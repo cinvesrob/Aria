@@ -1,6 +1,10 @@
 var classArActionDriveDistance =
 [
-    [ "State", "classArActionDriveDistance.html#a99053bb92e7b3bc572cb27c537a8f298", null ],
+    [ "State", "classArActionDriveDistance.html#a99053bb92e7b3bc572cb27c537a8f298", [
+      [ "STATE_NO_DISTANCE", "classArActionDriveDistance.html#a99053bb92e7b3bc572cb27c537a8f298ae5a9d2c2f353805f2d95872e7dc7accd", null ],
+      [ "STATE_ACHIEVED_DISTANCE", "classArActionDriveDistance.html#a99053bb92e7b3bc572cb27c537a8f298a0132d745b0cb4c13bc16625e93b10b09", null ],
+      [ "STATE_GOING_DISTANCE", "classArActionDriveDistance.html#a99053bb92e7b3bc572cb27c537a8f298a45d4b08e9ed2e3fe4661d1ccda388347", null ]
+    ] ],
     [ "ArActionDriveDistance", "classArActionDriveDistance.html#a499b36ac00bdfcf7afa5e4edf86279e3", null ],
     [ "~ArActionDriveDistance", "classArActionDriveDistance.html#a0e16aa22ff0c2ec27dcabdff7c109176", null ],
     [ "cancelDistance", "classArActionDriveDistance.html#adbc94dab9bd3c0ba42f07b572bf6b173", null ],

@@ -1,6 +1,12 @@
 var classArACTS__1__2 =
 [
-    [ "ActsConstants", "classArACTS__1__2.html#abd29db5baf1b65fcb73019f664adc996", null ],
+    [ "ActsConstants", "classArACTS__1__2.html#abd29db5baf1b65fcb73019f664adc996", [
+      [ "NUM_CHANNELS", "classArACTS__1__2.html#abd29db5baf1b65fcb73019f664adc996a75ffa2bd0d4e4952f00f77c5ed3ea4b7", null ],
+      [ "MAX_BLOBS", "classArACTS__1__2.html#abd29db5baf1b65fcb73019f664adc996af6c99b75ad05914e005c5db93a732fda", null ],
+      [ "ACTS_BLOB_DATA_SIZE", "classArACTS__1__2.html#abd29db5baf1b65fcb73019f664adc996a86786afa4bc66d8c7088303e553a2326", null ],
+      [ "DATA_HEADER", "classArACTS__1__2.html#abd29db5baf1b65fcb73019f664adc996abd8907130fc2d622144308c5ac63cca2", null ],
+      [ "MAX_DATA", "classArACTS__1__2.html#abd29db5baf1b65fcb73019f664adc996ab75ade71bd424503d225793229f90d4b", null ]
+    ] ],
     [ "ArACTS_1_2", "classArACTS__1__2.html#a911e0790deeebecd0230d4897ce358d4", null ],
     [ "~ArACTS_1_2", "classArACTS__1__2.html#aa64837c7954303ee48bf10218800d9cd", null ],
     [ "actsHandler", "classArACTS__1__2.html#aef210abbea4beab6a6d623785a01470a", null ],

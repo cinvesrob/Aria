@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -110,6 +111,8 @@ Adept MobileRobots, 10 Columbia Drive, Amherst, NH 03031; +1-603-881-7960
 #include "ArFunctor.h"
 #include "ArArgumentBuilder.h"
 #include "ArMutex.h"
+
+#include "ArGPSCoords.h" // for ArLLACoords
 
 #include <vector>
 
@@ -412,14 +415,37 @@ public:
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
   AREXPORT virtual bool hasOriginLatLongAlt();
+  bool hasOriginLatLonAlt() { return hasOriginLatLongAlt(); }
   AREXPORT virtual ArPose getOriginLatLong();
+  ArPose getOriginLatLon() { return getOriginLatLong(); }
   AREXPORT virtual double getOriginAltitude();
+  double getOriginLatitude() {
+    return getOriginLatLong().getX();
+  }
+  double getOriginLongitude() {
+    return getOriginLatLong().getY();
+  }
+
+
+  ArLLACoords getOriginLLA() {
+    return ArLLACoords(getOriginLatLon(), getOriginAltitude());
+  }
+
 
   AREXPORT virtual void setOriginLatLongAlt
                                         (bool hasOriginLatLong,
                                          const ArPose &originLatLong,
                                          double altitude,
                                          ArMapChangeDetails *changeDetails = NULL);
+
+  void setOriginLatLonAlt
+                                        (bool hasOriginLatLong,
+                                         const ArPose &originLatLong,
+                                         double altitude,
+                                         ArMapChangeDetails *changeDetails = NULL)
+  {
+    setOriginLatLongAlt(hasOriginLatLong, originLatLong, altitude, changeDetails);
+  }
 
 
   AREXPORT virtual void writeSupplementToFunctor(ArFunctor1<const char *> *functor, 

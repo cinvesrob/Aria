@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -68,7 +69,7 @@ AREXPORT ArPTZConnector::~ArPTZConnector()
 
 AREXPORT bool ArPTZConnector::connect()
 {
-  // Copy ArRobot's parameters:
+  // Copy ArRobot's default parameters:
   myParams.resize(Aria::getMaxNumPTZs());
   if(myRobot)
   {
@@ -92,11 +93,17 @@ AREXPORT bool ArPTZConnector::connect()
       pi != myParams.end(); 
       ++pi, ++i, ++picount)
   {
-    //printf("]] merging myArguments[%d] into myParams[%d]\n", i, picount);
-    pi->merge(myArguments[i]); 
+  //printf("]] myArguments.size is %d, i is %d\n", myArguments.size(), i);
+    if(i < myArguments.size())
+    {
+//      printf("]] merging myArguments[%d] into myParams[%d]\n", i, picount);
+      pi->merge(myArguments[i]); 
+    }
+
     if(pi->type == "" || pi->type == "none" || pi->connect == false)   // this ptz # was not specified in any parameters, or it was but with false connect flag
     {
-      //puts("null type or false connect flag, not creating or connecting.");
+        //puts("null type or \"none\" type or false connect flag, not creating or connecting.");
+        //printf("connectflag=%d\n", pi->connect);
       //myConnectedPTZs.push_back(NULL);
       continue;
     }
@@ -161,10 +168,14 @@ bool ArPTZConnector::parseArgs()
 
 bool ArPTZConnector::parseArgs(ArArgumentParser *parser)
 {
-  //puts("]]] ArPTZConnector::parseArgs");
+  // Store command-line arguments in myArguments. They will be merged into
+  // parameters in connect().
+
+//  puts("]]] ArPTZConnector::parseArgs");
   if(!parser) return false;
-  // -1 checks for argument with no PTZ index given (same as 0), then 0..(ourMaxNumPTZs-1) checks
-  // for arguments -ptz1..., -ptz2..., -ptz3... etc.
+  // -1 is a special case, checks for arguments implied for first PTZ, e.g.
+  // -ptzType is the same as -ptz1Type. 
+  // Then proceeds normally with 0 for the first ptz (-ptz1...).
   for(int i = -1; i < (int)getMaxNumPTZs(); ++i)
   {
     //printf("parse args for %d\n", i);
@@ -176,7 +187,7 @@ bool ArPTZConnector::parseArgs(ArArgumentParser *parser)
 
 bool ArPTZConnector::parseArgsFor(ArArgumentParser *parser, int which)
 {
-  ArPTZParams params;
+  ArPTZParams newargs;
   const char *type = NULL;
   const char *serialPort = NULL;
   int auxPort = -1;
@@ -204,9 +215,10 @@ bool ArPTZConnector::parseArgsFor(ArArgumentParser *parser, int which)
       ArLog::log(ArLog::Terse, "ArPTZConnector: Error parsing arguments: unrecognized PTZ type \"%s\" given with %sType.", type, prefix.c_str());
       return false;
     }
-    params.type = type;
-    params.connect = true;
-    params.connectSet = true;
+    newargs.type = type;
+    newargs.connect = true;
+    newargs.connectSet = true;
+    //printf("found command line argument %sType. set type to %s and set connect and connectSet to true for ptz %d.\n", prefix.c_str(), type, which);
   }
 
   size_t nConOpt = 0;
@@ -214,21 +226,21 @@ bool ArPTZConnector::parseArgsFor(ArArgumentParser *parser, int which)
   if(parser->checkParameterArgumentString( (prefix+"SerialPort").c_str(), &serialPort) && serialPort != NULL) 
   {
     ++nConOpt;
-    params.serialPort = serialPort;
+    newargs.serialPort = serialPort;
     //printf("got serial port %s\n", serialPort);
   }
 
   if(parser->checkParameterArgumentInteger( (prefix+"RobotAuxSerialPort").c_str(), &auxPort) && auxPort != -1)
   {
      ++nConOpt;
-    params.robotAuxPort = auxPort;
+    newargs.robotAuxPort = auxPort;
     //printf("got aux port %d\n", auxPort);
   }
 
   if(parser->checkParameterArgumentString( (prefix+"Address").c_str(), &address) && address != NULL) 
   {
     ++nConOpt;
-    params.address = address;
+    newargs.address = address;
     //printf("got address %s\n", address);
   }
 
@@ -245,39 +257,37 @@ bool ArPTZConnector::parseArgsFor(ArArgumentParser *parser, int which)
 
   if(parser->checkParameterArgumentInteger( (prefix+"TCPPort").c_str(), &tcpPort) && tcpPort != -1)
   {
-    params.tcpPort = tcpPort;
-    params.tcpPortSet = true;
+    newargs.tcpPort = tcpPort;
+    newargs.tcpPortSet = true;
     //printf("got tcp port %d\n", tcpPort);
   }
 
   bool wasSet = false;
   if(parser->checkArgument((prefix+"Inverted").c_str()))
   {
-    params.inverted = true;
-    params.invertedSet = true;
+    newargs.inverted = true;
+    newargs.invertedSet = true;
     //printf("got inverted %d\n", inverted);
   }
   if(parser->checkParameterArgumentBool( (prefix+"Inverted").c_str(), &inverted, &wasSet) && wasSet)
   {
-    params.inverted = inverted;
-    params.invertedSet = true;
+    newargs.inverted = inverted;
+    newargs.invertedSet = true;
     //printf("got inverted %d\n", inverted);
   }
   
-
-  if(which < myArguments.size())
-  {
-    //printf("merging these new params into existing myArguments[%d].\n", which);
-    myArguments[which].merge(params);
-  }
-  else
+  if((size_t)which >= myArguments.size())
   {
     // try not to assume we will be called with regular increasing which parameters,
     // (though we probably will be) so resize and set rather than use push_back:
     //printf("setting new, resized myArguments[%d] to these new params.\n", which);
     myArguments.resize(which+1);
-    myArguments[which] = params;
   }
+
+  // merge these rather than replacing them -- don't replace items in existing
+  // myArguments[which] if not set in newargs.
+  //myArguments[which] = newargs;
+  myArguments[which].merge(newargs);
 
   return true;
 }
@@ -292,6 +302,7 @@ AREXPORT void ArPTZConnector::logOptions() const
   {
     ArLog::log(ArLog::Terse, "\t\t%s", (*i).first.c_str());
   }
+  ArLog::log(ArLog::Terse, "\t\tnone");
   ArLog::log(ArLog::Terse, "\t-ptzInverted <true|false>\tIf true, reverse tilt and pan axes for cameras mounted upside down.");
   ArLog::log(ArLog::Terse, "\nOnly one of the following sets of connection parameters may be given:");
   ArLog::log(ArLog::Terse, "\nFor computer serial port connections:");

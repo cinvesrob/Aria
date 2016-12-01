@@ -1,5 +1,33 @@
+/*
+Adept MobileRobots Robotics Interface for Applications (ARIA)
+Copyright (C) 2004-2005 ActivMedia Robotics LLC
+Copyright (C) 2006-2010 MobileRobots Inc.
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
+
+     This program is free software; you can redistribute it and/or modify
+     it under the terms of the GNU General Public License as published by
+     the Free Software Foundation; either version 2 of the License, or
+     (at your option) any later version.
+
+     This program is distributed in the hope that it will be useful,
+     but WITHOUT ANY WARRANTY; without even the implied warranty of
+     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+     GNU General Public License for more details.
+
+     You should have received a copy of the GNU General Public License
+     along with this program; if not, write to the Free Software
+     Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+If you wish to redistribute ARIA under different terms, contact 
+Adept MobileRobots for information about a commercial version of ARIA at 
+robots@mobilerobots.com or 
+Adept MobileRobots, 10 Columbia Drive, Amherst, NH 03031; +1-603-881-7960
+*/
 #include "Aria.h"
 #include "ArNetworking.h"
+#include "ArSonarMTX.h"
+#include "ArServerModeJogPosition.h"
 
 /** @example serverDemo.cpp Example ArNetworking server providing teleoperation,
  * sonar data, control the camera, etc.
@@ -116,6 +144,8 @@ int main(int argc, char **argv)
   ArServerModeStop modeStop(&server, &robot);
   ArServerModeRatioDrive modeRatioDrive(&server, &robot);  
   ArServerModeWander modeWander(&server, &robot);
+  ArServerModeJogPosition modeJog(&server, &robot);
+  modeJog.addToConfig(Aria::getConfig());
   modeStop.addAsDefaultMode();
   modeStop.activate();
 
@@ -191,8 +221,8 @@ int main(int argc, char **argv)
   // connect the laser(s) if it was requested
   if (!laserConnector.connectLasers())
   {
-    printf("Could not connect to lasers... exiting\n");
-    Aria::exit(2);
+    ArLog::log(ArLog::Terse, "serverDemo: Warning: Could not connect to lasers.  Will continue but without laser sensing!");
+    //Aria::exit(2);
   }
   
 
@@ -203,13 +233,13 @@ int main(int argc, char **argv)
   // now let it spin off in its own thread
   server.runAsync();
 
-  printf("Server is now running...\n");
 
-  // Add a key handler so that you can exit by pressing
+  // Uncomment code below to add a key handler so that you can exit by pressing
   // escape. Note that a key handler prevents you from running
   // a program in the background on Linux, since it expects an 
   // active terminal to read keys from; remove this if you want
   // to run it in the background.
+/*
   ArKeyHandler *keyHandler;
   if ((keyHandler = Aria::getKeyHandler()) == NULL)
   {
@@ -220,6 +250,7 @@ int main(int argc, char **argv)
     robot.unlock();
     printf("To exit, press escape.\n");
   }
+*/
 
   // Read in parameter files.
   std::string configFile = "serverDemoConfig.txt";
@@ -249,6 +280,8 @@ int main(int argc, char **argv)
   robot.lock();
   robot.enableMotors();
   robot.unlock();
+
+  ArLog::log(ArLog::Normal, "serverDemo: Server is now running. Connect to %s with MobileEyes, clientDemo or another client.", server.getOpenOnIP()?server.getOpenOnIP():"this host");
 
   robot.waitForRunExit();
   Aria::exit(0);

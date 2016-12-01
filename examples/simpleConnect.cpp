@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -77,8 +78,14 @@ int main(int argc, char **argv)
   // with the background thread started by the call to robot.runAsync() above.
   // See the section on threading in the manual for more about this.
   robot.lock();
-  ArLog::log(ArLog::Normal, "simpleConnect: Pose=(%.2f,%.2f,%.2f), Trans. Vel=%.2f, Battery=%.2fV",
-    robot.getX(), robot.getY(), robot.getTh(), robot.getVel(), robot.getBatteryVoltage());
+  bool soc = robot.hasStateOfCharge();
+  float battv = 0.0;
+  if(soc)
+    battv = robot.getStateOfCharge();
+  else
+    battv = robot.getBatteryVoltage();
+  ArLog::log(ArLog::Normal, "simpleConnect: Pose=(%.2f,%.2f,%.2f), Trans.  Vel=%.2f, Battery=%.2f%c",
+    robot.getX(), robot.getY(), robot.getTh(), robot.getVel(), battv, soc?'%':'V');
   robot.unlock();
 
   // Sleep for 3 seconds.

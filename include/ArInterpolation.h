@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -30,6 +31,18 @@ Adept MobileRobots, 10 Columbia Drive, Amherst, NH 03031; +1-603-881-7960
 #include "ariaUtil.h"
 
 /** 
+    Store a buffer of positions (ArPose objects) with associated timestamps, can
+    be queried to interpolate (or optionally extrapolate) a pose for any arbitrary
+    timestamp.  
+
+    Will work best when positions are stored frequenly and regularly.
+
+    ArRobot maintains an ArInterpolation object which can be accessed by
+    ArRobot::getPoseInterpPosition(), ArRobot::getPoseInterpNumReadings(),
+    ArRobot::setPoseInterpNumReadings(), and ArRobot::getPoseInterpolation().
+    Or, you could use your own ArInterpolation object; use an ArRobot
+    "sensor-interpretation" task to store each robot pose received. 
+
     This class takes care of storing in readings of position vs time, and then
     interpolating between them to find where the robot was at a particular 
     point in time.  It has two lists, one containing the times, and one 
@@ -41,12 +54,15 @@ Adept MobileRobots, 10 Columbia Drive, Amherst, NH 03031; +1-603-881-7960
     the old ones are chopped off.
     
     This class now has a couple of variables for when it allows
-    prediction, they're set with setAllowedMSForPrediction and
-    setAllowedPercentageForPrediction.  If either is below 0 than they
+    prediction (extrapolation beyond the most recently stored pose). They're set
+    with setAllowedMSForPrediction() and
+    setAllowedPercentageForPrediction().  If either is below 0 than they
     are ignored (if both are below 0 it means any prediction is
     allowed, which would be bad).  Previous there was no MS limit, and
     the percentage limit was 50 (and so that is what the default is
     now).
+
+    @ingroup UtilityClasses
 **/
 class ArInterpolation
 {

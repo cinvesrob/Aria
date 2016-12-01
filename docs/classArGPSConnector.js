@@ -1,6 +1,13 @@
 var classArGPSConnector =
 [
-    [ "GPSType", "classArGPSConnector.html#ab7ddee30070f15cf1bcc8ec6cb4ca312", null ],
+    [ "GPSType", "classArGPSConnector.html#ab7ddee30070f15cf1bcc8ec6cb4ca312", [
+      [ "Standard", "classArGPSConnector.html#ab7ddee30070f15cf1bcc8ec6cb4ca312a915b3f171473120af03da3280df8452d", null ],
+      [ "Novatel", "classArGPSConnector.html#ab7ddee30070f15cf1bcc8ec6cb4ca312af8982f5382ba2f66d3d8e8f57ca26027", null ],
+      [ "Trimble", "classArGPSConnector.html#ab7ddee30070f15cf1bcc8ec6cb4ca312a66aac37f643b6fbe2982e3b6311deb44", null ],
+      [ "Invalid", "classArGPSConnector.html#ab7ddee30070f15cf1bcc8ec6cb4ca312a7633cc51ddfaaaea2b0cbfbd0a50f071", null ],
+      [ "NovatelSPAN", "classArGPSConnector.html#ab7ddee30070f15cf1bcc8ec6cb4ca312a30c85e3421653012054e970146fd9d75", null ],
+      [ "Simulator", "classArGPSConnector.html#ab7ddee30070f15cf1bcc8ec6cb4ca312adf049b3e1eec1403202c70dc1058fa88", null ]
+    ] ],
     [ "ArGPSConnector", "classArGPSConnector.html#a74cd02bcbf766e9d36d59e917ef14010", null ],
     [ "~ArGPSConnector", "classArGPSConnector.html#a2842fee666ccbc3c6413eced14e4f95e", null ],
     [ "create", "classArGPSConnector.html#a3ceecc898a2f2466fbd63aaedbe0c0d9", null ],

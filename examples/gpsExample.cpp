@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -85,9 +86,18 @@ int main(int argc, char** argv)
 
   if(gpsConnector.getGPSType() == ArGPSConnector::Simulator)
   {
-    ArLog::log(ArLog::Normal, "gpsExample: GPS is a simulator. Setting dummy position.");
-    (dynamic_cast<ArSimulatedGPS*>(gps))->setDummyPosition(42.80709, -71.579047, 100);
+    ArLog::log(ArLog::Normal, "gpsExample: GPS data is from simulator.");
+    /*
+      If connected to MobileSim, and aa map is loaded into MobileSim that contains an OriginLatLonAlt line,
+      then MobileSim will provides simulated GPS data based on the robot's 
+      true position in the simulator.  But you can also manually set "dummy"
+      positions like this instead, or to simulate GPS without connecting
+      to MobileSim:
+    */
+    //ArLog::log(ArLog::Normal, "gpsExample: GPS is a simulator. Setting dummy position.");
+    //(dynamic_cast<ArSimulatedGPS*>(gps))->setDummyPosition(42.80709, -71.579047, 100);
   }
+  
 
 
   ArLog::log(ArLog::Normal, "gpsExample: Reading data...");

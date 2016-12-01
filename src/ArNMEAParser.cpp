@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -36,7 +37,19 @@ Adept MobileRobots, 10 Columbia Drive, Amherst, NH 03031; +1-603-881-7960
 //#define DEBUG_ARNMEAPARSER 1
 
 #ifdef DEBUG_ARNMEAPARSER
-void ArNMEAParser_printBuf(FILE *fp, const char *data, int size){  for(int i = 0; i < size; ++i)  {    if(data[i] < ' ' || data[i] > '~')    {      fprintf(fp, "[0x%X]", data[i] & 0xff);    }    else    {      fputc(data[i], fp);    }  }}
+void ArNMEAParser_printBuf(FILE *fp, const char *data, int size) {  
+  for(int i = 0; i < size; ++i) {
+    if(data[i] == '\n')
+      fprintf(fp, "[LF]");
+    else if(data[i] == '\r')
+      fprintf(fp, "[CR]");
+    else if(data[i] < ' ' || data[i] > '~')  {
+      fprintf(fp, "[0x%X]", data[i] & 0xff);    
+    }
+    else
+      fputc(data[i], fp);    
+  }
+}
 #endif
 
 AREXPORT ArNMEAParser::ArNMEAParser(const char *name) :
@@ -182,11 +195,26 @@ AREXPORT int ArNMEAParser::parse(const char *buf, int n)
         Message msg;
         msg.message = &currentMessage;
         msg.timeParseStarted = currentMessageStarted;
-        HandlerMap::iterator h = myHandlers.find(currentMessage[0]);
+        msg.prefix = currentMessage[0].substr(0, 2);
+        // TODO should we check for an accepted set of prefixes? (e.g. GP, GN,
+        // GL, GB, BD, HC, PG, etc.)
+        msg.id = currentMessage[0].substr(2);
+#ifdef DEBUG_ARNMEAPARSER
+        fprintf(stderr, "\t[ArNMEAPArser: Input message has system prefix %s with message ID %s]\n", msg.prefix.c_str(), msg.id.c_str());
+#endif
+        std::string lastprefix = myLastPrefix[msg.id];
+        if(lastprefix != "" && lastprefix != msg.prefix)
+        {
+          const char *id = msg.id.c_str();
+          const char *p = msg.prefix.c_str();
+          const char *lp = lastprefix.c_str();
+          ArLog::log(ArLog::Normal, "ArNMEAParser: Warning: Got duplicate %s message with prefix %s (previous prefix was %s).  Data from %s%s will replace %s%s.", id, p, lp, p, id, lp, id);
+        }
+        HandlerMap::iterator h = myHandlers.find(msg.id);
         if (h != myHandlers.end()) 
         {
 #ifdef DEBUG_ARNMEAPARSER
-          fprintf(stderr, "\t[ArNMEAParser: Got complete message, calling handler for %s...]\n", currentMessage[0].c_str());
+          fprintf(stderr, "\t[ArNMEAParser: Got complete message, calling handler for %s...]\n", msg.id.c_str());
 #endif
           if(h->second)
           {
@@ -195,13 +223,13 @@ AREXPORT int ArNMEAParser::parse(const char *buf, int n)
           }
           else
           {
-            ArLog::log(ArLog::Terse, "ArNMEAParser Internal Error: NULL handler functor for message %s!\n", currentMessage[0].c_str());
+            ArLog::log(ArLog::Terse, "ArNMEAParser Internal Error: NULL handler functor for message %s!\n", msg.id.c_str());
           }
         }
 #ifdef DEBUG_ARNMEAPARSER
         else
         {
-          fprintf(stderr, "\t[ArNMEAParser: Have no message handler for %s.]\n", currentMessage[0].c_str());
+          fprintf(stderr, "\t[ArNMEAParser: Have no message handler for %s (%s).]\n", msg.id.c_str(), currentMessage[0].c_str());
         }
 #endif
       }

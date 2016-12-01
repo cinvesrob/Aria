@@ -19,6 +19,15 @@ JAVAC:=javac
 JAR:=jar
 endif
 
+ifndef JAVA_INCLUDE
+JAVA_INCLUDE:=/usr/lib/jvm/default-java/include
+endif
+
+
+ifndef SWIG
+SWIG:=swig
+endif
+
 CFILES:= \
 	ArCentralManager.cpp \
 	ArCentralForwarder.cpp \
@@ -30,6 +39,7 @@ CFILES:= \
 	ArClientSwitchManager.cpp \
 	ArClientArgUtils.cpp \
 	ArClientHandlerRobotUpdate.cpp \
+	ArClientRatioDrive.cpp \
 	ArHybridForwarderVideo.cpp \
 	ArMapChanger.cpp \
 	ArNetPacket.cpp \
@@ -51,6 +61,7 @@ CFILES:= \
 	ArServerMode.cpp \
 	ArServerModeDrive.cpp \
 	ArServerModeIdle.cpp \
+	ArServerModeJogPosition.cpp \
 	ArServerModeRatioDrive.cpp \
 	ArServerModeStop.cpp \
 	ArServerModeWander.cpp \
@@ -68,7 +79,7 @@ CFILES:= \
 OTFILES:=$(patsubst %.$(CFILEEXT),%.o,$(CFILES))
 OFILES:=$(patsubst %,../obj/%,$(OTFILES))
 
-TARGETS:=../lib/libArNetworking.so examples
+TARGETS:=../lib/libArNetworking.so examples/serverDemo examples/clientDemo
 
 EXAMPLES_CPP:=$(shell find examples -name "*.$(CFILEEXT)" | grep -v Mod.cpp)
 EXAMPLES:=$(patsubst %.$(CFILEEXT),%,$(EXAMPLES_CPP))
@@ -128,7 +139,7 @@ DATESTAMP=$(shell date +%Y%m%d)
 DATE=$(shell date +'%B %d, %Y')
 docs: doc
 doc: docs/index.html
-docs/index.html: $(SRC_FILES) $(HEADER_FILES) $(EXAMPLES_CPP) doxygen.conf docs/options/all_options.dox ../docs/index.html
+docs/index.html: $(SRC_FILES) $(HEADER_FILES) $(EXAMPLES_CPP) doxygen.conf.in docs/options/all_options.dox ../docs/index.html docs/RemoteRequestAPI.dox
 	@echo Removing old ArNetworking documentation...
 	$(MAKE) cleanDoc
 	@echo
@@ -145,6 +156,9 @@ docs/index.html: $(SRC_FILES) $(HEADER_FILES) $(EXAMPLES_CPP) doxygen.conf docs/
 # Force rebuilding of Makefile.dep:
 dep: clean cleanDep FORCE
 	$(MAKE) Makefile.dep
+
+cleanDep: FORCE
+	-rm Makefile.dep
 
 Makefile.dep:
 	if [ -f `echo src/*.cpp | cut -d' ' -f1` ]; then \
@@ -201,10 +215,10 @@ ifdef PYTHON_INCLUDE
 PYTHON_INCLUDE_FLAGS=-I$(PYTHON_INCLUDE)
 else
 ifdef DIST_INSTALL
-$(warning WARNING using default value of /usr/include/python2.5 for PYTHON_INCLUDE directory. Set PYTHON_INCLUDE environment variable if you would like to use a different version of the Python C development library to build the Python ARIA wrapper.)
+$(warning WARNING using default value of /usr/include/python2.7 for PYTHON_INCLUDE directory. Set PYTHON_INCLUDE environment variable if you would like to use a different version of the Python C development library to build the Python ARIA wrapper.)
 endif
-PYTHON_INCLUDE:=/usr/include/python2.5
-PYTHON_INCLUDE_FLAGS=-I/usr/include/python2.5
+PYTHON_INCLUDE:=/usr/include/python2.7
+PYTHON_INCLUDE_FLAGS=-I/usr/include/python2.7
 endif
 
 python: ariaPython ../python/_ArNetworkingPy.so
@@ -213,15 +227,11 @@ ariaPython:
 	$(MAKE) -C .. python
 
 ../python/ArNetworkingPy_wrap.cpp ../python/ArNetworkingPy.py: include/wrapper.i $(HEADER_FILES)
-	cd ../python; swig -c++ -python -module ArNetworkingPy -Dlinux -DAREXPORT -o ArNetworkingPy_wrap.cpp -I../include -I../ArNetworking/include ../ArNetworking/include/wrapper.i  
+	cd ../python; $(SWIG) -c++ -python -module ArNetworkingPy -Dlinux -DAREXPORT -DARNETWORKING_WRAPPER -o ArNetworkingPy_wrap.cpp -I../include -I../ArNetworking/include ../ArNetworking/include/wrapper.i  
 
-../python/_ArNetworkingPy.so: ../obj/ArNetworkingPy_wrap.o ../lib/libArNetworking.so 
-	$(CXX) $(BARECXXFLAGS) -shared -o $(@) ../obj/ArNetworkingPy_wrap.o -lpthread -ldl -lrt \
+../python/_ArNetworkingPy.so: ../python/ArNetworkingPy_wrap.cpp ../lib/libArNetworking.so 
+	$(CXX) $(BARECXXFLAGS) $(CXXINC) -I$(PYTHON_INCLUDE) -DARNETWORKING_WRAPPER -shared -o $(@) $< -lpthread -ldl -lrt \
 	-L../lib -lAria -lArNetworking
-
-../obj/ArNetworkingPy_wrap.o: ../python/ArNetworkingPy_wrap.cpp
-	@ if test -z "$(PYTHON_INCLUDE)"; then echo "*** Error: PYTHON_INCLUDE is not set, cannot build ArNetworking python wrapper! ***"; exit 1; fi
-	$(CXX) -c $(BARECXXFLAGS) -g $(CXXINC) -I$(PYTHON_INCLUDE) $< -o $@
 
 
 ## Java SWIG wrapper ##
@@ -237,7 +247,7 @@ java: ../lib/libArNetworkingJava.so ../java/ArNetworking.jar
 
 ../java/ArNetworkingJava_wrap.cpp ../java/com/mobilerobots/ArNetworking/ArServerBase.java: include/wrapper.i $(HEADER_FILES)
 	-mkdir -p ../java/com/mobilerobots/ArNetworking
-	rm ../java/com/mobilerobots/ArNetworking/*.java ../java/ArNetworkingJava_wrap.cpp ../java/ArNetworkingJava_wrap.h ; swig -c++ -java -package com.mobilerobots.ArNetworking -outdir ../java/com/mobilerobots/ArNetworking -module ArNetworkingJava -Dlinux -DAREXPORT -o ../java/ArNetworkingJava_wrap.cpp -I../include -Iinclude include/wrapper.i 
+	rm ../java/com/mobilerobots/ArNetworking/*.java ../java/ArNetworkingJava_wrap.cpp ../java/ArNetworkingJava_wrap.h ; $(SWIG) -c++ -java -package com.mobilerobots.ArNetworking -outdir ../java/com/mobilerobots/ArNetworking -module ArNetworkingJava -Dlinux -DAREXPORT -DARNETWORKING_WRAPPER -o ../java/ArNetworkingJava_wrap.cpp -I../include -Iinclude include/wrapper.i 
  
 ../java/com/mobilerobots/ArNetworking/ArServerBase.class: ../java/com/mobilerobots/ArNetworking/ArServerBase.java ../java/Aria.jar
 	 rm ../java/com/mobilerobots/ArNetworking/*.class; $(JAVAC) -classpath ../java/Aria.jar:../java ../java/com/mobilerobots/ArNetworking/*.java 
@@ -258,3 +268,5 @@ cleanJava:
 include Makefile.dep
 
 FORCE:
+
+.PHONY: all dirs examples tests clean cleanPython cleanJava cleanExamples cleanDoc fullClean docs doc dep cleanDep python ariaPython java 

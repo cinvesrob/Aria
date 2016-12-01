@@ -8,12 +8,9 @@ LineMinPos: -4756 -26950
 LineMaxPos: 19533 19394
 NumLines: 470
 LinesAreSorted: true
+OriginLatLonAlt: 42.807191 -71.578661 72.000000
+MapInfo: SectorType Name=BadGPSSector "Label=BadGPS" "Desc=Area where GPS is known to be unreliable" Shape=Plain Color0=0x888888
 MapInfo: BoundaryType Name=Measure "Label=Measuring stick" "Desc=Line that displays its length" Shape=Measure Color0=0xdd03e0
-MapInfo: DockType Name=Dock "Label=Unspecified dock" TaskListCount=10 TaskListIds=DockForcedDock|DockIdleDock|DockRequestedDock|DockDrivingToDock|DockDrivingIntoDock|DockDocked|DockNowUnforced|DockNowForced|DockUndocking|DockUndocked "TaskListLabels=Forced dock|Idle dock|Requested dock|Driving to dock|Driving into dock|Docked|Dock now unforced|Dock now forced|Undocking|Undocked" TaskClasses=Instant NameRequired=1
-MapInfo: DockType Name=DockPatrolBot "Label=PatrolBot dock" TaskListCount=10 TaskListIds=DockForcedDock|DockIdleDock|DockRequestedDock|DockDrivingToDock|DockDrivingIntoDock|DockDocked|DockNowUnforced|DockNowForced|DockUndocking|DockUndocked "TaskListLabels=Forced dock|Idle dock|Requested dock|Driving to dock|Driving into dock|Docked|Dock now unforced|Dock now forced|Undocking|Undocked" TaskClasses=Instant NameRequired=1
-MapInfo: DockType Name=DockPatrolBotNiMH "Label=PatrolBot NiMH dock" TaskListCount=10 TaskListIds=DockForcedDock|DockIdleDock|DockRequestedDock|DockDrivingToDock|DockDrivingIntoDock|DockDocked|DockNowUnforced|DockNowForced|DockUndocking|DockUndocked "TaskListLabels=Forced dock|Idle dock|Requested dock|Driving to dock|Driving into dock|Docked|Dock now unforced|Dock now forced|Undocking|Undocked" TaskClasses=Instant NameRequired=1
-MapInfo: DockType Name=DockPioneer "Label=Pioneer dock" TaskListCount=10 TaskListIds=DockForcedDock|DockIdleDock|DockRequestedDock|DockDrivingToDock|DockDrivingIntoDock|DockDocked|DockNowUnforced|DockNowForced|DockUndocking|DockUndocked "TaskListLabels=Forced dock|Idle dock|Requested dock|Driving to dock|Driving into dock|Docked|Dock now unforced|Dock now forced|Undocking|Undocked" TaskClasses=Instant NameRequired=1
-MapInfo: DockType Name=DockPowerBot "Label=PowerBot dock" TaskListCount=10 TaskListIds=DockForcedDock|DockIdleDock|DockRequestedDock|DockDrivingToDock|DockDrivingIntoDock|DockDocked|DockNowUnforced|DockNowForced|DockUndocking|DockUndocked "TaskListLabels=Forced dock|Idle dock|Requested dock|Driving to dock|Driving into dock|Docked|Dock now unforced|Dock now forced|Undocking|Undocked" TaskClasses=Instant NameRequired=1
 MapInfo: GoalType Name=Goal
 MapInfo: LocationType Name=Label "Label=Label" "Desc=Fixed-size text label" Color0=0x000000 Color1=0xffffff Shape=Label FtFix=1 FtSize=18
 Cairn: ForbiddenLine -5536 -27106 0.000000 "" ICON "" -5536 -27106 10917 -27106

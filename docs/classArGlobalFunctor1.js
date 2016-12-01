@@ -7,6 +7,6 @@ var classArGlobalFunctor1 =
     [ "invoke", "classArGlobalFunctor1.html#adc31735285c219c61ac23f2200bba7bd", null ],
     [ "invoke", "classArGlobalFunctor1.html#ad94dff9851a225a56bfd4a544139ad09", null ],
     [ "setP1", "classArGlobalFunctor1.html#ade674c66329b8caf6ed19596adbb6eae", null ],
-    [ "myFunc", "classArGlobalFunctor1.html#ae48094871ebc31a9a3313f96fa738b52", null ],
+    [ "myFunc", "classArGlobalFunctor1.html#a3d80dd4476176cea5e88cf80a4f8970a", null ],
     [ "myP1", "classArGlobalFunctor1.html#a9366f711684ccab50703e1d81c6592b6", null ]
 ];

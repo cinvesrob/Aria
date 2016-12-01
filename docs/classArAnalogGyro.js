@@ -1,6 +1,10 @@
 var classArAnalogGyro =
 [
-    [ "GyroType", "classArAnalogGyro.html#a6151dc37d9f0cd16117b1c3f80f39715", null ],
+    [ "GyroType", "classArAnalogGyro.html#a6151dc37d9f0cd16117b1c3f80f39715", [
+      [ "GYRO_NONE", "classArAnalogGyro.html#a6151dc37d9f0cd16117b1c3f80f39715a5699b9b8f84a724aaca07a1c83ac84e7", null ],
+      [ "GYRO_ANALOG_COMPUTER", "classArAnalogGyro.html#a6151dc37d9f0cd16117b1c3f80f39715af67cf1e1d44e92489f591a3e37f63a1d", null ],
+      [ "GYRO_ANALOG_CONTROLLER", "classArAnalogGyro.html#a6151dc37d9f0cd16117b1c3f80f39715aefdf538347ba0ee6431506b8fcb6f570", null ]
+    ] ],
     [ "ArAnalogGyro", "classArAnalogGyro.html#afcb9db5ed1efd9206d0574c30c44fd75", null ],
     [ "~ArAnalogGyro", "classArAnalogGyro.html#adcadb27031049ae191f31164a4ddc412", null ],
     [ "activate", "classArAnalogGyro.html#a348f63883ab1ea70b09ef64c1b6a7346", null ],

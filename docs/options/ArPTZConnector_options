@@ -7,6 +7,7 @@ Common PTU and Camera PTZ options:
 		vcc
 		vcc4
 		vcc50i
+		none
 	-ptzInverted <true|false>	If true, reverse tilt and pan axes for cameras mounted upside down.
 
 Only one of the following sets of connection parameters may be given:

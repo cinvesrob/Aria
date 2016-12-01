@@ -11,7 +11,7 @@ var classArFunctor1C =
     [ "setP1", "classArFunctor1C.html#a84561dcc8854f5cc301598e934919459", null ],
     [ "setThis", "classArFunctor1C.html#a49de24a26938ce2894d317c9c3c76aa8", null ],
     [ "setThis", "classArFunctor1C.html#af4cd41a582a3e7a8f5a3fc69797dd7b1", null ],
-    [ "myFunc", "classArFunctor1C.html#adfd86648fdd8782c973023dbd47d0c5c", null ],
+    [ "myFunc", "classArFunctor1C.html#a805d536f19eaaa6c97963480f775d92c", null ],
     [ "myObj", "classArFunctor1C.html#a2b7e7d708bfeadc26260c66c0fee40a7", null ],
     [ "myP1", "classArFunctor1C.html#a533f6bf247ea6d37645aa0e1ede1e88d", null ]
 ];

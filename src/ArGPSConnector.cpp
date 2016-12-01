@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -200,7 +201,7 @@ AREXPORT ArGPS* ArGPSConnector::createGPS(ArRobot *robot)
       // Setup serial connection
       ArSerialConnection *serialCon = new ArSerialConnection;
       ArLog::log(ArLog::Normal, "ArGPSConnector: Connecting to GPS on port %s at %d baud...", myPort, myBaud);
-      if (!serialCon->setBaud(myBaud)) { delete serialCon; return false; }
+      if (!serialCon->setBaud(myBaud)) { delete serialCon; return NULL; }
       if (serialCon->open(myPort) != 0) {
         ArLog::log(ArLog::Terse, "ArGPSConnector: Error: could not open GPS serial port %s.", myPort);
         delete serialCon;

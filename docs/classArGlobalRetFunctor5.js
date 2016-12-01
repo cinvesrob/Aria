@@ -19,7 +19,7 @@ var classArGlobalRetFunctor5 =
     [ "setP3", "classArGlobalRetFunctor5.html#a11d23bea22bc2cdc62b8d9c707c2f4c0", null ],
     [ "setP4", "classArGlobalRetFunctor5.html#a759c855ed4def740c653472147d5674a", null ],
     [ "setP5", "classArGlobalRetFunctor5.html#ad83a629df3c39fc9e631e66150856d84", null ],
-    [ "myFunc", "classArGlobalRetFunctor5.html#a4732c75ce4c0a1860759304be07b994a", null ],
+    [ "myFunc", "classArGlobalRetFunctor5.html#a842616cde85345f7ff381302a10cb711", null ],
     [ "myP1", "classArGlobalRetFunctor5.html#a870a3350f64839aa9bffcade557a3a5e", null ],
     [ "myP2", "classArGlobalRetFunctor5.html#a1e70b1ae535d75753a0579ad7d5c4be1", null ],
     [ "myP3", "classArGlobalRetFunctor5.html#a18c9742544c61583b9b121fb19ee264c", null ],

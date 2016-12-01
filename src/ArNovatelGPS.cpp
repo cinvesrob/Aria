@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -35,7 +36,7 @@ AREXPORT ArNovatelGPS::ArNovatelGPS() :
   myNovatelGPGGAHandler(this, &ArNovatelGPS::handleNovatelGPGGA)
 {
   // override normal GPGGA handler:
-  addNMEAHandler("GPGGA", &myNovatelGPGGAHandler);
+  addNMEAHandler("GGA", &myNovatelGPGGAHandler);
 }
 
 AREXPORT bool ArNovatelGPS::initDevice()
@@ -111,6 +112,7 @@ AREXPORT ArNovatelSPAN::ArNovatelSPAN() :
   // then this class could be simplified by supplying ArGPS::myGPRMCHandler as
   // the handler for INRMC, instead of implementing a new INGLL handler here.
   addNMEAHandler("INGLL", &myINGLLHandler);
+  addNMEAHandler("GLL", &myINGLLHandler);
 }
 
 AREXPORT ArNovatelSPAN::~ArNovatelSPAN()

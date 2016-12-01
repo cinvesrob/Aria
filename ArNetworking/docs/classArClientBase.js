@@ -1,8 +1,27 @@
 var classArClientBase =
 [
-    [ "ClientState", "classArClientBase.html#af81d1a763266af658676640386e0bdf0", null ],
-    [ "NonBlockingConnectReturn", "classArClientBase.html#a5566cb8173dd4c9ab4bcd3927c6af08f", null ],
-    [ "NonBlockingConnectState", "classArClientBase.html#a35dcde5f344eaa074ca8f9d24f8eff98", null ],
+    [ "Tracker", "classArClientBase_1_1Tracker.html", "classArClientBase_1_1Tracker" ],
+    [ "CLIENT_KEY_LENGTH", "classArClientBase.html#a307d45f7ff6432775c9f6a6be2a46b9cafa66f83897cf6fac0c909e409984730a", null ],
+    [ "ClientState", "classArClientBase.html#af81d1a763266af658676640386e0bdf0", [
+      [ "STATE_NO_CONNECTION", "classArClientBase.html#af81d1a763266af658676640386e0bdf0a2dc9a243a788b28855a2120ff03d91c1", null ],
+      [ "STATE_FAILED_CONNECTION", "classArClientBase.html#af81d1a763266af658676640386e0bdf0a68d3d360258b80db85e7b0eb2220e7e4", null ],
+      [ "STATE_OPENED_SOCKET", "classArClientBase.html#af81d1a763266af658676640386e0bdf0ae8788d50c4490a33e2d1d1532913001f", null ],
+      [ "STATE_EXCHANGED_INTROS", "classArClientBase.html#af81d1a763266af658676640386e0bdf0a2d6dea49e2382d59c9ef98685f1e8e2b", null ],
+      [ "STATE_REJECTED", "classArClientBase.html#af81d1a763266af658676640386e0bdf0a02f2e7a7258afdcb09500599fce5e34a", null ],
+      [ "STATE_WAITING_LIST", "classArClientBase.html#af81d1a763266af658676640386e0bdf0ae2760604361ba1d0263e9ad255afdc79", null ],
+      [ "STATE_CONNECTED", "classArClientBase.html#af81d1a763266af658676640386e0bdf0ae25062edaf7738d1b4bb46824fecb562", null ],
+      [ "STATE_LOST_CONNECTION", "classArClientBase.html#af81d1a763266af658676640386e0bdf0a00a87398679ccc603667d8df5863f528", null ]
+    ] ],
+    [ "NonBlockingConnectReturn", "classArClientBase.html#a5566cb8173dd4c9ab4bcd3927c6af08f", [
+      [ "NON_BLOCKING_CONTINUE", "classArClientBase.html#a5566cb8173dd4c9ab4bcd3927c6af08fa5247a113a022404af73587ada6251d55", null ],
+      [ "NON_BLOCKING_CONNECTED", "classArClientBase.html#a5566cb8173dd4c9ab4bcd3927c6af08fab549562d74947d93718d2e84d26c83e2", null ],
+      [ "NON_BLOCKING_FAILED", "classArClientBase.html#a5566cb8173dd4c9ab4bcd3927c6af08fa33c6c425717634c2e0988d8ed09cc5a1", null ]
+    ] ],
+    [ "NonBlockingConnectState", "classArClientBase.html#a35dcde5f344eaa074ca8f9d24f8eff98", [
+      [ "NON_BLOCKING_STATE_NONE", "classArClientBase.html#a35dcde5f344eaa074ca8f9d24f8eff98acfa60790190c56dbc6ac2c6d6a28b9e6", null ],
+      [ "NON_BLOCKING_STATE_TCP", "classArClientBase.html#a35dcde5f344eaa074ca8f9d24f8eff98a4d7debec8a6eb594197dd7e8bd923df5", null ],
+      [ "NON_BLOCKING_STATE_UDP", "classArClientBase.html#a35dcde5f344eaa074ca8f9d24f8eff98aad33312bd96237d4ac9921ab1e7f1609", null ]
+    ] ],
     [ "ArClientBase", "classArClientBase.html#ab2cf2d19c6da6490fe4c04554a7f31b2", null ],
     [ "~ArClientBase", "classArClientBase.html#aabd8d349c5ab2432da4f70bccbbaa40d", null ],
     [ "addCycleCallback", "classArClientBase.html#a927e8816c53d7c3c0244cf1d8ad6f68b", null ],
@@ -28,6 +47,7 @@ var classArClientBase =
     [ "getLogPrefix", "classArClientBase.html#a88796283202dd686aa9955a34614ad9e", null ],
     [ "getName", "classArClientBase.html#aa62374104cb01052e5edb5517e7de5a0", null ],
     [ "getName", "classArClientBase.html#ad331af6cfcbc37079d4f1bb283cd509e", null ],
+    [ "getPort", "classArClientBase.html#a9f5d72f8951f20a3bea6094fcbb9af52", null ],
     [ "getReceivedArgRetList", "classArClientBase.html#abebd9b3fd56c9401384876ffae90785a", null ],
     [ "getReceivedDataList", "classArClientBase.html#a9146d03d37cf37f85f52c08db84aae15", null ],
     [ "getReceivedGroupAndFlagsList", "classArClientBase.html#ad30d595c20eafd7058895b9e41b3998c", null ],
@@ -63,6 +83,9 @@ var classArClientBase =
     [ "requestOnceByCommand", "classArClientBase.html#a952ba6e629abdb7d01eabc247ca6cd4d", null ],
     [ "requestOnceByCommandUdp", "classArClientBase.html#aa45eea17535cde2664a071c0591f534a", null ],
     [ "requestOnceUdp", "classArClientBase.html#ab7e431bdf19aa838576c7928302efe67", null ],
+    [ "requestOnceWithDouble", "classArClientBase.html#a972cebefaa57d709158b5b0d2c459d0f", null ],
+    [ "requestOnceWithInt16", "classArClientBase.html#ad70a1f142b30a08ab54a02146a4c2005", null ],
+    [ "requestOnceWithInt32", "classArClientBase.html#a539a9fd371bade04042cf48191afd674", null ],
     [ "requestOnceWithString", "classArClientBase.html#a3b3783c386707050eb83287cb53dd07b", null ],
     [ "requestStop", "classArClientBase.html#aee1400e28ba15f18c032ea7f3b414cfd", null ],
     [ "requestStopByCommand", "classArClientBase.html#a993ac794e3e3df2a401a155600596ae8", null ],
@@ -110,6 +133,7 @@ var classArClientBase =
     [ "myNonBlockingConnectState", "classArClientBase.html#ae6749c53f5e6e667a9e7012159a2868d", null ],
     [ "myPacketTrackingMutex", "classArClientBase.html#a4e41f28eb10c31de5febd1f7def2db22", null ],
     [ "myPassword", "classArClientBase.html#acad6369b983172d3092c65def1a36edc", null ],
+    [ "myPort", "classArClientBase.html#a1486b59cf86991bc2d34c975146d7294", null ],
     [ "myProcessPacketCB", "classArClientBase.html#aa338beb2b2542ab9fe95bb4bc5d4a26e", null ],
     [ "myProcessPacketUdpCB", "classArClientBase.html#a04c61af74d790add44bae254b66e6966", null ],
     [ "myQuiet", "classArClientBase.html#af4a14693fd1eb0990ca77adc1532d3f3", null ],

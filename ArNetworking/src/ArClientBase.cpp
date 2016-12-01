@@ -1,3 +1,29 @@
+/*
+Adept MobileRobots Robotics Interface for Applications (ARIA)
+Copyright (C) 2004-2005 ActivMedia Robotics LLC
+Copyright (C) 2006-2010 MobileRobots Inc.
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
+
+     This program is free software; you can redistribute it and/or modify
+     it under the terms of the GNU General Public License as published by
+     the Free Software Foundation; either version 2 of the License, or
+     (at your option) any later version.
+
+     This program is distributed in the hope that it will be useful,
+     but WITHOUT ANY WARRANTY; without even the implied warranty of
+     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+     GNU General Public License for more details.
+
+     You should have received a copy of the GNU General Public License
+     along with this program; if not, write to the Free Software
+     Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+If you wish to redistribute ARIA under different terms, contact 
+Adept MobileRobots for information about a commercial version of ARIA at 
+robots@mobilerobots.com or 
+Adept MobileRobots, 10 Columbia Drive, Amherst, NH 03031; +1-603-881-7960
+*/
 
 #include "Aria.h"
 #include "ArExport.h"
@@ -17,8 +43,8 @@
 AREXPORT ArClientBase::ArClientBase() :
   myLogPrefix(""),
   myProcessPacketCB(this, &ArClientBase::processPacket, NULL, true),
-  myProcessPacketUdpCB(this, &ArClientBase::processPacketUdp)
-
+  myProcessPacketUdpCB(this, &ArClientBase::processPacketUdp),
+  myHost(""), myPort(-1)
 {
   myDataMutex.setLogName("ArClientBase::myDataMutex");
   myClientMutex.setLogName("ArClientBase::myClientMutex");
@@ -282,6 +308,7 @@ ArClientBase::internalNonBlockingConnectStart(
   myStartedConnection.setToNow();
   
   myHost = host;
+  myPort = port;
   myQuiet = !log;
   myTcpReceiver.setQuiet(myQuiet);
   if (user != NULL)
@@ -1275,8 +1302,8 @@ void ArClientBase::buildList(ArNetPacket *packet)
   unsigned int command;
   char name[512];
   char description[512];
-  char argDesc[512];
-  char retDesc[512];
+  char argDesc[1024];
+  char retDesc[1024];
   char commandGroup[512];
   char dataFlags[512];
 
@@ -1653,10 +1680,20 @@ parameters or arguments along with the request.
 AREXPORT bool ArClientBase::request(const char *name, long mSec, 
 				    ArNetPacket *packet)
 {
+  unsigned int command = findCommandFromName(name);
+
+  if (command == 0)
+  {
+    ArLog::log(ArLog::Normal, 
+	       "%sRequesting data for \"%s\", but it doesn't exist", 
+	       myLogPrefix.c_str(), name);
+    return false;
+  }
+  
   ArLog::log(myVerboseLogLevel, 
              "%sRequesting data for \"%s\"", 
              myLogPrefix.c_str(), name);
-  return requestByCommand(findCommandFromName(name), mSec, packet);
+  return requestByCommand(command, mSec, packet);
 }
 
 /**
@@ -1825,26 +1862,81 @@ AREXPORT bool ArClientBase::requestOnceByCommandUdp(unsigned int command,
 AREXPORT bool ArClientBase::requestOnceWithString(const char *name, 
 						  const char *str)
 {
-  std::map<std::string, unsigned int>::iterator it;
-
-  myMapsMutex.lock();
-  if ((it = myNameIntMap.find(name)) == myNameIntMap.end())
+  unsigned int command = findCommandFromName(name);
+  if(command == 0)
   {
     ArLog::log(ArLog::Normal, 
        "%sRequesting data for \"%s\" but no data with that name exists", 
 	       myLogPrefix.c_str(), name);
-    myMapsMutex.unlock();
+    //myMapsMutex.unlock();
     return false;
   }
-  myMapsMutex.unlock();
+
   ArLog::log(myVerboseLogLevel, 
-             "%sRequesting data once for \"%s\"", 
-             myLogPrefix.c_str(), name);
+             "%sRequesting data once for \"%s\" [%s]", 
+             myLogPrefix.c_str(), name, str);
   
   ArNetPacket tempPacket;
   tempPacket.strToBuf(str);
-  tempPacket.setCommand((*it).second);
+  tempPacket.setCommand(command);
   return sendPacketTcp(&tempPacket);
+}
+
+AREXPORT bool ArClientBase::requestOnceWithInt16(const char *name, ArTypes::Byte2 val)
+{
+  unsigned int command = findCommandFromName(name);
+  if(command == 0)
+  {
+    ArLog::log(ArLog::Normal, 
+       "%sRequesting data for \"%s\" but no data with that name exists", 
+	       myLogPrefix.c_str(), name);
+    return false;
+  }
+  ArLog::log(myVerboseLogLevel, 
+             "%sRequesting data once for \"%s\" [%d]", 
+             myLogPrefix.c_str(), name, val);
+  ArNetPacket p;
+  p.byte2ToBuf(val);
+  p.setCommand(command);
+  return sendPacketTcp(&p);
+}
+
+AREXPORT bool ArClientBase::requestOnceWithInt32(const char *name, ArTypes::Byte4 val)
+{
+  unsigned int command = findCommandFromName(name);
+  if(command == 0)
+  {
+    ArLog::log(ArLog::Normal, 
+       "%sRequesting data for \"%s\" but no data with that name exists", 
+	       myLogPrefix.c_str(), name);
+    return false;
+  }
+  ArLog::log(myVerboseLogLevel, 
+             "%sRequesting data once for \"%s\" [%d]", 
+             myLogPrefix.c_str(), name, val);
+  ArNetPacket p;
+  p.byte4ToBuf(val);
+  p.setCommand(command);
+  return sendPacketTcp(&p);
+}
+
+AREXPORT bool ArClientBase::requestOnceWithDouble(const char *name, double val)
+{
+  unsigned int command = findCommandFromName(name);
+  if(command == 0)
+  {
+    ArLog::log(ArLog::Normal, 
+       "%sRequesting data for \"%s\" but no data with that name exists", 
+	       myLogPrefix.c_str(), name);
+    return false;
+  }
+  ArLog::log(myVerboseLogLevel, 
+             "%sRequesting data once for \"%s\" [%f]", 
+             myLogPrefix.c_str(), name, val);
+  ArNetPacket p;
+  p.doubleToBuf(val);
+  p.setCommand(command);
+  return sendPacketTcp(&p);
 }
 
 /**

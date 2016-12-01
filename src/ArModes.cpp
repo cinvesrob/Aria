@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -502,6 +503,8 @@ AREXPORT ArModeCamera::ArModeCamera(ArRobot *robot, const char *name,
   myCom2CB(this, &ArModeCamera::com2),
   myCom3CB(this, &ArModeCamera::com3),
   myCom4CB(this, &ArModeCamera::com4),
+  myUSBCom0CB(this, &ArModeCamera::usb0),
+  myUSBCom9CB(this, &ArModeCamera::usb9),
   myAux1CB(this, &ArModeCamera::aux1),
   myAux2CB(this, &ArModeCamera::aux2),
   myPanAmount(5),
@@ -557,7 +560,7 @@ AREXPORT void ArModeCamera::deactivate(void)
 
 AREXPORT void ArModeCamera::userTask(void)
 {
-  if (myExercising && myCam != NULL && myLastExer.mSecSince() > 10000)
+  if (myExercising && myCam != NULL && myLastExer.mSecSince() > 7000)
   {
     switch (myExerState) {
     case CENTER:
@@ -796,6 +799,18 @@ AREXPORT void ArModeCamera::com4(void)
   portToMovement();
 }
 
+AREXPORT void ArModeCamera::usb0(void)
+{
+  myConn.setPort("/dev/ttyUSB0");
+  portToMovement();
+}
+
+AREXPORT void ArModeCamera::usb9(void)
+{
+  myConn.setPort("/dev/ttyUSB9");
+  portToMovement();
+}
+
 AREXPORT void ArModeCamera::aux1(void)
 {
   myCam->setAuxPort(1);
@@ -834,14 +849,19 @@ void ArModeCamera::cameraToAux(void)
 
 void ArModeCamera::portToMovement(void)
 {
+  ArLog::log(ArLog::Normal, "ArModeCamera: Opening connection to camera on port %s", myConn.getPortName());
   if (!myConn.openSimple())
   {
     ArLog::log(ArLog::Terse, 
-	       "\n\nCould not open camera on that port, try another port.\n");
+	       "\n\nArModeCamera: Could not open camera on that port, try another port.\n");
     helpPortKeys();
     return;
   }
-  myCam->setDeviceConnection(&myConn);
+  if(!myCam->setDeviceConnection(&myConn))
+  {
+    ArLog::log(ArLog::Terse, "\n\nArModeCamera: Error setting device connection!\n");
+    return;
+  }
   myCam->init();
   myRobot->setPTZ(myCam);
   myState = STATE_MOVEMENT;
@@ -931,6 +951,8 @@ void ArModeCamera::takePortKeys(void)
   addKeyHandler('2', &myCom2CB);
   addKeyHandler('3', &myCom3CB);
   addKeyHandler('4', &myCom4CB);
+  addKeyHandler('5', &myUSBCom0CB);
+  addKeyHandler('6', &myUSBCom9CB);
 }
 
 void ArModeCamera::giveUpPortKeys(void)
@@ -939,6 +961,8 @@ void ArModeCamera::giveUpPortKeys(void)
   remKeyHandler(&myCom2CB);
   remKeyHandler(&myCom3CB);
   remKeyHandler(&myCom4CB);
+  remKeyHandler(&myUSBCom0CB);
+  remKeyHandler(&myUSBCom9CB);
 }
 
 void ArModeCamera::helpPortKeys(void)
@@ -949,6 +973,8 @@ void ArModeCamera::helpPortKeys(void)
   ArLog::log(ArLog::Terse, "%13s:  select COM2 or /dev/ttyS1", "'2'");
   ArLog::log(ArLog::Terse, "%13s:  select COM3 or /dev/ttyS2", "'3'");
   ArLog::log(ArLog::Terse, "%13s:  select COM4 or /dev/ttyS3", "'4'");
+  ArLog::log(ArLog::Terse, "%13s:  select /dev/ttyUSB0", "'5'");
+  ArLog::log(ArLog::Terse, "%13s:  select /dev/ttyUSB9", "'6'");
 }
 
 void ArModeCamera::takeAuxKeys(void)
@@ -1856,7 +1882,7 @@ AREXPORT void ArModeLaser::userTask(void)
 	     farDist, farAngle);
     else
       printf("No far reading found");
-    printf("         %u readings   ", readings->size());
+    printf("         %lu readings   ", readings->size());
     myLaser->unlockDevice();
     fflush(stdout);
   }

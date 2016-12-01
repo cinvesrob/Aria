@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -24,10 +25,11 @@ robots@mobilerobots.com or
 Adept MobileRobots, 10 Columbia Drive, Amherst, NH 03031; +1-603-881-7960
 */
 
+%{
         /* SWIG 1.3 Wrapper Interface Definition for Aria */
+%}
 
 #ifdef SWIGPYTHON
-/*#warning Defining ARIA wrapper interface for Python*/
 
 /* We need the module declared as "AriaPy" here so that other modules
    (like ArNetworking or ARNL) that use this wrapper will know what
@@ -67,6 +69,8 @@ Adept MobileRobots, 10 Columbia Drive, Amherst, NH 03031; +1-603-881-7960
 #include "wrapper_Functors.h"
 
 #include <cstddef>
+
+#pragma GCC diagnostic ignored "-Wunused-label"
 %}
 
 /* Filter out warnings about setting const char* members in these classes--
@@ -125,7 +129,9 @@ Adept MobileRobots, 10 Columbia Drive, Amherst, NH 03031; +1-603-881-7960
 %}
 
 
-/* In python, use typemaps to convert function objects to ArFunctor subclasses */
+/* In python, use typemaps to convert function objects (python functions) passed
+ * into methods etc. into the appropriate ArFunctor subclasses  (see definitions
+ * in wrapper_Functors.h) */
 
 #ifdef SWIGPYTHON
 
@@ -147,12 +153,35 @@ Adept MobileRobots, 10 Columbia Drive, Amherst, NH 03031; +1-603-881-7960
   $1 = PyCallable_Check($input);
 }
 
+%typemap(in) ArRetFunctor1<bool, ArRobotPacket*>* {
+  $1 = new ArPyPacketHandlerFunctor($input);
+}
+%typecheck(SWIG_TYPECHECK_POINTER) ArRetFunctor1<bool, ArRobotPacket*>* {
+  $1 = PyCallable_Check($input);
+}
+
+%typemap(in) ArFunctor1<const char*>* {
+  $1 = new ArPyFunctor1_String($input);
+}
+%typecheck(SWIG_TYPECHECK_POINTER) ArFunctor1<const char*>* {
+  $1 = PyCallable_Check($input);
+}
+
+/*
+%typemap(in) ArFunctor1<int>* {
+  $1 = new ArPyFunctor1<int>($input);
+}
+%typecheck(SWIG_TYPECHECK_POINTER) ArFunctor1<int>* {
+  $1 = PyCallable_Check($input);
+}
+*/
+
 #endif /* ifdef SWIGPYTHON  */
 
 
 
 
-/* In Java, enable directors so you can subclass ArFunctors. */
+/* In Java, enable directors instead so you can subclass ArFunctors. */
 
 #ifdef SWIGJAVA
 
@@ -163,6 +192,8 @@ Adept MobileRobots, 10 Columbia Drive, Amherst, NH 03031; +1-603-881-7960
 %feature("director") ArRetFunctor1;
 %feature("director") ArFunctor1<ArRobotPacket*>;
 %feature("director") ArRetFunctor1<bool, ArRobotPacket*>;
+%feature("director") ArFunctor1<const char*>;
+%feature("director") ArFunctor1<int>;
 
 #endif
 
@@ -412,14 +443,21 @@ struct ArJoyVec3i { int x, y, z; };
 
 /* Give names to some standard library container template types. 
  * In Java, you must use the special template instance names defined
- * here to subclass from, e.g. "class MyPacketHandler extends ArRetFunctor1_Bool_ArRobotPacketP" 
+ * here e.g. "class MyPacketHandler extends ArRetFunctor1_Bool_ArRobotPacketP" 
+ * or "ArPoseVector v = new ArPoseVector();" or "ArLineSegmentVector lines =
+ * map.getLines();".   (In Python variable type declarations are omitted and
+ * for functors you can just pass or reference a named callable function
+ * directly rather than creating an ArFunctor-derived object.)
  */
 
 
 %include "std_vector.i"
+%template(ArPoseVector) std::vector<ArPose>;
 %template(ArPoseWithTimeVector) std::vector<ArPoseWithTime>;
 %template(ArSensorReadingVector) std::vector<ArSensorReading>;
 %template(DoubleVector) std::vector<double>;
+%template(ArLineSegmentVector) std::vector<ArLineSegment>;
+%template(ArPTZPtrVector) std::vector<ArPTZ*>;
 
 #include <list>
 /*#ifndef SWIGJAVA*/ /* doesn't have std_list.i */
@@ -484,6 +522,7 @@ struct ArJoyVec3i { int x, y, z; };
 %template(ArRetFunctor1_Bool_ArgumentBuilder) ArRetFunctor1<bool, ArArgumentBuilder>;
 %template(ArRetFunctor1_Bool_ArgumentBuilderP) ArRetFunctor1<bool, ArArgumentBuilder*>;
 %template(ArRetFunctor1_VoidP_VoidP) ArRetFunctor1<void*, void*>;
+/*%template(ArPyPacketHandlerFunctor) ArRetFunctor1<bool, ArRobotPacket*>;*/
 
 %include "ArACTS.h"
 %include "ArAMPTU.h"
@@ -627,7 +666,7 @@ struct ArJoyVec3i { int x, y, z; };
 %extend ArPose {
    char* __str__() {
       static char tmp[256];
-      snprintf(tmp, 256, "(X:%.4f, Y:%.4f, T:%.4f)", self->getX(), self->getY(), self->getTh());
+      snprintf(tmp, 256, "(X:%.2f, Y:%.2f, T:%.2f)", self->getX(), self->getY(), self->getTh());
       return &tmp[0];
    }
 }
@@ -664,6 +703,8 @@ struct ArJoyVec3i { int x, y, z; };
 #endif
 
 
+/* A version of ArSocket::read() that returns the string rather than adding data
+ * to supplied buffer. */
 %extend ArSocket {
   std::string read(size_t len, unsigned int msWait) {
     char *buf = (char*)malloc(len);
@@ -683,7 +724,7 @@ struct ArJoyVec3i { int x, y, z; };
 }
 
 
-/* Extend the ArJoyHandler class to return structs with vector values, which is
+/* Extend the ArJoyHandler class for Java to return structs with vector values, which is
  * easier to use than return via pointer arguments. */
 #ifndef SWIGPYTHON // In Python the original functions return a nicer python tuple
 
@@ -732,6 +773,161 @@ struct ArJoyVec3i { int x, y, z; };
 */
 
 
+/* Easier to learn and use ArRobot task accessors */
+%extend ArRobot {
+  ///  Add user task at position 50 with given name taken from @a
+  ///  functor's name, with lock.
+  ///  @see addUserTask()
+  ///  @see addSensorInterpTask(ArFunctor *)
+  /// @ingroup easy
+  /// TODO rename
+  ArSyncTask *addUserTask(ArFunctor *functor, const char *name = NULL) {
+    self->lock();
+    if(!name) name = functor->getName();
+    ArLog::debug("functor name is %s", name);
+    if(name == NULL || strlen(name) == 0)
+      name = "unnamed";
+    if(!self->addUserTask(name, 50, functor))
+    {
+      self->unlock();
+      return NULL;
+    }
+    ArSyncTask *t = self->findTask(functor);
+    self->unlock();
+    return t;
+  }
+
+  ///  Add sensor interpretation task at position 50 with given name or taken from @a
+  ///  functor's name, with locking. Simplified version of addSensorInterpTask()
+  ///  @see addSensorInterpTask()
+  ///  @see addUserTask(ArFunctor *)
+  ///  @ingroup easy
+  /// @threadsafe
+  /// TODO rename
+  ArSyncTask *addSensorInterpTask(ArFunctor *functor, const char *name = NULL) {
+    self->lock();
+    if(!name) name = functor->getName();
+    if(name == NULL || strlen(name) == 0)
+      name = "unnamed";
+    if(!self->addSensorInterpTask(name, 50, functor))
+    {
+      self->unlock();
+      return NULL;
+    }
+    ArSyncTask *t = self->findTask(functor);
+    self->unlock();
+    return t;
+  }
+
+  /// Remove any task with the given name, with lock
+  /// @ingroup easy
+  /// @threadsafe
+  void removeTask(const char *name)
+  {
+    self->lock();
+    // todo search tasks here instead of doing it twice via
+    // these two calls
+    self->remUserTask(name);
+    self->remSensorInterpTask(name);
+    self->unlock();
+  }
+
+
+  ///  @ingroup easy
+  /// TODO merge with replaceUserTask() to be replaceTask().
+  /// @threadsafe
+  bool replaceSensorInterpTask(ArFunctor *newFunctor, const char *name) {
+    self->lock();
+    self->remSensorInterpTask(name);
+    // TODO use position value of old task rather than assuming 50
+    bool r = self->addSensorInterpTask(name, 50, newFunctor);
+    self->unlock();
+    return r;
+  }
+  /// @ingroup easy
+  /// TODO merge with replaceSensorInterpTask() to be replaceTask().
+  bool replaceUserTask(ArFunctor *newFunctor, const char *name) {
+    self->lock();
+    self->remUserTask(name);
+    // TODO use position value of old task rather than assuming 50
+    bool r = self->addUserTask(name, 50, newFunctor);
+    self->unlock();
+    return r;
+  }
+
+  /// Remove any task with the given functor, with lock
+  /// @ingroup easy
+  /// @threadsafe
+  void removeTask(ArFunctor *f)
+  {
+    self->lock();
+    // todo search tasks here instead of doing it twice via
+    // these two calls
+    self->remUserTask(f);
+    self->remSensorInterpTask(f);
+    self->unlock();
+  }
+}
+
+
+#ifdef SWIGPYTHON
+/* Utilities to search network for WiBoxes and add connection arguments, and single
+ * functions for typical ARIA robot control program setup.  */
+/* TODO move into ARIA C++ library? */
+/* TODO also try to detect USB and serial ports. */
+%pythoncode %{
+
+def chooseWiBox():
+  import DiscoverWiBox  
+  import sys
+  a = DiscoverWiBox.choose('Aria')
+  if a != None:
+    sys.argv += ['-remoteHost', a, '-laserPortType', 'tcp', '-laserPort', a, '-remoteLaserTcpPort', '8102']
+
+
+Aria.chooseWiBox = staticmethod(chooseWiBox)
+Aria.chooseConnection = staticmethod(chooseWiBox)
+
+
+def containsAny(l, s):
+  for i in l:
+    if i in s:
+      return True
+  return False
+
+# Todo add to ARIA C++ library? Merge with AriaSystem from rosaria?
+# todo allow reconnection or disconnnect/destroy then connect again
+def connectToRobot():
+  import sys
+  try:
+    return Aria._robot
+  except AttributeError:
+    pass # continue
+  if not containsAny(sys.argv, set(['-rh', '-remoteHost', '-robotPort', '-rp', '--rh', '--remoteHost', '--robotPort', '--rp'])):
+    chooseWiBox()
+  Aria.init()
+  import sys
+  Aria._parser = ArArgumentParser(sys.argv)
+  Aria._parser.loadDefaultArguments()
+  Aria._robot = ArRobot()
+  print('Aria: Connecting to robot...')
+  Aria._con = ArRobotConnector(Aria._parser, Aria._robot)
+  if not Aria.parseArgs():
+     Aria.logOptions()
+     # todo raise Exception(
+     Aria.exit(1)
+  if not Aria._con.connectRobot():
+     print('Error connecting to robot.')
+     # todo raise Exception
+     Aria.exit(2)
+  print('Aria: Connected.')
+  return Aria._robot
+  
+Aria.connectToRobot = staticmethod(connectToRobot)
+Aria.connectRobot = staticmethod(connectToRobot)
+
+%}
+#endif
 
 
 /* TODO: typemap to check if a pointer returned by a method is NULL, and
@@ -740,3 +936,6 @@ struct ArJoyVec3i { int x, y, z; };
    object value?  (Also falso boolean returns for status?)
 */
 
+%{
+/* End SWIG 1.3 Wrapper Interface Definition for Aria */
+%}

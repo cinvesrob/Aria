@@ -1,6 +1,12 @@
 var classArGripper =
 [
-    [ "Type", "classArGripper.html#a565fcee58e47e92596e472c34f359368", null ],
+    [ "Type", "classArGripper.html#a565fcee58e47e92596e472c34f359368", [
+      [ "QUERYTYPE", "classArGripper.html#a565fcee58e47e92596e472c34f359368a74fbaa2ae0bcab24136ea7d6db3a7897", null ],
+      [ "GENIO", "classArGripper.html#a565fcee58e47e92596e472c34f359368a2ecbc5944c1ea48a2f9676793ca96243", null ],
+      [ "USERIO", "classArGripper.html#a565fcee58e47e92596e472c34f359368a2aa4f32bf4b551947ea158e00e8be4f2", null ],
+      [ "GRIPPAC", "classArGripper.html#a565fcee58e47e92596e472c34f359368a689386fc14c0c100e52a01b494e843e0", null ],
+      [ "NOGRIPPER", "classArGripper.html#a565fcee58e47e92596e472c34f359368ae1f5be72993ec3d941480086a6948e57", null ]
+    ] ],
     [ "ArGripper", "classArGripper.html#a363fc3f41b9415c12e544ca9f58a6a94", null ],
     [ "~ArGripper", "classArGripper.html#a0def6f8d0700d45d12ada89a95c00791", null ],
     [ "connectHandler", "classArGripper.html#a3ff9533dfd66d035e884785cb1d6663a", null ],

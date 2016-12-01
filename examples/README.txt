@@ -30,11 +30,11 @@ robotSyncTaskExample - simple example of ArRobot synchronized task callbacks
 lasers - Demonstrates how to connect to one or more laser rangefinder devices
 as defined in robot and program parameters, and obtain data from them.
 
-directMotionDemo - Drives the robot around using the basic direct
-motion commands (no ArActions or obstacle avoidance). it also runs the
-robot in its own thread, and has examples of connection handler callbacks.
+simpleMotionCommands - Drives the robot around using the basic direct
+motion commands (no ArActions or obstacle avoidance). 
 
-actionExample - Defines a couple of custom ArAction classes, and uses them.
+actionExample - Defines a couple of custom ArAction classes that generate
+robot motion requests, and uses them.
 
 actionGroup - Program that uses action groups to switch back and forth 
 between wander and teleop mode

@@ -1,9 +1,46 @@
 var classArSonarMTX =
 [
-    [ "Commands", "classArSonarMTX.html#ad4b1d3a913851276c536b7ea1eea5269", null ],
-    [ "Headers", "classArSonarMTX.html#a4aecead09a0799ae030fdaf96301ff35", null ],
-    [ "Sizes", "classArSonarMTX.html#a211fb1202a6095c77fa01369a106ff48", null ],
-    [ "SonarInfo", "classArSonarMTX.html#a264c9e608f0cadd8ca493fd2a4bd25c3", null ],
+    [ "Commands", "classArSonarMTX.html#ad4b1d3a913851276c536b7ea1eea5269", [
+      [ "ALIVE", "classArSonarMTX.html#ad4b1d3a913851276c536b7ea1eea5269ab330983bbb3fd4a9fb95cb1997a97eb4", null ],
+      [ "START_SCAN", "classArSonarMTX.html#ad4b1d3a913851276c536b7ea1eea5269a0955c80d3380ee84d80ecc996db1c692", null ],
+      [ "STOP_SCAN", "classArSonarMTX.html#ad4b1d3a913851276c536b7ea1eea5269a00cc14cbf392313de264f8c5ce92b3c7", null ],
+      [ "RESET", "classArSonarMTX.html#ad4b1d3a913851276c536b7ea1eea5269a538b94779654533cbfa09dfca79db127", null ],
+      [ "TAKE_SELF_ECHO", "classArSonarMTX.html#ad4b1d3a913851276c536b7ea1eea5269a13ff9a5ed122a2e592d72eedfec3ae7e", null ],
+      [ "GET_VERSION", "classArSonarMTX.html#ad4b1d3a913851276c536b7ea1eea5269a4b3781624fa951c7c24b67ee41c530de", null ],
+      [ "GET_NUM_TRANDUCERS", "classArSonarMTX.html#ad4b1d3a913851276c536b7ea1eea5269a67f0bb31bdf6662c656e27ffbb5de590", null ],
+      [ "GET_TRANSDUCER_MASK", "classArSonarMTX.html#ad4b1d3a913851276c536b7ea1eea5269a5014139e7cba45e4dcee10948ec3e46a", null ],
+      [ "SET_TRANSDUCER_MASK", "classArSonarMTX.html#ad4b1d3a913851276c536b7ea1eea5269a7b33f719eedce3fbeeb63ac02c01cd20", null ],
+      [ "GET_SONAR_DELAY", "classArSonarMTX.html#ad4b1d3a913851276c536b7ea1eea5269acf2e3335408fb47bda8d8b90ceb676e8", null ],
+      [ "SET_SONAR_DELAY", "classArSonarMTX.html#ad4b1d3a913851276c536b7ea1eea5269ae40ce09cbfa3ec38a3c2f910ab11e3c4", null ],
+      [ "GET_ECHO_SAMPLE_SIZE", "classArSonarMTX.html#ad4b1d3a913851276c536b7ea1eea5269a9c522fce90bfba140cd44fa3033d17fa", null ],
+      [ "SET_ECHO_SAMPLE_SIZE", "classArSonarMTX.html#ad4b1d3a913851276c536b7ea1eea5269a0e004f2ad088c43d364f5e284b2dc848", null ],
+      [ "GET_GAIN", "classArSonarMTX.html#ad4b1d3a913851276c536b7ea1eea5269a6fe73289aefa809135bb900a1b34e5cd", null ],
+      [ "SET_GAIN", "classArSonarMTX.html#ad4b1d3a913851276c536b7ea1eea5269a957f281bf9cbe0e6d751eab9a90cfbb6", null ],
+      [ "NUM_THRESHOLD_RANGES", "classArSonarMTX.html#ad4b1d3a913851276c536b7ea1eea5269a094507bc77b95bce1453b88e5f56aa40", null ],
+      [ "GET_THRESHOLDS", "classArSonarMTX.html#ad4b1d3a913851276c536b7ea1eea5269aaaa16aea4087fef1c2af02cd9bcaeb88", null ],
+      [ "SET_THRESHOLDS", "classArSonarMTX.html#ad4b1d3a913851276c536b7ea1eea5269a60a807f9488d8a364fbd21eee5fc40a3", null ],
+      [ "GET_NOISE_DELTA", "classArSonarMTX.html#ad4b1d3a913851276c536b7ea1eea5269a0d1d2490fe829212f1ec97ffe9d201b4", null ],
+      [ "SET_NOISE_DELTA", "classArSonarMTX.html#ad4b1d3a913851276c536b7ea1eea5269a81138081814c6876ffd711f58182ccc0", null ]
+    ] ],
+    [ "Headers", "classArSonarMTX.html#a4aecead09a0799ae030fdaf96301ff35", [
+      [ "HEADER1", "classArSonarMTX.html#a4aecead09a0799ae030fdaf96301ff35acf52e324bb15c5a5b2506ddc56f46abf", null ],
+      [ "HEADER2", "classArSonarMTX.html#a4aecead09a0799ae030fdaf96301ff35ab3afe635175a9b19b542e789fca341a4", null ]
+    ] ],
+    [ "Sizes", "classArSonarMTX.html#a211fb1202a6095c77fa01369a106ff48", [
+      [ "maxTransducers", "classArSonarMTX.html#a211fb1202a6095c77fa01369a106ff48aa2d907273a10b5c4055fa62a0999d190", null ]
+    ] ],
+    [ "SonarInfo", "classArSonarMTX.html#a264c9e608f0cadd8ca493fd2a4bd25c3", [
+      [ "SONAR_IS_CONFIGURED", "classArSonarMTX.html#a264c9e608f0cadd8ca493fd2a4bd25c3a6b6d0893c84ba5bd260082947d3d4e72", null ],
+      [ "SONAR_MAPPING", "classArSonarMTX.html#a264c9e608f0cadd8ca493fd2a4bd25c3a9726c9c3c0dcc5039ded07d9637f6d91", null ],
+      [ "SONAR_X", "classArSonarMTX.html#a264c9e608f0cadd8ca493fd2a4bd25c3aed9d31029d1df649301358e32317b697", null ],
+      [ "SONAR_Y", "classArSonarMTX.html#a264c9e608f0cadd8ca493fd2a4bd25c3a58caa51d3f996c305d6e079c4a5661ea", null ],
+      [ "SONAR_TH", "classArSonarMTX.html#a264c9e608f0cadd8ca493fd2a4bd25c3a5ae68cf7448929a63ada9786073853dd", null ],
+      [ "SONAR_GAIN", "classArSonarMTX.html#a264c9e608f0cadd8ca493fd2a4bd25c3a244cfc8010a0e83e752b40e14665f2a5", null ],
+      [ "SONAR_DETECTION_THRES", "classArSonarMTX.html#a264c9e608f0cadd8ca493fd2a4bd25c3ab6ee26ba074cf81d813e270f36817027", null ],
+      [ "SONAR_MAX_RANGE", "classArSonarMTX.html#a264c9e608f0cadd8ca493fd2a4bd25c3a9b397bd2e3dec3393ed4d79d7ee3f79a", null ],
+      [ "SONAR_USE_FOR_AUTONOMOUS_DRIVING", "classArSonarMTX.html#a264c9e608f0cadd8ca493fd2a4bd25c3a7ff5f8079653c23bf4a19850019059f2", null ],
+      [ "SONAR_LAST_READING", "classArSonarMTX.html#a264c9e608f0cadd8ca493fd2a4bd25c3ae20afa796d48ccacdad5b27560bb98ac", null ]
+    ] ],
     [ "ArSonarMTX", "classArSonarMTX.html#a0ac8a3f6500c9c3840d8fe9472fbf50e", null ],
     [ "~ArSonarMTX", "classArSonarMTX.html#a1bacb3c0f7b912e9a3ad9839ddb01002", null ],
     [ "addDisconnectOnErrorCB", "classArSonarMTX.html#a3ae7a9e283901ac20bd32a1a4f3aad57", null ],

@@ -19,7 +19,7 @@ var classArRetFunctor3C =
     [ "setP3", "classArRetFunctor3C.html#a0220fd5edf4ee84d1aab96ec3c8a1407", null ],
     [ "setThis", "classArRetFunctor3C.html#a242ee5ea8617dc20ce081bb11e9535df", null ],
     [ "setThis", "classArRetFunctor3C.html#a8c9d61f8c4f68f6a9d66868626d54f9b", null ],
-    [ "myFunc", "classArRetFunctor3C.html#a44f824102b765d1e69454559319d84e5", null ],
+    [ "myFunc", "classArRetFunctor3C.html#a589654884591453152b2c0d36f5e2881", null ],
     [ "myObj", "classArRetFunctor3C.html#aadee7e281cf00db3af2fd76c1c4d9127", null ],
     [ "myP1", "classArRetFunctor3C.html#aef22ea4dc1fbae929f982b8e1ec340c8", null ],
     [ "myP2", "classArRetFunctor3C.html#a2828e14efef1d83005e03be66fff47a5", null ],

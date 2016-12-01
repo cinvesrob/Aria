@@ -1,0 +1,740 @@
+/* This file is processed by Doxygen to include in the API Reference manual.
+   To view the formatted output, see docs/RemoteRequestAPI.html.
+   TODO: convert to Markdown once our default OS includes doxygen 1.8.0 
+*/
+
+/**
+
+@page RemoteRequestAPI ArNetworking Remote Request API List
+
+The following is a list of all modes and remote requests provided by various server
+classes in ArNetworking. To include a request in an ArNetworking server
+program, the program must create a server object of the type indicated. See the
+API documentation for the server object class for details on how it behaves.
+
+Other libraries including ARNL, MOGS, and ArVideo provide additional ArNetworking services.
+See the API reference documentation for those libraries for more details.
+
+The list below shows the request name, the class in the ArNetworking library
+that provides that request, and a description of the request and required
+and optional arguments for the request.
+
+In general, server and client classes can also be used via the Python and Java
+interfaces, as well as the native C++ library.   The ArNetworking Matlab
+interface provides a smaller set of functions for sending requests and receiving
+key data from servers such as robot state updates.
+
+@tableofcontents
+
+
+For a client to communicate with a server, it must create an ArClientBase
+instance, and connect it to the server.  Using ArArgumentParser and
+ArSimpleClientConnector, the server address, port and other information
+about connecting to the server may be given as command line options.
+
+For example, in C++:
+
+@code{.cpp}
+#include "Aria.h"
+#include "ArNetworking.h"
+  
+int main(int argc, char **argv)
+{
+  Aria::init();
+  ArClientBase client;
+  ArArgumentParser argParser(&argc, argv);
+  ArClientSimpleConnector clientConnector(&argParser);
+
+  argParser.loadDefaultArguments();
+  if(!Aria::parseArgs())
+  {
+    Aria::logOptions();
+    Aria::exit(1);
+  }
+
+  if(!clientConnector.connectClient(&client))
+  {
+    if (client.wasRejected())
+      printf("Server '%s' rejected connection, exiting\n", client.getHost());
+    else
+      printf("Could not connect to server '%s', exiting\n", client.getHost());
+    Aria::exit(1);
+  } 
+
+  ArLog::log(ArLog::Normal, "Connected to server.");
+
+  client.run();
+}
+@endcode
+
+Or, in Python:
+@code{.py}
+import AriaPy
+import sys
+Aria.init()
+client = ArClientBase()
+argParser = ArArgumentParser(sys.argv)
+clientConnector = ArClientSimpleConnector(argParser)
+
+argParser.loadDefaultArguments()
+if not Aria.parseArgs():
+  Aria.logOptions();
+  Aria.exit(1);
+
+if not clientConnector.connectClient(client):
+  print 'Could not connect to server %s, exiting' % (client.getHost())
+  Aria.exit(1);
+
+ArLog.log(ArLog.Normal, 'Connected to server.')
+
+client.run()
+@endcode
+
+To run the above programs, connecting to a server with address 10.0.126.32, and
+the default ArNetworking port 7272, use the following command line arguments:
+
+@code
+  -serverHost 10.0.126.32
+@endcode
+
+Run with <tt>-help</tt> to see a full list of command line arguments.
+
+To send a request to the server once with no fields, use ArClientBase::requestOnce(). For
+example, in C++:
+
+@code{.cpp}
+ client.requestOnce("stop");
+@endcode
+
+Similarly, in Python:
+
+@code{.py}
+  client.requestOnce('stop')
+@endcode
+
+To send continuous requests, use ArClientBase::request(). For example, to
+request "updateNumbers" from ArServerInfoRobot every 250 ms:
+
+C++:
+
+@code{.cpp}
+ client.request("updateNumbers", 250);
+@endcode
+
+Similarly in Python:
+
+@code{.py}
+  client.request('updateNumbers', 250)
+@endcode
+
+
+To send a request once with one argument, use ArClientBase::requestOnceWithInt16(),
+ArClientBase::requestOnceWithInt32(), ArClientBase::requestOnceWithString(), 
+or ArClientBase::requestOnceWithDouble(). For example:
+
+C++:
+@code{.cpp}
+ client.requestOnceWithDouble("turnToHeading", -90.0);
+@endcode
+
+Python:
+@code{.py}
+  client.requestOnceWithDouble('turnToHeading', -90.0)
+@endcode
+
+C++:
+@code{.cpp}
+ client.requestOnceWithString("gotoGoal", "Goal 5");
+@endcode
+
+python:
+@code{.py}
+  client.requestOnceWithString('gotoGoal', 'Goal 5')
+@endcode
+
+And similar for integers (either 16-bit/2-byte integers, or 32-bit/4-byte
+integers.)
+
+To include multiple argument fields with a request, you must construct an ArNetPacket
+object, placing fields into it in order for the arguments. For example:
+
+C++:
+@code{.cpp}
+ ArNetPacket p;
+ p.doubleToBuf(100.0);
+ p.doubleToBuf(60.0);
+ p.doubleToBuf(100.0);
+ p.doubleToBuf(0.0);
+ client.requestOnce("ratioDrive", &p);
+@endcode
+
+Python:
+@code{.py}
+  p = ArNetPacket()
+  p.doubleToBuf(100.0)
+  p.doubleToBuf(60.0)
+  p.doubleToBuf(100.0)
+  p.doubleToBuf(0.0)
+  client.requestOnce('ratioDrive', p)
+@endcode
+
+If a server does not provide a given request, then it will be ignored (possibly
+with a warning logged). You can view a list of requests accepted by a server by
+running the example clientCommandLister (see clientCommandLister.cpp).
+
+You can send requests from your program's main loop, from a callback added to
+ArNetworking's processing cycle via ArClientBase::addCycleCallback(), from 
+an ArRobot task callback, or from a separate thread (e.g. using ArAsyncTask).
+Make sure to lock objects that share data with different threads while accessing
+them. (Refer to class documentation for information on locking or multi-thread 
+use.)
+
+The ArNetworking Matlab interface also provides functions for sending simple
+requests (with number and string values.)
+
+Some requests send reply packets. To receive these replies in your client, add
+a handler callback to the ArClientBase object using ArClientBase::addHandler():
+
+@code
+ todo
+@endcode
+
+See ArClientBase for more information on using it in a client program.
+
+@tableofcontents
+
+@section modes Robot Control Modes
+
+@subsection stopmode Stop mode
+
+<table><tr><th>Mode Name:</th><td>Stop</td></tr></table>
+
+This mode is implemented on a server by creating an ArServerModeStop object.
+
+<table>
+<tr> <th> Request </th> <th> Arguments </th> <th> Description </th> </tr>
+<tr> <td> stop </td> </td> <td> No arguments. </td> <td> Stop the robot and enter stop mode. </td> </tr>
+</table>
+
+@subsection ratiodrivemode Ratio Drive Mode
+
+<table>
+<tr><th>Mode Name:</th></tr>
+<td>Normal Mode:</td><td>Drive</td></tr>
+<td>Unsafe Drive Mode:</td><td>UNSAFE Drive</td></tr>
+</table>
+
+This mode is implemented on a server by creating an ArServerModeRatioDrive object.
+
+Clients may use the ArClientRatioDrive utility to send requests, if desired.
+ 
+<table>
+<tr> <th> Request </th>  <th> Arguments </th> <th> Description </th> </tr>
+<tr> <td> ratioDrive </td>  <td>double:
+translation amount (0.0,100.0); double: rotation amount (0.0,100.0); double:
+throttle (0.0,100.0); [optional: double: lateral velocity amount (0.0,100.0)]</td> <td>Drive
+robot at given percentages of maximum configured velocities (via server's ArConfig) </td>
+</tr>
+<tr> <td>setSafeDrive</td> <td>byte: safe drive state</td>
+<td>Set whether to limit robot motion based on
+sensing, map, etc. Provide state 1 to enable, 0 to disable.</td></tr>
+<tr> <td>getSafeDrive</td> <td>none</td> 
+<td>Reply with getSafeDrive packet containing: byte: safe drive state (1 means
+enabled, 0 means disabled).</td>
+</tr>
+</table>
+
+@subsection jogpositionmode Jog Position Mode
+
+<table><tr><th>Mode Name:</th><td>Jog</td></tr></table>
+
+This mode is implemented on a server by creating an ArServerModeJogPosition object.
+
+<table>
+<tr> <th>Request</th> <th>Arguments</th> <th>Description</th> </tr>
+<tr> <td>moveDistance</td> <td>double: Distance in mm </td> <td> Move forward or backward by the specified distance (milimeters), then stop.</td> </tr>
+<tr> <td>turnByAngle</td>  <td>double: Angle in deg </td> <td> Rotate the given number of degrees relative to current heading.</td>  </tr>
+<tr> <td>turnToHeading</td> <td>double: Heading in deg </td> <td> Rotate to the given heading (absolute)</td> </tr>
+</table>
+
+This mode will become active if any of the above requests are received.  any
+active robot motion will be stopped once the mode becomes active, and also upon
+deactivation before switching to a new mode.
+Each moveDistance request interrupts any previous moveDistance request if
+still active.  Each turnByAngle or turnToHeading interrupts any previous turnByAngle
+or turnToHeading if still active.
+For continuous velocity control, see ArServerModeRatioDrive instead.
+Motion will be limited based on obstacles sensed. Clearences may be
+configured in configuration (ArConfig) if addToConfig() is called to
+associate with an ArConfig object.  (E.g.  <code>motionMode.addToConfig(Aria::getConfig())</code>).
+
+@subsection wandermode Wander Mode
+
+<table><tr><th>Mode Name:</th><td>Wander</td></tr></table>
+
+This mode is implemented on a server by creating an ArServerModeWander object.
+
+<table>
+<tr> <th> Request </th>  <th> Arguments </th> <th> Description </th> </tr>
+<tr> <td> wander </td> <td> no arguments </td> <td> Enter wander mode. Begin randomly wandering. </td> </tr>
+</table>
+
+For example:
+@code{.cpp}
+  client.requestOnce("wander");
+@endcode
+
+
+
+@subsection dockmode Dock Mode (ARNL only)
+
+<table><tr><th>Mode Name:</th><td>Dock</td></tr></table>
+
+
+This mode is implemented in ARNL only, by ArServerModeDock.  
+
+When commanded to
+dock, ARNL is used to navigate the robot to an automatic recharging station
+(aka docking station or dock), and attach to the docking station.
+
+<table>
+<tr> <th>Request</th> <th>Arguments</th> <th>Description</th> </tr>
+<tr> <td>dock</td>    <td>none</td>      <td>Enter dock mode and send the robot
+to the docking station, according to how it was configured (configure using
+MobileEyes).</td>
+</table>
+
+For example:
+@code{.cpp}
+  client.requestOnce("dock");
+@endcode
+
+
+@subsection gotopointmode Goal Mode (Navigation with ARNL/MOGS only)
+
+<table>
+<tr> <th>Mode Name:</th>  <th>Normal Status Value</th> <th>Success Status</th> </tr>
+<tr> <td>Goto goal</td>   <td>Going to <i>goalname</i> <td>Arrived at <i>goalname</i></td>  </tr>
+<tr> <td>Goto point</td>  <td>Going to point</td>      <td>Arrived at point</td> </tr>
+<tr> <td>Go home</td>     <td>Returning home</td>      <td>Returned home</td></tr>
+</table>
+
+All status values indicating an error or failure begin with the word "Failed".  Possible status strings indicating failure include (but are not limited to):
+<ul>
+ <li>Robot lost</li>
+ <li>Failed driving because map empty
+ <li>Failure to find a suitible path within the map:
+   <ul>
+      <li>Failed to plan to <i>goalname</i>
+      <li>Failed to plan to point
+   </ul>
+ </li>
+ <li>Failures due to inability to move the robot or sucessfully navigate on planned path because of timeout, obstructions or other problems:
+     <ul>
+       <li>Failed to get home
+       <li>Failed to get home because robot lost
+       <li>Failed to get to <i>goalname</i>
+       <li>Failed to get to <i>goalname</i> because robot lost
+       <li>Failed to get to point
+       <li>Failed to get to point because robot lost
+     </ul>
+ </li>
+</ul>
+
+Check log output for more details on errors.
+
+
+For more details on autonomous navigation and localization with ARNL or MOGS, see the BaseArnl, ARNL and MOGS reference manuals:
+
+<ul>
+<li> If installed here, go to:
+  <ul>
+<li> <a href="../../../Arnl/docs/BaseArnl-Reference/index.html">BaseArnl API Reference</a>
+<li> <a href="../../../Arnl/docs/ARNL-Reference/index.html">ARNL API Reference</a>
+<li> <a href="../../../Arnl/docs/MOGS-Reference/index.html">MOGS API Reference</a>
+  </ul>
+<li> To download, visit http://robots.mobilerobots.com/wiki/ARNL
+</ul>
+
+@subsection tourgoalsmode Tour Goals Mode
+
+<table>
+<tr><th>Mode Name:</th>     <th>Normal Status Value</th>     </tr>
+<tr><td>Touring goals</td>  <td>Touring to <i>goalnname</i>  </tr>
+</table>
+
+All status values indicating an error or failure begin with the word "Failed".  Possible status strings indicating failure include (but are not limited to):
+<ul>
+  <li>Failed touring goals: All goals failed
+  <li>Failed touring because robot lost
+</ul>
+
+
+For more details on autonomous navigation and localization with ARNL or MOGS, see the BaseArnl, ARNL and MOGS reference manuals:
+
+<ul>
+<li> If installed here, go to:
+  <ul>
+<li> <a href="../../../Arnl/docs/BaseArnl-Reference/index.html">BaseArnl API Reference</a>
+<li> <a href="../../../Arnl/docs/ARNL-Reference/index.html">ARNL API Reference</a>
+<li> <a href="../../../Arnl/docs/MOGS-Reference/index.html">MOGS API Reference</a>
+  </ul>
+<li> To download, visit http://robots.mobilerobots.com/wiki/ARNL
+</ul>
+
+
+@section status Robot and Server Status Updates
+
+Clients can use the ArClientHandlerRobotUpdate to receive and store updates of
+the server mode, status and essential robot telemetry information.
+Functions to recevie updates are also available in the ArNetworking Matlab
+interface.
+Use this to monitor the server mode and status, and to get the most recent robot
+position and other data.    See ArClientHandlerRobotUpdate and
+robotUpdateExample.cpp for more details and example code.
+
+This service is provided on the serve by an ArServerInfoRobot object.
+
+<table>
+
+<tr> <th>Request</th> <th>Arguments</th> <th>Description</th> <th>Reply packet</th> <th>Client Interface Class</th> <th>Server Class</th> </tr>
+
+<tr> <td>updateStrings</td> <td>none</td> <td>Request robot status updates.</td>
+<td>string: server status; string: server mode; string: extended status
+string</td> <td>ArClientHandlerRobotUpdate</td>
+<td>ArServerInfoRobot</td> </tr>
+
+<tr> <td>updateNumbers</td> <td>none</td> <td>Request robot status updates.</td> <td>byte2: battery voltage (decivolts)
+or state of charge (see batteryInfo);
+ byte4: x position; byte4: y position; byte2: theta; byte2:
+translation velocity; byte2: rotational velocity; byte2: lateral velocity; byte:
+temperature (or -128 for no data)</td> <td>ArClientHandlerRobotUpdate</td>
+<td>ArServerInfoRobot</td> </tr>
+
+<tr> <td>batteryInfo</td> <td>none</td> <td>Get battery/charge information</td>
+<td>double: low battery threshold voltage; double: shutdown battery voltage
+threshold; ubyte: battery type (1 if indicates state of charge, 0 if it
+indicates voltage)</td><td>ArClientHandlerRobotUpdate</td>
+<td>ArServerInfoRobot</td>  </tr>
+
+<tr> <td>physicalInfo</td> <td>none</td> <td>Get information about robot type
+etc.</td> <td>string: robot model type; string: robot model subtype; byte2:
+robot width (mm); byte2: distance from robot center to front (mm); byte2:
+distance from robot center to rear (mm); byte: has lateral velocity</td>
+<td>ArClientHandlerRobotUpdate</td> <td>ArServerInfoRobot</td> </tr>
+
+</table>
+
+@section strings General Application-specific Data Set
+
+A server can provide a general set of regularly updated text fields using
+ArServerInfoStrings which can be displayed to users in a table.  All item values in
+this set of data are ascii text strings. This is usually used for server and application statistics
+and diagnostic data.
+
+<table>
+<tr> <th>Request</th> <th>Arguments</th> <th>Description</th> <th>Reply packet</th> </tr>
+<tr> <td>getStringsInfo</td> <td>none</td> <td>Get list of items in the data
+set. </td> <td>ubyte2: number of
+items; list of items: {string: name; ubyte2: suggested maximum field width to use in
+display}</td> </tr>
+<tr> <td>getStrings</td> <td>none</td> <td>Get data. Request this at a regular
+rate. The reply is a list of strings. Use getStringsInfo to get matching list of
+labels.</td> <td>list: {string: value}</td> </tr>
+</table>
+
+@see ArServerInfoStrings
+
+@section systemstatus Host OS Status
+
+Request diagnostic information about the server host operating system
+
+<table>
+<tr> <th>Request</th> <th>Arguments</th> <th>Description</th> <th>Reply packet</th> </tr>
+<tr> <td>mtxWirelessInfo</td> <td>none</td> <td>Network information</td>
+<td>string: ip address; byte4: wireless link status (0 disconnected, >0 for ok);
+byte4: wireless link signal quality level</td> </tr>
+</table>
+
+@see ArServerInfoSystemStatus
+
+@section camera Camera Pan/Tilt/Zoom Controls
+
+The list of cameras is provided by ArServerHandlerCameraCollection
+on the server.  Control of each camera is provided by an ArServerHandlerCamera
+for each camera. 
+
+(A general purpose Pan/tilt unit is also considered a "camera". It will
+ignore zoom control requests.)
+
+For services that capture
+and provide video image data, see the ArVideo library.  The ArVideo library also
+contains camera control implementations and examples for more types of cameras
+than just ARIA.
+<ul>
+<li> If installed here, go to <a href="../../ArVideo/docs/index.html">ArVideo API Reference</a>
+<li> To download, visit http://robots.mobilerobots.com/wiki/ArVideo
+</ul>
+
+@subsection camerarequests Requests Received
+
+Some requests control individual cameras, identified by name. However, if a
+server only has one camera, and does not provide a list of cameras using 
+ArServerHandlerCameraControl, then the <i>Name</i> will be omitted.
+<table>
+<tr> <th>Request</th> <th>Arguments</th> <th>Description</th> </tr>
+<tr> <td>getCameraList</td> <td>none</td> <td>
+Replies with a packet containing a 2-byte integer 
+indicating the number of cameras. Then, for each camera:
+<ol>
+<li>camera name (string)</li>
+<li>camera type (string)</li>
+<li>camera name for user display (string)</li>
+<li>camera type for user display (string)</li>
+<li>list of requests that can be sent for this camera, beginning with the 2-byte number of commands, then, for
+each command:
+
+<ol>
+  <li>the generic descriptive name (string)</li>
+  <li>the specific command request name (string)</li>
+  <li>an appropriate frequency for making this request (4-byte integer)</li>
+</ol>
+
+</li>
+
+<li>list of parameters, beginning with the 2-byte number of parameters, then,
+for each parameter, the parameter definition/value (see ArClientArg for format).
+</li>
+
+</td> </tr>
+
+<tr> <td>setCameraParams</td> <td>string: camera name; string: param name 1;
+(varies): param name 1; [additional parameter names and values...]; null string
+terminates list.</td> <td>Replies by sending cameraParamUpdated message upon
+completion of changes.</td> </tr>
+      <tr><td>setCameraRel<i>Name</i></td> <td>double: pan amount; double: tilt
+amount;
+[double: zoom amount]</td> <td> Command to pan and tilt the camera from the 
+                                     current position by the values given in the 
+                                     first two arguments. If a third argument is 
+                                     given, zoom from the current position.</td></tr>
+      <tr><td>setCameraAbs<i>Name</i></td> <td>double: pan position; double:
+tilt position; [double: zoom position]</td> <td> Command to pan and tilt the camera to the 
+                                     absolute positions given by the first two 
+                                     arguments. If a third argument is given, set 
+                                     the zoom to that absolute position.</td></tr>
+      <tr><td>setCameraPct<i>Name</i></td> <td>double: pan position; double tilt
+position</td> <td> Command to pan and tilt the camera to the 
+                                     given positions as percentage of their overall 
+                                     ranges.</td></tr>
+      <tr><td>getCameraData<i>Name</i></td> <td>none</td> <td>Data request to get current pan and tilt values. 
+                                     Also get zoom value if available.</td></tr>
+      <tr><td>getCameraInfo<i>Name</i></td> <td>None</td> <td>Data request to get pan and tilt ranges. Also 
+                                     gets the zoom range if available.</td></tr>
+      <tr><td>getCameraModeList<i>Name</i></td> <td>none</td> <td>Gets the list of modes that camera with name <i>Name</i> supports. Replies with a message containing a list  of mode names as strings, ending with an empty string (or end of packet is
+reached) </td></tr>
+      <tr><td>setCameraMode<i>Name</i></td> <td>string: mode name</td> <td> change the camera mode of camera with name <i>Name</i> </td></tr>
+      
+</table>
+
+@subsection camerareplies Packets Sent
+
+When a camera is added or a parameter changes, the server broadcasts the
+following packets to each client:
+<table>
+<tr><td>cameraListUpdate</td> <td>no arguments</td> <td>use getCameraList to get
+the new list.</td></tr>
+
+<tr><td>cameraParamUpdated</td> <td>Starts with camera name, then a list of parameter
+name and value (see ArClientArg for format). An empty parameter name
+string terminates the list.</td> <td> </td> </tr>
+      <tr><td>getCameraModeUpdated<i>Name</i></td> <td>none</td>
+<td>Sent when the mode is changed of the camera with name <i>Name</i></td></tr>
+</table>
+
+Note that the cameraParamUpdated is currently only sent in response to a 
+setCameraParams request.  That is, it does not monitor the actual parameter  
+values in the ArCameraCollection. 
+
+@section config Application Configuration
+
+A server can provide remote clients with access to the server's
+ArConfig configuration.  This is implemneted on the server by
+ArServerHandlerConfig.  You may use ArClientHandlerConfig on a client
+to download the server configuration to a local ArConfig object, modify
+the configuration, and send it back to the server. 
+
+@section map  Map Data
+
+@see ArServerHandlerMap
+
+A remote client can download all map data into an ArMap object, or request a few specific aspects of the map such as goal names.  This request is provided by ArServerHandlerMap on a server, see its class documentation for more details.
+
+<table>
+<tr> <th>Request</th> <th>Reply Packet(s)</th> </tr>
+<tr> <td>getMapId</td> <td>Map identifier string (null-terminated string); Map filename (null-terminated string); checksum (length-prefixed string); map size (4-byte unsigned integer); timestamp (4-byte signed integer)</td> </tr>
+<tr> <td>getMapName</td> <td>Null-terminated map filename string</td> </tr>
+<tr> <td>getGoals</td> <td>Sequence of null-terminated strings with goal object names from the map</td> </tr>
+<tr> <td>getMap</td> <td>Replies with multiple <code>getMap</code> packets, each containing a line of text from the map file, terminated by an empty <code>getMap</code> packet.</td> </tr>
+<tr> <td>getMapBinary</td> <td>Like <code>getMap</code> but the LINES and DATA sections are encoded as more compact sequences of 16-bit integers (multiple per packet).</td> </tr>
+</table>
+
+The following packet types will also be broadcast to all clients to indicate certain events:
+
+* mapUpdated
+* goalsUpdated
+
+The mapUpdated packet is sent to all connected clients whenever a new map is loaded or the map is changed. The packet contains no data; the new map can be downloaded using one of the above requests.
+
+The goalsUpdated packet is sent to all connected clients whenever the list of Goal objects changes in the map or a new map is loaded. The packet contains no data; the new list of goals can be downloaded using getGoals, or by downloading the entire map. 
+
+
+@section mapscanning Control Scanning for Making Maps
+
+ArServerMapping provides requests to begin and end scanning for a new map.
+Servers will use the ArLaserLogger utility from ARIA to collect laser scan data
+and save it to a file which can be downloaded and loaded into Mapper3 to process 
+into a map.  (Mapper3 is provided with the optional Laser Mapping and Navigation
+packages from MobileRobots.)
+
+<table>
+<tr> <th>Request</th> <th>Arguments</th> <th>Description</th> </tr>
+<tr> <td>mappingStart</td> <td>string: name of map file</td> <td>Begin scanning
+for a new map. A <tt>mappingStart</tt> reply is sent containing a status byte: 0
+if scanning is sucessfully started, 1 if already scanning (scanning is
+continued), 2 on error.</td> </tr> 
+<tr> <td>mappingEnd</td> <td>none</td> <td>Stop scanning. A
+<tt>mappingEnd</tt> reply is sent containing a status byte: 0 if scanning is
+stopped without error, 1 if not currently scanning, 2 on error saving, moving or
+renaming scan file.</td> </tr> 
+<tr> <td>mappingStatus</td> <td>none</td> <td>Replies with a
+<tt>mappingStatus</tt> packet containing: string: name of current scan file if
+scanning, or empty string if not currently scanning. Deprecated in favor of
+<tt>mappingStatusBroadcast</tt> </tr> 
+<tr> <td>mappingStatusBroadcast</td> <td>none</td> <td>Request that the server
+send a <tt>mappingStatusBroadcast</tt> packet to all clients containing: string:
+name of scan file if currently scanning, or empty string if not currently
+scanning.</tr> 
+</table>
+
+@sa ArServerHandlerMapping
+
+
+@section files File Upload, Download and Listing
+
+Services are provided on the server by objects with class names starting with
+"ArServer...", declared in ArServerFileUtils.h.
+
+Interfaces for clients to communicate with the server are declared in ArClientFileUtils:
+  Use ArClientFileToClient to download files from the server to the client.  
+  Use ArClientFileFromClient to upload files to the server.
+  Use ArClientFileLister to get listings of files on the server.
+  Use ArClientDeleteFileOnServer to delete files on the server.
+
+The top level directory is determined by the server and is mapped to some
+directory on the server host filesystem. Clients may not access files outside
+this containing directory.
+
+
+
+@section commMonitor Network Communications Monitoring
+
+The ArServerHandlerCommMonitor sends regular broadcasts to clients which can be
+used to verify stability or performance of network communications. See
+ArServerHandlerCommMonitor for details.
+
+@section popups Display Popup Windows in Client
+
+The server can request that clients display notifications dialogs to users using
+an ArServerHandlerPopup object.  This will send the following to clients:
+
+<table>
+<tr> <th>Request</th> <th>Fields</th> <th>Description</th> </tr>
+
+<tr> 
+  <td>popupCreate</td> 
+  <td>byte4: id; string: ?; string: title; string: message; byte: type (0 = neutral, 1 = information, 2 = warning, 3 = critical error, 4 = query); string: button 0 label or empty; string: button 1 label or empty; string: button 2 label or empty; byte: default button index; byte: escape button index</td> 
+  <td>Display a dialog</td> 
+</tr>
+
+<tr>
+  <td>popupClose</td>
+  <td>byte4: id; string: message</td>
+  <td>Close a dialog</td>
+</tr>
+
+</table>
+
+Clients can send the following:
+
+<table>
+<tr> <th>Request</th> <th>Arguments</th> <th>Description</th> </tr>
+<tr> <td>popupClicked</td> <td>byte4: dialog id; byte: button clicked</td> </tr>
+<tr> <td>popupList</td> <td>none</td> <td>Resend popupCreate requests for open dialogs.</td> </tr>
+</table>
+
+
+
+@section drawings Visualization Graphics
+
+To be overlayed on the map. @see ArServerInfoDrawings for full description.
+
+@section customcommands Custom User Commands
+
+Simple commands to be displayed in a list or menu in remote user interface
+clients. 
+
+The ArServerSimpleServerCommands, ArServerSimpleComUC,
+ArServerSimpleComMovementLogging,
+ArServerSimpleComLogRobotConfig, ArServerSimpleComLogActions,
+ArServerSimpleLogRobotDebugPackets, 
+and ArServerSimpleConnectionTester, 
+implement various simple commands used for debugging software and the
+robot itself.
+
+You can add your own additional commands through ArServerHandlerCommands.
+
+@section auth Basic User Authentication
+
+@see ArServerUserInfo
+
+@section ARNL ARNL and MOGS Autonomous Navigation
+
+For more details on autonomous navigation and localization with ARNL or MOGS, see the BaseArnl, ARNL and MOGS reference manuals:
+
+<ul>
+<li> If installed here, go to:
+  <ul>
+<li> <a href="../../../Arnl/docs/BaseArnl-Reference/index.html">BaseArnl API Reference</a>
+<li> <a href="../../../Arnl/docs/ARNL-Reference/index.html">ARNL API Reference</a>
+<li> <a href="../../../Arnl/docs/MOGS-Reference/index.html">MOGS API Reference</a>
+  </ul>
+<li> To download, visit http://robots.mobilerobots.com/wiki/ARNL
+</ul>
+
+
+The following are the most commonly used requests used with ARNL.  See the ARNL documentation and examples for more.
+
+
+<table>
+<tr> <th>Request</th> <th>Arguments</th> <th>Description</th> </tr>
+<tr> <td>tourGoals</td> <td>none</td> <td>Activate Tour Goals mode, if available on the server</td> </tr>
+<tr> <td>gotoGoal</td> <td>goal name (string)</td> <td>Activate Goto Goal mode and request that ARNL navigate to the named goal</td> </tR>
+<tr> <td>gotoPose</td> <td> X (4-byte integer), Y (4-byte int), Theta (optional 2-byte int)</td> <td>Activate Goal Mode and request ARNL navigate to the specified position in the map.</td> </tr>
+<tr> <td>dock</td> <td>none</td> <td>Activate Docking mode and send the robot to the docking station based on map and relevant configuration parameters</td> </tr>
+<tr> <td>home</td> <td>none</td> <td>Activate Goal mode and send the robot to the Home point in the map (if any)</td> </tr>
+<tr> <td>localizeToPose</td> <td>X (4-byte int), Y (4-byte int), Theta (4-byte int)</td> <td>Initialize ARNL laser localization at the given point int the map.  Check status, <code>getLocState</code> reply and localization score for results.</td></tr>
+<tr> <td>getLocState</td> <td>none</td> <td>Return details of localization status: state (unsigned byte, see ArBaseLocalizationTask::LocalizationState); localization score (2-byte unsigned integer 0..100)</td> </tr>
+<tr> <td>pathPlannerStatus</td> <td>none</td> <td>Reply with path planning status string</td> </tr>
+<tr> <td>getGoals</td> <td>none</td> <td>Reply with list of goal names (null-terminated strings)</td> </tr>
+<tr> <td>goalName</td> <td>none</td> <td>Reply with current goal name</td> </tr>
+<tr> <td>getPath</td> <td>none</td> <td>Reply with points representing planned path if any</td> </tr>
+<tr> <td>dockInfo</td> <td>none</td> <td>Reply with details about docking state</td> </tr>
+</table>
+
+When goal mode is activated, then the status and mode strings will indicate the status of navigation. (See gotopointmode.)
+
+@sa gotopointmode
+@sa map
+
+*/

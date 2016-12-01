@@ -1,6 +1,11 @@
 var classArActionDeceleratingLimiter =
 [
-    [ "LimiterType", "classArActionDeceleratingLimiter.html#a9f56735c03f29b8944f971685679b585", null ],
+    [ "LimiterType", "classArActionDeceleratingLimiter.html#a9f56735c03f29b8944f971685679b585", [
+      [ "FORWARDS", "classArActionDeceleratingLimiter.html#a9f56735c03f29b8944f971685679b585afa1c53c01bede226ecdd47286485204c", null ],
+      [ "BACKWARDS", "classArActionDeceleratingLimiter.html#a9f56735c03f29b8944f971685679b585a079120e097fa9c79ad0de688a36bd544", null ],
+      [ "LATERAL_LEFT", "classArActionDeceleratingLimiter.html#a9f56735c03f29b8944f971685679b585ab1c9f0a1dbf7f181b5c520a24faafff1", null ],
+      [ "LATERAL_RIGHT", "classArActionDeceleratingLimiter.html#a9f56735c03f29b8944f971685679b585a35c67c52ca401fdb991cd58e54c0eaa0", null ]
+    ] ],
     [ "ArActionDeceleratingLimiter", "classArActionDeceleratingLimiter.html#a58ac6476c6348f0d94488f1d81e77b17", null ],
     [ "~ArActionDeceleratingLimiter", "classArActionDeceleratingLimiter.html#a3f327e08a9c4075e932e7c85735298e9", null ],
     [ "addToConfig", "classArActionDeceleratingLimiter.html#a6ba2d5dd80d9bb2f39ea2820399bbec4", null ],

@@ -15,7 +15,7 @@ var classArRetFunctor2C =
     [ "setP2", "classArRetFunctor2C.html#a87594e56b19be318d980efb98d8f349e", null ],
     [ "setThis", "classArRetFunctor2C.html#a35c79da69f6e9404786262f6ccf1a53e", null ],
     [ "setThis", "classArRetFunctor2C.html#af9b4264634478b69501bf35694cc779a", null ],
-    [ "myFunc", "classArRetFunctor2C.html#a207d90aac8969038a93331324d50e864", null ],
+    [ "myFunc", "classArRetFunctor2C.html#aba0a5b760b941ad5f5472cc539ec7c00", null ],
     [ "myObj", "classArRetFunctor2C.html#aa1927116e86e2ba492ae9f80f8333e61", null ],
     [ "myP1", "classArRetFunctor2C.html#a0e813e9f89b1a1caa116ea20589331a9", null ],
     [ "myP2", "classArRetFunctor2C.html#abc94c10e023cb300405efe63a4f0878a", null ]

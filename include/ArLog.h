@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -45,6 +46,7 @@ class ArConfig;
    and Verbose. By default the level is set to Normal.
 
    @ingroup ImportantClasses
+   @ingroup easy
 */
 class ArLog
 {
@@ -100,32 +102,54 @@ public:
    * @swigomit */
   AREXPORT static void logNoLock(LogLevel level, const char *str, ...);
 #endif 
-  /// If possible (only in Linux right now) log the backtrace
+  /// Log function call backtrace for debugging 
+  /// @linuxonly
   AREXPORT static void logBacktrace(LogLevel level);
-  /// Log a file if it exists
+  /// Read the contents of @fileName and print a log message for each line. File should be plain text.
   AREXPORT static bool logFileContents(LogLevel level, const char *fileName);
 
   // We use this to print to a Colbert stream, if available
+  /// @deprecated
   AREXPORT static void (* colbertPrint)(int i, const char *str);
 
   /// Use an ArConfig object to control ArLog's options
   AREXPORT static void addToConfig(ArConfig *config);
 
+  /// Set log level
+  AREXPORT static void setLogLevel(LogLevel level);
+
 #ifndef ARINTERFACE
-  /// Init for aram behavior
+  // Init for aram behavior
+  /// @internal
   AREXPORT static void aramInit(const char *prefix, 
 				ArLog::LogLevel defaultLevel = ArLog::Normal, 
 				double defaultSize = 10, 
 				bool daemonized = false);
 #endif
   
-  /// Internal functor to be called when a log message is made (this shouldn't really be used)
+  /// Set a functor to be called when a log message is made 
   /// Call clearFunctor() to unset.
   AREXPORT static void setFunctor(ArFunctor1<const char *> *functor);
   /// Clear functor set by setFunctor().
   AREXPORT static void clearFunctor();
   /// Internal function to force a lockup, only for debugging
+  /// @internal
   AREXPORT static void internalForceLockup(void);
+
+  /// Convenience function to log a message at Terse log level with "Warning: " prepended
+  AREXPORT static void warning(const char *str, ...);
+  /// Convenience function to log a message at Terse log level with "Error: " prepended
+  AREXPORT static void error(const char *str, ...);
+  /// Convenience function to log a message at Normal log level 
+  AREXPORT static void info(const char *str, ...);
+  /// Convenience function to log a message at Verbose log level 
+  AREXPORT static void debug(const char *str, ...);
+
+#ifndef SWIG
+  /// @internal
+  AREXPORT static void log_v(LogLevel level, const char *prefix, const char *format, va_list vaptr);
+#endif
+
 protected:
   AREXPORT static bool processFile(void);
 #ifndef ARINTERFACE

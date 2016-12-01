@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -47,14 +48,7 @@ Adept MobileRobots, 10 Columbia Drive, Amherst, NH 03031; +1-603-881-7960
  * 
  * If FOR_ARIA is defined, then the classes whose options are included are:
  *   ArRobotConnector
- *   ArLaserConnector with Sick LMS2xx
- *   ArLaserConnector with Sick LMS1xx
- *   ArLaserConnector with URG 1.0
- *   ArLaserConnector with URG 2.0
- *   ArLaserConnector with LMS5xx
- *   ArLaserConnector with SICK S3xxx Series
- *   ArLaserConnector with Keyence SZ Series
- *   ArLaserConnector with SICK TiM3XX
+ *   ArLaserConnector with each laser type
  *   ArPTZConnector
  *   ArGPSConnector
  *   ArCompassConnector
@@ -130,6 +124,9 @@ class ArLaserConnectorWrapper :
   ArS3Series s3xxLaser;
   ArSZSeries szLaser;
   ArLMS1XX tim3xxLaser;
+  ArLMS1XX tim551Laser;
+  ArLMS1XX tim561Laser;
+  ArLMS1XX tim571Laser;
 public:
   ArLaserConnectorWrapper(ArArgumentParser *argParser) :
     ArLaserConnector(argParser, NULL, NULL),
@@ -137,7 +134,10 @@ public:
     lms1xxLaser(1, "lms1XX", ArLMS1XX::LMS1XX),
     lms5xxLaser(1, "lms5xx", ArLMS1XX::LMS5XX), 
     s3xxLaser(1), szLaser(1),
-    tim3xxLaser(1, "tim3XX", ArLMS1XX::TiM3XX)
+    tim3xxLaser(1, "tim3XX", ArLMS1XX::TiM3XX),
+    tim551Laser(1, "tim551", ArLMS1XX::TiM551),
+    tim561Laser(1, "tim561", ArLMS1XX::TiM561),
+    tim571Laser(1, "tim571", ArLMS1XX::TiM571)
   {
   }
   virtual void logOptions()
@@ -201,9 +201,25 @@ public:
     ArLaserConnector::logLaserOptions(myLasers[1], false, false);
 
     // TiM3xx
-    puts("\nFor laser type \"tim3XX\" (SICK TiM300):\n");
+    puts("\nFor laser type \"tim510\" or \"tim3XX\" (SICK TiM310 and TiM510):\n");
     addPlaceholderLaser(&tim3xxLaser, 1); // replace previous
     ArLaserConnector::logLaserOptions(myLasers[1], false, false);
+
+    // TiM551
+    puts("\nFor laser type \"tim551\" (SICK TiM551):\n");
+    addPlaceholderLaser(&tim551Laser, 1); // replace previous
+    ArLaserConnector::logLaserOptions(myLasers[1], false, false);
+
+    // TiM561
+    puts("\nFor laser type \"tim561\" (SICK TiM561):\n");
+    addPlaceholderLaser(&tim551Laser, 1); // replace previous
+    ArLaserConnector::logLaserOptions(myLasers[1], false, false);
+
+    // TiM571
+    puts("\nFor laser type \"tim571\" (SICK TiM571):\n");
+    addPlaceholderLaser(&tim571Laser, 1); // replace previous
+    ArLaserConnector::logLaserOptions(myLasers[1], false, false);
+
   }
 };
 

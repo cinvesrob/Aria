@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -98,7 +99,7 @@ AREXPORT ArRVisionPTZ::ArRVisionPTZ(ArRobot *robot) :
   ArPTZ(NULL),
   myPacket(255), 
   myZoomPacket(9),
-  mySerialPort(ArUtil::COM3)
+  mySerialPort(ArUtil::COM4)
 {
   //myRobot = robot;
   initializePackets();
@@ -165,14 +166,14 @@ AREXPORT bool ArRVisionPTZ::init(void)
   // send command to power on camera on seekur
   if(myRobot)
   {
-	  ArLog::log(ArLog::Normal, "ArRVisionPTZ: turning camer power on ...");
+	  ArLog::log(ArLog::Normal, "ArRVisionPTZ: turning camera power on ...");
 	  myRobot->com2Bytes(116, 12, 1);
   }
   
   myConn = getDeviceConnection();
   if(!myConn)
   {
-     ArLog::log(ArLog::Normal, "ArRVisionPTZ: opening connection to camera on COM3...");
+     ArLog::log(ArLog::Normal, "ArRVisionPTZ: new connection to camera on %s...", mySerialPort);
      ArSerialConnection *ser = new ArSerialConnection();
      if(ser->open(mySerialPort) != 0)
      {
@@ -285,7 +286,7 @@ ArBasePacket * ArRVisionPTZ::readPacket(void)
   unsigned char data[ARRVISION_MAX_RESPONSE_BYTES];
   unsigned char byte;
   int num;
-  memset(data, ARRVISION_MAX_RESPONSE_BYTES, 0);
+  memset(data, 0, ARRVISION_MAX_RESPONSE_BYTES);
   for (num=0; num <= ARRVISION_MAX_RESPONSE_BYTES+1; num++) {
     if (myConn->read((char *) &byte, 1,1) <= 0 ||
 	num == ARRVISION_MAX_RESPONSE_BYTES+1) {

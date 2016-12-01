@@ -1,7 +1,76 @@
 
 
+Aria 2.9.1
+October 14, 2016
+---------------------------
+
+This version contains all of the changes 
+listed for ARIA 2.9.0 and 2.8.x below, as well as the following:
+
+* Fixed serial port (COM port) names for Pioneer LX components on Windows
+* ArGPS will now work with more types of GPS receivers, even if they use
+  different NMEA message/sentence prefixes other than "GP..."
+* amigo-sh-tim3xx (aka amigo-sh-tim5xx) robot type and default parameters added to ARIA
+  Amigobot with TiM laser on Wibox.
+* Add missing RobotLengthFront and RobotLengthRear parameters for 
+  Seekur and Seekur Jr. (in internal defaults and seekur.p and seekurjr.p).
+  (This caused bad driving trajectories in ARNL e.g. turning away from path) 
+* Add identifiers for newer camera connection and separate arm logic power to
+  seekurPower control tool
+* Default port for RVision PTZ camera is now COM4 (/dev/ttyS3 on Linux)
+* RVision now works in ARIA demo.
+* Can now add ArRobot packet handler callbacks from Python (added typemap and
+  supporting code for ArRetFunctor1<bool, ArRobotPacket*>)
+* Added new "tim551", "tim561", and "tim571" laser types to support SICK TiM
+  lasers. Specify them in robot parameter files or with the -laserType command
+  line option to use.
+* Can use "tim510" laser type identifier as alias for "tim3xx".
+* In ARIA demo program, a few USB serial port options have been added to 
+  menu selection of PTZ camera ports.
+* ArNetworking includes new ArServerModeJogPosition. Remote clients can send
+  requests to this mode to move the robot in short relative increments
+  forward/back and rotate.  
+* Minor fixes to Visual Studio 2013 projects
+* Added ArCallbackList2 and ArCallbackList3 classes.
+* ArNetworking includes new ArClientRatioDrive, a class to make it easier to 
+  remotely drive robot by velocity requests. (Same as teleoperation tools in
+  MobileEyes)
+* ArNetworking now includes a consolidated list of remote requests with
+  packet field descriptions, as a page in the ArNetworking API Reference 
+  documentation.  (These requests and replies are used by ArNetworking clients
+  to communicate with servers including ARNL servers.)
+* Misc ArNetworking documentation and examples improvements, including new 
+  example program that shows how to get String Info Group data
+  aka "Custom Details" from server (ArServerInfoStrings). Corrected
+  documentation of ArServerInfoStrings "getStrings" request.
+* Enable HasRearBumps by default in Pioneer LX parameters (params/pioneer-lx.p
+  and internal defaults): The first three "User Bumpers" inputs trigger the same
+  bumper flags as the robot's built-in front bumpers; the second set of 
+  three User Bumps inputs trigger the Rear Bumps.
+* Includes fixes to LMS1xx and TiM interfaces that allow rotated laser
+  (backwards-facing) mounting to work.
+* Added function to Aria Python library to seach network for WiBox
+  wireless devices, and prompt user for connection, making Python
+  development a bit easier. Added more information to Python documentation,
+  including notes on how to use the Idle IDE on Windows and how to get
+  started using the Jupyter Notebook interactive Python workflow (formerly
+  known as iPython Notebook)
+* Fixed HasMoveCommand flag in default robot parameters for Pioneer LX 
+  that indicates how ArRobot should implement move(). (Set to false.)  LX 
+  currently does not have a working built-in MOVE command so discrete 
+  movement is implemented within ArRobot. 
+* On Windows, there is now partial support for Visual C++ 2015 (VC14)
+  in ARIA and ArNetworking.  Other libraies will get support in future
+  versions.
+* Added Visual Studio templates that can be copied into your user
+  directory (Visual Studio directories in My Documentes) and used to
+  create new projects already set up for ARIA and with example code.
+* Windows installer now sets up Python environment (by setting PATH environment
+  variable and permanently in Windows Registry, and by adding to PythonPath in 
+  Windows Registry, these are done in both the System and User scopes.)
+
 Aria 2.9.0
-November 04, 2014
+November 10, 2014
 ---------------------------
 
 This version contains all of the changes 
@@ -28,7 +97,7 @@ Bug Fixes:
 * Fixed ArNetworking ArServerMode mode-lock
 * Reset ArSocket timeout immediately after a successful connection
   (in addition to creation and reading data)
-* Add missing RobotLengthFront and RobotLengthRead parameters for 
+* Add missing RobotLengthFront and RobotLengthRear parameters for 
   Seekur Jr. (in internal defaults and seekurjr.p)
 * Some additional diagnostics added to ArS3Laser
 * Fixes to SICK TiM laser support

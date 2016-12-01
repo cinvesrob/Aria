@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -157,8 +158,10 @@ public:
   /// Gets a ArTypes::UByte8 from the buffer
   AREXPORT virtual ArTypes::UByte8 bufToUByte8(void);
 
-  /// Gets a string from the buffer
-  AREXPORT virtual void bufToStr(char *buf, int len);
+  /// Gets a null-terminated string from the buffer
+  AREXPORT virtual void bufToStr(char *buf, int maxlen);
+  /// Gets a null-terminated string from the buffer
+  AREXPORT std::string bufToString();
   /// Gets length bytes from buffer and puts them into data
   AREXPORT virtual void bufToData(char * data, int length);
   /// Gets length bytes from buffer and puts them into data

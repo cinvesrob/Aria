@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -1117,6 +1118,7 @@ AREXPORT int ArRobot::asyncConnectHandler(bool tryHarderToConnect)
 	if (myOrigRobotConfig->getStateOfChargeShutdown() > 0)
 	  setStateOfChargeShutdown(
 		  myOrigRobotConfig->getStateOfChargeShutdown());
+      ArLog::log(ArLog::Normal, "Robot Serial Number: %s", myOrigRobotConfig->getSerialNumber());
       }
       else if (myRequireConfigPacket)
       {
@@ -1586,6 +1588,10 @@ AREXPORT bool ArRobot::madeConnection(bool resetConnectionTime)
     myParams = new ArRobotAmigo;
   else if (ArUtil::strcasecmp(myRobotSubType, "amigo-sh") == 0)
     myParams = new ArRobotAmigoSh;
+  else if (ArUtil::strcasecmp(myRobotSubType, "amigo-sh-tim5xx") == 0)
+    myParams = new ArRobotAmigoShTim5xxWibox;
+  else if (ArUtil::strcasecmp(myRobotSubType, "amigo-sh-tim3xx") == 0)
+    myParams = new ArRobotAmigoShTim5xxWibox;
   else if (ArUtil::strcasecmp(myRobotSubType, "p2at") == 0)
     myParams = new ArRobotP2AT;
   else if (ArUtil::strcasecmp(myRobotSubType, "p2at8") == 0)
@@ -2022,17 +2028,29 @@ AREXPORT void ArRobot::setLatVel(double latVelocity)
 }
 
 /** 
-  Sets the velocity of each of the wheels on the robot
-  independently.  ArRobot caches these values, and sends them with 
+  Sends command to set the robot's velocity differentially, with
+  separate velocities for left and right sides of the robot. The
+  ArRobot caches these values, and sends them with 
   a VEL2 command during the next
   cycle.  Note that this cancels both translational velocity AND
   rotational velocity, and is canceled by any of the other direct
   motion commands.  
   The values are rounded to the nearest whole number mm/sec before
   sent to the robot controller.
+
+  @note This method of controlling the robot is primarily for compatibility with
+  old robots and is not recommended.  Instead use setVel() and setRotVel() to
+  set translational and rotational components of robot motion.
+
+  @note Not all robots (e.g. Pioneer LX) implement this command it, it may be ignored.
+  There may also be some differences in how different robot firmware types
+  implement this command. See robot operations manual for more details.
+
   @sa setVel
   @sa setRotVel
   @sa clearDirectMotion
+
+  @deprecated
 
   @param leftVelocity the desired velocity of the left wheel 
   @param rightVelocity the desired velocity of the right wheel
@@ -3078,6 +3096,10 @@ AREXPORT ArSyncTask *ArRobot::getSyncTaskRoot(void)
    The synchronous tasks get called every robot cycle (every 100 ms by 
    default).  
 
+   @warning Not thread safe; if robot thread is running in background (from
+    runAsync()), you must lock the ArRobot object before calling and unlock after
+    calling this method.
+
    @param name the name to give to the task, should be unique
 
    @param position the place in the list of user tasks to place this
@@ -3163,6 +3185,9 @@ AREXPORT void ArRobot::remUserTask(ArFunctor *functor)
 /**
    The synchronous tasks get called every robot cycle (every 100 ms by 
    default).  
+   @warning Not thread safe; if robot thread is running in background (from
+    runAsync()), you must lock the ArRobot object before calling and unlock after
+    calling this method.
    @param name the name to give to the task, should be unique
    @param position the place in the list of user tasks to place this 
    task, this can be any integer, though by convention 0 to 100 is used.
@@ -4724,7 +4749,7 @@ AREXPORT void ArRobot::packetHandlerNonThreaded(void)
   {
     char buf[10000];
     sprintf(buf, 
-	    "Losing connection because no odometry received from microcontroller in %d milliseconds (greater than the timeout of %d).", 
+	    "Losing connection because no odometry received from microcontroller in %ld milliseconds (greater than the timeout of %d).", 
 	    (-myLastOdometryReceivedTime.mSecTo()),
 	    myTimeoutTime);
     myConnectionTimeoutMutex.unlock();
@@ -4740,7 +4765,7 @@ AREXPORT void ArRobot::packetHandlerNonThreaded(void)
       ((-myLastPacketReceivedTime.mSecTo()) > myTimeoutTime))
   {
     char buf[10000];
-    sprintf(buf, "Losing connection because nothing received from robot in %d milliseconds (greater than the timeout of %d).", 
+    sprintf(buf, "Losing connection because nothing received from robot in %ld milliseconds (greater than the timeout of %d).", 
 	       (-myLastPacketReceivedTime.mSecTo()),
 	       myTimeoutTime);
     myConnectionTimeoutMutex.unlock();
@@ -4870,7 +4895,7 @@ AREXPORT void ArRobot::packetHandlerThreadedProcessor(void)
   {
     char buf[10000];
     sprintf(buf, 
-	    "Losing connection because no odometry received from robot in %d milliseconds (greater than the timeout of %d).", 
+	    "Losing connection because no odometry received from robot in %ld milliseconds (greater than the timeout of %d).", 
 	    (-myLastOdometryReceivedTime.mSecTo()),
 	    myTimeoutTime);
     myConnectionTimeoutMutex.unlock();
@@ -4886,7 +4911,7 @@ AREXPORT void ArRobot::packetHandlerThreadedProcessor(void)
       ((-myLastPacketReceivedTime.mSecTo()) > myTimeoutTime))
   {
     char buf[10000];
-    sprintf(buf, "Losing connection because nothing received from robot in %d milliseconds (greater than the timeout of %d).", 
+    sprintf(buf, "Losing connection because nothing received from robot in %ld milliseconds (greater than the timeout of %d).", 
 	       (-myLastPacketReceivedTime.mSecTo()),
 	       myTimeoutTime);
     myConnectionTimeoutMutex.unlock();

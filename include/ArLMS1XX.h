@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -121,7 +122,10 @@ public:
   AREXPORT void setLaserModel(int laserModel)
   { myLaserModel = laserModel; }
   AREXPORT void setmyName(const char *name )
-  { strcpy(myName, name); }
+  { 
+    strncpy(myName, name, sizeof(myName)); 
+    myName[sizeof(myName)-1] = '\0';
+  }
   AREXPORT void setReadTimeout(int timeout )
   { myReadTimeout = timeout; }
 
@@ -153,8 +157,10 @@ protected:
   @see ArLaserConnector
   Use ArLaserConnector to connect to a laser, determining type based on robot and program configuration  parameters.
 
-  This is the ArLaser implementation for SICK LMS1xx, LMS5xx, and TiM3xx lasers. To use these lasers with ArLaserConnector, specify 
-  the appropriate type in program configuration (lms1xx, lms6xx, or tim3xx).
+  This is the ArLaser implementation for SICK LMS1xx, LMS5xx, TiM310/510
+  (aka TiM3xx), TiM551, TiM561, and TiM571  lasers. To use these lasers with ArLaserConnector, specify 
+  the appropriate type in program configuration (lms1xx, lms5xx, tim3xx or
+  tim510, tim551, tim561, tim571).
 */
 class ArLMS1XX : public ArLaser
 {
@@ -164,7 +170,10 @@ public:
 	{
 		LMS1XX, 
 		LMS5XX,
-		TiM3XX
+		TiM3XX,
+    TiM551,
+    TiM561,
+    TiM571
 	};
 
   /// Constructor
@@ -179,7 +188,7 @@ public:
 	// specific init routine per laser
   AREXPORT virtual bool lms5xxConnect(void);
   AREXPORT virtual bool lms1xxConnect(void);
-  AREXPORT virtual bool tim3xxConnect(void);
+  AREXPORT virtual bool timConnect(void);
 
   AREXPORT virtual bool asyncConnect(void);
   AREXPORT virtual bool disconnect(void);
@@ -207,10 +216,19 @@ protected:
   void sensorInterp(void);
   void failedToConnect(void);
   void clear(void);
+
+  /// @return true if message contents matches checksum, false otherwise.
   bool validateCheckSum(ArLMS1XXPacket *packet);
 
   LaserModel myLaserModel;
-  //bool myIsLMS5XX;
+
+  enum LaserModelFamily
+  {
+    LMS,
+    TiM,
+  };
+
+  LaserModelFamily myLaserModelFamily;
 
   bool myIsConnected;
   bool myTryingToConnect;

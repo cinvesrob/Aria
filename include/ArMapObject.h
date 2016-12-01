@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -207,6 +208,9 @@ public:
   /// Returns the "to" pose for lines and rectangles; valid only if hasFromTo() 
   AREXPORT ArPose getToPose(void) const;
 
+  void setPose(ArPose p) { myPose = p; }
+  AREXPORT void setFromTo(ArPose from, ArPose to);
+
   /// Returns the optional rotation of a rectangle; or 0 if none
   /**
    * Note that this function doesn't know whether it actually makes sense 
@@ -250,6 +254,27 @@ public:
    * this method simply returns the pose.
   **/
   AREXPORT ArPose findCenter(void) const;
+
+  /** Return true if the given point is inside the region of this object,
+   * assuming that this object is a region or sector.  False if not.
+   */
+  bool isPointInside(const ArPose& p) const { 
+    if(!hasFromTo()) return false;
+    const std::vector<ArPose> v = getRegionVertices();
+    if(v.size() > 2)
+      return p.isInsidePolygon(v);
+    else
+      return false;
+  }
+
+  /** If this object is a region or sector type, return a std::vector containing
+   * the position (in global map coordinate frame) of each corner. I.e. taking
+   * object rotation into account, find each corner. If this object is not a
+   * region or sector (i.e. does not have "from" and "to" corners), then 
+   * an empty std::vector is returned.  The "Theta" components of the vertex
+   * ArPose objects is not set or used.
+   */
+  AREXPORT std::vector<ArPose> getRegionVertices() const;
 
   // --------------------------------------------------------------------------
   // I/O Methods

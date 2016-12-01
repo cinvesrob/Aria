@@ -1,6 +1,12 @@
 var classArMapChangeDetails =
 [
-    [ "MapLineChangeType", "classArMapChangeDetails.html#ae40f8bf0789880c41e790d271e723f56", null ],
+    [ "ArMapScanChangeDetails", "structArMapChangeDetails_1_1ArMapScanChangeDetails.html", "structArMapChangeDetails_1_1ArMapScanChangeDetails" ],
+    [ "CHANGE_TYPE_COUNT", "classArMapChangeDetails.html#a9fb1e7517342c4a2d2b67a96f4e60df3a5b99d287bb56d59d29306dfc38ea7888", null ],
+    [ "MapLineChangeType", "classArMapChangeDetails.html#ae40f8bf0789880c41e790d271e723f56", [
+      [ "DELETIONS", "classArMapChangeDetails.html#ae40f8bf0789880c41e790d271e723f56a22243bc461eb8f7256b43d48fbab93e3", null ],
+      [ "ADDITIONS", "classArMapChangeDetails.html#ae40f8bf0789880c41e790d271e723f56a3d3611f9a8bbac9ecb307c6bd0c534e9", null ],
+      [ "LAST_CHANGE_TYPE", "classArMapChangeDetails.html#ae40f8bf0789880c41e790d271e723f56a77d8c81cd415084ade91207b729ff5f5", null ]
+    ] ],
     [ "ArMapChangeDetails", "classArMapChangeDetails.html#a689d0cb52969fb4abaa34abbf4cc70ca", null ],
     [ "ArMapChangeDetails", "classArMapChangeDetails.html#aea0d43fc534317e4aa3fce60f06100ec", null ],
     [ "~ArMapChangeDetails", "classArMapChangeDetails.html#a6543be978257171640e756eff3d69bca", null ],

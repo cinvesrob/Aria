@@ -1,6 +1,10 @@
 var classArLMS1XXPacketReceiver =
 [
-    [ "State", "classArLMS1XXPacketReceiver.html#a8cb71629a6d7fba2403287e64ac9778c", null ],
+    [ "State", "classArLMS1XXPacketReceiver.html#a8cb71629a6d7fba2403287e64ac9778c", [
+      [ "STARTING", "classArLMS1XXPacketReceiver.html#a8cb71629a6d7fba2403287e64ac9778ca72781f10c24f26e7e61060f965ee4066", null ],
+      [ "DATA", "classArLMS1XXPacketReceiver.html#a8cb71629a6d7fba2403287e64ac9778cab66ccc38de892b9229663982878ff3a5", null ],
+      [ "REMAINDER", "classArLMS1XXPacketReceiver.html#a8cb71629a6d7fba2403287e64ac9778cacd32be9c1d68a61b89c9d9582b900255", null ]
+    ] ],
     [ "ArLMS1XXPacketReceiver", "classArLMS1XXPacketReceiver.html#af4324335834cae1aaa4f0ea8954f4d4f", null ],
     [ "~ArLMS1XXPacketReceiver", "classArLMS1XXPacketReceiver.html#a8557ab678a0908b898a49094855a3b66", null ],
     [ "getDeviceConnection", "classArLMS1XXPacketReceiver.html#a74f41e1f13c0e072ece511eb3358c89e", null ],

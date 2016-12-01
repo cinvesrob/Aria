@@ -5,13 +5,14 @@ ARIA
 Adept MobileRobots Advanced Robotics Interface for Applications
 ---------------------------------------------------------------
 
-Version 2.9.0
+Version 2.9.1
   
-Linux 
+Linux x64
 
 Copyright 2002, 2003, 2004, 2005 ActivMedia Robotics, LLC. All rights reserved.
 Copyright 2006, 2007, 2008, 2009 MobileRobots Inc. All rights reserved.
-Copyright 2010-2014 Adept Technology. All rights reserved.
+Copyright 2010-2015 Adept Technology. All rights reserved.
+Copyright 2016 Omron Adept Technologies, Inc. All rights reserved.
 
 See LICENSE.txt for full license information about ARIA.
 
@@ -64,11 +65,11 @@ license under which ARIA has been provided.
 
 The ARIA package includes both source code and pre-built libraries
 and example programs. These libraries and programs were build with
-GCC 3.4 if on Linux, and MS Visual C++ 2010 (10.0), Visual C++ 2012
-(11.0) and Visual C++ 2013 (12.0) for Windows Desktop if on Windows.  
-Using the above compilers for development is recommended.  See below
-for specific instructons on using these compilers to build your 
-programs linked to ARIA, or to rebuild ARIA.
+GCC 4.x if on Linux, and MS Visual C++ 2010 (10.0), Visual C++ 2012
+(11.0), Visual C++ 2013 (12.0) and Visual C++ 2015 (14.0) for Windows 
+Desktop if on Windows.   Using the above compilers for development 
+is recommended.  See below for specific instructons on using these 
+compilers to build your  programs linked to ARIA, or to rebuild ARIA.
 
 NOTE: If you use a different compiler or compiler version, you must 
 rebuild the ARIA libraries to ensure link compatability.
@@ -101,11 +102,11 @@ The ArNetworking library has its own reference manual,
 ArNetworking-Reference.html in the ArNetworking subdirectory, and examples
 in ArNetworking/examples.
 
-If you plan on using the Java or Python wrapper libraries, see the 
-javaExamples, pythonExamples, ArNetworking/javaExamples and
-ArNetworking/pythonExamples directories for important information in
-README files, and example programs. You should also read the Aria Reference
-manual for general information about Aria -- the API in the wrapper libraries
+If you plan on using the Java, Python or Matlab wrapper libraries, see the 
+javaExamples, pythonExamples, ArNetworking/javaExamples,
+ArNetworking/pythonExamples, and matlab directories for important information in
+README files, and example programs. You should also read the ARIA Reference
+manual for general information about ARIA -- the API in the wrapper libraries
 are almost identical to the C++ API.
 
 If you have any problems or questions using ARIA or your robot, the 
@@ -114,23 +115,25 @@ MobileRobots support site provides:
   * A FAQ (Frequently Asked Questions) list, at <http://robots.mobilerobots.com/FAQ.html>
   * A knowlege base of information on robot hardware and software, at <http://robots.mobilerobots.com>
   * All robot and device manuals
-  * The Aria-Users mailing list, where you can discuss Aria with other users and 
+  * The Aria-Users mailing list, where you can discuss ARIA with other users and 
     MobileRobots software developers:
       * Search the archives at <http://robots.mobilerobots.com/archives/aria-users/threads.html>
       * Join the list at <http://robots.mobilerobots.com/archives/aria-info.html>
   * Information on contacting MobileRobots technical support.
 
+Visit the MobileRobots support site at <http://robots.mobilerobots.com>
+
 License and Sharing
 ===================
 
-ARIA is released under the GNU Public License, which means that if you
-distribute any work which uses ARIA, you must distribute the entire 
-source code to that work under the GPS as well.  Read the included 
-LICENSE text for details.  We open-sourced ARIA under GPL with full
-source code not only for your convenience, but also so that you can 
-share your enhancements to the software.  If you wish your enhancements 
-to make it into our future ARIA versions, you will need to assign the 
-copyright on those changes to Adept. Contact lafary@mobilerobots.com 
+ARIA is released under the GNU Public License (GPL) v.2, which means 
+that if you distribute any work which uses ARIA, you must distribute 
+the entire source code to that work under the GPL as well.  Read the 
+included LICENSE text for details.  We open-sourced ARIA under GPL with 
+full source code not only for your convenience, but also so that you can 
+share your work and enhancements to the software.  If you wish your 
+ARIA changes to make it into our future ARIA versions, you will need to 
+assign the copyright on those changes to Adept. Contact support@mobilerobots.com 
 with these changes or with questions about this.
 
 Accordingly, please do share your work, and please sign up for the 
@@ -152,36 +155,57 @@ Aria/:
   examples  ARIA examples -- a good place to start; see examples/README.txt
   include   ARIA header (*.h) files
   src       ARIA source code (*.cpp) files
-  lib       Libraries (.lib files for Windows, .so files for Linux) 
-  bin       Contains Windows binaries and DLLs.
-  params    Robot definition (parameter) files ("p3dx.p", for example)
+  lib or lib64 - Libraries (.lib files for Windows, .so files for Linux) 
+  bin or bin64 - Contains Windows binaries and DLLs.
+  params    Robot parameter files ("p3dx.p", for example) containing defaults
+            for various robot types.  You can also add a custom parameter
+			file here named for your robot's NAME (see ARIA reference manual).
   tests     Test files, somewhat esoteric but useful during ARIA development
   utils     Utility commands, not generally needed
-  advanced  Advanced demos, not for the faint of heart (or ARIA novice)
-  python    Python wrapper package
-  java      Java wrapper package
+  python    Python wrapper modules and libraries
+  pythonExamples - Example Python scripts and README file with details on
+            how to use ARIA with Python.
+  java      Java wrapper library
+  javaExamples Example Java programs and README file with details on
+            how to use ARIA with Java.
+  maps      Some example map files that may be used with the simulator.
+  matlab    Scripts and instructions that may be used to compile a simplified
+            Matlab interface to ARIA.
+  VSTemplates - Contains project templates for Visual Studio. Run the 
+            included script to copy these templates to your home
+			directory (Windows only)
+  Command Prompt in ARIA Directory (Windows only) - Runs a Windows command
+            prompt session that may be used to explore and run example
+			programs from the ARIA directory.
+  CommandLineOptions.txt - Summary of typical command-line options that 
+            may be given to most ARIA programs
+  LICENSE.txt        GPL license; agree to this to use ARIA
+  Aria-*.sln    	   MS Visual C++ solutions for building ARIA and 'demo'.
+  examples/All_examples-*.sln 
+                  MS Visual C++ solutions for building ARIA examples.
+  Makefile          (Linux only) GNU Make makefile (for building ARIA and examples
+  Makefile_example  Example GNU Makefile (Linux only) that you can copy and
+                    modify for your own project.
+  INSTALL.txt       More information about installing ARIA
+  README.txt        This file; also see READMEs in advanced/, examples/, and tests/
+  Changes.txt       Summary of changes in each version of ARIA
 
 Aria/ArNetworking/:  (A library used to facilitate network communication)
   docs      API Reference Manual for ArNetworking 
   examples  ArNetworking examples
-  include   ArNetworking header (*.h) files, of course
+  include   ArNetworking header (*.h) files
   src       ArNetworking source (*.cpp) files
   python    Python wrapper package
+  pythonExamples - Python examples and instructions
   java      Java wrapper package
+  javaExamples - Java examples and instructions
   
+If you have installed any additional ARIA/Pioneer SDK libraries
+then they will also be available as subdirectories of the Aria directory.
 
-Other ARIA Files of Note
-========================
+If you have installed ARNL, SONARNL or MOGS, then it will be in 
+a separate installation (Arnl directory).
 
-LICENSE.txt        GPL license; agree to this to use ARIA
-Aria-*.sln    	   MS Visual C++ solutions for building ARIA and 'demo'.
-examples/All_examples-*.sln 
-                  MS Visual C++ solutions for building ARIA examples.
-Makefile          Linux makefile (GNU Make) for building ARIA and examples
-Makefile.dep      Linux dependency file
-INSTALL.txt       More information about installing ARIA
-README.txt        This file; also see READMEs in advanced/, examples/, and tests/
-Changes.txt       Summary of changes in each version of ARIA
 
 
 Building programs that use ARIA
@@ -191,30 +215,87 @@ Windows
 -------
 
 On Windows, use Microsoft Visual C++ 2010 (VC10), Visual C++ 2012 (VC11),
-or Visual C++ 2013 (VC12) for Windows Desktop (VC++ 2013 projects are
-available for most packages, but not all yet).  Free "Express" versions of 
-Visual C++ can be downloaded from Microsoft, or full versions purchased.
-Only Visual C++ is required. Other Visual Studio options such as C#,
-web development tools, .NET, SQL Server or database tools, or Silverlight
-are not required by ARIA or other Pioneer SDK libraries, and do not
-need to be installed.
+Visual C++ 2013 (VC12), or Visual C++ 2015 (VC14) for Windows Desktop.
+Free "Express" or "Community" versions of  Visual C++ can be 
+downloaded from Microsoft (see microsoft.com or visualstudio.com), or 
+full versions purchased.  Only Visual C++ is required. Other Visual 
+Studio options such as C#, web development tools, .NET, SQL Server or 
+database tools, or Silverlight are not required by ARIA or other 
+Pioneer SDK libraries, and do not need to be installed.
 
 Note: If you use a different version of Visual C++, you must rebuild 
-the ARIA libraries. We recommand and support only these versions; other
-versions may or may not work.
+the ARIA libraries. We recommand, test, and support only the above 
+versions; other versions or other compilers may or may not work. If you
+need to make any changes to use other compilers or compiler versions,
+please share your experience with the aria-users mailing list.
 
-You can add your new project the Visual Studio solution files provided with ARIA if you
-wish, or create a new solution and add your new project as well as projects
-for the ARIA libraries you use.
+You can start a new project from a template, or from scratch.
+
+New Visual Studio Project from Template
+---------------------------------------
+
+To start a project from a template, first install copies of the
+ARIA templates by running the "Install Visual C++ Templates.bat" script
+from the Start menu -> All Programs -> MobileRobots -> Aria ->
+Install Visual C++ Templates.  Exit Visual Studio if running.
+Run Visual Studio.  Click on "New Project..." from the startup
+page or the File menu.  Expand the "Installed", "Templates", "Visual C++", "ARIA" categories on the left, and select
+"Program using ARIA Library".  Fill in your desired project names
+and directory locations and click OK. An example program is included in the project which initializes ARIA, parses command-line arguments, attempts to connect to a robot, displays some data, then exits after sleeping for 3 seconds.  Modify this 
+as desired.
+
+The ARIA DLLs are in the ARIA "bin" directory (C:\Program Files\MobileRobots\Aria\bin).  
+This directory can be added to the system PATH, or the appropriate
+ARIA DLL copied to the same directory as your program executable, 
+or you can place your program executable in the ARIA bin directory.
+
+ARIA does not require the use of precompiled headers, and precompiled
+ARIA headers are not provided.  
+
+You do not need to include "stdafx.h" and "stdafx.cpp" in your project.
+
+To make your program more portable, you can use a standard C++ definition
+of your program's main function rather than WinMain or other 
+Windows-specific conventions:
+
+  int main(int argc, char **argv)
+  {
+      Aria::init();
+	  
+      ...
+	  
+	  Aria::exit(0);
+	  returrn 0;
+  }
+
+All code that uses the ARIA API should include the Aria.h header file before
+any other ARIA header files or header files from other Pioneer SDK libraries.
+Aria.h will set up some preprocessor and type definitions needed by the rest
+of the ARIA API:
+
+  #include "Aria.h"
+
+See the ARIA API reference documentation and example programs to 
+get started writing your programs.
+
+New Visual Studio Project from Scratch 
+--------------------------------------
+
+Begin by creating a new solution and C++ project for your 
+application.   You may also add the appropriate ARIA project(s)
+to your solution as well, as dependencies of your program.  This
+will let your solution automatically rebuild the ARIA libary if 
+neccesary.   Make sure to use the project files(s) corresponding
+to the version of Visual C++ you are using.
 
 Now you must configure your project to find ARIA. These instructions
 assume a default installation; if you installed ARIA elsewhere you
 must use different paths. If you keep your Visual Studo project within
-Aria's directory, you can also use relative paths (e.g. "..\lib" for the
+ARIA's directory, you can also use relative paths (e.g. "..\lib" for the
 library path).
 
-Aria DLL libraries are provided in two variants, "Debug" libraries that use 
-the "Multithreaded Debug DLL" runtime library, and non-Debug (or "Release") libraries
+ARIA DLL libraries are provided in two variants, "Debug" libraries that use 
+the "Multithreaded Debug DLL" runtime library, and non-Debug or "Release" libraries
 that use the plain "Multithreaded DLL" runtime library.  The ARIA solutions
 use a "Debug" and a "Release" configuration to select these variants; you
 can also use these configuration names as well if you wish.
@@ -222,6 +303,10 @@ can also use these configuration names as well if you wish.
 It is also possible to build static ARIA libraries. These libraries use 
 the "Multithreaded Debug" runtime library for Debug mode, or "Multithreaded"
 for Release mode.  These libraries will include the word "Static" in their names.
+
+You must set up the Debug configuration of your project to match the
+ARIA Debug configuration, and also set up the Release configuration of
+your project as well, to match the ARIA Release configuration.
 
 The steps required to configure a new program project settings for use with 
 the ARIA DLL libraries are as follows:
@@ -235,7 +320,7 @@ project in the solution explorer pane and choose Properties.
 2. Open the "General" section
 
   * Either set "Output Files" to "C:\Program Files\MobileRobots\Aria\bin" 
-    (Aria's bin directory, where Aria.dll etc. are), or put Aria's bin directory
+    (ARIA's bin directory, where Aria.dll etc. are), or put ARIA's bin directory
     in your system PATH environment variable, or copy the DLLs to your own
     project's output directory.
  
@@ -249,7 +334,7 @@ project in the solution explorer pane and choose Properties.
 3. Open  the "Link" or "Linker" section.
 
  * To "Additional Library Path" add "C:\Program Files\MobileRobots\Aria\lib"
-   (or other correct path to Aria lib directory)
+   (or other correct path to ARIA lib directory)
  
  * Open the "Input" subsection.
 
@@ -270,7 +355,7 @@ project in the solution explorer pane and choose Properties.
       If you are using the ArNetworking library, also add:
         ArNetworkingDebugVC12.lib
 		
-	* Aria does not require any of the Windows system libraries included
+	* ARIA does not require any of the Windows system libraries included
 	  by Visual C++ as "Inherited values" in the Linker Additional Dependencies,
 	  so you can uncheck "Inherit from parent or project defaults" after choosing
 	  "Edit" from the drop-down menu next to the Additional Dependencies
@@ -293,7 +378,7 @@ project in the solution explorer pane and choose Properties.
       If you are using the ArNetworking library, also add:
         ArNetworkingVC12.lib
 		
-    * Aria does not require any of the Windows system libraries included
+    * ARIA does not require any of the Windows system libraries included
 	  by Visual C++ as "Inherited values" in the Linker Additional Dependencies,
 	  so you can uncheck "Inherit from parent or project defaults" after choosing
 	  "Edit" from the drop-down menu next to the Additional Dependencies
@@ -307,7 +392,7 @@ project in the solution explorer pane and choose Properties.
 
     * To "Additional Include Directories" add 
       "C:\Program Files\MobileRobots\Aria\include".
-	 (or other correct path to Aria's include directory)
+	 (or other correct path to ARIA's include directory)
 
    * Click on the "Code Generation" subsection
 
@@ -329,10 +414,10 @@ and also append ARIA_STATIC to the preprocessor definitions in the C++ -> Prepro
 section (this prevents DLL "export" attributes from being added to method
 declarations in the ARIA header files.)
 
-The ARIA DLLs are in the Aria "bin" directory (C:\Program Files\MobileRobots\Aria\bin
+The ARIA DLLs are in the ARIA "bin" directory (C:\Program Files\MobileRobots\Aria\bin
 if installed).  This directory can be added to the system PATH, or the appropriate
 ARIA DLL copied to the same directory as your program executable, or you can place 
-your program executable in the Aria bin directory.
+your program executable in the ARIA bin directory.
 
 ARIA does not require the use of precompiled headers, and precompiled
 ARIA headers are not provided.  To disable the use of precompiled headers
@@ -349,6 +434,13 @@ of your program's main function to standard C++:
   {
       ...
   }
+
+All code that uses the ARIA API should include the Aria.h header file before
+any othehr ARIA header files or header files from other Pioneer SDK libraries.
+Aria.h will set up some preprocessor and type definitions needed by the rest
+of the ARIA API.
+
+  #include "Aria.h"
 
 See the ARIA API reference documentation and example programs to 
 get started writing your programs.
@@ -369,6 +461,11 @@ the same version of G++ or a compatible version to build programs that
 link against it, or rebuild ARIA using your preferrend G++ version. (On
 Debian and Ubuntu systems, the default g++ and gcc compiler versions may be changed
 using the 'galternatives' program or the 'update-alternatives' command). 
+In general, the 4.x series of GCC compilers are compatible with each other,
+but not with 3.4 or other 3.x versions, and vice versa. We recommend using
+the standard version of GCC on your Linux system, unless using an old 
+version of Linux, (e.g. RedHat 7, Debian 3), in which case, we recommend
+specifically using GCC 3.4.
 
 When compiling ARIA or its examples, you may also temporarily override the 
 C++ compiler command ('g++' by default) by setting the CXX environment 
@@ -398,14 +495,14 @@ to learn how to use ARIA.
 
 ### Using ARIA from your own Makefile or other build system: ###
 
-If you want to keep your program in a different place than the Aria 
+If you want to keep your program in a different place than the ARIA 
 examples directory, and use your own Makefile or other build tool,
 you need to use the following g++ options to compile the program:
 
  -fPIC -I/usr/local/Aria/include 
 
 If you wish, you may also use -g and -Wall for debugging information
-and useful warnings.   Aria does not use exceptions, so you may also
+and useful warnings.   ARIA does not use exceptions, so you may also
 use -fno-exceptions if you wish; this will cause any use of exceptions
 in your program to trigger a compile error.
 
@@ -414,7 +511,7 @@ For linking with libAria use these options:
   -L/usr/local/Aria/lib -lAria -lpthread -ldl -lrt
 
 If you are also using ArNetworking, use the following compile option
-in addition to the Aria options above:
+in addition to the ARIA options above:
 
   -I/usr/local/Aria/ArNetworking/include
   
@@ -437,11 +534,20 @@ might look something like this:
 	  $(CXX) $(CFLAGS) $(ARIA_INCLUDE) $< -o $@ $(ARIA_LINK)
 
 
+If you run the `make` command in the same directory as this Makefile,
+then GNU Make will check `program.cpp` for changes, and if newer than
+`program`, will attempt to build the target program named "program"
+using this compiler command, based on the expansions of the variables and
+the target and dependency patterns which match "program" and "program.cpp":
+
+  c++ -fPIC -g -Wall -I/usr/local/Aria/include program.cpp -o program -L/usr/local/Aria/lib -lAria -lpthread -ldl -lrt
+
 Refer to the GNU Make manual <http://www.gnu.org/software/make> or 
 other books or documentation about Make to learn more.
 
 See the ARIA API reference documentation and example programs to 
 get started writing your programs.
+
 
 ### Setting variables for ARIA Makefiles ###
 
@@ -451,11 +557,21 @@ line when running `make`, for example:
 
   make CXX="g++-4.6"
 
+These will be used when building or reduilding the ARIA library as well
+as example and test programs from examples/ and tests/. ArNetworking also
+has similar variables.
+
+
 CXXFLAGS    Additional compile flags passed to the C++ compiler. You
             can add GCC options to enable profiling, optimizations, etc.  
             For example, to rebuild ARIA optimized for the Atom CPU
             found in the LX/MTX embedded computer, add -mtune=atom and -O2:
               make clean; make CXXFLAGS="-mtune=atom -O2"
+            Or, to include all symbols to see more information in the
+            output of ArLog::logBacktrace():
+              make CXXFLAGS="-O0 -rdynamic"
+            Or to enable profiling:
+              make CXXFLAGS="-pg -fprofile-arcs"
             These compiler flags will be used in addition to ARIA's 
             default flags.
 
@@ -514,6 +630,11 @@ found at the following sites:
    differ between Linux distributions and not all HOWTO documents will
    be relevant to your distribution.
 
+ * Ask Ubuntu and other question-answer sites can be searched to find answers to 
+   problems using Linux, or to ask questions: 
+    * <http://www.askubuntu.com>
+    * More Stack Exchange sites are at <https://stackexchange.com/sites>
+
 For more depth, there are many books about using Linux, consult your
 local computer bookseller. The ideal way to learn about Linux is to work 
 with an experienced colleague who can demonstrate things and answer 
@@ -528,7 +649,10 @@ If you are new to C++ programming, the definitive guide is Bjarne
 Stroustrup's book "The C++ Programming Language".   The book
 "C++ In a Nutshell", published by O'Reilly & Associates, is a
 good quick guide and reference. There are also several websites
-and many other books about C++.
+and many other books about C++.   You can search Stack Overflow
+<http://www.stackoverflow.com> and other question-answer sites, 
+or ask new questions if your question has not previously been
+asked and answered.
 
 
 Using ARIA from Java or Python
@@ -569,7 +693,7 @@ to an ArNetworking server from Matlab.
 MobileSim Simulator
 ===================
 
-SRIsim is no longer included with Aria.  There is now a seperately
+SRIsim is no longer included with ARIA.  There is now a seperately
 downloadable MobileSim simulator at our support webpage 
 <http://robots.mobilerobots.com>.  MobileSim is compatible with SRISim,
 but adds many new features.

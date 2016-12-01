@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -163,16 +164,65 @@ int main(int argc, char **argv) {
   Aria::setKeyHandler(&keyHandler);
   robot.attachKeyHandler(&keyHandler);
   
+  // Add imuPacketHandler() as packet handler function 
   ArGlobalRetFunctor1<bool, ArRobotPacket *> myImuPacketHandler(&imuPacketHandler);
   robot.addPacketHandler(&myImuPacketHandler, ArListPos::FIRST);
+
+  // Run robot cycle in background thread
   robot.runAsync(true);
   ArUtil::sleep(500);
+
+  // Check whether robot firmware thinks it has an IMU
   robot.lock();
-  robot.comInt(26, 2);  // request IMU packets continuously
-  ArLog::log(ArLog::Normal, "Requested IMU packets, waiting...");
+  /*
+  if (!robot.getOrigRobotConfig()->getHasGyro())
+  {
+    ArLog::log(ArLog::Terse, "imuExample: Robot firmware indicates gyro/imu disabled! (See HasGyro and/or GyroType parameter)");
+    robot.unlock();
+    Aria::exit(1);
+    return 1;
+  }
+  */
+  int gyroType = robot.getOrigRobotConfig()->getGyroType();
+  const char *gyroTypeDescr = "UNRECOGNIZED VALUE";
+  switch(gyroType)
+  {
+    case 0:
+      gyroTypeDescr = "Disabled/No Gyro";
+      break;
+    case 1:
+      gyroTypeDescr = "Pioneer3 Gyro Data";
+      break;
+    case 2:
+      gyroTypeDescr = "Pioneer3 Gyro Auto";
+      break;
+    case 3:
+      gyroTypeDescr = "Seekur/SeekurJr Single Axis Gyro";
+      break;
+    case 4:
+      gyroTypeDescr = "Seekur/SeekurJr IMU";
+      break;
+    default:
+      ArLog::log(ArLog::Normal, "imuExample: Unrecognized GyroType value %d!", gyroType);
+  }
+  ArLog::log(ArLog::Normal, "imuExample: Robot firmware reports GyroType=%d (%s)");
+  if(gyroType != 4)
+  {
+    ArLog::log(ArLog::Terse, "imuExample: Robot firmware configuration paramater GyroType=%d (%s). Cannot get IMU data with this GyroType, need GyroType 4.", gyroType, gyroTypeDescr);
+    robot.unlock();
+    Aria::exit(1);
+    return 1;
+  }
   robot.unlock();
+
+  // request IMU packets continuously
+  robot.lock();
+  robot.comInt(26, 2);  
+  ArLog::log(ArLog::Normal, "imuExample: Requested IMU packets, waiting...");
+  robot.unlock();
+
+  // Wait for disconnect and exit
   robot.waitForRunExit();
-  Aria::shutdown();
-  exit(0);
+  Aria::exit(0);
 }
 			 

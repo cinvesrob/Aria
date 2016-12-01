@@ -1,5 +1,8 @@
 var classArRobotPacketSender =
 [
+    [ "INTARG", "classArRobotPacketSender.html#a6ba63fdcaa23fa87b333f7647b951e82a9e0191418ebded84a1e70fe330d5d40e", null ],
+    [ "NINTARG", "classArRobotPacketSender.html#a6ba63fdcaa23fa87b333f7647b951e82a6570a31e265bed1f529a76d4fa38363c", null ],
+    [ "STRARG", "classArRobotPacketSender.html#a6ba63fdcaa23fa87b333f7647b951e82a24f9f4e913a4d54db023ba2744644c40", null ],
     [ "ArRobotPacketSender", "classArRobotPacketSender.html#a3d6164270a77da60766268ecaf839a84", null ],
     [ "ArRobotPacketSender", "classArRobotPacketSender.html#a71f0b04f8f8d4ecc81d0aee323079996", null ],
     [ "ArRobotPacketSender", "classArRobotPacketSender.html#a5a1324a9c7633a816fa3f20750e95471", null ],

@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -35,12 +36,24 @@ AREXPORT ArSonarDevice::ArSonarDevice(size_t currentBufferSize,
   myProcessCB(this, &ArSonarDevice::processReadings),
   myIgnoreReadingCB(NULL)
 {
+  // Remove readings from cumulative buffer if far away from robot after it
+  // moves:
   setMaxDistToKeepCumulative(3000); 
-  myFilterNearDist = 50;	// 50 mm between cumulative readings, at least
-  myFilterFarDist = 3000;       // throw out cumulative readings this far
-                                // from robot
+
+  // Do our own filtering of readings that are closer than 50 mm  to each other from 
+  //cumulative buffer between cumulative readings, at least:
+  myFilterNearDist = 50;
+
+  // Do our own filtering of cumulative readings this far from robot:
+  myFilterFarDist = 3000;
+
+  // Remove readings from current buffer if more than 5 seconds old:
   setMaxSecondsToKeepCurrent(5);
+
+  // Remove readings from cumulatiive buffer if more than 15 seconds old:
   setMaxSecondsToKeepCumulative(15);
+
+  // Visualization properties for GUI clients such as MobileEyes:
   setCurrentDrawingData(new ArDrawingData("polyArrows", 
                                           ArColor(0x33, 0xCC, 0xFF), 
                                           200,  // mm length of arrow
@@ -73,6 +86,15 @@ AREXPORT void ArSonarDevice::processReadings(void)
 
   for (i = 0; i < myRobot->getNumSonar(); i++)
   {
+    // Get a reference to the ArSensorReading object for sonar sensor #i, which
+    // will provide an X,Y position and timestamp for the most recently received
+    // obstacle detected by that sonar sensor. ArRobot created a set of 
+    // ArSensorReading objects for each sonar sensor  when it connected to the 
+    // robot, configured them with the position of the sonar sensor relative to the
+    // center of the robot. It calls ArSensorReading::newData() when new sonar
+    // data is received to cause the ArSensorReading object to update the X,Y
+    // position based on the range value received from the sonar sensor.
+
     reading = myRobot->getSonarReading(i);
     if (reading == NULL || !reading->isNew(myRobot->getCounter()))
       continue;

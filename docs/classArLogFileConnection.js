@@ -1,6 +1,9 @@
 var classArLogFileConnection =
 [
-    [ "Open", "classArLogFileConnection.html#a3f9f03f5608a2b7254836645ac6848bd", null ],
+    [ "Open", "classArLogFileConnection.html#a3f9f03f5608a2b7254836645ac6848bd", [
+      [ "OPEN_FILE_NOT_FOUND", "classArLogFileConnection.html#a3f9f03f5608a2b7254836645ac6848bda4481537d5595c470ce7d50bf9f9b48b7", null ],
+      [ "OPEN_NOT_A_LOG_FILE", "classArLogFileConnection.html#a3f9f03f5608a2b7254836645ac6848bda27cb9ee9c3c3d31f1dc535efe95c8c79", null ]
+    ] ],
     [ "ArLogFileConnection", "classArLogFileConnection.html#a5790036cd172e4ecd2a3c0be99df5360", null ],
     [ "~ArLogFileConnection", "classArLogFileConnection.html#a6a085a3eb86853a6dd114660ee8bfc2c", null ],
     [ "buildStrMap", "classArLogFileConnection.html#ae33b5eaa66604dfd0e1bf7c8368cec9a", null ],

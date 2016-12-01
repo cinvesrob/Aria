@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -506,9 +507,12 @@ ArLMS1XXPacket *ArLMS1XXPacketReceiver::receivePacket(unsigned int msWait,
 			}
 			else
 			{
-				ArLog::log(ArLog::Terse,
-							"%s::receivePacket() Received invalid char during STARTING, looking for 0x02 got 0x%02x %c",
-									myName, c, c);
+        			char l = ' ';
+       				if(c >= ' ' && c <= '~')
+          				l = c;
+				ArLog::log(ArLog::Verbose,
+							"%s::receivePacket() Warning: Received invalid char during STARTING, looking for 0x02 got 0x%02x %c. Skipping.",
+									myName, c, l);
 			}
 		}
 		else if (myState == DATA)
@@ -650,8 +654,7 @@ ArLMS1XXPacket *ArLMS1XXPacketReceiver::receivePacket(unsigned int msWait,
 					loopcount = myReadCount - 1;
 				break;
 
-				case ArLMS1XX::TiM3XX:
-				case ArLMS1XX::LMS5XX:
+        default:
 					loopcount = myReadCount;
 				break;
 			
@@ -916,6 +919,11 @@ AREXPORT ArLMS1XX::ArLMS1XX(int laserNumber,
 
 	myLaserModel = laserModel;
 
+  if(myLaserModel == LMS1XX || myLaserModel == LMS5XX)
+    myLaserModelFamily = LMS;
+  else
+    myLaserModelFamily = TiM;
+
 	clear();
 	myRawReadings = new std::list<ArSensorReading *>;
 
@@ -926,49 +934,49 @@ AREXPORT ArLMS1XX::ArLMS1XX(int laserNumber,
 	laserSetName(getName());
 
 	laserAllowSetPowerControlled(false);
-	// MPL 8/8/11 taking this out since you can't actually set the
-	// degrees on the LMS 100 or LMS 500 (it's always the maximum)
 
   switch (myLaserModel) {
 
-	// not sure if we need to do this for TiM??
-  case ArLMS1XX::LMS1XX:
-  case ArLMS1XX::TiM3XX:
-		laserAllowSetDegrees(-135, -135, 135, 	// default, min, max for start degrees
-			 135, -135, 135); 		// default, min, max for end degrees
+    case ArLMS1XX::LMS1XX:
+    case ArLMS1XX::TiM3XX:
+    case TiM551:
+    case TiM561:
+    case TiM571:
+      // LMS1xx and all TiMs have 270 deg max FoV
+      laserAllowSetDegrees(-135, -135, 135, 	// default, min, max for start degrees
+         135, -135, 135); 		// default, min, max for end degrees
 
-    break;
+      break;
 
-  case ArLMS1XX::LMS5XX:
+    case ArLMS1XX::LMS5XX:
+      // LMS500 has 190 deg max FOV
+      laserAllowSetDegrees(-95, -95, 95, 95, -95, 95);
+      break;
 
-		break;
 
   } // end switch laserModel
 
 
-	//if(!myIsLMS5XX)
-	//{
-	//	laserAllowSetDegrees(-135, -135, 135, 	// default, min, max for start degrees
-	//		 135, -135, 135); 		// default, min, max for end degrees
-	//}
 
 	std::map<std::string, double> incrementChoices;
 
 	// According to documentation, LMS1xx allows half or quarter degree resolution, and
 	// LMS5xx allows half, quarter and also one degree resolution. One was the default for the 
 	// LMS2xx, so let's keep that for LMS5xx. Applications can still set it to 
-        // half or quarter instead, same as they used to with the 2xx.
-	incrementChoices["half"] = .5;
-	incrementChoices["quarter"] = .25;
+  // half or quarter instead, same as they used to with the 2xx.
 
   switch (myLaserModel) {
 
 	// not sure if we need to do this for TiM??
   case ArLMS1XX::LMS1XX:
+    incrementChoices["half"] = .5;
+    incrementChoices["quarter"] = .25;
 		laserAllowIncrementChoices("half", incrementChoices);
     break;
 
   case ArLMS1XX::LMS5XX:
+    incrementChoices["half"] = .5;
+    incrementChoices["quarter"] = .25;
 		incrementChoices["one"] = 1;
 		laserAllowIncrementChoices("one", incrementChoices);
 		break;
@@ -976,6 +984,20 @@ AREXPORT ArLMS1XX::ArLMS1XX(int laserNumber,
   case ArLMS1XX::TiM3XX:
 		incrementChoices["three"] = 3;
 		laserAllowIncrementChoices("three", incrementChoices);
+		break;
+
+  case TiM551:
+		incrementChoices["one"] = 1;
+		//incrementChoices["three"] = 3;
+		laserAllowIncrementChoices("one", incrementChoices);
+		break;
+
+  case TiM561:
+  case TiM571:
+		//incrementChoices["one"] = 1;
+		//incrementChoices["three"] = 3;
+		incrementChoices["third"] = 0.333333;
+		laserAllowIncrementChoices("third", incrementChoices);
 		break;
   } // end switch laser model
 
@@ -998,6 +1020,31 @@ AREXPORT ArLMS1XX::ArLMS1XX(int laserNumber,
 	laserAllowReflectorBitsChoices("none", reflectorBitsChoices);
 
 
+  // max ranges
+  switch (myLaserModel) 
+  {
+    case LMS1XX:
+      laserSetAbsoluteMaxRange(50000);
+      break;
+
+    case LMS5XX:
+      laserSetAbsoluteMaxRange(80000);
+      break;
+
+    case TiM3XX:
+      laserSetAbsoluteMaxRange(4000);
+      break;
+
+    case TiM551:
+    case TiM561:
+      laserSetAbsoluteMaxRange(10000);
+      break;
+
+    case TiM571:
+      laserSetAbsoluteMaxRange(25000);
+      break;
+  }
+
 	std::list<std::string> baudChoices;
 
   switch (myLaserModel) {
@@ -1011,20 +1058,24 @@ AREXPORT ArLMS1XX::ArLMS1XX(int laserNumber,
 
   case ArLMS1XX::LMS1XX:
   case ArLMS1XX::LMS5XX:
-    // set possible baud choices for serial, but default to tcp 
-		baudChoices.push_back("9600");
-    baudChoices.push_back("57600");
-		baudChoices.push_back("115200");
-    laserAllowStartingBaudChoices("57600", baudChoices);
-		laserSetDefaultTcpPort(2111);
+  case TiM551:
+  case TiM561:
+  case TiM571:
+    // default to tcp only
 		laserSetDefaultPortType("tcp");
 		break;
 
   } // end switch laser model
 
+  // default TCP port for all types, though tim310/510 default connection type is
+  // serial, only used for tim if manually set to tcp.
+  laserSetDefaultTcpPort(2111);
+
 	// PS = add new field for scan freq
 //	myScanFreq = 5;
 
+  // Log level for debugging and other detailed informational messages. Warnings
+  // and key events are still logged at Normal/Terse as appropriate.
 	myLogLevel = ArLog::Verbose;
 	//myLogLevel = ArLog::Normal;
 
@@ -1041,23 +1092,6 @@ AREXPORT ArLMS1XX::ArLMS1XX(int laserNumber,
 	resetLastCumulativeCleanTime();
 
   switch (myLaserModel) {
-
-  case ArLMS1XX::TiM3XX:
-		// need to make new dots for TiM
-  case ArLMS1XX::LMS1XX:
-		setCurrentDrawingData(
-				new ArDrawingData("polyDots",
-						ArColor(0, 0, 255),
-						80,  // mm diameter of dots
-						75), // layer above sonar
-						true);
-
-		setCumulativeDrawingData(
-				new ArDrawingData("polyDots",
-						ArColor(125, 125, 125),
-						100, // mm diameter of dots
-						60), // layer below current range devices
-						true);
 
     break;
 
@@ -1077,6 +1111,22 @@ AREXPORT ArLMS1XX::ArLMS1XX(int laserNumber,
 						true);
 
 		break;
+
+  default:
+		// need to make different default dots for TiMs, 1xx, etc.
+		setCurrentDrawingData(
+				new ArDrawingData("polyDots",
+						ArColor(0, 0, 255),
+						80,  // mm diameter of dots
+						75), // layer above sonar
+						true);
+
+		setCumulativeDrawingData(
+				new ArDrawingData("polyDots",
+						ArColor(125, 125, 125),
+						100, // mm diameter of dots
+						60), // layer below current range devices
+						true);
 
   } // end switch laserModel
 
@@ -1151,22 +1201,7 @@ AREXPORT void ArLMS1XX::setRobot(ArRobot *robot)
 	if (myRobot != NULL)
 	{
 		myRobot->remSensorInterpTask(&mySensorInterpTask);
-
-		switch (myLaserModel) {
-
-		case ArLMS1XX::TiM3XX:
-			myRobot->addSensorInterpTask("tim3xx", 90, &mySensorInterpTask);
-		break;
-
-		case ArLMS1XX::LMS1XX:
-			myRobot->addSensorInterpTask("lms1XX", 90, &mySensorInterpTask);
-    break;
-
-		case ArLMS1XX::LMS5XX:
-			myRobot->addSensorInterpTask("lms5XX", 90, &mySensorInterpTask);
-		break;
-
-		} // end switch laserModel
+    myRobot->addSensorInterpTask(getName(), 90, &mySensorInterpTask);
 
 		//if (myIsLMS5XX)
 		//	myRobot->addSensorInterpTask("lms5XX", 90, &mySensorInterpTask);
@@ -1284,7 +1319,7 @@ void ArLMS1XX::sensorInterp (void)
 		//int onStep;
 		ArSensorReading *reading;
 		// read the extra stuff
-		myVersionNumber = packet->bufToUByte2();
+		myVersionNumber = packet->bufToUByte2(); // first value after LMDscandata
 		myDeviceNumber = packet->bufToUByte2();
 		mySerialNumber = packet->bufToUByte4();
 		myDeviceStatus1 = packet->bufToUByte();
@@ -1300,8 +1335,8 @@ void ArLMS1XX::sensorInterp (void)
 		myOutputStatus1 = packet->bufToUByte();
 		myOutputStatus2 = packet->bufToUByte();
 
-		// myReserved is checksum on TiM3xx
-		myReserved = packet->bufToUByte2();
+		// myReserved is checksum on TiM
+		myReserved = packet->bufToUByte2(); // 14th value after LMDscandata
 
 		myScanningFreq = packet->bufToUByte4();
 		myMeasurementFreq = packet->bufToUByte4();
@@ -1311,22 +1346,21 @@ void ArLMS1XX::sensorInterp (void)
 			ArLog::log (myLogLevel, "%s::sensorInterp() DeviceStatus %d %d",
 			            getName(), myDeviceStatus1, myDeviceStatus2);
 
-//#if 0
-		// validate checksum if TiM
-		if (myLaserModel == ArLMS1XX::TiM3XX) {
 
-			if (validateCheckSum(packet)) {
-				ArLog::log (ArLog::Normal, "%s::sensorInterp() Bad TiM3XX checksum... skipping this packet",
+    // Do only TiMs have checksums?
+/*
+		if (myLaserModelFamily == TiM) {
+			if (!validateCheckSum(packet)) {
+				ArLog::log (ArLog::Normal, "%s: Warning: Bad checksum... skipping this packet",
 				            getName());
 
 				delete packet;
 				unlockDevice();
 				myDataMutex.unlock();
-
 				continue;
 			}
 		}
-//#endif
+*/
 
 		ArTime time = packet->getTimeReceived();
 		ArPose pose;
@@ -1338,10 +1372,17 @@ void ArLMS1XX::sensorInterp (void)
 
 		// TiM scan freq is 0 in TiM packet - use measurementfreq
 
-		if (myLaserModel == ArLMS1XX::TiM3XX)
+    // XXX TODO check that this is correct
+    int freq = 0;
+		if (myLaserModelFamily == TiM)
+    {
 			myScanningFreq = myMeasurementFreq;
-
-		int freq = 1000/ (myScanningFreq/100);
+      freq = 0;
+    }
+    else
+    {
+      freq = 1000.0/ ((double)myScanningFreq/100.0);
+    }
 
 		//ArLog::log(ArLog::Normal,
 		//	"%s::sensorInterp() freq = %d inputted freq = %d",getName(),freq,myScanningFreq);
@@ -1372,7 +1413,7 @@ void ArLMS1XX::sensorInterp (void)
 		  myVersionNumber, myDeviceNumber,
 		  mySerialNumber, myScanCounter, myScanningFreq, myMeasurementFreq);
 		*/
-		myNumberEncoders = packet->bufToUByte2();
+		myNumberEncoders = packet->bufToUByte2(); // 17th value after LMDscandata
 		//printf("\tencoders %d\n", myNumberEncoders);
 
 		if (myNumberEncoders > 0)
@@ -1385,11 +1426,12 @@ void ArLMS1XX::sensorInterp (void)
 		}
 
 
-		myNumChans16Bit = packet->bufToUByte2();
+		myNumChans16Bit = packet->bufToUByte2(); // 18th value after LMDscanadat if NumberEncoders=0
 
-		// PS - for TiM for what ever reason 2nd byte is num 16 bit chans
+		// for TiM310/510 for what ever reason 2nd byte is also num 16 bit chans
+		// despite COLA protocol documentation:
 		if (myLaserModel == ArLMS1XX::TiM3XX)
-			myNumChans16Bit = packet->bufToUByte2();
+			myNumChans16Bit = packet->bufToUByte2(); // 19th value after LMDscandata if NumberEncoders=0 and its a TiM
 
 
 		if (myNumChans16Bit > 1)
@@ -1402,9 +1444,11 @@ void ArLMS1XX::sensorInterp (void)
 		double eachAngularStepWidth;
 		int eachNumberData;
 		std::list<ArSensorReading *>::iterator it;
-		double atDeg;
+		double atDeg; // angle of reading transformed according to sensorPoseTh parameter
+    double atDegLocal = 0; // angle of reading local to laser
 		int onReading;
 		double start = 0;
+    double startLocal = 0;
 		double increment = 0;
 		bool startedProcessing = false;
 
@@ -1423,7 +1467,7 @@ void ArLMS1XX::sensorInterp (void)
 				unlockDevice();
 				myDataMutex.unlock();
 				ArLog::log (ArLog::Normal,
-				            "%s: Could not process channel %s",
+				            "%s::sensorInterp(): Could not process channel %s",
 				            getName(), eachChanMeasured);
 				continue;
 			}
@@ -1431,26 +1475,17 @@ void ArLMS1XX::sensorInterp (void)
 				ArLog::log (ArLog::Normal, "%s: Processing 16bit %s (%d %d)",
 				            getName(), eachChanMeasured,
 				            measuringDistance, measuringReflectance);
+
 			// for LMS5XX Scaling Factor is a real number
-
-			switch (myLaserModel) {
-			case ArLMS1XX::TiM3XX:
-			case ArLMS1XX::LMS1XX:
-				eachScalingFactor = packet->bufToUByte4(); // FIX should be real
-				break;
-			case ArLMS1XX::LMS5XX:
+      if(myLaserModel == LMS5XX)
 				eachScalingFactor = packet->bufToByte4(); // FIX should be real
-				break;
-			} // end switch laserModel
+      else
+				eachScalingFactor = packet->bufToUByte4(); // FIX should be real
 
-//      if (myIsLMS5XX)
-//	eachScalingFactor = packet->bufToByte4(); // FIX should be real
-//      else
-//	eachScalingFactor = packet->bufToUByte4(); // FIX should be real
 			eachScalingOffset = packet->bufToUByte4(); // FIX should be real
 			eachStartingAngle = packet->bufToByte4() / 10000.0;
-			eachAngularStepWidth = packet->bufToUByte2() / 10000.0;
-			eachNumberData = packet->bufToUByte2();
+			eachAngularStepWidth = packet->bufToUByte2() / 10000.0; // angular distance between each reading
+			eachNumberData = packet->bufToUByte2(); // number of readings in this set
 			/*
 			ArLog::log(ArLog::Terse, "%s: %s start %.1f step %.2f numReadings %d",
 			getName(), eachChanMeasured,
@@ -1467,6 +1502,7 @@ void ArLMS1XX::sensorInterp (void)
 			if (myRawReadings->size() == 0)
 				for (i = 0; i < eachNumberData; i++)
 					myRawReadings->push_back (new ArSensorReading);
+
 			if (eachNumberData > myRawReadings->size()) {
 				ArLog::log (ArLog::Terse, "%s::sensorInterp() Bad data, in theory have %d readings but can only have %d... skipping this packet\n",
 				            getName(), myRawReadings->size(), eachNumberData);
@@ -1477,18 +1513,30 @@ void ArLMS1XX::sensorInterp (void)
 				continue;
 			}
 
+      // TODO? Move some of the logic below regarding projecting from rays to
+      // cartesian points based on sensor position, flipped, etc. to ArLaser,
+      // ArRangeDevice or ArSensorReading so other laser and sensor classes can
+      // use it?
+
+      // first iteration:
 			if (!startedProcessing) {
-				if (myFlipped) {
+        startLocal = -1 * ((eachNumberData - 1) * eachAngularStepWidth) / 2.0;
+				if (getFlipped()) {
 					// original from LMS100, but this seems to have some problems
 					//start = mySensorPose.getTh() + eachStartingAngle - 90.0 + eachAngularStepWidth * eachNumberData;
 					// so we're trying this new algorithm which should be less dependent on SICK's protocol
-					start = mySensorPose.getTh() + ( (eachNumberData - 1) * eachAngularStepWidth) / 2.0;
+					//start = mySensorPose.getTh() + ( (eachNumberData - 1) * eachAngularStepWidth) / 2.0;
+					// but this might have had problems pointing backwards (found on 3/16/2015)				
+          start = ArMath::addAngle(mySensorPose.getTh(), ( (eachNumberData - 1) * eachAngularStepWidth) / 2.0);
 					increment = -eachAngularStepWidth;
 				} else {
 					// original from LMS100, but this seems to have some problems
 					//start = mySensorPose.getTh() + eachStartingAngle - 90.0;
-					// so we're trying this new algorithm which should be less dependent on SICK's protocol
-					start = mySensorPose.getTh() - ( (eachNumberData - 1) * eachAngularStepWidth) / 2.0;
+					// so we're trying this new algorithm which should be less dependent on SICK's protocol...
+				  // but this might have had problems pointing backwards (found on 3/16/2015)
+				  //start = mySensorPose.getTh() - ( (eachNumberData - 1) * eachAngularStepWidth) / 2.0;
+				  // so we're trying this one
+				  start = ArMath::subAngle(mySensorPose.getTh(), ( (eachNumberData - 1) * eachAngularStepWidth) / 2.0);
 					increment = eachAngularStepWidth;
 					/*
 						ArLog::log(ArLog::Normal,
@@ -1501,50 +1549,39 @@ void ArLMS1XX::sensorInterp (void)
 			bool ignore;
 
 			for (atDeg = start,
+           atDegLocal = startLocal,
 			     it = myRawReadings->begin(),
 			     onReading = 0;
 			     onReading < eachNumberData;
-			     atDeg += increment,
+			     // MPL trying to fix bug with negative readings
+			     //atDeg += increment,
+			     atDeg = ArMath::addAngle(atDeg, increment),
+           atDegLocal = ArMath::addAngle(atDegLocal, eachAngularStepWidth),
 			     it++,
 			     onReading++) {
+
 				ignore = false;
-				// MPL 8/8/11 taking this out since
-				// the start and end degrees aren't
-				// really settable, and it causes
-				// problems if the laser points
-				// somwhere other than forwards
-				// (RH 8-1-12 added back in for lms100 only where we seed to restrict fov on seekurs)
 
-				switch (myLaserModel) {
-				case ArLMS1XX::TiM3XX:
-				case ArLMS1XX::LMS1XX:
-					if (atDeg < getStartDegrees() || atDeg > getEndDegrees()) {
-						// we configured lms1xx to have restricted fov, so this actually shouldn't happen:
-						ArLog::log (ArLog::Verbose, "ArLMS1XX: Warning: laser sent reading at %f out of FOV, setting 'ignore' flag on this reading. (LaserStartDegrees=%f, LaserEndDegrees=%f)", atDeg, getStartDegrees(), getEndDegrees());
-						ignore = true;
-					}
-					break;
-				case ArLMS1XX::LMS5XX:
-					break;
-				} // end switch laserModel
-
-//	if(!myIsLMS5XX)
-//	{
-//		if (atDeg < getStartDegrees() || atDeg > getEndDegrees())
-//		{
-				// we configured lms1xx to have restricted fov, so this actually shouldn't happen:
-//			ArLog::log(ArLog::Verbose, "ArLMS1XX: Warning: laser sent reading at %f out of FOV, setting 'ignore' flag on this reading. (LaserStartDegrees=%f, LaserEndDegrees=%f)", atDeg, getStartDegrees(), getEndDegrees());
-//			ignore = true;
-//		}
-//	}
-				reading = (*it);
+        reading = (*it);
 
 				if (myFirstReadings)
 					reading->resetSensorPosition (ArMath::roundInt (mySensorPose.getX()),
 					                              ArMath::roundInt (mySensorPose.getY()),
 					                              atDeg);
 
-				if (measuringDistance) {
+        // was configured to have restricted fov, set ignore flag. (Move to ArLaser or other shared class?)
+        if (    (canSetDegrees()    && (atDegLocal < getStartDegrees()             || atDegLocal > getEndDegrees()))
+             || (canChooseDegrees() && (atDegLocal < -getDegreesChoiceDouble()/2.0 || atDegLocal > getDegreesChoiceDouble()/2.0))
+        )
+        {
+          ignore = true;
+        }
+        //fprintf(stderr, "onReading=%d (n=%d), atDeg=%f atDegLocal=%f, (canSetDegrees=%d, startDeg=%f, endDeg=%f, increment=%f, eachAngularStepWidth=%f) => ignore=%d\n", onReading, eachNumberData, atDeg, atDegLocal, canSetDegrees(), getStartDegrees(), getEndDegrees(), increment, eachAngularStepWidth, ignore); 
+
+        // calculate either obstacle position data or reflectance value data
+        // and update the ArSensorReading reading with the new data
+				if (measuringDistance)  
+        {
 					dist = packet->bufToUByte2();
 					// this was the original code, that just ignored 0s as a
 					// reading... however sometimes the sensor reports very close
@@ -1561,44 +1598,23 @@ void ArLMS1XX::sensorInterp (void)
 					// try not doing this for 500?????
 					int mindist;
 
-					switch (myLaserModel) {
-					case ArLMS1XX::TiM3XX:
-					case ArLMS1XX::LMS1XX:
-						mindist = 30;
-						break;
-					case ArLMS1XX::LMS5XX:
-						mindist = 15;
-						break;
-					} // end switch laserModel
-
-//	  if (myIsLMS5XX)
-//	    mindist = 15;
-//	  else
-//	    mindist = 30;
+          if(myLaserModel == LMS5XX)
+            mindist = 15;
+          else
+            mindist = 50;
 
 					if (dist < mindist) {
+            // too close to be valid, ignore
 						ignore = true;
 						// set this to greater than max range, so that some ARAM
 						// features work
 						dist = getMaxRange() + 1;
 					}
+
 					// on LMS5XX scalling factor = 1 is 65m =2 is 80m
+          if(myLaserModel == LMS5XX)
+            dist = dist * 2;
 
-					switch (myLaserModel) {
-					case ArLMS1XX::TiM3XX:
-					case ArLMS1XX::LMS1XX:
-						break;
-					case ArLMS1XX::LMS5XX:
-						dist = dist * 2;//eachScalingFactor;
-						break;
-					} // end switch laserModel
-
-//	  if (myIsLMS5XX)
-//	  {
-					//????? scaling fact dosn't seem to work
-					//printf("scalling fac = %d",eachScalingFactor);
-//	    dist = dist * 2;//eachScalingFactor;
-//	  }
 					/*
 					  else if (!ignore && dist < 150)
 					  {
@@ -1614,7 +1630,7 @@ void ArLMS1XX::sensorInterp (void)
 					refl = packet->bufToUByte2();
 					if (refl > 254 * 255) {
 						reading->setExtraInt (refl/255);
-						ArLog::log (ArLog::Normal, "%s: refl at %g of %d (raw %d)", getName(), atDeg, refl/255, refl);
+						//ArLog::log (ArLog::Normal, "%s: refl at %g of %d (raw %d)", getName(), atDeg, refl/255, refl);
 					}
 					// if the bit is dazzled we could set it to be ignored, but
 					// that'd be some later day
@@ -1669,7 +1685,7 @@ void ArLMS1XX::sensorInterp (void)
 			// if this isn't the data we want then skip it
 
 // PS - need to understand this more
-			if (myLaserModel != ArLMS1XX::TiM3XX) {
+			if (myLaserModelFamily != TiM) {
 
 				if (strcasecmp (eachChanMeasured8Bit, "RSSI1") != 0) {
 					ArLog::log (ArLog::Normal, "%s: Got unprocessable 8bit of %s", getName(),
@@ -1828,7 +1844,7 @@ AREXPORT ArLMS1XXPacket *ArLMS1XX::sendAndRecv(
 
 AREXPORT bool ArLMS1XX::blockingConnect(void)
 {
-	char buf[1024];
+//	char buf[1024];
   ArSerialConnection *conn;
 
 	if (!getRunning())
@@ -1850,14 +1866,17 @@ AREXPORT bool ArLMS1XX::blockingConnect(void)
 		if ((conn = dynamic_cast<ArSerialConnection *>(myConn)) != NULL)
 		{
 			conn->setBaud(atoi(getStartingBaudChoice()));
+      ArLog::log(ArLog::Normal, "%s: Will use serial connection %s at %d baud.", getName(), conn->getPort(), conn->getBaud());
 		}
 	}
+
+  ArLog::log(ArLog::Normal, "%s: Opening connection...", getName());
 
 	if (myConn->getStatus() != ArDeviceConnection::STATUS_OPEN &&
 			!myConn->openSimple())
 	{
 		ArLog::log(ArLog::Terse,
-				"%s::blockingConnect() Could not connect because the connection was not open and could not open it", getName());
+				"%s::blockingConnect() Could not connect because the connection was not open and could not open it as %s %s", getName(), myConn->getPortType(), myConn->getPortName());
 		myConnMutex.unlock();
 		failedToConnect();
 		return false;
@@ -1883,6 +1902,9 @@ AREXPORT bool ArLMS1XX::blockingConnect(void)
 			myReceiver.setReadTimeout(50);
 		break;
 			
+    default:
+      myReceiver.setReadTimeout(5);
+    break;
 
 	} // end switch laserModel
 
@@ -1902,6 +1924,7 @@ AREXPORT bool ArLMS1XX::blockingConnect(void)
 	setCurrentBufferSize(size);
 
 
+  ArLog::log(ArLog::Normal, "%s: Connecting to laser...", getName());
 	switch (myLaserModel) {
 
 		case ArLMS1XX::LMS1XX:
@@ -1910,7 +1933,10 @@ AREXPORT bool ArLMS1XX::blockingConnect(void)
 		break;
 
 		case ArLMS1XX::TiM3XX:
-			if (tim3xxConnect())
+    case TiM551:
+    case TiM561:
+    case TiM571:
+			if (timConnect())
 				return true;
 		break;
 
@@ -1924,11 +1950,14 @@ AREXPORT bool ArLMS1XX::blockingConnect(void)
 
 
 	ArLog::log(ArLog::Terse,
-			"%s::blockingConnect() Did not get scandata back from laser", getName());
+			"%s::blockingConnect() Could not connect to laser.", getName());
 	failedToConnect();
 	return false;
 
 }
+
+// scanfreq is scannnin frequency in hz, resolution is angle increment in
+// degrees. these values will be converted as appropriate.
 
 AREXPORT bool ArLMS1XX::lms5xxConnect(void)
 {
@@ -1958,40 +1987,42 @@ AREXPORT bool ArLMS1XX::lms5xxConnect(void)
 		sendPacket.strToBuf("SetAccessMode");
 		sendPacket.uByteToBuf(0x3); // level
 		sendPacket.strToBuf("F4724744"); // hashed password
-		sendPacket.finalizePacket();
+    sendPacket.finalizePacket();
 
-		ArLog::log(myLogLevel, "%s::lms5xxConnect() sending SetAccessMode: %s", getName(),
-				sendPacket.getBuf());
+    ArLog::log(myLogLevel, "%s::lms5xxConnect() sending SetAccessMode: %s", getName(),
+        sendPacket.getBuf());
 
-		if ((packet = sendAndRecv(timeDone, &sendPacket, "SetAccessMode")) != NULL)
-		{
+    if ((packet = sendAndRecv(timeDone, &sendPacket, "SetAccessMode")) != NULL)
+    {
 
-			ArLog::log(myLogLevel, "%s::lms5xxConnect() received SetAccessMode answer",getName());
-			delete packet;
-			packet = NULL;
+      ArLog::log(myLogLevel, "%s::lms5xxConnect() received SetAccessMode answer",getName());
+      delete packet;
+      packet = NULL;
 
-		}
-		else
-		{
-			ArLog::log(ArLog::Normal,
-					"%s::lms5xxConnect() ::sendAndRecvfor send SetAccessMode failed", getName());
-			failedToConnect();
-			return false;
-		}
-
-
-        // 2. Set Frequency and Resolution
-		sendPacket.empty();
-		sendPacket.strToBuf("sMN");
-		sendPacket.strToBuf("mLMPsetscancfg");
+    }
+    else
+    {
+      ArLog::log(ArLog::Normal,
+          "%s::lms5xxConnect() ::sendAndRecvfor send SetAccessMode failed", getName());
+      failedToConnect();
+      return false;
+    }
 
 
-		// PS the scanning freq needs to be 5000 for .5 angle resolution and 2500 for angle resolution .25
-        // PS 9/1/11 - use strcmp instead of double stuff
-		if (strcmp(getIncrementChoice(),"quarter") == 0)
-		//if (getIncrementChoiceDouble() == .25)
-			sendPacket.byte4ToBuf(2500); // scanning freq
-		else if (strcmp(getIncrementChoice(),"half") == 0)
+    // 2. Set Frequency and Resolution
+    sendPacket.empty();
+    sendPacket.strToBuf("sMN");
+    sendPacket.strToBuf("mLMPsetscancfg");
+
+
+
+    // PS the scanning freq needs to be 5000 for .5 angle resolution and 2500 for angle resolution .25
+    // PS 9/1/11 - use strcmp instead of double stuff
+    // TODO set for other increment choices or use getIncrementDouble()*10000.
+    if (strcmp(getIncrementChoice(),"quarter") == 0)
+      //if (getIncrementChoiceDouble() == .25)
+      sendPacket.byte4ToBuf(2500); // scanning freq
+    else if (strcmp(getIncrementChoice(),"half") == 0)
 			sendPacket.byte4ToBuf(5000); // scanning freq
 		else
 			sendPacket.byte4ToBuf(7500); // scanning freq
@@ -2005,6 +2036,8 @@ AREXPORT bool ArLMS1XX::lms5xxConnect(void)
 		//		"%s::lms5xxConnect() increment = %d", getName(), getIncrementChoiceDouble());
 
 
+    // we send the stand and end angle but according to protocol will not be
+    // used (but they are included in the response packet)
 		sendPacket.byte4ToBuf(-5 * 10000); // can't change starting angle
 		sendPacket.byte4ToBuf(185 * 10000); // can't change ending angle
 
@@ -2410,9 +2443,12 @@ AREXPORT bool ArLMS1XX::lms5xxConnect(void)
 			return false;
 		}
 
+    		//ArLog::log(ArLog::Normal, "Waiting for response...");
 		while (timeDone.mSecTo() > 0)
 		{
 			packet = myReceiver.receivePacket(1000);
+
+      			//ArLog::log(ArLog::Normal, "Got packet %s %s", packet->getCommandType(), packet->getCommandName());
 
 			// PS 9/1/11 - fix a bug where we were just looking for the sSN LMDscandata
 			// but actually the LMS sends back a sEA LMDscandata first, so we need to
@@ -2740,20 +2776,20 @@ AREXPORT bool ArLMS1XX::lms1xxConnect(void)
 
 }
 
-AREXPORT bool ArLMS1XX::tim3xxConnect(void)
+AREXPORT bool ArLMS1XX::timConnect(void)
 {
 
 		ArTime timeDone;
 		if (myPowerControlled) {
 			if (!timeDone.addMSec(60 * 1000)) {
 				ArLog::log(ArLog::Normal,
-						"%s::tim3xxConnect() error adding msecs (60 * 1000)");
+						"%s::timConnect() error adding msecs (60 * 1000)");
 			}
 		}
 		else {
 			if (!timeDone.addMSec(30 * 1000)) {
 				ArLog::log(ArLog::Normal,
-						"%s::tim3xxConnect() error adding msecs (30 * 1000)");
+						"%s::timConnect() error adding msecs (30 * 1000)");
 			}
 		}
 
@@ -2773,12 +2809,12 @@ AREXPORT bool ArLMS1XX::tim3xxConnect(void)
 		// just ask for continuous data
 
 		ArLog::log(ArLog::Terse,
-					"%s::tim3xxConnect() Sending (STOP) sEN LMDscandata ", getName());
+					"%s::timConnect() Sending (STOP) sEN LMDscandata ", getName());
 
 		if ((myConn->write(sendPacket.getBuf(), sendPacket.getLength())) == -1)
 		{
 			ArLog::log(ArLog::Terse,
-					"%s::tim3xxConnect() Could not send sEN LMDscandata to laser", getName());
+					"%s::timConnect() Could not send sEN LMDscandata to laser", getName());
 			failedToConnect();
 			return false;
 		}
@@ -2796,16 +2832,18 @@ AREXPORT bool ArLMS1XX::tim3xxConnect(void)
 		// just ask for continuous data
 
 		ArLog::log(ArLog::Terse,
-					"%s::tim3xxConnect() Sending (Only one Telegram) sRN LMDscandata ", getName());
+					"%s::timConnect() Sending (Only one Telegram) sRN LMDscandata ", getName());
 
 		if ((myConn->write(sendPacket.getBuf(), sendPacket.getLength())) == -1)
 		{
 			ArLog::log(ArLog::Terse,
-					"%s::tim3xxConnect() Could not send sRN LMDscandata to laser", getName());
+					"%s::timConnect() Could not send sRN LMDscandata to laser", getName());
 			failedToConnect();
 			return false;
 		}
 
+
+    ArLog::log(ArLog::Normal, "%s::timConnect: Waiting for response...", getName());
 
 		// now get the response to the one telegram
 		ArTime t;
@@ -2813,12 +2851,16 @@ AREXPORT bool ArLMS1XX::tim3xxConnect(void)
 		{
 
 			packet = myReceiver.receivePacket(1000);
+
+      // debug:
+      if(packet) ArLog::log(ArLog::Normal, "Got response packet %s %s", packet->getCommandType(), packet->getCommandName());
+
 			if (packet != NULL &&
 //					strcasecmp(packet->getCommandType(), "sSN") == 0 &&
 					strcasecmp(packet->getCommandType(), "sRA") == 0 &&
 					strcasecmp(packet->getCommandName(), "LMDscandata") == 0)
 			{
-				ArLog::log(ArLog::Normal, "%s::tim3xxConnect() Took %f sec to get sRA LMDscandata packet from laser.", getName(), (double)(t.mSecSince())/1000.0);
+				ArLog::log(ArLog::Normal, "%s::timConnect() Took %f sec to get sRA LMDscandata packet from laser.", getName(), (double)(t.mSecSince())/1000.0);
 				delete packet;
 				packet = NULL;
 
@@ -2831,12 +2873,12 @@ AREXPORT bool ArLMS1XX::tim3xxConnect(void)
 				sendPacket.finalizePacket();
 
 				ArLog::log(ArLog::Terse,
-							"%s::tim3xxConnect() Sending (send permanent) sEN LMDscandata ", getName());
+							"%s::timConnect() Sending (send permanent) sEN LMDscandata ", getName());
 
 				if ((myConn->write(sendPacket.getBuf(), sendPacket.getLength())) == -1)
 				{
 					ArLog::log(ArLog::Terse,
-							"%s::tim3xxConnect() Could not send sEN LMDscandata to laser", getName());
+							"%s::timConnect() Could not send sEN LMDscandata to laser", getName());
 					failedToConnect();
 					return false;
 				}
@@ -2847,7 +2889,7 @@ AREXPORT bool ArLMS1XX::tim3xxConnect(void)
 					strcasecmp(packet->getCommandType(), "sEA") == 0 &&
 					strcasecmp(packet->getCommandName(), "LMDscandata") == 0)
 				{
-					ArLog::log(ArLog::Normal, "%s::tim3xxConnect() Took %f sec to get sEA LMDscandata packet from laser.", getName(), (double)(t.mSecSince())/1000.0);
+					ArLog::log(ArLog::Normal, "%s::timConnect() Took %f sec to get sEA LMDscandata packet from laser.", getName(), (double)(t.mSecSince())/1000.0);
 					delete packet;
 					packet = NULL;
 
@@ -2855,21 +2897,21 @@ AREXPORT bool ArLMS1XX::tim3xxConnect(void)
 					myIsConnected = true;
 					myTryingToConnect = false;
 					unlockDevice();
-					ArLog::log(ArLog::Normal, "%s::tim3xxConnect() Connected to laser", getName());
+					ArLog::log(ArLog::Normal, "%s::timConnect() Connected to laser", getName());
 					laserConnect();
 					return true;
 				}
 				else
 				{
 					ArLog::log(ArLog::Terse,
-							"%s::tim3xxConnect() Could not get sEA LMDscandata from laser", getName());
+							"%s::timConnect() Could not get sEA LMDscandata from laser", getName());
 					failedToConnect();
 					return false;
 				}
 			}
 			else if (packet != NULL)
 			{
-				ArLog::log(ArLog::Normal, "%s::tim3xxConnect() Got %s %s (%d long) while waiting for sRA LMDscandata", getName(),
+				ArLog::log(ArLog::Normal, "%s::timConnect() Got unexpected %s %s (%d long) while waiting for sRA LMDscandata", getName(),
 						packet->getCommandType(), packet->getCommandName(),
 						packet->getLength());
 				delete packet;
@@ -2879,14 +2921,14 @@ AREXPORT bool ArLMS1XX::tim3xxConnect(void)
 			else if (packet == NULL) {
 				if ((myConn->write(sendPacket.getBuf(), sendPacket.getLength())) == -1) {
 					ArLog::log(ArLog::Terse,
-							"%s::tim3xxConnect() Could not send sRN LMDscandata to laser", getName());
+							"%s::timConnect() Could not send sRN LMDscandata to laser", getName());
 					failedToConnect();
 					return false;
 				}
 			}
 		}
 	ArLog::log(ArLog::Normal,
-						"%s::tim3xxConnect() Timout waiting for initial packet from TiM - failing connect", getName());
+						"%s::timConnect() Timout waiting for initial packet from TiM - failing connect", getName());
 	failedToConnect();
 	return false;
 
@@ -2894,7 +2936,7 @@ AREXPORT bool ArLMS1XX::tim3xxConnect(void)
 
 AREXPORT void * ArLMS1XX::runThread(void *arg)
 {
-  char buf[1024];
+  //char buf[1024];
   ArLMS1XXPacket *packet;
   
   /*
@@ -2983,17 +3025,24 @@ bool ArLMS1XX::validateCheckSum(ArLMS1XXPacket *packet)
 
 {
 
-unsigned short checksum = 0;
-char str[1024];
-char *pch;
-unsigned char val;
-unsigned char val1;
+  // XOR all values in the message including the checksum, which should result
+  // in 0.
 
-	strncpy(str, packet->getBuf(), packet->getLength() - 1);
+  unsigned short checksum = 0;
+  char str[1024];
+  char *pch;
+  unsigned char val;
+  unsigned char val1;
 
-	// PS 3/3/2014 - add NULL termintor to the string
-	str[packet->getLength()] = '\0';
+  const int maxcopylen = ArUtil::findMin(1024, packet->getLength());
+	strncpy(str, packet->getBuf(), maxcopylen);
+  str[maxcopylen-1] = '\0';
 
+  IFDEBUG(
+		ArLog::log(ArLog::Normal,
+		 "%s::validateCheckSum() packet contains %s", getName(), str);
+  )
+  
 	pch = strtok(&str[17], " ");
 	while (pch != NULL) {
 
@@ -3047,10 +3096,16 @@ unsigned char val1;
 	} // end while
 
 
-	//if (checksum == 0)
-	//	ArLog::log(ArLog::Normal,
-	//	 "%s::validateCheckSum() checksum = %d", getName(), checksum);
+  IFDEBUG(
+    if (checksum == 0)
+      ArLog::log(ArLog::Normal,
+       "%s::validateCheckSum() checksum = 0x%x", getName(), checksum);
+    else
+      ArLog::log(ArLog::Normal,
+        "%s::validateCheckSum() INVALID checksum = 0x%x", getName(), checksum);
+  )
 
-	return checksum;
+	return (checksum == 0);
 
 }
+

@@ -1,6 +1,11 @@
 var classArModeGripper =
 [
-    [ "ExerState", "classArModeGripper.html#a1e6be241319f8fddd36607494f8de5df", null ],
+    [ "ExerState", "classArModeGripper.html#a1e6be241319f8fddd36607494f8de5df", [
+      [ "UP_OPEN", "classArModeGripper.html#a1e6be241319f8fddd36607494f8de5dfa0823b0e705341696bdb38d7f7bf79358", null ],
+      [ "UP_CLOSE", "classArModeGripper.html#a1e6be241319f8fddd36607494f8de5dfa85cd4da7da14eb499820f5c28576d3b0", null ],
+      [ "DOWN_CLOSE", "classArModeGripper.html#a1e6be241319f8fddd36607494f8de5dfa0fe4b64e66205f8e075246d593c1ca98", null ],
+      [ "DOWN_OPEN", "classArModeGripper.html#a1e6be241319f8fddd36607494f8de5dfa79e8bd57dfcc38acc3d3458d1fed6e59", null ]
+    ] ],
     [ "ArModeGripper", "classArModeGripper.html#a59ed4dccc77d2e9dab21f25f1e3ae39c", null ],
     [ "~ArModeGripper", "classArModeGripper.html#ad8da6623a9da2e832cca0c7ffad3b6f1", null ],
     [ "activate", "classArModeGripper.html#aae7ce850d9321b16f0702e1c9f9e5823", null ],

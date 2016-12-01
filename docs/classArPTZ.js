@@ -71,6 +71,7 @@ var classArPTZ =
     [ "setInverted", "classArPTZ.html#acd0092aeb13d29dc4900818c5d819809", null ],
     [ "setLimits", "classArPTZ.html#af636ce588e4385b3dc7263f7fd7fad44", null ],
     [ "setPanSpeed", "classArPTZ.html#a2ca6ce6f3808a6cf2c01f55c4edb975b", null ],
+    [ "setRobot", "classArPTZ.html#a2dd6d9bafa2b26f8ee482be2b49a5783", null ],
     [ "setTiltSpeed", "classArPTZ.html#a4ad63f6a50f4be8fc4cbf58e77373301", null ],
     [ "tilt", "classArPTZ.html#a924db75e9b7739125ea6ca9cc1dae9a3", null ],
     [ "tilt_i", "classArPTZ.html#a602c89a0c1a9d16ad8fc9e6e3e73c0c3", null ],

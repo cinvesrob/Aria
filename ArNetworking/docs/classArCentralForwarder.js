@@ -1,7 +1,19 @@
 var classArCentralForwarder =
 [
-    [ "ReturnType", "classArCentralForwarder.html#a6844773eaf1c1b39a53c8cc4417f8342", null ],
-    [ "State", "classArCentralForwarder.html#a2b8bbbfa0a3271f11f61e54576e0131c", null ],
+    [ "ReturnType", "classArCentralForwarder.html#a6844773eaf1c1b39a53c8cc4417f8342", [
+      [ "RETURN_NONE", "classArCentralForwarder.html#a6844773eaf1c1b39a53c8cc4417f8342a3496674755d46a601dc2fb00d69133cd", null ],
+      [ "RETURN_SINGLE", "classArCentralForwarder.html#a6844773eaf1c1b39a53c8cc4417f8342ad34fc048337b251fd1f13da3344ca6b7", null ],
+      [ "RETURN_VIDEO", "classArCentralForwarder.html#a6844773eaf1c1b39a53c8cc4417f8342a68e36b9520ff2c7fe7dac930d7f962d4", null ],
+      [ "RETURN_UNTIL_EMPTY", "classArCentralForwarder.html#a6844773eaf1c1b39a53c8cc4417f8342aa751b0656ccd8d0d58239dad19b09f30", null ],
+      [ "RETURN_COMPLEX", "classArCentralForwarder.html#a6844773eaf1c1b39a53c8cc4417f8342a94947964d4fc67e0b62cc5c7f4abece2", null ],
+      [ "RETURN_VIDEO_OPTIM", "classArCentralForwarder.html#a6844773eaf1c1b39a53c8cc4417f8342af87ab227a1afa28adf8787473c3e98f3", null ]
+    ] ],
+    [ "State", "classArCentralForwarder.html#a2b8bbbfa0a3271f11f61e54576e0131c", [
+      [ "STATE_STARTING", "classArCentralForwarder.html#a2b8bbbfa0a3271f11f61e54576e0131ca0e6f96762eb4c07dea30e200e7f40350", null ],
+      [ "STATE_CONNECTING", "classArCentralForwarder.html#a2b8bbbfa0a3271f11f61e54576e0131ca52c612de7b1a40a4c197a543df6c0099", null ],
+      [ "STATE_GATHERING", "classArCentralForwarder.html#a2b8bbbfa0a3271f11f61e54576e0131cadc22bf7017a315ad9a497fcbf0b53da6", null ],
+      [ "STATE_CONNECTED", "classArCentralForwarder.html#a2b8bbbfa0a3271f11f61e54576e0131ca1deabe169e195fb6169450a9ebdff59a", null ]
+    ] ],
     [ "ArCentralForwarder", "classArCentralForwarder.html#a744e6e3eda6d6b7e52a7544266e11f67", null ],
     [ "ArCentralForwarder", "classArCentralForwarder.html#a51602d6b815790ffb616cf0536ad53a7", null ],
     [ "~ArCentralForwarder", "classArCentralForwarder.html#a485f9ceb0e8496dc89961700552958d6", null ],

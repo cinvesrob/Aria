@@ -1,8 +1,28 @@
 var classArP2Arm =
 [
-    [ "PacketType", "classArP2Arm.html#a0fefe90aabf68167d7e5450464b03beb", null ],
-    [ "State", "classArP2Arm.html#a5a4a41ffa5c5b09876d7c90ce608bd94", null ],
-    [ "StatusType", "classArP2Arm.html#a635bd05c565cd4e3b2ae8ca6358c22af", null ],
+    [ "PacketType", "classArP2Arm.html#a0fefe90aabf68167d7e5450464b03beb", [
+      [ "StatusPacket", "classArP2Arm.html#a0fefe90aabf68167d7e5450464b03beba95a0a8922a69c4df590759f918df528c", null ],
+      [ "InfoPacket", "classArP2Arm.html#a0fefe90aabf68167d7e5450464b03beba9bce11144f1826391cb4aa568cba886b", null ]
+    ] ],
+    [ "State", "classArP2Arm.html#a5a4a41ffa5c5b09876d7c90ce608bd94", [
+      [ "SUCCESS", "classArP2Arm.html#a5a4a41ffa5c5b09876d7c90ce608bd94a2ffcdb24a114a9398e330f1184366035", null ],
+      [ "ALREADY_INITED", "classArP2Arm.html#a5a4a41ffa5c5b09876d7c90ce608bd94a85a1005ca93ede9758c36538dea59a04", null ],
+      [ "NOT_INITED", "classArP2Arm.html#a5a4a41ffa5c5b09876d7c90ce608bd94a9fae319150fb8796d9ab1a4feeca4b40", null ],
+      [ "ROBOT_NOT_SETUP", "classArP2Arm.html#a5a4a41ffa5c5b09876d7c90ce608bd94ab15664bb39dbd09b045d7783ac97372b", null ],
+      [ "NO_ARM_FOUND", "classArP2Arm.html#a5a4a41ffa5c5b09876d7c90ce608bd94a3de7bc4503b701dd32527d740a785df1", null ],
+      [ "COMM_FAILED", "classArP2Arm.html#a5a4a41ffa5c5b09876d7c90ce608bd94a4258de5e1fbd8de7ab06f94d5fb883da", null ],
+      [ "COULD_NOT_OPEN_PORT", "classArP2Arm.html#a5a4a41ffa5c5b09876d7c90ce608bd94a08528a0dec126926b58cb6c09ea1afa1", null ],
+      [ "COULD_NOT_SET_UP_PORT", "classArP2Arm.html#a5a4a41ffa5c5b09876d7c90ce608bd94aeb8005d5ac6ec1f6843cddd9f010eb6a", null ],
+      [ "ALREADY_CONNECTED", "classArP2Arm.html#a5a4a41ffa5c5b09876d7c90ce608bd94a5a36990c7bdcc3db9601e545d4a88507", null ],
+      [ "NOT_CONNECTED", "classArP2Arm.html#a5a4a41ffa5c5b09876d7c90ce608bd94ac5788d1174b4a16830bfb20de929d7c5", null ],
+      [ "INVALID_JOINT", "classArP2Arm.html#a5a4a41ffa5c5b09876d7c90ce608bd94a7dd407a9cf8ca330fa1f1bc5463a589b", null ],
+      [ "INVALID_POSITION", "classArP2Arm.html#a5a4a41ffa5c5b09876d7c90ce608bd94a1a7fb3c689068b5cec3c4710daccb018", null ]
+    ] ],
+    [ "StatusType", "classArP2Arm.html#a635bd05c565cd4e3b2ae8ca6358c22af", [
+      [ "StatusOff", "classArP2Arm.html#a635bd05c565cd4e3b2ae8ca6358c22afa11db582c277bbf10d38bfca2117341c4", null ],
+      [ "StatusSingle", "classArP2Arm.html#a635bd05c565cd4e3b2ae8ca6358c22afa2a201348300a434a162245436e17b70c", null ],
+      [ "StatusContinuous", "classArP2Arm.html#a635bd05c565cd4e3b2ae8ca6358c22afa7006376e59275c2ec3e16c64c6588146", null ]
+    ] ],
     [ "ArP2Arm", "classArP2Arm.html#ac0d88ccd84dbfa1d1a0c83d85880890e", null ],
     [ "~ArP2Arm", "classArP2Arm.html#ad9e852a463f3a4640b3ac9b276a04bdd", null ],
     [ "armPacketHandler", "classArP2Arm.html#aaaa22961705b1f156224d63e98115e5a", null ],

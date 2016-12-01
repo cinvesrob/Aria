@@ -19,6 +19,9 @@ interface objects. Read documentation fro details.
 
   @defgroup MTX MTX/Pioneer LX Specific Classes
   @brief These classes are only used on Pioneer LX and other MTX-type robots.
+
+  @defgroup easy Easy Subset of ARIA for Beginners
+  @brief This category highlights a minimal, essential set of features to get started using ARIA as quickly as possible, especially when writing short programs or Python scripts to experiment and learn
 */
 
 /**
@@ -1755,17 +1758,9 @@ do so is there for the intrepid.
 
 One other thing worth noting is that you can call ArRobot::loopOnce()
 and it will run through its loop a single time and return.  This is so
-that you can use ARIA from your own control structure.  If you are
-using loopOnce you may also find it beneficial to call
-ArRobot::incCounter, so that the loop counter will be updated.  You
-could also just call ArRobot::packetHandler, ArRobot::actionHandler,
-or ArRobot::stateReflector on your own, as these are the most
-important internal functions, though if you make your own loop you
-should probably call ArRobot::incCounter any way that you do it, as
-this is how sonar are known to be new or not, and such.
-
-We recommend that whatever you do you use the same type of strict
-threading/locking that ARIA observes.
+that you can use ARIA from your own loop or control structure.  You
+must call loopOnce() regularly and at least every 100ms to maintain 
+consistent communication with the robot.
 
 
  \subsection hardConnectRobot Connecting with a Robot or the Simulator the hard way

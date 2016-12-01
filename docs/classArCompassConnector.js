@@ -1,6 +1,10 @@
 var classArCompassConnector =
 [
-    [ "DeviceType", "classArCompassConnector.html#ad35d1a31c6c2fc156cd96be50cf5e565", null ],
+    [ "DeviceType", "classArCompassConnector.html#ad35d1a31c6c2fc156cd96be50cf5e565", [
+      [ "Robot", "classArCompassConnector.html#ad35d1a31c6c2fc156cd96be50cf5e565a193c64212992622a3dcffe2a6c1915ed", null ],
+      [ "SerialTCM", "classArCompassConnector.html#ad35d1a31c6c2fc156cd96be50cf5e565ab0be0cb7785f511a7bcd94bcf2c91371", null ],
+      [ "None", "classArCompassConnector.html#ad35d1a31c6c2fc156cd96be50cf5e565aeb891532b3d6081ea77be6db65efcf01", null ]
+    ] ],
     [ "ArCompassConnector", "classArCompassConnector.html#aba4d793958c1ddca05ef0bb23429fa19", null ],
     [ "~ArCompassConnector", "classArCompassConnector.html#a7c25bfbdc44443d00d89661b1c00e39b", null ],
     [ "connect", "classArCompassConnector.html#acf69689ded511973fa84835bd27155ad", null ],

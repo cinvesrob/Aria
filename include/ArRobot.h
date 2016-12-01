@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -29,7 +30,6 @@ Adept MobileRobots, 10 Columbia Drive, Amherst, NH 03031; +1-603-881-7960
 #include "ariaTypedefs.h"
 #include "ArRobotPacketSender.h"
 #include "ArRobotPacketReceiver.h"
-#include "ArFunctor.h"
 #include "ArFunctor.h"
 #include "ArSyncTask.h"
 #include "ArSensorReading.h"
@@ -115,10 +115,20 @@ public:
   AREXPORT void runAsync(bool stopRunIfNotConnected, 
 			 bool runNonThreadedPacketReader = false);
 
+  /// @copydoc run(bool, bool)
+  /// @ingroup easy
+  void run() { run(true); }
+
+  /// @copydoc runAsync(bool, bool)
+  /// @ingroup easy
+  void runAsync() { runAsync(true); }
+
   /// Returns whether the robot is currently running or not
+  /// @ingroup easy
   AREXPORT bool isRunning(void) const;
 
   /// Stops the robot from doing any more processing
+  /// @ingroup easy
   AREXPORT void stopRunning(bool doDisconnect=true); 
 
   /// Sets the connection this instance uses
@@ -129,6 +139,7 @@ public:
   /// Questions whether the robot is connected or not
   /** 
       @return true if connected to a robot, false if not
+      @ingroup easy
   */
   bool isConnected(void) const { return myIsConnected; }
   /// Connects to a robot, not returning until connection made or failed
@@ -149,40 +160,52 @@ public:
   
 
   /// Enables the motors on the robot
+  /// @ingroup easy
   AREXPORT void enableMotors();
   /// Disables the motors on the robot
+  /// @ingroup easy
   AREXPORT void disableMotors();
 
   /// Enables the sonar on the robot
+  /// @ingroup easy
   AREXPORT void enableSonar();
   /// Enables some of the sonar on the robot (the ones for autonomous driving)
   AREXPORT void enableAutonomousDrivingSonar();
   /// Disables the sonar on the robot
+  /// @ingroup easy
   AREXPORT void disableSonar();
 
   /// Stops the robot
   /// @see clearDirectMotion
+  /// @ingroup easy
   AREXPORT void stop(void);
   /// Sets the velocity
   /// @see clearDirectMotion
+  /// @ingroup easy
   AREXPORT void setVel(double velocity);
-  /// Sets the velocity of the wheels independently
+  /// Sets differential movement if implemented by robot
   AREXPORT void setVel2(double leftVelocity, double rightVelocity);
   /// Move the given distance forward/backwards
+  /// @ingroup easy
   AREXPORT void move(double distance);
   /// Sees if the robot is done moving the previously given move
+  /// @ingroup easy
   AREXPORT bool isMoveDone(double delta = 0.0);
   /// Sets the difference required for being done with a move
   void setMoveDoneDist(double dist) { myMoveDoneDist = dist; }
   /// Gets the difference required for being done with a move
   double getMoveDoneDist(void) { return myMoveDoneDist; }
   /// Sets the heading
+  /// @ingroup easy
   AREXPORT void setHeading(double heading);
   /// Sets the rotational velocity
+  /// @ingroup easy
   AREXPORT void setRotVel(double velocity);
   /// Sets the delta heading
+  /// @ingroup easy
   AREXPORT void setDeltaHeading(double deltaHeading);
   /// Sees if the robot is done changing to the previously given setHeading
+  /// @ingroup easy
   AREXPORT bool isHeadingDone(double delta = 0.0) const;
   /// sets the difference required for being done with a heading change (e.g. used in isHeadingDone())
   void setHeadingDoneDiff(double degrees) 
@@ -195,6 +218,7 @@ public:
 
 
   /// sees if we're stopped
+  /// @ingroup easy
   AREXPORT bool isStopped(double stoppedVel = 0.0, double stoppedRotVel = 0.0,
 			  double stoppedLatVel = 0.0);
 
@@ -311,31 +335,42 @@ public:
    *
    *  @sa getEncoderPose()
    *  @sa moveTo()
+   *  @ingroup easy
    *
    */
   ArPose getPose(void) const { return myGlobalPose; }
   /// Gets the global X position of the robot
-  /** @sa getPose() */
+  /** @sa getPose() 
+      @ingroup easy
+  */
   double getX(void) const { return  myGlobalPose.getX(); }
   /// Gets the global Y position of the robot
-  /** @sa getPose() */
+  /** @sa getPose() 
+      @ingroup easy
+  */
   double getY(void) const { return myGlobalPose.getY(); }
   /// Gets the global angular position ("theta") of the robot
-  /** @sa getPose() */
+  /** @sa getPose() 
+      @ingroup easy
+  */
   double getTh(void) const { return myGlobalPose.getTh(); }
   /// Gets the distance to a point from the robot's current position
+  /// @ingroup easy
   double findDistanceTo(const ArPose pose) 
     { return myGlobalPose.findDistanceTo(pose); }
   /// Gets the angle to a point from the robot's current position and orientation
+  /// @ingroup easy
   double findAngleTo(const ArPose pose) 
     { return myGlobalPose.findAngleTo(pose); }
   /// Gets the difference between the angle to a point from the robot's current heading
+  /// @ingroup easy
   double findDeltaHeadingTo(const ArPose pose) 
     { return ArMath::subAngle(myGlobalPose.findAngleTo(pose),
 			      myGlobalPose.getTh()); }
 
 
   /// Gets the current translational velocity of the robot
+  /// @ingroup easy
   double getVel(void) const { return myVel; }
   /// Gets the current rotational velocity of the robot
   /**
@@ -343,6 +378,7 @@ public:
      this is the velocity reported by the robot.  With older firmware
      this number is calculated using the difference between the robot's reported wheel
      velocities multiplied by diffConvFactor from the .p (robot parameter) files.
+      @ingroup easy
   **/
   double getRotVel(void) const { return myRotVel; }
   /// Gets the current lateral velocity of the robot
@@ -356,10 +392,13 @@ public:
   */
   bool hasLatVel(void) const { return myParams->hasLatVel(); }
   /// Gets the robot radius (in mm)
+  /// @ingroup easy
   double getRobotRadius(void) const { return myParams->getRobotRadius(); }
   /// Gets the robot width (in mm)
+  /// @ingroup easy
   double getRobotWidth(void) const { return myParams->getRobotWidth(); }
   /// Gets the robot length (in mm)
+  /// @ingroup easy
   double getRobotLength(void) const { return myParams->getRobotLength(); }
   /// Gets the robot length to the front (in mm)
   double getRobotLengthFront(void) const { return myRobotLengthFront; }
@@ -418,7 +457,7 @@ public:
   /// Gets if the state of charge value is in use
   bool haveStateOfCharge(void) const { return myHaveStateOfCharge; }
   /// @copydoc haveStateOfCharge()
-  bool hasStateOfCHarge() const { return haveStateOfCharge(); }
+  bool hasStateOfCharge() const { return haveStateOfCharge(); }
   /// Gets the state of charge (percent of charge, as number between 0 and 100)
   double getStateOfCharge(void) const 
     { if (!myHaveStateOfCharge) return 0; else return myStateOfCharge; }
@@ -631,16 +670,21 @@ public:
   AREXPORT int getSonarPacCount(void) const;
 
   /// Gets the range of the last sonar reading for the given sonar
+  /// @ingroup easy
   AREXPORT int getSonarRange(int num) const;
   /// Find out if the given sonar reading was newly refreshed by the last incoming SIP received.
   AREXPORT bool isSonarNew(int num) const;
   /// Find the number of sonar sensors (that the robot has yet returned values for)
+  /// @ingroup easy
   int getNumSonar(void) const { return myNumSonar; }
   /// Returns the sonar reading for the given sonar
+  /// @ingroup easy
   AREXPORT ArSensorReading *getSonarReading(int num) const;
   /// Returns the closest of the current sonar reading in the given range
+  /// @ingroup easy
   AREXPORT int getClosestSonarRange(double startAngle, double endAngle) const;
   /// Returns the number of the sonar that has the closest current reading in the given range
+  /// @ingroup easy
   AREXPORT int getClosestSonarNumber(double startAngle, double endAngle) const;
 
   /// Gets the robots name in ARIAs list
@@ -908,6 +952,8 @@ public:
   /// Finds whether a particular range device is attached to this robot or not
   AREXPORT bool hasLaser(ArLaser *device) const;
 
+  size_t getNumLasers() { return myLaserMap.size(); }
+
 
   /// Adds a battery to the robot's map of them
   /// @internal
@@ -1063,10 +1109,12 @@ public:
   AREXPORT void remRunExitCB(ArFunctor *functor);
 
   /// Suspend calling thread until the ArRobot is connected
+  /// @ingroup easy
   AREXPORT WaitState waitForConnect(unsigned int msecs=0);
   /// Suspend calling thread until the ArRobot is connected or fails to connect
   AREXPORT WaitState waitForConnectOrConnFail(unsigned int msecs=0);
   /// Suspend calling thread until the ArRobot run loop has exited
+  /// @ingroup easy
   AREXPORT WaitState waitForRunExit(unsigned int msecs=0);
 
   /// Wake up all threads waiting on this robot
@@ -1082,6 +1130,8 @@ public:
   AREXPORT bool addUserTask(const char *name, int position, 
 			       ArFunctor *functor,
 			       ArTaskState::State *state = NULL);
+
+
   /// Removes a user task from the list of synchronous taskes by name
   AREXPORT void remUserTask(const char *name);
   /// Removes a user task from the list of synchronous taskes by functor
@@ -1097,10 +1147,14 @@ public:
   /// Logs the list of all tasks, strictly for your viewing pleasure
   AREXPORT void logAllTasks(void) const;
 
-  /// Adds a task under the sensor interp part of the syncronous tasks
+  /// Adds a sensor interpretation task. These are called during the ArRobot
+  /// task synchronous cycle after robot data has been received (from the SIP
+  /// and other robot packets).
   AREXPORT bool addSensorInterpTask(const char *name, int position, 
 				       ArFunctor *functor,
 	       			       ArTaskState::State *state = NULL);
+
+
   /// Removes a sensor interp tasks by name
   AREXPORT void remSensorInterpTask(const char *name);
   /// Removes a sensor interp tasks by functor
@@ -1112,10 +1166,13 @@ public:
   AREXPORT ArSyncTask *findTask(ArFunctor *functor);
 
   /// Adds an action to the list with the given priority 
+  /// @ingroup easy
   AREXPORT bool addAction(ArAction *action, int priority);
   /// Removes an action from the list, by pointer
+  /// @ingroup easy
   AREXPORT bool remAction(ArAction *action);
   /// Removes an action from the list, by name
+  /// @ingroup easy
   AREXPORT bool remAction(const char *actionName);
   /// Returns the first (highest priority) action with the given name (or NULL)
   AREXPORT ArAction *findAction(const char *actionName);
@@ -1126,6 +1183,7 @@ public:
   AREXPORT void deactivateActions(void);
 
   /// Logs out the actions and their priorities
+  /// @ingroup easy
   AREXPORT void logActions(bool logDeactivated = false) const;
 
   /// Gets the resolver the robot is using

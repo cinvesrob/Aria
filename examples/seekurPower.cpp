@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -50,12 +51,16 @@ powerspec PowerSpecs[] = {
   {"gps", 6, "Turn GPS receeiver on or off.", 0},
   {"poe", 4, "Turn 12V Power over Ethernet port on or off.", 0},
   {"lan", 5, "Turn internal LAN ethernet switch on or off.", 0},
-  {"camera", 12, "Turn the 24V RVision camera on or off.", 0},
-  {"rvision", 12, "Turn the 24V RVision camera on or off.", 0},
+  {"camera-raw", 12, "Turn the 24V RVision camera on or off.", 0},
+  {"rvision-raw", 12, "Turn the 24V RVision camera on or off.", 0},
+  {"camera", 10, "Turn the 24V RVision camera on or off.", 0},
+  {"rvision", 10, "Turn the 24V RVision camera on or off.", 0},
   {"ptu1", 9, "Turn pan/tilt unit #1 on or off.", 0},
   {"ptu2", 22, "Turn pan/tilt unit #2 on or off.", 0},
   {"ptu3", 23, "Turn pan/tilt unit #3 on or off.", 0},
-  {"arm", 29, "Turn the 24V manipulator arm on or off.", 0},
+  {"arm", 29, "Turn the raw 24V manipulator arm drive power on or off.", 0},
+  {"armpower", 29, "Turn the raw 24V manipulator arm drive power on or off.", 0},
+  {"armlogic", 8, "Turn the regulated manipulator arm controller/logic power on or off.", 0},
   {"armcam", 7, "Turn the arm camera or other 12V arm accessories on or off.", 0}
 };
 

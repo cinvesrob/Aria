@@ -1,7 +1,169 @@
 
-To install the contents of this .tgz package in /usr/local,
-run "make install" as the root user, or "sudo make install" 
-if you have the "sudo" tool.
+ARIA Installation Instructions
+===============================
+Version 2.9.1
 
-See README.txt for more information on getting started.
+Don't forget to sign up for the Aria-Users mailing list by sending a message 
+with the subject 'subscribe' to aria-users-request@mobilerobots.com.
+
+ARIA software development is supported on Windows using MS Visual
+C++, and on GNU/Linux using GNU development tools (make, GCC).  It is
+possible to build ARIA on other Posix/Unix-like systems but this is
+not officially supported or as frequently tested as Linux and Windows. 
+You can discuss use of ARIA on other operating systems or build environments
+on the aria-users group mailing list.
+
+See README.txt for more information.
+
+
+Windows:
+--------
+
+Run Aria-2.9.1.exe to invoke the setup program, then simply
+follow the prompts.  All ARIA software will be installed in 
+C:\Program Files\MobileRobots\Aria.  Shortcuts will be installed
+in the Start menu to documentation, examples, and the Aria directory.
+
+The kit includes the Aria library and two pre-built examples
+that you can run from the bin directory. More examples are available in the 
+examples directory. Visual C++ projects are provided to build (most) example
+programs, as well as for ARIA itself.
+
+In order to compile ARIA and the examples, you should use Microsoft 
+Visual C++.  Free "Express" versions are available from Microsoft.
+For more information see also http://robots.mobilerobots.com/wiki/Windows_C%2B%2B_Compilers
+
+See README.txt and the ARIA API Reference documentation for important details
+on how to build code on Windows vith Visual C++ and get started using
+ARIA.
+
+
+GNU/Linux:
+----------
+
+To use the precompiled Aria library under Linux, you will need GCC
+(with the C++ compiler, g++) and Make.  The ARIA Ubuntu packages
+come built with the standard GCC version for their distribution platform
+(Indicated in the package file name).  If you would like to rebuild them with a 
+different compiler or version, run "make clean; make" from the top 
+level /usr/local/Aria directory, or use the source package.  
+
+You can set environment variables to affect compilation with make, such as 
+CXX and CXXFLAGS (see README.txt). For example, if you want to use the 
+command "g++-3.4" to compile, set CXX to g++-3.4 and export the variable. 
+See README.txt for more discussion of this.
+
+The ARIA and ArNetworking libraries and some pre-built examples are included
+in the Ubuntu packages.  You can run these examples and find more examples 
+in the examples directory.  All ARIA software is placed in /usr/local/Aria.  
+In addition, the file /etc/Aria will be created with the ARIA installation 
+location, and /etc/ld.so.conf may be updated to include /usr/local/Aria/lib. 
+
+
+
+To install on Debian or Ubuntu:
+-------------------------------
+
+Binary (pre-built) packages are available for Ubuntu 12 and later.
+
+The libaria package provides libArNetworking as well 
+as libAria, and all documentation, source code, and example programs.
+libaria-python and libaria-java provide the Python and Java wrapper 
+libraries respectively.
+
+To install a .deb package file downloaded from the website, use dpkg.
+For example:
+   dpkg -i libaria_2.9.1+ubuntu12_i386.deb
+
+Both 32-bit and 64-bit packages are provided. If you are on a 32-bit
+operating system, use the package with "_i386" suffix. If you are on
+a 64-bit system, use the package with "_amd64" suffix. To check
+the architecture of your Debian or Ubuntu system, run the following command:
+ dpkg-architecture  -qDEB_HOST_ARCH
+Or open the System Settings GUI, and open Details.  The architecture
+will be listed as "OS type".  
+
+Aria will be installed in /usr/local/Aria.
+
+You can install any required dependencies using apt-get, aptitude, 
+synaptic, or the Ubuntu Software Center.
+
+To uninstall the ARIA libraries, use 'apt-get remove libaria'. Any
+packages that depend on libaria will also be removed.
+
+
+
+To compile from source code and install on other platforms:
+-----------------------------------------------------------
+
+You may download the source code as a compressed 'tar'  or Zip 
+archive and compile Aria yourself (See README.txt for notes 
+about compiling the source).
+
+Unpack the .tar.gz archive:
+   tar xzvf ARIA-src-2.9.1.tgz
+
+Enter the new directory, and use make to build ARIA:
+   cd Aria-src-2.9.1
+   make
+
+Or if you are on a multicore or multiprocessor computer, build
+with multiple processes in parallel:
+   make -j4
+
+To also make the ArNetworking librarie:
+   cd ArNetworking
+   make
+
+To install Aria, become the root user and use make install:
+   sudo make install
+
+Aria will be installed in /usr/local/Aria.   The dynamic (shared) 
+libraries are in /usr/local/Aria/lib and the header files are in
+/usr/local/Aria/include and /usr/local/Aria/ArNetworking/include.
+
+It is possible to build static libraries instead. From the Aria directory,
+run:
+  make lib/libAria.a
+  make lib/libArNetworking.a
+  cd examples
+  make demoStatic
+
+Next, you will then need to tell the dynamic linker where to find the ARIA 
+libraries: For example, on Linux, either add "/usr/local/Aria/lib" to 
+/etc/ld.so.conf for permanent effect, or add it to the LD_LIBRARY_PATH 
+environment variable for temporary effect.  On Mac OSX, add the lib 
+directory to DYLD_LIBRARY_PATH environment variable. Other platforms
+will need other similar settings either in the OS or your application
+project to locate the ARIA libraries.
+
+The ARIA libraries depend require only the following standard Linux 
+system libraries on Linux-based systems: libpthread, libdl 2, librt 1, 
+libm 6, libc 6, libstdc++ 6.  
+
+To compile ARIA, you will need GCC, G++ and GNU Make.
+
+These are all standard system libraries and development tools, so on 
+most current systems you should not need to install anything extra to 
+compile and use ARIA (other than g++ and make if not yet installed.)
+
+There is some support in ARIA for compiling on Mac OSX and MinGW, but
+this is not regularly tested and verified. Contact the aria-users forum
+for work with other users on supporting these and any other platforms. 
+
+
+More Information
+----------------
+
+For documentation and information about using ARIA and ArNetwtorking,
+refer to README.txt, the ARIA reference manual at doc/index.html, and
+the ArNetworking reference manual at ArNetworking/doc/index.html. Information 
+is also available on the support website http://robots.mobilerobots.com .
+
+
+------------ 
+Adept MobileRobots 
+support@mobilerobots.com
+http://www.mobilerobots.com
+http://robots.mobilerobots.com
 

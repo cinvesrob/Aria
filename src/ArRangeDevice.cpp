@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -279,7 +280,7 @@ AREXPORT void ArRangeDevice::addReading(double x, double y, bool *wasAdded)
 }
 
 /**
- * The closest reading within a polar region or "slice" defined by the given
+ * The closest reading within a polar region (sector or slice) defined by the given
  * angle range is returned.  Optionally, the specific angle of the found may be
  * placed in @a angle, if not NULL.
  * The region searched is the region between @a startAngle, sweeping
@@ -297,6 +298,8 @@ AREXPORT void ArRangeDevice::addReading(double x, double y, bool *wasAdded)
    @param endAngle where to end the slice, going counterclockwise from startAngle
    @param angle if given, a pointer to a value in which to put the specific angle to the found reading
    @return the range to the obstacle (a value >= the maximum range indicates that no reading was detected in the specified region)
+
+   @python @a angle is ignored
 
   Example:
    @image html ArRangeDevice_currentReadingPolar.png This figure illustrates an example range device and the meanings of arguments and return value.
@@ -336,6 +339,8 @@ AREXPORT double ArRangeDevice::currentReadingPolar(double startAngle,
    @param endAngle where to end the slice, going counterclockwise from startAngle
    @param angle if given, a pointer to a value in which to put the specific angle to the found reading
    @return the range to the obstacle (a value >= the maximum range indicates that no reading was detected in the specified region)
+
+   @python @a angle is ignored
 
   Example:
    @image html ArRangeDevice_currentReadingPolar.png This figure illustrates an example range device and the meanings of arguments and return value.

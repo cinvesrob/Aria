@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -195,17 +196,17 @@ public:
 
   /// Can pan and tilt speed (slew rates) be set to move device?
   virtual bool canPanTiltSlew() { return false; }
-  /// @copy canPanTiltSlew()
+  /// @copydoc canPanTiltSlew()
   bool canSetSpeed() { return canPanTiltSlew(); }
   
   /// Set pan slew rate (speed) (degrees/sec) if device supports it (see canPanTiltSlew())
   virtual bool panSlew(double s) { return false; }
-  /// @copy panSlew()
+  /// @copydoc panSlew()
   bool setPanSpeed(double s) { return panSlew(s); }
   
   /// Set tilt slew rate (speed) (degrees/sec) if device supports it (see canPanTiltSlew())
   virtual bool tiltSlew(double s) { return false; }
-  /// @copy tiltSlew()
+  /// @copydoc tiltSlew()
   bool setTiltSpeed(double s) { return tiltSlew(s); }
 
   /// Maximum pan speed (slew rate) (degrees/sec) if device supports, or 0 if not.
@@ -321,6 +322,10 @@ public:
 
   /// Return ArRobot object this PTZ is associated with. May be NULL
   ArRobot *getRobot() { return myRobot; }
+
+  /// Set ArRobot object this PTZ is associated with. May be NULL
+  void setRobot(ArRobot* r) { myRobot = r; }
+
 protected:
   ArRobot *myRobot;
   ArDeviceConnection *myConn;

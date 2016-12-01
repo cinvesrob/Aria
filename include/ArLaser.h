@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -214,8 +215,21 @@ public:
     }
 
   /// Adds a series of degree at which to ignore readings (within 1 degree of nearest integer)
+  /// @arg ignoreReadings a string containing a space- or comma-separated list of angles or angle ranges.
+  ///   Angle ranges are two separated by a '-'.  Negative angles are also indicated
+  ///   with '-' as well.  Ranges should be in the form <i>lower</i>-<i>higher</i> including
+  ///   on the negative side.  For example, "-93--91,42,91-93"
+  ///   means the range from -93 to -91, the single degree at 42, and the range
+  ///   from 91 to 93 degrees.  0 is the center of the laser's forward field of view.
+  /// @sa addIgnoreReading()
+  /// @sa clearIgnoreReadings()
+  /// @sa setStartDegrees()
+  /// @sa setEndDegrees()
   AREXPORT bool addIgnoreReadings(const char *ignoreReadings); 
   /// Adds a degree at which to ignore readings (within 1 degree of nearest integer)
+  /// @sa clearIgnoreReadings()
+  /// @sa setStartDegrees()
+  /// @sa setEndDegrees()
   void addIgnoreReading(double ignoreReading)
     { myIgnoreReadings.insert(ArMath::roundInt(ignoreReading)); }
   /// Clears the degrees we ignore readings at
@@ -228,7 +242,7 @@ public:
   /// Gets if the laser is flipped or not
   bool getFlipped(void) { return myFlipped; }
   /// Sets if the laser is flipped or not
-  bool setFlipped(bool flipped) { myFlipped = flipped; return true; }
+  bool setFlipped(bool flipped) { myFlipped = flipped; myFlippedSet = true; return true; }
 
   /// Gets the default TCP port for the laser
   int getDefaultTcpPort(void) { return myDefaultTcpPort; }
@@ -236,7 +250,7 @@ public:
   /// Gets the default port type for the laser
   const char *getDefaultPortType(void) { return myDefaultPortType.c_str(); }
 
-  /// Sees if this class can set the degrees with doubles or not
+  /// Indicates whether it is possible to set the specific start and stop angles of sensing (field of view)
   /**
      Gets if this class can set the start and end degrees with doubles.
      

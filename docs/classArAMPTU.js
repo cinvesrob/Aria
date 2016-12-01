@@ -1,5 +1,8 @@
 var classArAMPTU =
 [
+    [ "MIN_SLEW", "classArAMPTU.html#a74ace90f481409464469e98d8709422ca0d556baacdf97308fbf74d7109b9c3b1", null ],
+    [ "MAX_TILT_SLEW", "classArAMPTU.html#a74ace90f481409464469e98d8709422ca458e6356b891d71ba3d974480c8d4fbe", null ],
+    [ "MAX_PAN_SLEW", "classArAMPTU.html#a74ace90f481409464469e98d8709422ca2c9d20f37428e7c23b283d0f50873395", null ],
     [ "ArAMPTU", "classArAMPTU.html#acfb99f61d4bac54bc713792e4faebf9f", null ],
     [ "~ArAMPTU", "classArAMPTU.html#a10495344bb45fd2212a49440c87a1701", null ],
     [ "canPanTiltSlew", "classArAMPTU.html#ae55def127a0a37d8a06d5c05afd78ae4", null ],

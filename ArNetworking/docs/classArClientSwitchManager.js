@@ -1,6 +1,12 @@
 var classArClientSwitchManager =
 [
-    [ "State", "classArClientSwitchManager.html#a47d2af2da63155fee05665a1172f2ca7", null ],
+    [ "State", "classArClientSwitchManager.html#a47d2af2da63155fee05665a1172f2ca7", [
+      [ "IDLE", "classArClientSwitchManager.html#a47d2af2da63155fee05665a1172f2ca7aa7306774388491dd141b3a4692934d2a", null ],
+      [ "TRYING_CONNECTION", "classArClientSwitchManager.html#a47d2af2da63155fee05665a1172f2ca7a1069b62b4ade904243c160454a3abe6d", null ],
+      [ "CONNECTING", "classArClientSwitchManager.html#a47d2af2da63155fee05665a1172f2ca7a149242cfb43d615b05a45e25f0bfeb10", null ],
+      [ "CONNECTED", "classArClientSwitchManager.html#a47d2af2da63155fee05665a1172f2ca7a70869eb22f373a95b08a5edb3282abcd", null ],
+      [ "LOST_CONNECTION", "classArClientSwitchManager.html#a47d2af2da63155fee05665a1172f2ca7abf6fc6dea0c54c87a9d93158ab8dfe2b", null ]
+    ] ],
     [ "ArClientSwitchManager", "classArClientSwitchManager.html#a98e33ba3d1698b01b2152d4ca0af0993", null ],
     [ "~ArClientSwitchManager", "classArClientSwitchManager.html#af16b82736c4ac19ab0b2a0aca2d414e7", null ],
     [ "addConnectedCB", "classArClientSwitchManager.html#a76f4867ff4409a4a931ac4846a02be4b", null ],

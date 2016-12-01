@@ -1,6 +1,9 @@
 var classArVersalogicIO =
 [
-    [ "Direction", "classArVersalogicIO.html#a4c472f7ff0e386ab18f4093f32808c42", null ],
+    [ "Direction", "classArVersalogicIO.html#a4c472f7ff0e386ab18f4093f32808c42", [
+      [ "DIGITAL_INPUT", "classArVersalogicIO.html#a4c472f7ff0e386ab18f4093f32808c42a6c1c5e13f2c2f712d746af2da58f0c78", null ],
+      [ "DIGITAL_OUTPUT", "classArVersalogicIO.html#a4c472f7ff0e386ab18f4093f32808c42a3922b0acfa31fc34dbae34f22dd0809c", null ]
+    ] ],
     [ "ArVersalogicIO", "classArVersalogicIO.html#aed8be986d9d901ce34e5aaae841b8e58", null ],
     [ "~ArVersalogicIO", "classArVersalogicIO.html#af52e1f6603d5b5ec3e82e43ffaddb56f", null ],
     [ "closeIO", "classArVersalogicIO.html#af280c01496c4832e6e59cdaf7eeebd2d", null ],

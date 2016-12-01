@@ -23,7 +23,7 @@ var classArFunctor4C =
     [ "setP4", "classArFunctor4C.html#a8cda4e1dce1a3eb2e4cf89241b26f209", null ],
     [ "setThis", "classArFunctor4C.html#af827cfd4ac60c779a13def8e68f28031", null ],
     [ "setThis", "classArFunctor4C.html#ae290d59d095668f1af63798f1053967c", null ],
-    [ "myFunc", "classArFunctor4C.html#ac332d1a6036ae8bb8361b98a95a6348b", null ],
+    [ "myFunc", "classArFunctor4C.html#ab6d166717dd7e3fe879b793f892ea7ef", null ],
     [ "myObj", "classArFunctor4C.html#aba8066fcbc812e5803f0a5ae2b53a7c3", null ],
     [ "myP1", "classArFunctor4C.html#a4096569d7dbaa7807bad3b4aae609b2e", null ],
     [ "myP2", "classArFunctor4C.html#a61b710c7a6d58eb6bc438c9c33e49198", null ],

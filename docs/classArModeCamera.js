@@ -1,7 +1,17 @@
 var classArModeCamera =
 [
-    [ "ExerState", "classArModeCamera.html#a690079be92b4c28cdd2c3ec6d65253d8", null ],
-    [ "State", "classArModeCamera.html#a0f4a034b894d10deb7ef2ed4d76cce5f", null ],
+    [ "ExerState", "classArModeCamera.html#a690079be92b4c28cdd2c3ec6d65253d8", [
+      [ "CENTER", "classArModeCamera.html#a690079be92b4c28cdd2c3ec6d65253d8acdaa6e93ebd9099ac33388dbfee44d1b", null ],
+      [ "UP_LEFT", "classArModeCamera.html#a690079be92b4c28cdd2c3ec6d65253d8ad81624cd119353996dfc86c521444340", null ],
+      [ "UP_RIGHT", "classArModeCamera.html#a690079be92b4c28cdd2c3ec6d65253d8a4a4c518e04eded86aad1eeddd935d3b1", null ],
+      [ "DOWN_RIGHT", "classArModeCamera.html#a690079be92b4c28cdd2c3ec6d65253d8a61caee527b43c8d48c0311590dddcd01", null ],
+      [ "DOWN_LEFT", "classArModeCamera.html#a690079be92b4c28cdd2c3ec6d65253d8a6fd8145fd46d639b1a3c3f26268afa93", null ]
+    ] ],
+    [ "State", "classArModeCamera.html#a0f4a034b894d10deb7ef2ed4d76cce5f", [
+      [ "STATE_CAMERA", "classArModeCamera.html#a0f4a034b894d10deb7ef2ed4d76cce5fa419109b5031ced05ac47c507c786b820", null ],
+      [ "STATE_PORT", "classArModeCamera.html#a0f4a034b894d10deb7ef2ed4d76cce5fa6a82fde566b2b76c0c52ed05bdc89f26", null ],
+      [ "STATE_MOVEMENT", "classArModeCamera.html#a0f4a034b894d10deb7ef2ed4d76cce5faa5ac0298aafe101fb9e9abeb2e6a5e30", null ]
+    ] ],
     [ "ArModeCamera", "classArModeCamera.html#a54182bfd93424b84a04ecfe54f5d66ef", null ],
     [ "~ArModeCamera", "classArModeCamera.html#a2c52e2b0fa8801c61c7012a9fe089b21", null ],
     [ "activate", "classArModeCamera.html#a15f0de080808c23b7eb7c7b788780e36", null ],
@@ -48,6 +58,8 @@ var classArModeCamera =
     [ "takePortKeys", "classArModeCamera.html#a0c485622a186bb631e7a0464d739cbff", null ],
     [ "toggleAutoFocus", "classArModeCamera.html#a31de83c5e1e16540399611e1004a43f7", null ],
     [ "up", "classArModeCamera.html#a49702abe6ab45b92817e27ef54f97b38", null ],
+    [ "usb0", "classArModeCamera.html#adbd533bcf72ea20c6364a763f8a8c0b2", null ],
+    [ "usb9", "classArModeCamera.html#a21d173a581653f91025c495f6f5198ea", null ],
     [ "userTask", "classArModeCamera.html#ab3682a2e1a8bc575729be7f9fa49b156", null ],
     [ "zoomIn", "classArModeCamera.html#a3949520bead8c139c30b670f7d280c5b", null ],
     [ "zoomOut", "classArModeCamera.html#af9972e0a2ed4b44407e31ee0c719ab76", null ],
@@ -86,6 +98,8 @@ var classArModeCamera =
     [ "myTiltAmount", "classArModeCamera.html#a8a5c00c963bc0160642cb0c85a525ded", null ],
     [ "myToggleAutoFocusCB", "classArModeCamera.html#a036e6927251392e42a5973d356d3e3be", null ],
     [ "myUpCB", "classArModeCamera.html#a373371adb162bb060190db0808224967", null ],
+    [ "myUSBCom0CB", "classArModeCamera.html#a1c3b8a4d00879a1e4d9a535e72613f84", null ],
+    [ "myUSBCom9CB", "classArModeCamera.html#a6c503b97263469487e58219b43d7db45", null ],
     [ "myZoomInCB", "classArModeCamera.html#adac9128d923edbb395d3424abc33740d", null ],
     [ "myZoomOutCB", "classArModeCamera.html#ad0b1258dff333d71c868df3389e628e0", null ]
 ];

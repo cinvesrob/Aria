@@ -1,8 +1,20 @@
 var classArDPPTU =
 [
-    [ "Axis", "classArDPPTU.html#a387b76b5dfe9aeffa4f4f8fb895a8826", null ],
-    [ "DeviceType", "classArDPPTU.html#a7777a8c7419aaadd5a31aa7e90b4321c", null ],
-    [ "PowerMode", "classArDPPTU.html#a5a87415804ec17deb8dae2400c7c0931", null ],
+    [ "Axis", "classArDPPTU.html#a387b76b5dfe9aeffa4f4f8fb895a8826", [
+      [ "PAN", "classArDPPTU.html#a387b76b5dfe9aeffa4f4f8fb895a8826a61953132dae2f522bbb85853377d1191", null ],
+      [ "TILT", "classArDPPTU.html#a387b76b5dfe9aeffa4f4f8fb895a8826a2fddc9483671527010216bcc33036d2f", null ]
+    ] ],
+    [ "DeviceType", "classArDPPTU.html#a7777a8c7419aaadd5a31aa7e90b4321c", [
+      [ "PANTILT_DEFAULT", "classArDPPTU.html#a7777a8c7419aaadd5a31aa7e90b4321ca002100fdca0caded94de852b5b6a5197", null ],
+      [ "PANTILT_PTUD47", "classArDPPTU.html#a7777a8c7419aaadd5a31aa7e90b4321ca029fca3bc395e885d3e3e9364305a508", null ],
+      [ "PANTILT_PTUD46", "classArDPPTU.html#a7777a8c7419aaadd5a31aa7e90b4321cabfa01db559586814bf1bd9119ac07d60", null ]
+    ] ],
+    [ "PowerMode", "classArDPPTU.html#a5a87415804ec17deb8dae2400c7c0931", [
+      [ "OFF", "classArDPPTU.html#a5a87415804ec17deb8dae2400c7c0931ad4bcef0d8f7edfaf1386e7461a2e9e3b", null ],
+      [ "LOW", "classArDPPTU.html#a5a87415804ec17deb8dae2400c7c0931a106f540128817b39618a8ae4b4d28c14", null ],
+      [ "NORMAL", "classArDPPTU.html#a5a87415804ec17deb8dae2400c7c0931a698789114b57a3515250ce490073e2c9", null ],
+      [ "HIGH", "classArDPPTU.html#a5a87415804ec17deb8dae2400c7c0931a763cf2bae2795efc03118747cdefa4a9", null ]
+    ] ],
     [ "ArDPPTU", "classArDPPTU.html#ac6a0d92c900d2d561b7f04c332f8c65a", null ],
     [ "~ArDPPTU", "classArDPPTU.html#a2fe512895543ad4a19a8a066acd7173b", null ],
     [ "awaitExec", "classArDPPTU.html#ac1a3c1a1b13db347ec5d0b6db11d18b5", null ],

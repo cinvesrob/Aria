@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -27,6 +28,7 @@ Adept MobileRobots, 10 Columbia Drive, Amherst, NH 03031; +1-603-881-7960
 #include "ariaOSDef.h"
 #include "ArActionLimiterForwards.h"
 #include "ArRobot.h"
+#include "ArRangeDevice.h"
 
 /**
    @param name name of the action
@@ -60,6 +62,7 @@ AREXPORT ArActionLimiterForwards::ArActionLimiterForwards(const char *name,
 			"Ratio of the width of the box to look at to the robot radius (multiplier)"));
   myWidthRatio = widthRatio;
   myLastStopped = false;
+  myLastSensorReadingDev = NULL;
 }
 
 AREXPORT ArActionLimiterForwards::~ArActionLimiterForwards()
@@ -99,23 +102,35 @@ ArActionLimiterForwards::fire(ArActionDesired currentDesired)
     checkDist = mySlowDist;
 
   myDesired.reset();
-  dist = myRobot->checkRangeDevicesCurrentBox(0,
+  dist = myRobot->checkRangeDevicesCurrentBox(
+        0,
 				-myRobot->getRobotWidth()/2.0 * myWidthRatio,
-  			        checkDist + myRobot->getRobotLength()/2,
-				myRobot->getRobotWidth()/2.0 * myWidthRatio);
+  			checkDist + myRobot->getRobotLength()/2,
+				myRobot->getRobotWidth()/2.0 * myWidthRatio,
+        &myLastSensorReadingPos,
+        &myLastSensorReadingDev
+  );
   dist -= myRobot->getRobotLength() / 2;
   //printf("%.0f\n", dist);
+
   if (dist < myStopDist)
   {
-    if (printing && !myLastStopped)
-      printf("Stopping\n");
+    if(!myLastStopped)
+    {
+      if (printing) printf("Stopping\n");
+      ArLog::log(ArLog::Verbose, "%s: Stopping due to sensor reaoding", getName());
+    }
     myLastStopped = true;
     myDesired.setMaxVel(0);
     return &myDesired;
   }
 
-  if (printing && myLastStopped)
-    printf("Going\n");
+  if(myLastStopped)
+  {
+    if (printing) printf("Going\n");
+    ArLog::log(ArLog::Verbose, "%s: Allowing motion", getName());
+  } 
+
   myLastStopped = false;
   //printf("%f ", dist);
   if (dist > mySlowDist)

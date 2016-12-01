@@ -9,6 +9,7 @@ var classArArgumentParser =
     [ "addDefaultArgumentFile", "classArArgumentParser.html#a3829748cdf17452be8c5fdd8a9638be5", null ],
     [ "checkArgument", "classArArgumentParser.html#a08d0d87154763e4869f0342a47059886", null ],
     [ "checkArgumentVar", "classArArgumentParser.html#adb2c8381cfd3982b5230ab0e345d48d8", null ],
+    [ "checkHelp", "classArArgumentParser.html#a7f49e13ab287d2aaaa571b8dde116d78", null ],
     [ "checkHelpAndWarnUnparsed", "classArArgumentParser.html#ac3889cbdfa862031c51bf80e06954914", null ],
     [ "checkParameterArgument", "classArArgumentParser.html#aca9661c6e8ef423337590bc5c2336dec", null ],
     [ "checkParameterArgumentBool", "classArArgumentParser.html#a19bde315a3456ae1034e4f6f84b46f62", null ],

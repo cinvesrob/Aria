@@ -1,6 +1,14 @@
 var classArNetPacket =
 [
-    [ "PacketSource", "classArNetPacket.html#a699c1b74aac44c20113ba6412655de1d", null ],
+    [ "SIZE_OF_LENGTH", "classArNetPacket.html#a11c6eb7a86ddc6ea04a49cc0ea307a64a7e723695f5dc573ce73549d9db39465b", null ],
+    [ "MAX_LENGTH", "classArNetPacket.html#a11c6eb7a86ddc6ea04a49cc0ea307a64a233ff463989369cb076795dd20c44d22", null ],
+    [ "HEADER_LENGTH", "classArNetPacket.html#a11c6eb7a86ddc6ea04a49cc0ea307a64a4e7fdf73911e38ef8031b03e27cc157e", null ],
+    [ "FOOTER_LENGTH", "classArNetPacket.html#a11c6eb7a86ddc6ea04a49cc0ea307a64a143233cf777bfe992c946039dd006548", null ],
+    [ "MAX_DATA_LENGTH", "classArNetPacket.html#a11c6eb7a86ddc6ea04a49cc0ea307a64a340ff1cfb7242c223236b0a6568afddc", null ],
+    [ "PacketSource", "classArNetPacket.html#a699c1b74aac44c20113ba6412655de1d", [
+      [ "TCP", "classArNetPacket.html#a699c1b74aac44c20113ba6412655de1dada3588583303835c7ded0f5767d8df6a", null ],
+      [ "UDP", "classArNetPacket.html#a699c1b74aac44c20113ba6412655de1daff33666d202e647f4c668e8397578cf5", null ]
+    ] ],
     [ "ArNetPacket", "classArNetPacket.html#a9c9843ff5d3a400cac0d6d00c83f78b5", null ],
     [ "ArNetPacket", "classArNetPacket.html#ae2be3f2502d8f7dc6de1829382adb13f", null ],
     [ "~ArNetPacket", "classArNetPacket.html#a3501d8ef29c8cc2604a631bb4e1d34c4", null ],

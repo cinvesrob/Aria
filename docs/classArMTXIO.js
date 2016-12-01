@@ -1,6 +1,10 @@
 var classArMTXIO =
 [
-    [ "Direction", "classArMTXIO.html#a7adc67ef6586aa8f5dc559754e3038bb", null ],
+    [ "Direction", "classArMTXIO.html#a7adc67ef6586aa8f5dc559754e3038bb", [
+      [ "DIGITAL_INPUT", "classArMTXIO.html#a7adc67ef6586aa8f5dc559754e3038bbab9dc93bee3386039cec6a180e28952be", null ],
+      [ "DIGITAL_OUTPUT", "classArMTXIO.html#a7adc67ef6586aa8f5dc559754e3038bbaef8748f1cfb40a749e26bc334be53fcb", null ],
+      [ "INVALID", "classArMTXIO.html#a7adc67ef6586aa8f5dc559754e3038bbaa8ce0801cc8186bb5f69bff28d3febdb", null ]
+    ] ],
     [ "ArMTXIO", "classArMTXIO.html#a3d6e28d7bfca2e817e1341a98952ca45", null ],
     [ "~ArMTXIO", "classArMTXIO.html#adeb605ebc6943a354885575328179577", null ],
     [ "closeIO", "classArMTXIO.html#a815ca10341bb99b6a64a45c71839fed8", null ],

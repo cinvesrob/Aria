@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -32,6 +33,7 @@ Adept MobileRobots, 10 Columbia Drive, Amherst, NH 03031; +1-603-881-7960
 #include "ariaUtil.h"
 #include "ArMutex.h"
 #include "ArNMEAParser.h"
+#include "ArGPSCoords.h"
 #include <math.h>
 #include <string>
 #include <vector>
@@ -132,18 +134,6 @@ public:
 
     /** Same as connect(). See connect().  */
     bool blockingConnect(unsigned long connectTimeout = 20000) { return connect(connectTimeout); }
-
-protected:
-    /** Block until data is read from GPS.
-        Waits by calling read() every 100 ms for @a timeout ms.
-     */
-    AREXPORT bool waitForData(unsigned long timeout);
-
-    /** Subclasses may override to send device initialization/configuration
-     * commands and set up device-specific message handlers. (Default behavior
-     * is to do nothing and return true.)
-     */
-    virtual bool initDevice() { return true; }
 
 public:
 
@@ -296,6 +286,12 @@ public:
     /** @return longitude in decimal degrees. 
         (from NMEA GPRMC) */
     double getLongitude() const { return myData.longitude; }
+
+    /// @return latitude, longitude and altitude
+    ArLLACoords getLLA() const { return ArLLACoords(myData.latitude, myData.longitude, myData.altitude); }
+
+    /// @return latitude and longitude in an ArPose object. Theta will be 0.
+    ArPose getPose() const { return ArPose(myData.latitude, myData.longitude); }
 
     /** @return copy of an ArTime object set to the time that ArGPS read and received latitude and longitude data from the GPS. 
         (from NMEA GPRMC) */
@@ -462,6 +458,16 @@ public:
     }
 
 protected:
+    /** Block until data is read from GPS.
+        Waits by calling read() every 100 ms for @a timeout ms.
+     */
+    AREXPORT bool waitForData(unsigned long timeout);
+
+    /** Subclasses may override to send device initialization/configuration
+     * commands and set up device-specific message handlers. (Default behavior
+     * is to do nothing and return true.)
+     */
+    virtual bool initDevice() { return true; }
 
      
     /* Most recent data values received, to return to user */

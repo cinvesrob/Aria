@@ -1,6 +1,12 @@
 var classArSerialConnection =
 [
-    [ "Open", "classArSerialConnection.html#a2a056665bf9ddabcad6c7e53e3e25d84", null ],
+    [ "Open", "classArSerialConnection.html#a2a056665bf9ddabcad6c7e53e3e25d84", [
+      [ "OPEN_COULD_NOT_OPEN_PORT", "classArSerialConnection.html#a2a056665bf9ddabcad6c7e53e3e25d84ac0eea66274bf02ae7af107fabfcc3d10", null ],
+      [ "OPEN_COULD_NOT_SET_UP_PORT", "classArSerialConnection.html#a2a056665bf9ddabcad6c7e53e3e25d84a02bdf357f43fb4936fcb598877a7320f", null ],
+      [ "OPEN_INVALID_BAUD_RATE", "classArSerialConnection.html#a2a056665bf9ddabcad6c7e53e3e25d84aadd67b088b70689f136f48edac58c650", null ],
+      [ "OPEN_COULD_NOT_SET_BAUD", "classArSerialConnection.html#a2a056665bf9ddabcad6c7e53e3e25d84ab1cb59de5c2b832733890bb21cc2459b", null ],
+      [ "OPEN_ALREADY_OPEN", "classArSerialConnection.html#a2a056665bf9ddabcad6c7e53e3e25d84a2bcf41b557b6018567ef23efb20a3c8e", null ]
+    ] ],
     [ "ArSerialConnection", "classArSerialConnection.html#a749c4362becea68b6aff81a3f3114fe5", null ],
     [ "~ArSerialConnection", "classArSerialConnection.html#af31c4e4b8dd9c4f61365a2c682e27259", null ],
     [ "baudToRate", "classArSerialConnection.html#aa0fb77c9ba34a65adb74aa664439b313", null ],

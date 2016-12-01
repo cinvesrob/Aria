@@ -1,5 +1,6 @@
 var classArServerBase =
 [
+    [ "SlowIdleThread", "classArServerBase_1_1SlowIdleThread.html", "classArServerBase_1_1SlowIdleThread" ],
     [ "ArServerBase", "classArServerBase.html#a3b5424c9529d3abf77f94e22473a923d", null ],
     [ "~ArServerBase", "classArServerBase.html#a9654db575351b18c10a08729d9fda1ce", null ],
     [ "acceptTcpSockets", "classArServerBase.html#af1d003d3aca3e9697d913a450cc8a35c", null ],

@@ -1,7 +1,18 @@
 var classArSocket =
 [
-    [ "Error", "classArSocket.html#adb19935936354b6819a87d680d7a8b56", null ],
-    [ "Type", "classArSocket.html#a09dbfe6cd3ec459a1cb105da8a267c06", null ],
+    [ "Error", "classArSocket.html#adb19935936354b6819a87d680d7a8b56", [
+      [ "NoErr", "classArSocket.html#adb19935936354b6819a87d680d7a8b56a0945eab54fe783dbfbcab2a4ce0bd783", null ],
+      [ "NetFail", "classArSocket.html#adb19935936354b6819a87d680d7a8b56a9557eb4832b42c64d6151a907da4070c", null ],
+      [ "ConBadHost", "classArSocket.html#adb19935936354b6819a87d680d7a8b56aa5465f460dd4bd9f5d054ef78f16119d", null ],
+      [ "ConNoRoute", "classArSocket.html#adb19935936354b6819a87d680d7a8b56a61dad631d02e9796ec48ddf653b88b62", null ],
+      [ "ConRefused", "classArSocket.html#adb19935936354b6819a87d680d7a8b56a42337bf2db3c326719032bb12f6a3374", null ],
+      [ "NameLookup", "classArSocket.html#adb19935936354b6819a87d680d7a8b56a38134cb5cae4075b0d521e3595cbf312", null ]
+    ] ],
+    [ "Type", "classArSocket.html#a09dbfe6cd3ec459a1cb105da8a267c06", [
+      [ "UDP", "classArSocket.html#a09dbfe6cd3ec459a1cb105da8a267c06ab0ccfd1392f9521bfe206880f33a8f0e", null ],
+      [ "TCP", "classArSocket.html#a09dbfe6cd3ec459a1cb105da8a267c06a5e4328bd37cda9c39c102f89e2f1a09c", null ],
+      [ "Unknown", "classArSocket.html#a09dbfe6cd3ec459a1cb105da8a267c06ad65f945a93d30858a88762852798910f", null ]
+    ] ],
     [ "ArSocket", "classArSocket.html#a6e63b642e8fa16034373b51ef1c35705", null ],
     [ "ArSocket", "classArSocket.html#a612acf14e9aca4e12e931784a5147513", null ],
     [ "ArSocket", "classArSocket.html#a133fce4174f7a64327353510804796e9", null ],

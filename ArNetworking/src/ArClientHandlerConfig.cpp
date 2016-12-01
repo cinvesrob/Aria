@@ -1,3 +1,29 @@
+/*
+Adept MobileRobots Robotics Interface for Applications (ARIA)
+Copyright (C) 2004-2005 ActivMedia Robotics LLC
+Copyright (C) 2006-2010 MobileRobots Inc.
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
+
+     This program is free software; you can redistribute it and/or modify
+     it under the terms of the GNU General Public License as published by
+     the Free Software Foundation; either version 2 of the License, or
+     (at your option) any later version.
+
+     This program is distributed in the hope that it will be useful,
+     but WITHOUT ANY WARRANTY; without even the implied warranty of
+     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+     GNU General Public License for more details.
+
+     You should have received a copy of the GNU General Public License
+     along with this program; if not, write to the Free Software
+     Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+If you wish to redistribute ARIA under different terms, contact 
+Adept MobileRobots for information about a commercial version of ARIA at 
+robots@mobilerobots.com or 
+Adept MobileRobots, 10 Columbia Drive, Amherst, NH 03031; +1-603-881-7960
+*/
 #include "Aria.h"
 #include "ArExport.h"
 #include "ArClientHandlerConfig.h"
@@ -221,34 +247,34 @@ AREXPORT void ArClientHandlerConfig::requestConfigFromServer(void)
 }
 
 
-AREXPORT void ArClientHandlerConfig::handleGetConfigBySectionsV4
+void ArClientHandlerConfig::handleGetConfigBySectionsV4
                                                         (ArNetPacket *packet)
 {
   handleGetConfigData(packet, true, 4);
 }
 
 
-AREXPORT void ArClientHandlerConfig::handleGetConfigBySectionsV3(ArNetPacket *packet)
+void ArClientHandlerConfig::handleGetConfigBySectionsV3(ArNetPacket *packet)
 {
   handleGetConfigData(packet, true, 3);
 }
 
-AREXPORT void ArClientHandlerConfig::handleGetConfigBySectionsV2(ArNetPacket *packet)
+void ArClientHandlerConfig::handleGetConfigBySectionsV2(ArNetPacket *packet)
 {
   handleGetConfigData(packet, true, 2);
 }
 
-AREXPORT void ArClientHandlerConfig::handleGetConfigBySections(ArNetPacket *packet)
+void ArClientHandlerConfig::handleGetConfigBySections(ArNetPacket *packet)
 {
   handleGetConfigData(packet, true, 1);
 }
 
-AREXPORT void ArClientHandlerConfig::handleGetConfig(ArNetPacket *packet)
+void ArClientHandlerConfig::handleGetConfig(ArNetPacket *packet)
 {
   handleGetConfigData(packet, false, 0);
 }
 
-AREXPORT void ArClientHandlerConfig::handleGetConfigData(ArNetPacket *packet,
+void ArClientHandlerConfig::handleGetConfigData(ArNetPacket *packet,
                                                          bool isMultiplePackets,
                                                          int version)
 {
@@ -371,7 +397,7 @@ AREXPORT void ArClientHandlerConfig::handleGetConfigData(ArNetPacket *packet,
 } // end method handleGetConfigData
 
 
-AREXPORT void ArClientHandlerConfig::handleGetConfigSectionFlags(
+void ArClientHandlerConfig::handleGetConfigSectionFlags(
 	ArNetPacket *packet) 
 {
   int numSections = packet->bufToByte4();
@@ -520,7 +546,7 @@ AREXPORT void ArClientHandlerConfig::saveConfigToServer(
   }
 }
 
-AREXPORT void ArClientHandlerConfig::handleSetConfig(ArNetPacket *packet)
+void ArClientHandlerConfig::handleSetConfig(ArNetPacket *packet)
 { 
   char buffer[1024];
   packet->bufToStr(buffer, sizeof(buffer));
@@ -548,7 +574,7 @@ AREXPORT void ArClientHandlerConfig::handleSetConfig(ArNetPacket *packet)
 }
 
 /// Handles the return packet from the setConfig (saveConfigToServer)
-AREXPORT void ArClientHandlerConfig::handleSetConfigBySections(ArNetPacket *packet)
+void ArClientHandlerConfig::handleSetConfigBySections(ArNetPacket *packet)
 {
   char buffer[1024];
   packet->bufToStr(buffer, sizeof(buffer));
@@ -576,7 +602,7 @@ AREXPORT void ArClientHandlerConfig::handleSetConfigBySections(ArNetPacket *pack
 } 
 
 /// Handles the return packet from the setConfig (saveConfigToServer)
-AREXPORT void ArClientHandlerConfig::handleSetConfigBySectionsV2(ArNetPacket *packet)
+void ArClientHandlerConfig::handleSetConfigBySectionsV2(ArNetPacket *packet)
 {
   IFDEBUG(ArLog::log(ArLog::Normal,
                      "ArClientHandlerConfig::handleSetConfigBySectionsV2()"));
@@ -921,7 +947,7 @@ AREXPORT bool ArClientHandlerConfig::requestSectionDefaults(
 
 
 
-AREXPORT void ArClientHandlerConfig::handleGetConfigDefaults(
+void ArClientHandlerConfig::handleGetConfigDefaults(
 	ArNetPacket *packet)
 {
   ArLog::log(ArLog::Normal, "%sreceived default config %s", 
@@ -1121,7 +1147,7 @@ AREXPORT void ArClientHandlerConfig::remGotLastEditablePriorityCB
 } // end method remGotLastEditablePriorityCB
 
 
-AREXPORT void ArClientHandlerConfig::handleGetLastEditablePriority
+void ArClientHandlerConfig::handleGetLastEditablePriority
                                                     (ArNetPacket *packet)
 {
 

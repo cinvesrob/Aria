@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -662,7 +663,6 @@ AREXPORT bool ArArgumentBuilder::getArgBool(size_t whichArg,
 AREXPORT bool ArArgumentBuilder::isArgInt(size_t whichArg, bool forceHex) const
 {
   const char *str;
-  int ret;
   char *endPtr;
   if (whichArg > myArgc || getArg(whichArg) == NULL)
     return false;
@@ -679,7 +679,7 @@ AREXPORT bool ArArgumentBuilder::isArgInt(size_t whichArg, bool forceHex) const
     base = 16;
   }
 
-  ret = strtol(str, &endPtr, base);
+  strtol(str, &endPtr, base);
   if (endPtr[0] == '\0' && endPtr != str)
     return true;
   else
@@ -728,7 +728,6 @@ AREXPORT int ArArgumentBuilder::getArgInt(size_t whichArg,
 AREXPORT bool ArArgumentBuilder::isArgLongLongInt(size_t whichArg) const
 {
   const char *str;
-  long long int ret;
   char *endPtr;
   if (whichArg > myArgc || getArg(whichArg) == NULL)
     return false;
@@ -743,9 +742,9 @@ AREXPORT bool ArArgumentBuilder::isArgLongLongInt(size_t whichArg) const
   }
 
 #ifndef _MSC_VER
-    ret = strtoll(str, &endPtr, base);
+    strtoll(str, &endPtr, base);
 #else
-    ret = _strtoi64(str, &endPtr, base);
+    _strtoi64(str, &endPtr, base);
 #endif
 
   if (endPtr[0] == '\0' && endPtr != str)
@@ -799,7 +798,6 @@ AREXPORT int ArArgumentBuilder::getArgLongLongInt(size_t whichArg,
 AREXPORT bool ArArgumentBuilder::isArgDouble(size_t whichArg) const
 {
   const char *str;
-  double ret;
   char *endPtr;
   if (whichArg > myArgc || getArg(whichArg) == NULL)
     return false;
@@ -815,7 +813,7 @@ AREXPORT bool ArArgumentBuilder::isArgDouble(size_t whichArg) const
   }
   else
   {
-    ret = strtod(str, &endPtr);
+    strtod(str, &endPtr);
     if (endPtr[0] == '\0' && endPtr != str)
       return true;
     else

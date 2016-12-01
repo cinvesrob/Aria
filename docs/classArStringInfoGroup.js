@@ -9,6 +9,7 @@ var classArStringInfoGroup =
     [ "addStringInt", "classArStringInfoGroup.html#aa1315a75e4e69ba232b4239f61b5a2e4", null ],
     [ "addStringLong", "classArStringInfoGroup.html#a8f5302164bdd719baf878e76ebbfc533", null ],
     [ "addStringString", "classArStringInfoGroup.html#a98daaf0a7d7501eac9f89f53de029f43", null ],
+    [ "addStringString", "classArStringInfoGroup.html#ab6e383bdddb314c23762b4945824d378", null ],
     [ "addStringUnsignedLong", "classArStringInfoGroup.html#a575b85c62714c58a0253caf4213fff52", null ],
     [ "myAddedStrings", "classArStringInfoGroup.html#a79e8eff70f5077a5228e09e5d5392d58", null ],
     [ "myAddStringCBList", "classArStringInfoGroup.html#af18587972bd13d431e0138d95659d90d", null ],

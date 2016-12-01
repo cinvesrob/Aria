@@ -1,6 +1,18 @@
 var classArMapInfoInterface =
 [
-    [ "InfoType", "classArMapInfoInterface.html#ae8f1a9d7cce478985fc30c9237d93e05", null ],
+    [ "INFO_COUNT", "classArMapInfoInterface.html#a5de957b3fa4519b1ff562f1ee9d9240da20ee240af44438cad2f33cfe29f21b23", null ],
+    [ "InfoType", "classArMapInfoInterface.html#ae8f1a9d7cce478985fc30c9237d93e05", [
+      [ "MAP_INFO", "classArMapInfoInterface.html#ae8f1a9d7cce478985fc30c9237d93e05a34eb25df5af2b80fc9da559b7074b2a7", null ],
+      [ "FIRST_INFO", "classArMapInfoInterface.html#ae8f1a9d7cce478985fc30c9237d93e05a43cc914ec328dc61f7ad3ac3c7241c4c", null ],
+      [ "META_INFO", "classArMapInfoInterface.html#ae8f1a9d7cce478985fc30c9237d93e05af2f297edecf3ad24764990d325d35f29", null ],
+      [ "TASK_INFO", "classArMapInfoInterface.html#ae8f1a9d7cce478985fc30c9237d93e05af8292aef78325420d45fb11f7a0bbf67", null ],
+      [ "ROUTE_INFO", "classArMapInfoInterface.html#ae8f1a9d7cce478985fc30c9237d93e05a7ae389082ea4c263a4df2f3aa3186a8f", null ],
+      [ "SCHED_TASK_INFO", "classArMapInfoInterface.html#ae8f1a9d7cce478985fc30c9237d93e05a3b4136d47451943fde3375cdb811c98b", null ],
+      [ "SCHED_INFO", "classArMapInfoInterface.html#ae8f1a9d7cce478985fc30c9237d93e05a6322eef461adaf54bd22c6eda06523b9", null ],
+      [ "CAIRN_INFO", "classArMapInfoInterface.html#ae8f1a9d7cce478985fc30c9237d93e05afab7a58fe818b209b1932ee8d758db27", null ],
+      [ "CUSTOM_INFO", "classArMapInfoInterface.html#ae8f1a9d7cce478985fc30c9237d93e05a6fda900fe4e3a84219b49c8670377b22", null ],
+      [ "LAST_INFO", "classArMapInfoInterface.html#ae8f1a9d7cce478985fc30c9237d93e05a96063b169201f877050e201d280f6404", null ]
+    ] ],
     [ "ArMapInfoInterface", "classArMapInfoInterface.html#aa2b0edebd71ed20087faf5a9b96e0e01", null ],
     [ "~ArMapInfoInterface", "classArMapInfoInterface.html#ae9bef84cbe069ec2619d9e80504f2059", null ],
     [ "getInfo", "classArMapInfoInterface.html#a377012af07697ccb5b2d5cbff842d10c", null ],

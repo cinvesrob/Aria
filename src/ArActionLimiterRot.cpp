@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -111,12 +112,12 @@ ArActionLimiterRot::fire(ArActionDesired currentDesired)
   const ArRangeDevice *rightRangeDevice = NULL;
 
   double dist;
-  const ArRangeDevice *rangeDevice = NULL;
+  //const ArRangeDevice *rangeDevice = NULL;
 
   //ArLog::LogLevel verboseLogLevel = ArLog::Verbose;
-  ArLog::LogLevel verboseLogLevel = ArLog::Verbose;
-  if (printing)
-    verboseLogLevel = ArLog::Normal;
+  //ArLog::LogLevel verboseLogLevel = ArLog::Verbose;
+  //if (printing)
+  //  verboseLogLevel = ArLog::Normal;
 
 
   leftDist = myRobot->checkRangeDevicesCurrentPolar(
@@ -128,30 +129,30 @@ ArActionLimiterRot::fire(ArActionDesired currentDesired)
   if (leftDist > 0 && rightDist < 0)
   {
     dist = leftDist;
-    rangeDevice = leftRangeDevice;
+    //rangeDevice = leftRangeDevice;
   }
   else if (rightDist > 0 && leftDist < 0)
   {
     dist = rightDist;
-    rangeDevice = rightRangeDevice;
+    //rangeDevice = rightRangeDevice;
   }
   else if (leftDist > 0 && rightDist > 0)
   {
     if (leftDist < rightDist)
     {
       dist = leftDist;
-      rangeDevice = leftRangeDevice;
+      //rangeDevice = leftRangeDevice;
     }
     else 
     {
       dist = rightDist;
-      rangeDevice = rightRangeDevice;
+      //rangeDevice = rightRangeDevice;
     }
   }
   else
   {
     dist = -1;
-    rangeDevice = NULL;
+    //rangeDevice = NULL;
   }
 
   if (printing)

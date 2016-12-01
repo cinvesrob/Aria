@@ -1,5 +1,6 @@
 var classArBatteryConnector =
 [
+    [ "BatteryData", "classArBatteryConnector_1_1BatteryData.html", "classArBatteryConnector_1_1BatteryData" ],
     [ "ArBatteryConnector", "classArBatteryConnector.html#aa89558b9ab3d847639802db304868928", null ],
     [ "~ArBatteryConnector", "classArBatteryConnector.html#a01a13e72f73c076a8320b365aa26cf33", null ],
     [ "addBattery", "classArBatteryConnector.html#ab1829cccfc25cd121e6f6df497c6740c", null ],

@@ -51,7 +51,8 @@
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -65,9 +66,9 @@
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -133,7 +134,8 @@
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -147,9 +149,9 @@
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -216,7 +218,8 @@
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -230,9 +233,9 @@
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -293,7 +296,8 @@
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -307,9 +311,9 @@
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -373,7 +377,8 @@
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -387,9 +392,9 @@
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -449,7 +454,8 @@
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -463,9 +469,9 @@
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -529,7 +535,8 @@
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -543,9 +550,9 @@
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -556,6 +563,190 @@
  include/ArNetPacket.h include/ArNetPacketSenderTcp.h \
  include/ArNetPacketReceiverTcp.h include/ArNetPacketReceiverUdp.h \
  include/ArClientData.h include/ArClientArgUtils.h
+../obj/ArClientHandlerRobotUpdate.o: src/ArClientHandlerRobotUpdate.cpp \
+ ../include/Aria.h ../include/ariaOSDef.h ../include/ariaTypedefs.h \
+ ../include/ArSerialConnection.h ../include/ArDeviceConnection.h \
+ ../include/ariaUtil.h ../include/ArLog.h ../include/ArMutex.h \
+ ../include/ArFunctor.h ../include/ArArgumentParser.h \
+ ../include/ArArgumentBuilder.h ../include/ArBasePacket.h \
+ ../include/ArTcpConnection.h ../include/ArSocket.h \
+ ../include/ArSimpleConnector.h ../include/ArRobotConnector.h \
+ ../include/ArLaserConnector.h ../include/ArLogFileConnection.h \
+ ../include/ArRobotPacket.h ../include/ArRobotPacketSender.h \
+ ../include/ArRobotPacketReceiver.h \
+ ../include/ArRobotConfigPacketReader.h ../include/ArRobotTypes.h \
+ ../include/ArRobotParams.h ../include/ArConfig.h \
+ ../include/ArConfigArg.h ../include/ArFileParser.h \
+ ../include/ArHasFileName.h ../include/ArConfigGroup.h \
+ ../include/ArRobot.h ../include/ArSyncTask.h ../include/ArTaskState.h \
+ ../include/ArSensorReading.h ../include/ArTransform.h \
+ ../include/ArCondition.h ../include/ArSyncLoop.h \
+ ../include/ArASyncTask.h ../include/ArThread.h \
+ ../include/ArRobotPacketReaderThread.h ../include/ArActionDesired.h \
+ ../include/ArResolver.h ../include/ArInterpolation.h \
+ ../include/ArKeyHandler.h ../include/ArCommands.h \
+ ../include/ArJoyHandler.h ../include/ariaInternal.h \
+ ../include/ArStringInfoGroup.h ../include/ArSonarDevice.h \
+ ../include/ArRangeDevice.h ../include/ArRangeBuffer.h \
+ ../include/ArDrawingData.h ../include/ArPriorityResolver.h \
+ ../include/ArAction.h ../include/ArArg.h ../include/ArActionGroup.h \
+ ../include/ArActionGroups.h ../include/ArActionColorFollow.h \
+ ../include/ArACTS.h ../include/ArPTZ.h ../include/ArPTZConnector.h \
+ ../include/ArActionDeceleratingLimiter.h \
+ ../include/ArActionLimiterForwards.h \
+ ../include/ArActionLimiterBackwards.h \
+ ../include/ArActionLimiterTableSensor.h ../include/ArActionBumpers.h \
+ ../include/ArActionIRs.h ../include/ArActionStallRecover.h \
+ ../include/ArActionAvoidFront.h ../include/ArActionAvoidSide.h \
+ ../include/ArActionConstantVelocity.h ../include/ArActionInput.h \
+ ../include/ArActionRobotJoydrive.h ../include/ArActionJoydrive.h \
+ ../include/ArActionKeydrive.h ../include/ArActionTriangleDriveTo.h \
+ ../include/ArLineFinder.h ../include/ArActionTurn.h \
+ ../include/ArActionRatioInput.h ../include/ArActionStop.h \
+ ../include/ArActionGoto.h ../include/ArModule.h \
+ ../include/ArModuleLoader.h ../include/ArRecurrentTask.h \
+ ../include/ArGripper.h ../include/ArSonyPTZ.h ../include/ArRVisionPTZ.h \
+ ../include/ArAMPTU.h ../include/ArP2Arm.h ../include/ArSick.h \
+ ../include/ArLaser.h ../include/ArRangeDeviceThreaded.h \
+ ../include/ArFunctorASyncTask.h ../include/ArLMS2xx.h \
+ ../include/ArLMS2xxPacket.h ../include/ArLMS2xxPacketReceiver.h \
+ ../include/ArLaserLogger.h ../include/ArIrrfDevice.h \
+ ../include/ArDPPTU.h ../include/ArVCC4.h ../include/ArMode.h \
+ ../include/ArModes.h ../include/ArTCMCompassRobot.h ../include/ArTCM2.h \
+ ../include/ArNetServer.h ../include/ArSignalHandler.h \
+ ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
+ ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
+ ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
+ ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
+ ../include/ArRatioInputKeydrive.h ../include/ArRatioInputJoydrive.h \
+ ../include/ArRatioInputRobotJoydrive.h \
+ ../include/ArActionMovementParameters.h ../include/ArSoundPlayer.h \
+ ../include/ArSoundsQueue.h ../include/ArSpeech.h \
+ ../include/ArCameraCollection.h ../include/ArCameraCommands.h \
+ ../include/ArSonarAutoDisabler.h ../include/ArActionDriveDistance.h \
+ ../include/ArLaserReflectorDevice.h ../include/ArRobotConfig.h \
+ ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
+ ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
+ ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
+ ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
+ ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
+ ../include/ArActionMovementParametersDebugging.h ../include/ArZippable.h \
+ ../include/ArS3Series.h ../include/ArSZSeries.h ../include/ArExport.h \
+ include/ArClientHandlerRobotUpdate.h include/ArNetPacket.h \
+ include/ArClientBase.h include/ArClientCommands.h \
+ include/ArServerCommands.h include/ArNetPacket.h \
+ include/ArNetPacketSenderTcp.h include/ArNetPacketReceiverTcp.h \
+ include/ArNetPacketReceiverUdp.h include/ArClientData.h
+../obj/ArClientRatioDrive.o: src/ArClientRatioDrive.cpp \
+ include/ArClientRatioDrive.h ../include/Aria.h ../include/ariaOSDef.h \
+ ../include/ariaTypedefs.h ../include/ArSerialConnection.h \
+ ../include/ArDeviceConnection.h ../include/ariaUtil.h ../include/ArLog.h \
+ ../include/ArMutex.h ../include/ArFunctor.h \
+ ../include/ArArgumentParser.h ../include/ArArgumentBuilder.h \
+ ../include/ArBasePacket.h ../include/ArTcpConnection.h \
+ ../include/ArSocket.h ../include/ArSimpleConnector.h \
+ ../include/ArRobotConnector.h ../include/ArLaserConnector.h \
+ ../include/ArLogFileConnection.h ../include/ArRobotPacket.h \
+ ../include/ArRobotPacketSender.h ../include/ArRobotPacketReceiver.h \
+ ../include/ArRobotConfigPacketReader.h ../include/ArRobotTypes.h \
+ ../include/ArRobotParams.h ../include/ArConfig.h \
+ ../include/ArConfigArg.h ../include/ArFileParser.h \
+ ../include/ArHasFileName.h ../include/ArConfigGroup.h \
+ ../include/ArRobot.h ../include/ArSyncTask.h ../include/ArTaskState.h \
+ ../include/ArSensorReading.h ../include/ArTransform.h \
+ ../include/ArCondition.h ../include/ArSyncLoop.h \
+ ../include/ArASyncTask.h ../include/ArThread.h \
+ ../include/ArRobotPacketReaderThread.h ../include/ArActionDesired.h \
+ ../include/ArResolver.h ../include/ArInterpolation.h \
+ ../include/ArKeyHandler.h ../include/ArCommands.h \
+ ../include/ArJoyHandler.h ../include/ariaInternal.h \
+ ../include/ArStringInfoGroup.h ../include/ArSonarDevice.h \
+ ../include/ArRangeDevice.h ../include/ArRangeBuffer.h \
+ ../include/ArDrawingData.h ../include/ArPriorityResolver.h \
+ ../include/ArAction.h ../include/ArArg.h ../include/ArActionGroup.h \
+ ../include/ArActionGroups.h ../include/ArActionColorFollow.h \
+ ../include/ArACTS.h ../include/ArPTZ.h ../include/ArPTZConnector.h \
+ ../include/ArActionDeceleratingLimiter.h \
+ ../include/ArActionLimiterForwards.h \
+ ../include/ArActionLimiterBackwards.h \
+ ../include/ArActionLimiterTableSensor.h ../include/ArActionBumpers.h \
+ ../include/ArActionIRs.h ../include/ArActionStallRecover.h \
+ ../include/ArActionAvoidFront.h ../include/ArActionAvoidSide.h \
+ ../include/ArActionConstantVelocity.h ../include/ArActionInput.h \
+ ../include/ArActionRobotJoydrive.h ../include/ArActionJoydrive.h \
+ ../include/ArActionKeydrive.h ../include/ArActionTriangleDriveTo.h \
+ ../include/ArLineFinder.h ../include/ArActionTurn.h \
+ ../include/ArActionRatioInput.h ../include/ArActionStop.h \
+ ../include/ArActionGoto.h ../include/ArModule.h \
+ ../include/ArModuleLoader.h ../include/ArRecurrentTask.h \
+ ../include/ArGripper.h ../include/ArSonyPTZ.h ../include/ArRVisionPTZ.h \
+ ../include/ArAMPTU.h ../include/ArP2Arm.h ../include/ArSick.h \
+ ../include/ArLaser.h ../include/ArRangeDeviceThreaded.h \
+ ../include/ArFunctorASyncTask.h ../include/ArLMS2xx.h \
+ ../include/ArLMS2xxPacket.h ../include/ArLMS2xxPacketReceiver.h \
+ ../include/ArLaserLogger.h ../include/ArIrrfDevice.h \
+ ../include/ArDPPTU.h ../include/ArVCC4.h ../include/ArMode.h \
+ ../include/ArModes.h ../include/ArTCMCompassRobot.h ../include/ArTCM2.h \
+ ../include/ArNetServer.h ../include/ArSignalHandler.h \
+ ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
+ ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
+ ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
+ ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
+ ../include/ArRatioInputKeydrive.h ../include/ArRatioInputJoydrive.h \
+ ../include/ArRatioInputRobotJoydrive.h \
+ ../include/ArActionMovementParameters.h ../include/ArSoundPlayer.h \
+ ../include/ArSoundsQueue.h ../include/ArSpeech.h \
+ ../include/ArCameraCollection.h ../include/ArCameraCommands.h \
+ ../include/ArSonarAutoDisabler.h ../include/ArActionDriveDistance.h \
+ ../include/ArLaserReflectorDevice.h ../include/ArRobotConfig.h \
+ ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
+ ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
+ ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
+ ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
+ ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
+ ../include/ArActionMovementParametersDebugging.h ../include/ArZippable.h \
+ ../include/ArS3Series.h ../include/ArSZSeries.h include/ArNetworking.h \
+ include/ArServerBase.h include/ArServerCommands.h \
+ include/ArServerClient.h include/ArNetPacket.h \
+ include/ArNetPacketReceiverTcp.h include/ArNetPacketSenderTcp.h \
+ include/ArServerClientData.h include/ArServerClientIdentifier.h \
+ include/ArServerData.h include/ArNetPacketReceiverUdp.h \
+ include/ArServerUserInfo.h include/ArClientBase.h \
+ include/ArClientCommands.h include/ArClientData.h include/ArMapChanger.h \
+ ../include/ariaTypedefs.h ../include/ariaUtil.h \
+ ../include/ArMapInterface.h ../include/ArMapUtils.h ../include/ArMutex.h \
+ include/ArCentralForwarder.h include/ArClientSwitchManager.h \
+ include/ArServerHandlerCamera.h \
+ include/ArServerHandlerCameraCollection.h ../include/ArExport.h \
+ ../include/ArFunctor.h ../include/ArCameraCollection.h \
+ include/ArServerHandlerCommMonitor.h include/ArServerHandlerCommands.h \
+ include/ArServerHandlerPopup.h include/ArServerInfoDrawings.h \
+ include/ArServerInfoRobot.h include/ArServerInfoSensor.h \
+ include/ArServerHandlerMap.h ../include/ArConfig.h \
+ include/ArServerMode.h include/ArServerModeDrive.h \
+ include/ArServerModeRatioDrive.h include/ArServerModeStop.h \
+ include/ArServerModeWander.h include/ArServerHandlerConfig.h \
+ include/ArClientHandlerConfig.h include/ArHybridForwarderVideo.h \
+ include/ArServerSimpleCommands.h include/ArServerFileUtils.h \
+ include/ArClientFileUtils.h include/ArClientSimpleConnector.h \
+ include/ArServerHandlerMapping.h include/ArTempDirectoryHelper.h \
+ include/ArServerSimpleOpener.h include/ArServerInfoStrings.h \
+ include/ArClientArgUtils.h include/ArCentralManager.h \
+ include/ArServerModeIdle.h include/ArClientBase.h
 ../obj/ArClientSimpleConnector.o: src/ArClientSimpleConnector.cpp \
  ../include/Aria.h ../include/ariaOSDef.h ../include/ariaTypedefs.h \
  ../include/ArSerialConnection.h ../include/ArDeviceConnection.h \
@@ -609,7 +800,8 @@
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -623,9 +815,9 @@
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -689,7 +881,8 @@
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -703,9 +896,9 @@
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -771,7 +964,8 @@
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -785,9 +979,9 @@
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -853,7 +1047,8 @@
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -867,9 +1062,9 @@
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -939,7 +1134,8 @@
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -953,9 +1149,9 @@
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -1015,7 +1211,8 @@
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -1029,9 +1226,9 @@
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -1091,7 +1288,8 @@
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -1105,9 +1303,9 @@
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -1167,7 +1365,8 @@
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -1181,9 +1380,9 @@
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -1243,7 +1442,8 @@
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -1257,9 +1457,9 @@
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -1325,7 +1525,8 @@
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -1339,9 +1540,9 @@
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -1406,7 +1607,8 @@
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -1420,9 +1622,9 @@
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -1485,7 +1687,8 @@
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -1499,9 +1702,9 @@
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -1566,7 +1769,8 @@
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -1580,9 +1784,9 @@
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -1669,7 +1873,8 @@
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -1683,9 +1888,9 @@
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -1752,7 +1957,8 @@
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -1766,9 +1972,9 @@
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -1854,7 +2060,8 @@
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -1868,9 +2075,9 @@
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -1935,7 +2142,8 @@
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -1949,9 +2157,9 @@
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -2017,7 +2225,8 @@
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -2031,9 +2240,9 @@
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -2099,7 +2308,8 @@
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -2113,9 +2323,9 @@
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -2182,7 +2392,8 @@
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -2196,9 +2407,9 @@
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -2263,7 +2474,8 @@
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -2277,9 +2489,9 @@
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -2344,7 +2556,8 @@
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -2358,9 +2571,9 @@
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -2426,7 +2639,8 @@
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -2440,9 +2654,9 @@
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -2507,7 +2721,8 @@
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -2521,9 +2736,9 @@
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -2588,7 +2803,8 @@
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -2602,9 +2818,9 @@
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -2670,7 +2886,8 @@
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -2684,9 +2901,9 @@
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -2772,7 +2989,8 @@
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -2786,9 +3004,9 @@
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -2800,6 +3018,90 @@
  include/ArNetPacketSenderTcp.h include/ArServerClientData.h \
  include/ArServerClientIdentifier.h include/ArServerData.h \
  include/ArNetPacketReceiverUdp.h include/ArServerUserInfo.h
+../obj/ArServerModeJogPosition.o: src/ArServerModeJogPosition.cpp \
+ ../include/Aria.h ../include/ariaOSDef.h ../include/ariaTypedefs.h \
+ ../include/ArSerialConnection.h ../include/ArDeviceConnection.h \
+ ../include/ariaUtil.h ../include/ArLog.h ../include/ArMutex.h \
+ ../include/ArFunctor.h ../include/ArArgumentParser.h \
+ ../include/ArArgumentBuilder.h ../include/ArBasePacket.h \
+ ../include/ArTcpConnection.h ../include/ArSocket.h \
+ ../include/ArSimpleConnector.h ../include/ArRobotConnector.h \
+ ../include/ArLaserConnector.h ../include/ArLogFileConnection.h \
+ ../include/ArRobotPacket.h ../include/ArRobotPacketSender.h \
+ ../include/ArRobotPacketReceiver.h \
+ ../include/ArRobotConfigPacketReader.h ../include/ArRobotTypes.h \
+ ../include/ArRobotParams.h ../include/ArConfig.h \
+ ../include/ArConfigArg.h ../include/ArFileParser.h \
+ ../include/ArHasFileName.h ../include/ArConfigGroup.h \
+ ../include/ArRobot.h ../include/ArSyncTask.h ../include/ArTaskState.h \
+ ../include/ArSensorReading.h ../include/ArTransform.h \
+ ../include/ArCondition.h ../include/ArSyncLoop.h \
+ ../include/ArASyncTask.h ../include/ArThread.h \
+ ../include/ArRobotPacketReaderThread.h ../include/ArActionDesired.h \
+ ../include/ArResolver.h ../include/ArInterpolation.h \
+ ../include/ArKeyHandler.h ../include/ArCommands.h \
+ ../include/ArJoyHandler.h ../include/ariaInternal.h \
+ ../include/ArStringInfoGroup.h ../include/ArSonarDevice.h \
+ ../include/ArRangeDevice.h ../include/ArRangeBuffer.h \
+ ../include/ArDrawingData.h ../include/ArPriorityResolver.h \
+ ../include/ArAction.h ../include/ArArg.h ../include/ArActionGroup.h \
+ ../include/ArActionGroups.h ../include/ArActionColorFollow.h \
+ ../include/ArACTS.h ../include/ArPTZ.h ../include/ArPTZConnector.h \
+ ../include/ArActionDeceleratingLimiter.h \
+ ../include/ArActionLimiterForwards.h \
+ ../include/ArActionLimiterBackwards.h \
+ ../include/ArActionLimiterTableSensor.h ../include/ArActionBumpers.h \
+ ../include/ArActionIRs.h ../include/ArActionStallRecover.h \
+ ../include/ArActionAvoidFront.h ../include/ArActionAvoidSide.h \
+ ../include/ArActionConstantVelocity.h ../include/ArActionInput.h \
+ ../include/ArActionRobotJoydrive.h ../include/ArActionJoydrive.h \
+ ../include/ArActionKeydrive.h ../include/ArActionTriangleDriveTo.h \
+ ../include/ArLineFinder.h ../include/ArActionTurn.h \
+ ../include/ArActionRatioInput.h ../include/ArActionStop.h \
+ ../include/ArActionGoto.h ../include/ArModule.h \
+ ../include/ArModuleLoader.h ../include/ArRecurrentTask.h \
+ ../include/ArGripper.h ../include/ArSonyPTZ.h ../include/ArRVisionPTZ.h \
+ ../include/ArAMPTU.h ../include/ArP2Arm.h ../include/ArSick.h \
+ ../include/ArLaser.h ../include/ArRangeDeviceThreaded.h \
+ ../include/ArFunctorASyncTask.h ../include/ArLMS2xx.h \
+ ../include/ArLMS2xxPacket.h ../include/ArLMS2xxPacketReceiver.h \
+ ../include/ArLaserLogger.h ../include/ArIrrfDevice.h \
+ ../include/ArDPPTU.h ../include/ArVCC4.h ../include/ArMode.h \
+ ../include/ArModes.h ../include/ArTCMCompassRobot.h ../include/ArTCM2.h \
+ ../include/ArNetServer.h ../include/ArSignalHandler.h \
+ ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
+ ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
+ ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
+ ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
+ ../include/ArRatioInputKeydrive.h ../include/ArRatioInputJoydrive.h \
+ ../include/ArRatioInputRobotJoydrive.h \
+ ../include/ArActionMovementParameters.h ../include/ArSoundPlayer.h \
+ ../include/ArSoundsQueue.h ../include/ArSpeech.h \
+ ../include/ArCameraCollection.h ../include/ArCameraCommands.h \
+ ../include/ArSonarAutoDisabler.h ../include/ArActionDriveDistance.h \
+ ../include/ArLaserReflectorDevice.h ../include/ArRobotConfig.h \
+ ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
+ ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
+ ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
+ ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
+ ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
+ ../include/ArActionMovementParametersDebugging.h ../include/ArZippable.h \
+ ../include/ArS3Series.h ../include/ArSZSeries.h ../include/ArExport.h \
+ include/ArServerModeJogPosition.h ../include/ariaTypedefs.h \
+ include/ArServerMode.h include/ArServerBase.h include/ArServerCommands.h \
+ include/ArServerClient.h include/ArNetPacket.h \
+ include/ArNetPacketReceiverTcp.h include/ArNetPacketSenderTcp.h \
+ include/ArServerClientData.h include/ArServerClientIdentifier.h \
+ include/ArServerData.h include/ArNetPacketReceiverUdp.h \
+ include/ArServerUserInfo.h include/ArServerHandlerCommands.h \
+ ../include/ArActionLimiterRot.h
 ../obj/ArServerModeRatioDrive.o: src/ArServerModeRatioDrive.cpp \
  ../include/Aria.h ../include/ariaOSDef.h ../include/ariaTypedefs.h \
  ../include/ArSerialConnection.h ../include/ArDeviceConnection.h \
@@ -2853,7 +3155,8 @@
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -2867,9 +3170,9 @@
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -2935,7 +3238,8 @@
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -2949,9 +3253,9 @@
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -3016,7 +3320,8 @@
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -3030,9 +3335,9 @@
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -3118,7 +3423,8 @@
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -3132,9 +3438,9 @@
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -3201,7 +3507,8 @@
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -3215,9 +3522,9 @@
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -3282,7 +3589,8 @@
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -3296,9 +3604,9 @@
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -3313,6 +3621,109 @@
  ../include/ArLog.h ../include/ArArgumentParser.h \
  ../include/ArArgumentBuilder.h
 ../obj/md5.o: src/md5.cpp ../include/ArExport.h ../include/md5.h
+examples/changeMapOnServer: examples/changeMapOnServer.cpp ../include/Aria.h \
+ ../include/ariaOSDef.h ../include/ariaTypedefs.h \
+ ../include/ArSerialConnection.h ../include/ArDeviceConnection.h \
+ ../include/ariaUtil.h ../include/ArLog.h ../include/ArMutex.h \
+ ../include/ArFunctor.h ../include/ArArgumentParser.h \
+ ../include/ArArgumentBuilder.h ../include/ArBasePacket.h \
+ ../include/ArTcpConnection.h ../include/ArSocket.h \
+ ../include/ArSimpleConnector.h ../include/ArRobotConnector.h \
+ ../include/ArLaserConnector.h ../include/ArLogFileConnection.h \
+ ../include/ArRobotPacket.h ../include/ArRobotPacketSender.h \
+ ../include/ArRobotPacketReceiver.h \
+ ../include/ArRobotConfigPacketReader.h ../include/ArRobotTypes.h \
+ ../include/ArRobotParams.h ../include/ArConfig.h \
+ ../include/ArConfigArg.h ../include/ArFileParser.h \
+ ../include/ArHasFileName.h ../include/ArConfigGroup.h \
+ ../include/ArRobot.h ../include/ArSyncTask.h ../include/ArTaskState.h \
+ ../include/ArSensorReading.h ../include/ArTransform.h \
+ ../include/ArCondition.h ../include/ArSyncLoop.h \
+ ../include/ArASyncTask.h ../include/ArThread.h \
+ ../include/ArRobotPacketReaderThread.h ../include/ArActionDesired.h \
+ ../include/ArResolver.h ../include/ArInterpolation.h \
+ ../include/ArKeyHandler.h ../include/ArCommands.h \
+ ../include/ArJoyHandler.h ../include/ariaInternal.h \
+ ../include/ArStringInfoGroup.h ../include/ArSonarDevice.h \
+ ../include/ArRangeDevice.h ../include/ArRangeBuffer.h \
+ ../include/ArDrawingData.h ../include/ArPriorityResolver.h \
+ ../include/ArAction.h ../include/ArArg.h ../include/ArActionGroup.h \
+ ../include/ArActionGroups.h ../include/ArActionColorFollow.h \
+ ../include/ArACTS.h ../include/ArPTZ.h ../include/ArPTZConnector.h \
+ ../include/ArActionDeceleratingLimiter.h \
+ ../include/ArActionLimiterForwards.h \
+ ../include/ArActionLimiterBackwards.h \
+ ../include/ArActionLimiterTableSensor.h ../include/ArActionBumpers.h \
+ ../include/ArActionIRs.h ../include/ArActionStallRecover.h \
+ ../include/ArActionAvoidFront.h ../include/ArActionAvoidSide.h \
+ ../include/ArActionConstantVelocity.h ../include/ArActionInput.h \
+ ../include/ArActionRobotJoydrive.h ../include/ArActionJoydrive.h \
+ ../include/ArActionKeydrive.h ../include/ArActionTriangleDriveTo.h \
+ ../include/ArLineFinder.h ../include/ArActionTurn.h \
+ ../include/ArActionRatioInput.h ../include/ArActionStop.h \
+ ../include/ArActionGoto.h ../include/ArModule.h \
+ ../include/ArModuleLoader.h ../include/ArRecurrentTask.h \
+ ../include/ArGripper.h ../include/ArSonyPTZ.h ../include/ArRVisionPTZ.h \
+ ../include/ArAMPTU.h ../include/ArP2Arm.h ../include/ArSick.h \
+ ../include/ArLaser.h ../include/ArRangeDeviceThreaded.h \
+ ../include/ArFunctorASyncTask.h ../include/ArLMS2xx.h \
+ ../include/ArLMS2xxPacket.h ../include/ArLMS2xxPacketReceiver.h \
+ ../include/ArLaserLogger.h ../include/ArIrrfDevice.h \
+ ../include/ArDPPTU.h ../include/ArVCC4.h ../include/ArMode.h \
+ ../include/ArModes.h ../include/ArTCMCompassRobot.h ../include/ArTCM2.h \
+ ../include/ArNetServer.h ../include/ArSignalHandler.h \
+ ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
+ ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
+ ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
+ ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
+ ../include/ArRatioInputKeydrive.h ../include/ArRatioInputJoydrive.h \
+ ../include/ArRatioInputRobotJoydrive.h \
+ ../include/ArActionMovementParameters.h ../include/ArSoundPlayer.h \
+ ../include/ArSoundsQueue.h ../include/ArSpeech.h \
+ ../include/ArCameraCollection.h ../include/ArCameraCommands.h \
+ ../include/ArSonarAutoDisabler.h ../include/ArActionDriveDistance.h \
+ ../include/ArLaserReflectorDevice.h ../include/ArRobotConfig.h \
+ ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
+ ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
+ ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
+ ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
+ ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
+ ../include/ArActionMovementParametersDebugging.h ../include/ArZippable.h \
+ ../include/ArS3Series.h ../include/ArSZSeries.h include/ArNetworking.h \
+ include/ArServerBase.h include/ArServerCommands.h \
+ include/ArServerClient.h include/ArNetPacket.h \
+ include/ArNetPacketReceiverTcp.h include/ArNetPacketSenderTcp.h \
+ include/ArServerClientData.h include/ArServerClientIdentifier.h \
+ include/ArServerData.h include/ArNetPacketReceiverUdp.h \
+ include/ArServerUserInfo.h include/ArClientBase.h \
+ include/ArClientCommands.h include/ArClientData.h include/ArMapChanger.h \
+ ../include/ariaTypedefs.h ../include/ariaUtil.h \
+ ../include/ArMapInterface.h ../include/ArMapUtils.h ../include/ArMutex.h \
+ include/ArCentralForwarder.h include/ArClientSwitchManager.h \
+ include/ArServerHandlerCamera.h include/ArNetworking.h \
+ include/ArServerHandlerCameraCollection.h ../include/ArExport.h \
+ ../include/ArFunctor.h ../include/ArCameraCollection.h \
+ include/ArServerHandlerCommMonitor.h include/ArServerHandlerCommands.h \
+ include/ArServerHandlerPopup.h include/ArServerInfoDrawings.h \
+ include/ArServerInfoRobot.h include/ArServerInfoSensor.h \
+ include/ArServerHandlerMap.h ../include/ArConfig.h \
+ include/ArServerMode.h include/ArServerModeDrive.h \
+ include/ArServerModeRatioDrive.h include/ArServerModeStop.h \
+ include/ArServerModeWander.h include/ArServerHandlerConfig.h \
+ include/ArClientHandlerConfig.h include/ArHybridForwarderVideo.h \
+ include/ArServerSimpleCommands.h include/ArServerFileUtils.h \
+ include/ArClientFileUtils.h include/ArClientSimpleConnector.h \
+ include/ArServerHandlerMapping.h include/ArTempDirectoryHelper.h \
+ include/ArServerSimpleOpener.h include/ArServerInfoStrings.h \
+ include/ArClientArgUtils.h include/ArCentralManager.h \
+ include/ArServerModeIdle.h
 examples/clientCommandLister: examples/clientCommandLister.cpp ../include/Aria.h \
  ../include/ariaOSDef.h ../include/ariaTypedefs.h \
  ../include/ArSerialConnection.h ../include/ArDeviceConnection.h \
@@ -3366,7 +3777,8 @@ examples/clientCommandLister: examples/clientCommandLister.cpp ../include/Aria.h
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -3380,9 +3792,9 @@ examples/clientCommandLister: examples/clientCommandLister.cpp ../include/Aria.h
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -3468,7 +3880,8 @@ examples/clientDemo: examples/clientDemo.cpp ../include/Aria.h \
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -3482,9 +3895,9 @@ examples/clientDemo: examples/clientDemo.cpp ../include/Aria.h \
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -3516,7 +3929,110 @@ examples/clientDemo: examples/clientDemo.cpp ../include/Aria.h \
  include/ArServerHandlerMapping.h include/ArTempDirectoryHelper.h \
  include/ArServerSimpleOpener.h include/ArServerInfoStrings.h \
  include/ArClientArgUtils.h include/ArCentralManager.h \
- include/ArServerModeIdle.h
+ include/ArServerModeIdle.h include/ArClientRatioDrive.h
+examples/clientStringInfoExample: examples/clientStringInfoExample.cpp \
+ ../include/Aria.h ../include/ariaOSDef.h ../include/ariaTypedefs.h \
+ ../include/ArSerialConnection.h ../include/ArDeviceConnection.h \
+ ../include/ariaUtil.h ../include/ArLog.h ../include/ArMutex.h \
+ ../include/ArFunctor.h ../include/ArArgumentParser.h \
+ ../include/ArArgumentBuilder.h ../include/ArBasePacket.h \
+ ../include/ArTcpConnection.h ../include/ArSocket.h \
+ ../include/ArSimpleConnector.h ../include/ArRobotConnector.h \
+ ../include/ArLaserConnector.h ../include/ArLogFileConnection.h \
+ ../include/ArRobotPacket.h ../include/ArRobotPacketSender.h \
+ ../include/ArRobotPacketReceiver.h \
+ ../include/ArRobotConfigPacketReader.h ../include/ArRobotTypes.h \
+ ../include/ArRobotParams.h ../include/ArConfig.h \
+ ../include/ArConfigArg.h ../include/ArFileParser.h \
+ ../include/ArHasFileName.h ../include/ArConfigGroup.h \
+ ../include/ArRobot.h ../include/ArSyncTask.h ../include/ArTaskState.h \
+ ../include/ArSensorReading.h ../include/ArTransform.h \
+ ../include/ArCondition.h ../include/ArSyncLoop.h \
+ ../include/ArASyncTask.h ../include/ArThread.h \
+ ../include/ArRobotPacketReaderThread.h ../include/ArActionDesired.h \
+ ../include/ArResolver.h ../include/ArInterpolation.h \
+ ../include/ArKeyHandler.h ../include/ArCommands.h \
+ ../include/ArJoyHandler.h ../include/ariaInternal.h \
+ ../include/ArStringInfoGroup.h ../include/ArSonarDevice.h \
+ ../include/ArRangeDevice.h ../include/ArRangeBuffer.h \
+ ../include/ArDrawingData.h ../include/ArPriorityResolver.h \
+ ../include/ArAction.h ../include/ArArg.h ../include/ArActionGroup.h \
+ ../include/ArActionGroups.h ../include/ArActionColorFollow.h \
+ ../include/ArACTS.h ../include/ArPTZ.h ../include/ArPTZConnector.h \
+ ../include/ArActionDeceleratingLimiter.h \
+ ../include/ArActionLimiterForwards.h \
+ ../include/ArActionLimiterBackwards.h \
+ ../include/ArActionLimiterTableSensor.h ../include/ArActionBumpers.h \
+ ../include/ArActionIRs.h ../include/ArActionStallRecover.h \
+ ../include/ArActionAvoidFront.h ../include/ArActionAvoidSide.h \
+ ../include/ArActionConstantVelocity.h ../include/ArActionInput.h \
+ ../include/ArActionRobotJoydrive.h ../include/ArActionJoydrive.h \
+ ../include/ArActionKeydrive.h ../include/ArActionTriangleDriveTo.h \
+ ../include/ArLineFinder.h ../include/ArActionTurn.h \
+ ../include/ArActionRatioInput.h ../include/ArActionStop.h \
+ ../include/ArActionGoto.h ../include/ArModule.h \
+ ../include/ArModuleLoader.h ../include/ArRecurrentTask.h \
+ ../include/ArGripper.h ../include/ArSonyPTZ.h ../include/ArRVisionPTZ.h \
+ ../include/ArAMPTU.h ../include/ArP2Arm.h ../include/ArSick.h \
+ ../include/ArLaser.h ../include/ArRangeDeviceThreaded.h \
+ ../include/ArFunctorASyncTask.h ../include/ArLMS2xx.h \
+ ../include/ArLMS2xxPacket.h ../include/ArLMS2xxPacketReceiver.h \
+ ../include/ArLaserLogger.h ../include/ArIrrfDevice.h \
+ ../include/ArDPPTU.h ../include/ArVCC4.h ../include/ArMode.h \
+ ../include/ArModes.h ../include/ArTCMCompassRobot.h ../include/ArTCM2.h \
+ ../include/ArNetServer.h ../include/ArSignalHandler.h \
+ ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
+ ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
+ ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
+ ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
+ ../include/ArRatioInputKeydrive.h ../include/ArRatioInputJoydrive.h \
+ ../include/ArRatioInputRobotJoydrive.h \
+ ../include/ArActionMovementParameters.h ../include/ArSoundPlayer.h \
+ ../include/ArSoundsQueue.h ../include/ArSpeech.h \
+ ../include/ArCameraCollection.h ../include/ArCameraCommands.h \
+ ../include/ArSonarAutoDisabler.h ../include/ArActionDriveDistance.h \
+ ../include/ArLaserReflectorDevice.h ../include/ArRobotConfig.h \
+ ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
+ ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
+ ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
+ ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
+ ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
+ ../include/ArActionMovementParametersDebugging.h ../include/ArZippable.h \
+ ../include/ArS3Series.h ../include/ArSZSeries.h include/ArNetworking.h \
+ include/ArServerBase.h include/ArServerCommands.h \
+ include/ArServerClient.h include/ArNetPacket.h \
+ include/ArNetPacketReceiverTcp.h include/ArNetPacketSenderTcp.h \
+ include/ArServerClientData.h include/ArServerClientIdentifier.h \
+ include/ArServerData.h include/ArNetPacketReceiverUdp.h \
+ include/ArServerUserInfo.h include/ArClientBase.h \
+ include/ArClientCommands.h include/ArClientData.h include/ArMapChanger.h \
+ ../include/ariaTypedefs.h ../include/ariaUtil.h \
+ ../include/ArMapInterface.h ../include/ArMapUtils.h ../include/ArMutex.h \
+ include/ArCentralForwarder.h include/ArClientSwitchManager.h \
+ include/ArServerHandlerCamera.h include/ArNetworking.h \
+ include/ArServerHandlerCameraCollection.h ../include/ArExport.h \
+ ../include/ArFunctor.h ../include/ArCameraCollection.h \
+ include/ArServerHandlerCommMonitor.h include/ArServerHandlerCommands.h \
+ include/ArServerHandlerPopup.h include/ArServerInfoDrawings.h \
+ include/ArServerInfoRobot.h include/ArServerInfoSensor.h \
+ include/ArServerHandlerMap.h ../include/ArConfig.h \
+ include/ArServerMode.h include/ArServerModeDrive.h \
+ include/ArServerModeRatioDrive.h include/ArServerModeStop.h \
+ include/ArServerModeWander.h include/ArServerHandlerConfig.h \
+ include/ArClientHandlerConfig.h include/ArHybridForwarderVideo.h \
+ include/ArServerSimpleCommands.h include/ArServerFileUtils.h \
+ include/ArClientFileUtils.h include/ArClientSimpleConnector.h \
+ include/ArServerHandlerMapping.h include/ArTempDirectoryHelper.h \
+ include/ArServerSimpleOpener.h include/ArServerInfoStrings.h \
+ include/ArClientArgUtils.h include/ArCentralManager.h \
+ include/ArServerModeIdle.h include/ArClientHandlerRobotUpdate.h
 examples/configClient: examples/configClient.cpp ../include/Aria.h \
  ../include/ariaOSDef.h ../include/ariaTypedefs.h \
  ../include/ArSerialConnection.h ../include/ArDeviceConnection.h \
@@ -3570,7 +4086,8 @@ examples/configClient: examples/configClient.cpp ../include/Aria.h \
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -3584,9 +4101,9 @@ examples/configClient: examples/configClient.cpp ../include/Aria.h \
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -3672,7 +4189,8 @@ examples/configClientToServer: examples/configClientToServer.cpp \
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -3686,9 +4204,9 @@ examples/configClientToServer: examples/configClientToServer.cpp \
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -3774,7 +4292,8 @@ examples/configServer: examples/configServer.cpp ../include/Aria.h \
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -3788,9 +4307,9 @@ examples/configServer: examples/configServer.cpp ../include/Aria.h \
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -3876,7 +4395,8 @@ examples/configServerRobot: examples/configServerRobot.cpp ../include/Aria.h \
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -3890,9 +4410,9 @@ examples/configServerRobot: examples/configServerRobot.cpp ../include/Aria.h \
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -3978,7 +4498,8 @@ examples/drawingsExample: examples/drawingsExample.cpp ../include/Aria.h \
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -3992,9 +4513,9 @@ examples/drawingsExample: examples/drawingsExample.cpp ../include/Aria.h \
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -4080,7 +4601,8 @@ examples/drawingsExampleWithRobot: examples/drawingsExampleWithRobot.cpp \
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -4094,9 +4616,9 @@ examples/drawingsExampleWithRobot: examples/drawingsExampleWithRobot.cpp \
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -4182,7 +4704,8 @@ examples/getVideoExample: examples/getVideoExample.cpp ../include/Aria.h \
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -4196,9 +4719,9 @@ examples/getVideoExample: examples/getVideoExample.cpp ../include/Aria.h \
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -4284,7 +4807,8 @@ examples/popupExample: examples/popupExample.cpp ../include/Aria.h \
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -4298,9 +4822,9 @@ examples/popupExample: examples/popupExample.cpp ../include/Aria.h \
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -4386,7 +4910,8 @@ examples/proprietaryDirectoryEmptier: examples/proprietaryDirectoryEmptier.cpp \
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -4400,9 +4925,9 @@ examples/proprietaryDirectoryEmptier: examples/proprietaryDirectoryEmptier.cpp \
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -4488,7 +5013,8 @@ examples/proprietaryGetSnapshots: examples/proprietaryGetSnapshots.cpp \
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -4502,9 +5028,9 @@ examples/proprietaryGetSnapshots: examples/proprietaryGetSnapshots.cpp \
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -4590,7 +5116,8 @@ examples/ptzCameraClientExample: examples/ptzCameraClientExample.cpp \
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -4604,9 +5131,9 @@ examples/ptzCameraClientExample: examples/ptzCameraClientExample.cpp \
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -4639,6 +5166,109 @@ examples/ptzCameraClientExample: examples/ptzCameraClientExample.cpp \
  include/ArServerSimpleOpener.h include/ArServerInfoStrings.h \
  include/ArClientArgUtils.h include/ArCentralManager.h \
  include/ArServerModeIdle.h
+examples/robotUpdateExample: examples/robotUpdateExample.cpp ../include/Aria.h \
+ ../include/ariaOSDef.h ../include/ariaTypedefs.h \
+ ../include/ArSerialConnection.h ../include/ArDeviceConnection.h \
+ ../include/ariaUtil.h ../include/ArLog.h ../include/ArMutex.h \
+ ../include/ArFunctor.h ../include/ArArgumentParser.h \
+ ../include/ArArgumentBuilder.h ../include/ArBasePacket.h \
+ ../include/ArTcpConnection.h ../include/ArSocket.h \
+ ../include/ArSimpleConnector.h ../include/ArRobotConnector.h \
+ ../include/ArLaserConnector.h ../include/ArLogFileConnection.h \
+ ../include/ArRobotPacket.h ../include/ArRobotPacketSender.h \
+ ../include/ArRobotPacketReceiver.h \
+ ../include/ArRobotConfigPacketReader.h ../include/ArRobotTypes.h \
+ ../include/ArRobotParams.h ../include/ArConfig.h \
+ ../include/ArConfigArg.h ../include/ArFileParser.h \
+ ../include/ArHasFileName.h ../include/ArConfigGroup.h \
+ ../include/ArRobot.h ../include/ArSyncTask.h ../include/ArTaskState.h \
+ ../include/ArSensorReading.h ../include/ArTransform.h \
+ ../include/ArCondition.h ../include/ArSyncLoop.h \
+ ../include/ArASyncTask.h ../include/ArThread.h \
+ ../include/ArRobotPacketReaderThread.h ../include/ArActionDesired.h \
+ ../include/ArResolver.h ../include/ArInterpolation.h \
+ ../include/ArKeyHandler.h ../include/ArCommands.h \
+ ../include/ArJoyHandler.h ../include/ariaInternal.h \
+ ../include/ArStringInfoGroup.h ../include/ArSonarDevice.h \
+ ../include/ArRangeDevice.h ../include/ArRangeBuffer.h \
+ ../include/ArDrawingData.h ../include/ArPriorityResolver.h \
+ ../include/ArAction.h ../include/ArArg.h ../include/ArActionGroup.h \
+ ../include/ArActionGroups.h ../include/ArActionColorFollow.h \
+ ../include/ArACTS.h ../include/ArPTZ.h ../include/ArPTZConnector.h \
+ ../include/ArActionDeceleratingLimiter.h \
+ ../include/ArActionLimiterForwards.h \
+ ../include/ArActionLimiterBackwards.h \
+ ../include/ArActionLimiterTableSensor.h ../include/ArActionBumpers.h \
+ ../include/ArActionIRs.h ../include/ArActionStallRecover.h \
+ ../include/ArActionAvoidFront.h ../include/ArActionAvoidSide.h \
+ ../include/ArActionConstantVelocity.h ../include/ArActionInput.h \
+ ../include/ArActionRobotJoydrive.h ../include/ArActionJoydrive.h \
+ ../include/ArActionKeydrive.h ../include/ArActionTriangleDriveTo.h \
+ ../include/ArLineFinder.h ../include/ArActionTurn.h \
+ ../include/ArActionRatioInput.h ../include/ArActionStop.h \
+ ../include/ArActionGoto.h ../include/ArModule.h \
+ ../include/ArModuleLoader.h ../include/ArRecurrentTask.h \
+ ../include/ArGripper.h ../include/ArSonyPTZ.h ../include/ArRVisionPTZ.h \
+ ../include/ArAMPTU.h ../include/ArP2Arm.h ../include/ArSick.h \
+ ../include/ArLaser.h ../include/ArRangeDeviceThreaded.h \
+ ../include/ArFunctorASyncTask.h ../include/ArLMS2xx.h \
+ ../include/ArLMS2xxPacket.h ../include/ArLMS2xxPacketReceiver.h \
+ ../include/ArLaserLogger.h ../include/ArIrrfDevice.h \
+ ../include/ArDPPTU.h ../include/ArVCC4.h ../include/ArMode.h \
+ ../include/ArModes.h ../include/ArTCMCompassRobot.h ../include/ArTCM2.h \
+ ../include/ArNetServer.h ../include/ArSignalHandler.h \
+ ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
+ ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
+ ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
+ ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
+ ../include/ArRatioInputKeydrive.h ../include/ArRatioInputJoydrive.h \
+ ../include/ArRatioInputRobotJoydrive.h \
+ ../include/ArActionMovementParameters.h ../include/ArSoundPlayer.h \
+ ../include/ArSoundsQueue.h ../include/ArSpeech.h \
+ ../include/ArCameraCollection.h ../include/ArCameraCommands.h \
+ ../include/ArSonarAutoDisabler.h ../include/ArActionDriveDistance.h \
+ ../include/ArLaserReflectorDevice.h ../include/ArRobotConfig.h \
+ ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
+ ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
+ ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
+ ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
+ ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
+ ../include/ArActionMovementParametersDebugging.h ../include/ArZippable.h \
+ ../include/ArS3Series.h ../include/ArSZSeries.h include/ArNetworking.h \
+ include/ArServerBase.h include/ArServerCommands.h \
+ include/ArServerClient.h include/ArNetPacket.h \
+ include/ArNetPacketReceiverTcp.h include/ArNetPacketSenderTcp.h \
+ include/ArServerClientData.h include/ArServerClientIdentifier.h \
+ include/ArServerData.h include/ArNetPacketReceiverUdp.h \
+ include/ArServerUserInfo.h include/ArClientBase.h \
+ include/ArClientCommands.h include/ArClientData.h include/ArMapChanger.h \
+ ../include/ariaTypedefs.h ../include/ariaUtil.h \
+ ../include/ArMapInterface.h ../include/ArMapUtils.h ../include/ArMutex.h \
+ include/ArCentralForwarder.h include/ArClientSwitchManager.h \
+ include/ArServerHandlerCamera.h include/ArNetworking.h \
+ include/ArServerHandlerCameraCollection.h ../include/ArExport.h \
+ ../include/ArFunctor.h ../include/ArCameraCollection.h \
+ include/ArServerHandlerCommMonitor.h include/ArServerHandlerCommands.h \
+ include/ArServerHandlerPopup.h include/ArServerInfoDrawings.h \
+ include/ArServerInfoRobot.h include/ArServerInfoSensor.h \
+ include/ArServerHandlerMap.h ../include/ArConfig.h \
+ include/ArServerMode.h include/ArServerModeDrive.h \
+ include/ArServerModeRatioDrive.h include/ArServerModeStop.h \
+ include/ArServerModeWander.h include/ArServerHandlerConfig.h \
+ include/ArClientHandlerConfig.h include/ArHybridForwarderVideo.h \
+ include/ArServerSimpleCommands.h include/ArServerFileUtils.h \
+ include/ArClientFileUtils.h include/ArClientSimpleConnector.h \
+ include/ArServerHandlerMapping.h include/ArTempDirectoryHelper.h \
+ include/ArServerSimpleOpener.h include/ArServerInfoStrings.h \
+ include/ArClientArgUtils.h include/ArCentralManager.h \
+ include/ArServerModeIdle.h include/ArClientHandlerRobotUpdate.h
 examples/serverDemo: examples/serverDemo.cpp ../include/Aria.h \
  ../include/ariaOSDef.h ../include/ariaTypedefs.h \
  ../include/ArSerialConnection.h ../include/ArDeviceConnection.h \
@@ -4692,7 +5322,8 @@ examples/serverDemo: examples/serverDemo.cpp ../include/Aria.h \
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -4706,9 +5337,9 @@ examples/serverDemo: examples/serverDemo.cpp ../include/Aria.h \
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \
@@ -4740,7 +5371,8 @@ examples/serverDemo: examples/serverDemo.cpp ../include/Aria.h \
  include/ArServerHandlerMapping.h include/ArTempDirectoryHelper.h \
  include/ArServerSimpleOpener.h include/ArServerInfoStrings.h \
  include/ArClientArgUtils.h include/ArCentralManager.h \
- include/ArServerModeIdle.h ../include/ArSonarMTX.h
+ include/ArServerModeIdle.h ../include/ArSonarMTX.h \
+ include/ArServerModeJogPosition.h
 examples/simpleServerExample: examples/simpleServerExample.cpp ../include/Aria.h \
  ../include/ariaOSDef.h ../include/ariaTypedefs.h \
  ../include/ArSerialConnection.h ../include/ArDeviceConnection.h \
@@ -4794,7 +5426,8 @@ examples/simpleServerExample: examples/simpleServerExample.cpp ../include/Aria.h
  ../include/ArNetServer.h ../include/ArSignalHandler.h \
  ../include/ArAnalogGyro.h ../include/ArMapInterface.h \
  ../include/ArMapObject.h ../include/ArMapUtils.h ../include/ArMap.h \
- ../include/ArMapComponents.h ../include/ArBumpers.h ../include/ArIRs.h \
+ ../include/ArMapComponents.h ../include/ArGPSCoords.h \
+ ../include/ArBumpers.h ../include/ArIRs.h \
  ../include/ArForbiddenRangeDevice.h ../include/ArVersalogicIO.h \
  ../include/ArMTXIO.h ../include/ArActionGotoStraight.h \
  ../include/ArDataLogger.h ../include/ArRobotJoyHandler.h \
@@ -4808,9 +5441,9 @@ examples/simpleServerExample: examples/simpleServerExample.cpp ../include/Aria.h
  ../include/ArTCMCompassDirect.h ../include/ArNMEAParser.h \
  ../include/ArLaserFilter.h ../include/ArUrg.h ../include/ArGPS.h \
  ../include/ArTrimbleGPS.h ../include/ArNovatelGPS.h \
- ../include/ArGPSCoords.h ../include/ArSonarConnector.h \
- ../include/ArBatteryConnector.h ../include/ArLCDConnector.h \
- ../include/ArSonarMTX.h ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
+ ../include/ArSonarConnector.h ../include/ArBatteryConnector.h \
+ ../include/ArLCDConnector.h ../include/ArSonarMTX.h \
+ ../include/ArBatteryMTX.h ../include/ArLCDMTX.h \
  ../include/ArSimulatedLaser.h ../include/ArExitErrorSource.h \
  ../include/ArActionLimiterRot.h ../include/ArRobotBatteryPacketReader.h \
  ../include/ArLMS1XX.h ../include/ArUrg_2_0.h \

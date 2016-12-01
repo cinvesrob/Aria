@@ -1,9 +1,15 @@
 var classArSoundsQueue =
 [
+    [ "Item", "classArSoundsQueue_1_1Item.html", "classArSoundsQueue_1_1Item" ],
     [ "InterruptItemFunctor", "classArSoundsQueue.html#a2916308d2249f60aca43728d04061d36", null ],
     [ "PlaybackConditionFunctor", "classArSoundsQueue.html#a831d244f0f9f5740c58131e4cd663050", null ],
     [ "PlayItemFunctor", "classArSoundsQueue.html#a1670bc04bab708282683f9862d822eeb", null ],
-    [ "ItemType", "classArSoundsQueue.html#adcaafc197f106de866c854ce3f9f468a", null ],
+    [ "ItemType", "classArSoundsQueue.html#adcaafc197f106de866c854ce3f9f468a", [
+      [ "SPEECH", "classArSoundsQueue.html#adcaafc197f106de866c854ce3f9f468aaff9560fbb9ddb6bda32407459d6f0452", null ],
+      [ "SOUND_FILE", "classArSoundsQueue.html#adcaafc197f106de866c854ce3f9f468aadef6ca00bef4d298e42d17496b316519", null ],
+      [ "SOUND_DATA", "classArSoundsQueue.html#adcaafc197f106de866c854ce3f9f468aa012e88524e98387f2eedc95dd52fcf0e", null ],
+      [ "OTHER", "classArSoundsQueue.html#adcaafc197f106de866c854ce3f9f468aaa05e18e03ed3ec20f890cd07a1594e9e", null ]
+    ] ],
     [ "ArSoundsQueue", "classArSoundsQueue.html#a33befc3feee15be660f082f4db9624b0", null ],
     [ "ArSoundsQueue", "classArSoundsQueue.html#a6a89210de3f17c8e247297d08457e271", null ],
     [ "ArSoundsQueue", "classArSoundsQueue.html#a40cc3dc2fa1806e7ddabe2c570e0420a", null ],

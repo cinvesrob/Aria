@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -76,6 +77,10 @@ public:
       /** Timestamp when the beginning of this message was recieved and parsing
        * began. */
       ArTime timeParseStarted;
+      /// Message ID (first word minus talker prefix)
+      std::string id;
+      /// Talker-ID prefix, may indicate type of receiver or what kind of GPS system is in use
+      std::string prefix;
     } Message;
       
 
@@ -87,9 +92,10 @@ public:
      * by related classes, but you could use for ususual or custom messages
      * emitted by a device that you wish to be handled outside of the ArNMEAParser
      * class. 
+     * @param messageID ID of NMEA sentence/message, without two-letter "talker" prefix.
      */
-    AREXPORT void addHandler(const char *message, ArNMEAParser::Handler *handler);
-    AREXPORT void removeHandler(const char *message);
+    AREXPORT void addHandler(const char *messageID, ArNMEAParser::Handler *handler);
+    AREXPORT void removeHandler(const char *messageID);
 
     /* Read a chunk of input text from the given device connection and 
      * parse with parse(char*, int).  The maximum amount of text read from the device
@@ -119,6 +125,8 @@ public:
 private:
     /* NMEA message handlers used by ArNMEAParser */
     HandlerMap myHandlers;
+
+    std::map<std::string, std::string> myLastPrefix;
 
 public:
     const ArNMEAParser::HandlerMap& getHandlersRef() const { return myHandlers; }

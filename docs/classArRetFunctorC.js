@@ -7,6 +7,6 @@ var classArRetFunctorC =
     [ "invokeR", "classArRetFunctorC.html#ab59bceb505f12713b03d61ce8fdba2e0", null ],
     [ "setThis", "classArRetFunctorC.html#a8ebc6a64f46ea70b8be7367d95f0e13d", null ],
     [ "setThis", "classArRetFunctorC.html#a57a0037ff55cf36b0eb8fb76e26a5f7f", null ],
-    [ "myFunc", "classArRetFunctorC.html#a68428c34d962cf42a76f3057b0a0f2b3", null ],
+    [ "myFunc", "classArRetFunctorC.html#ac9775cc3596880d1b7e9948814ad3bd6", null ],
     [ "myObj", "classArRetFunctorC.html#a4f3501960e54bb47af1968f86822b78d", null ]
 ];

@@ -1,6 +1,10 @@
 var classArClientFileFromClient =
 [
-    [ "SendSpeed", "classArClientFileFromClient.html#af616d7009ffc1d4da0ceb4a4f14c50f3", null ],
+    [ "SendSpeed", "classArClientFileFromClient.html#af616d7009ffc1d4da0ceb4a4f14c50f3", [
+      [ "SPEED_AUTO", "classArClientFileFromClient.html#af616d7009ffc1d4da0ceb4a4f14c50f3a5e5bdd437c73ed0f1bd66a85e067b7ee", null ],
+      [ "SPEED_FAST", "classArClientFileFromClient.html#af616d7009ffc1d4da0ceb4a4f14c50f3a6c5c85759206d70311afe5e5f004687e", null ],
+      [ "SPEED_SLOW", "classArClientFileFromClient.html#af616d7009ffc1d4da0ceb4a4f14c50f3a9bbda9b413fa78dbd49ebf09d8dfe59d", null ]
+    ] ],
     [ "ArClientFileFromClient", "classArClientFileFromClient.html#ad5b55bc26a12f32c22ef4622bf2d5ca0", null ],
     [ "~ArClientFileFromClient", "classArClientFileFromClient.html#ad75e2355f2ce01084d3606344d35d2a7", null ],
     [ "addFileSentCallback", "classArClientFileFromClient.html#a1569e3c3b6d253b37969212a12167e46", null ],

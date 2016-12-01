@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -58,13 +59,14 @@ public:
   AREXPORT void addReadingConditional(double x, double y, 
 				      double closeDistSquared, 
 				      bool *wasAdded = NULL);
+#ifndef SWIG
   /// Begins a walk through the getBuffer list of readings
   AREXPORT void beginInvalidationSweep(void);
   /// While doing an invalidation sweep a reading to the list to be invalidated
   AREXPORT void invalidateReading(std::list<ArPoseWithTime*>::iterator readingIt);
   /// Ends the invalidation sweep
   AREXPORT void endInvalidationSweep(void);
-#ifndef SWIG
+
   /** @brief Gets a pointer to a list of readings
    *  @swigomit
    */

@@ -1,8 +1,19 @@
 var classArActionColorFollow =
 [
-    [ "LocationState", "classArActionColorFollow.html#a83ae05f30d7476cd301eb07976bd94d2", null ],
-    [ "MoveState", "classArActionColorFollow.html#ab611ddb077ee2be4a70a71921ded2a0f", null ],
-    [ "TargetState", "classArActionColorFollow.html#a06856450d1b8b5686f4be753ed242213", null ],
+    [ "LocationState", "classArActionColorFollow.html#a83ae05f30d7476cd301eb07976bd94d2", [
+      [ "LEFT", "classArActionColorFollow.html#a83ae05f30d7476cd301eb07976bd94d2a5700d8d0468fc776fe89562f56c04247", null ],
+      [ "RIGHT", "classArActionColorFollow.html#a83ae05f30d7476cd301eb07976bd94d2a8e99a0d431ce4d8d3bd2358f45c6671b", null ],
+      [ "CENTER", "classArActionColorFollow.html#a83ae05f30d7476cd301eb07976bd94d2ad23430cf706f7e0a3a6c4a822ba5af5d", null ]
+    ] ],
+    [ "MoveState", "classArActionColorFollow.html#ab611ddb077ee2be4a70a71921ded2a0f", [
+      [ "FOLLOWING", "classArActionColorFollow.html#ab611ddb077ee2be4a70a71921ded2a0fae3abfcec189129cf1851b9bba2b908bc", null ],
+      [ "ACQUIRING", "classArActionColorFollow.html#ab611ddb077ee2be4a70a71921ded2a0fadb4e00e591df124872cecbdd03dc255c", null ],
+      [ "STOPPED", "classArActionColorFollow.html#ab611ddb077ee2be4a70a71921ded2a0fa734484b1a5a7f1d76c95632617adcf60", null ]
+    ] ],
+    [ "TargetState", "classArActionColorFollow.html#a06856450d1b8b5686f4be753ed242213", [
+      [ "NO_TARGET", "classArActionColorFollow.html#a06856450d1b8b5686f4be753ed242213a95a0ceb57cd7c6596596c0d2fef390e7", null ],
+      [ "TARGET", "classArActionColorFollow.html#a06856450d1b8b5686f4be753ed242213a2f1211151ab9c679375e6a50a9f3ba35", null ]
+    ] ],
     [ "ArActionColorFollow", "classArActionColorFollow.html#a4f7750f975fe722521e183056763fce4", null ],
     [ "~ArActionColorFollow", "classArActionColorFollow.html#a383b75a09ac0d9c3488aeb0a2165d332", null ],
     [ "fire", "classArActionColorFollow.html#a26356b359ccd0ff11349601bc9df2d2f", null ],

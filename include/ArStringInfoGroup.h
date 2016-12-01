@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -69,6 +70,10 @@ public:
   AREXPORT bool addStringString(const char *name, ArTypes::UByte2 maxLen, 
 			      ArRetFunctor<const char *> *functor,
 			      const char *format = "%s");
+
+  /// Adds a std::string to the list. std::string::c_str() will be used to  
+  AREXPORT bool addStringString(const char *name, ArTypes::UByte2 maxLen,
+            ArRetFunctor<std::string> *functor);
 
   /// Adds an int to the list in the helped way
   AREXPORT bool addStringUnsignedLong(const char *name, 

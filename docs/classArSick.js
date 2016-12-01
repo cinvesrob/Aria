@@ -1,10 +1,33 @@
 var classArSick =
 [
-    [ "BaudRate", "classArSick.html#a8c37e1ced06a894bed8ca2f912eb6005", null ],
-    [ "Bits", "classArSick.html#a145259518d1b75e099789f1a8a65c85f", null ],
-    [ "Degrees", "classArSick.html#a7d5f71e49fe2964984145cc63050a71d", null ],
-    [ "Increment", "classArSick.html#aa4c87ae82d48336ddef3df0e33e0d012", null ],
-    [ "Units", "classArSick.html#a4976232f497ab679a524d8e01785a791", null ],
+    [ "BaudRate", "classArSick.html#a8c37e1ced06a894bed8ca2f912eb6005", [
+      [ "BAUD9600", "classArSick.html#a8c37e1ced06a894bed8ca2f912eb6005a13f8a15408d96abc9602d03c2d231ef8", null ],
+      [ "BAUD19200", "classArSick.html#a8c37e1ced06a894bed8ca2f912eb6005a92cb952572a4dc008b5fea1f58045d08", null ],
+      [ "BAUD38400", "classArSick.html#a8c37e1ced06a894bed8ca2f912eb6005a8df5dacefb48f07ff1b901e88467df31", null ],
+      [ "BAUD_INVALID", "classArSick.html#a8c37e1ced06a894bed8ca2f912eb6005a79346eb54d582db6ba9433b8a91160ef", null ]
+    ] ],
+    [ "Bits", "classArSick.html#a145259518d1b75e099789f1a8a65c85f", [
+      [ "BITS_1REFLECTOR", "classArSick.html#a145259518d1b75e099789f1a8a65c85fa926dd783536ee5d2fd432537f4741c5a", null ],
+      [ "BITS_2REFLECTOR", "classArSick.html#a145259518d1b75e099789f1a8a65c85fa834a29529181a58793c64fff0a8e665c", null ],
+      [ "BITS_3REFLECTOR", "classArSick.html#a145259518d1b75e099789f1a8a65c85fa6dab42d52e2c13377baa3883beeabe15", null ],
+      [ "BITS_INVALID", "classArSick.html#a145259518d1b75e099789f1a8a65c85fa3ada913d12aa6a6c4651db21c4df15aa", null ]
+    ] ],
+    [ "Degrees", "classArSick.html#a7d5f71e49fe2964984145cc63050a71d", [
+      [ "DEGREES180", "classArSick.html#a7d5f71e49fe2964984145cc63050a71da732d82f8e4a3b6a488be5faab62b64ee", null ],
+      [ "DEGREES100", "classArSick.html#a7d5f71e49fe2964984145cc63050a71da9feaf98b651b41bd4db0860dccaf33bb", null ],
+      [ "DEGREES_INVALID", "classArSick.html#a7d5f71e49fe2964984145cc63050a71da870417a50fe230b04f5ad869b2bf8d4e", null ]
+    ] ],
+    [ "Increment", "classArSick.html#aa4c87ae82d48336ddef3df0e33e0d012", [
+      [ "INCREMENT_ONE", "classArSick.html#aa4c87ae82d48336ddef3df0e33e0d012a33c47bd7730b7eff2f4655b9e702cdb7", null ],
+      [ "INCREMENT_HALF", "classArSick.html#aa4c87ae82d48336ddef3df0e33e0d012a23158a1a8b6295eea5f7058875456553", null ],
+      [ "INCREMENT_INVALID", "classArSick.html#aa4c87ae82d48336ddef3df0e33e0d012ac277a4c8aa028e6c85cff2c710f99241", null ]
+    ] ],
+    [ "Units", "classArSick.html#a4976232f497ab679a524d8e01785a791", [
+      [ "UNITS_1MM", "classArSick.html#a4976232f497ab679a524d8e01785a791adae0b43c1da072cb02c38dbdc80d63c4", null ],
+      [ "UNITS_1CM", "classArSick.html#a4976232f497ab679a524d8e01785a791a7d400345c83ad1f6a0787f42e98ff28d", null ],
+      [ "UNITS_10CM", "classArSick.html#a4976232f497ab679a524d8e01785a791a57ea7214d7b818fa34503c08bbfabbe8", null ],
+      [ "UNITS_INVALID", "classArSick.html#a4976232f497ab679a524d8e01785a791aa5c88b1f58bae5290958362acf212dde", null ]
+    ] ],
     [ "ArSick", "classArSick.html#a60f9ebf4e1c4f5946f86b697daac5d33", null ],
     [ "~ArSick", "classArSick.html#a248f770625f323026d0e3ba6e52a8f7e", null ],
     [ "addConnectCB", "classArSick.html#ae929f31a288591fa3805d98a41e76996", null ],

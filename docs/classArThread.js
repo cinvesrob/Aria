@@ -2,7 +2,14 @@ var classArThread =
 [
     [ "MapType", "classArThread.html#ad165ffa091e34f6215c73d36aca9b4b2", null ],
     [ "ThreadType", "classArThread.html#a8da72e9d81791ca3da3d04f2b9c65934", null ],
-    [ "Status", "classArThread.html#af6d126a960a5af55f2ab3e05233e8b53", null ],
+    [ "Status", "classArThread.html#af6d126a960a5af55f2ab3e05233e8b53", [
+      [ "STATUS_FAILED", "classArThread.html#af6d126a960a5af55f2ab3e05233e8b53acc18d305d0eccadd2588c4b42f5f94b5", null ],
+      [ "STATUS_NORESOURCE", "classArThread.html#af6d126a960a5af55f2ab3e05233e8b53a3a691b0c508247f05b57fdcdf26bcbcf", null ],
+      [ "STATUS_NO_SUCH_THREAD", "classArThread.html#af6d126a960a5af55f2ab3e05233e8b53afb6a6a19ac7e5eae84ca230f90a577c1", null ],
+      [ "STATUS_INVALID", "classArThread.html#af6d126a960a5af55f2ab3e05233e8b53a8cabd345d26c252559a993ba7d4db196", null ],
+      [ "STATUS_JOIN_SELF", "classArThread.html#af6d126a960a5af55f2ab3e05233e8b53aa12716ae2e87670197b81ece3dbca9ea", null ],
+      [ "STATUS_ALREADY_DETATCHED", "classArThread.html#af6d126a960a5af55f2ab3e05233e8b53ac31e3677374b5ae653026a3be95c6274", null ]
+    ] ],
     [ "ArThread", "classArThread.html#af6646fdb41042a80a0d54c778d1af3d9", null ],
     [ "ArThread", "classArThread.html#aff21160d49a502bfc018d0e2126959aa", null ],
     [ "ArThread", "classArThread.html#a08068bcc611a53074d8999a5622f2289", null ],

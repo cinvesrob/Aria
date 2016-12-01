@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -172,6 +173,8 @@ public:
   AREXPORT void com2(void);
   AREXPORT void com3(void);
   AREXPORT void com4(void);
+  AREXPORT void usb0(void);
+  AREXPORT void usb9(void);
   AREXPORT void aux1(void);
   AREXPORT void aux2(void);
 protected:
@@ -236,6 +239,8 @@ protected:
   ArFunctorC<ArModeCamera> myCom2CB;
   ArFunctorC<ArModeCamera> myCom3CB;
   ArFunctorC<ArModeCamera> myCom4CB;
+  ArFunctorC<ArModeCamera> myUSBCom0CB;
+  ArFunctorC<ArModeCamera> myUSBCom9CB;
   ArFunctorC<ArModeCamera> myAux1CB;
   ArFunctorC<ArModeCamera> myAux2CB;
   const int myPanAmount;

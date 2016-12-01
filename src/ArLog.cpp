@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -899,3 +900,59 @@ AREXPORT void ArLog::internalForceLockup(void)
   ourMutex.lock();
 }
 
+AREXPORT void ArLog::log_v(LogLevel level, const char *prefix, const char *str, va_list ptr)
+{
+  char buf[1024];
+  strncpy(buf, prefix, sizeof(buf));
+  const size_t prefixSize = strlen(prefix);
+  vsnprintf(buf+prefixSize, sizeof(buf)-prefixSize, str, ptr);
+  buf[sizeof(buf) - 1] = '\0';
+  logNoLock(level, buf);
+}
+
+
+AREXPORT void ArLog::info(const char *str, ...)
+{
+  ourMutex.lock();
+  va_list ptr;
+  va_start(ptr, str);
+  log_v(Normal, "", str, ptr);
+  va_end(ptr);
+  ourMutex.unlock();
+}
+
+AREXPORT void ArLog::warning(const char *str, ...)
+{
+  ourMutex.lock();
+  va_list ptr;
+  va_start(ptr, str);
+  log_v(Terse, "Warning: ", str, ptr);
+  va_end(ptr);
+  ourMutex.unlock();
+}
+
+AREXPORT void ArLog::error(const char *str, ...)
+{
+  ourMutex.lock();
+  va_list ptr;
+  va_start(ptr, str);
+  log_v(Terse, "Error: ", str, ptr);
+  va_end(ptr);
+  ourMutex.unlock();
+}
+
+AREXPORT void ArLog::debug(const char *str, ...)
+{
+  ourMutex.lock();
+  va_list ptr;
+  va_start(ptr, str);
+  log_v(Terse, "[debug] ", str, ptr);
+  va_end(ptr);
+  ourMutex.unlock();
+}
+
+AREXPORT void ArLog::setLogLevel(LogLevel level) {
+	ourMutex.lock();
+	ourLevel = level;
+	ourMutex.unlock();
+}

@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -829,9 +830,29 @@ AREXPORT void ArArgumentParser::logDefaultArgumentLocations(void)
       ArLog::log(ArLog::Normal, "%10s%-10s%s", "", "envVar", (*it).c_str());
   }
 }
+
+
+      
 /**
- * Check whether a special "help" flag was given in the arguments, and also
- * print a warning (Using ArLog at Normal log level) if any unparsed arguments were found.   
+ * Check whether a special -help flag was given in the arguments
+ * The following are the help flags: -help, -h, --help, /?, /h.  
+ * @return false if a help flag was found true otherwise.
+ */
+AREXPORT bool ArArgumentParser::checkHelp()
+{
+  if (myHelp || checkArgument("-help") || checkArgument("-h") || 
+      checkArgument("/?") || checkArgument("/h"))
+  {
+    myHelp = true;
+    return false;
+  }
+  return true;
+}
+      
+/**
+ * Check whether a special -help flag was given in the arguments. If a -help
+ * flag was not given, also check whether any arguments remain unparsed by this
+ * argument parser.
  * The following are the help flags: -help, -h, --help, /?, /h.  
  * @return false if a help flag was found or unparsed arguments 
  * were found, true otherwise.
@@ -840,17 +861,13 @@ AREXPORT void ArArgumentParser::logDefaultArgumentLocations(void)
  *  expected here, which prevents this method from warning about them being unparsed
  *  yet.
  */
+  
 AREXPORT bool ArArgumentParser::checkHelpAndWarnUnparsed(
 	unsigned int numArgsOkay)
 {
-  
-  if (myHelp || checkArgument("-help") || checkArgument("-h") || 
-      checkArgument("/?") || checkArgument("/h"))
-  {
-    myHelp = true;
+  if(!checkHelp())
     return false;
-  }
-      
+
   if (getArgc() <= 1 + numArgsOkay)
     return true;
 

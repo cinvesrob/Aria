@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -108,20 +109,20 @@ AREXPORT ArGPS::ArGPS() :
   myGPMSSHandler(this, &ArGPS::handleGPMSS),
   myGPGSTHandler(this, &ArGPS::handleGPGST)
 {
-  addNMEAHandler("GPRMC", &myGPRMCHandler);
-  addNMEAHandler("GPGGA", &myGPGGAHandler);
-  addNMEAHandler("PGRME", &myPGRMEHandler);
-  addNMEAHandler("PGRMZ", &myPGRMZHandler);
-  addNMEAHandler("HCHDG", &myHCHDxHandler);
-  addNMEAHandler("HCHDM", &myHCHDxHandler);
-  addNMEAHandler("HCHDT", &myHCHDxHandler);
-  addNMEAHandler("GPHDG", &myHCHDxHandler);
-  addNMEAHandler("GPHDM", &myHCHDxHandler);
-  addNMEAHandler("GPHDT", &myHCHDxHandler);
-  addNMEAHandler("GPGSA", &myGPGSAHandler);
-  addNMEAHandler("GPGSV", &myGPGSVHandler);
-  addNMEAHandler("GPMSS", &myGPMSSHandler);
-  addNMEAHandler("GPGST", &myGPGSTHandler);
+  addNMEAHandler("RMC", &myGPRMCHandler);
+  addNMEAHandler("GGA", &myGPGGAHandler);
+  addNMEAHandler("RME", &myPGRMEHandler);
+  addNMEAHandler("RMZ", &myPGRMZHandler);
+  addNMEAHandler("HDG", &myHCHDxHandler);
+  addNMEAHandler("HDM", &myHCHDxHandler);
+  addNMEAHandler("HDT", &myHCHDxHandler);
+  //addNMEAHandler("HDG", &myHCHDxHandler);
+  //addNMEAHandler("HDM", &myHCHDxHandler);
+  //ddNMEAHandler("HDT", &myHCHDxHandler);
+  addNMEAHandler("GSA", &myGPGSAHandler);
+  addNMEAHandler("GSV", &myGPGSVHandler);
+  addNMEAHandler("MSS", &myGPMSSHandler);
+  addNMEAHandler("GST", &myGPGSTHandler);
 
   myMutex.setLogName("ArGPS::myMutex");
 }
@@ -254,7 +255,7 @@ void ArGPS::parseGPRMC(const ArNMEAParser::Message &msg, double &latitudeResult,
 
   ArNMEAParser::MessageVector *message = msg.message;
 #if defined(DEBUG_ARGPS) || defined(DEBUG_ARGPS_GPRMC)
-  fprintf(stderr, "XXX GPRMC size=%d, stat=%s latDegMin=%s, latNS=%s, lonDegMin=%s, lonEW=%s\n", message->size(), 
+  fprintf(stderr, "ArGPS: XXX GPRMC size=%d, stat=%s latDegMin=%s, latNS=%s, lonDegMin=%s, lonEW=%s\n", message->size(), 
     (message->size() > 2) ? (*message)[2].c_str() : "(missing)", 
     (message->size() > 3) ? (*message)[3].c_str() : "(missing)", 
     (message->size() > 4) ? (*message)[4].c_str() : "(missing)", 
@@ -304,6 +305,10 @@ void ArGPS::parseGPRMC(const ArNMEAParser::Message &msg, double &latitudeResult,
 // Fix type, number of satellites tracked, DOP and also maybe altitude
 void ArGPS::handleGPGGA(ArNMEAParser::Message msg)
 {
+#ifdef DEBUG_ARGPS
+fprintf(stderr, "ArGPS: Got GPGGA\n");
+#endif
+
   ArNMEAParser::MessageVector *message = msg.message;
   if (message->size() < 7) return;
   switch((*message)[6].c_str()[0])
@@ -373,13 +378,13 @@ void ArGPS::handlePGRMZ(ArNMEAParser::Message msg)
 void ArGPS::handleHCHDx(ArNMEAParser::Message msg)
 {
   ArNMEAParser::MessageVector *message = msg.message;
-  if((*message)[0] == "HCHDT") // true north
+  if(msg.id == "HDT") // true north
   {
     myData.haveCompassHeadingTrue = readFloatFromStringVec(message, 1, &myData.compassHeadingTrue);
     if(myData.haveCompassHeadingTrue) ++(myData.compassTrueCounter);
   }
 
-  if((*message)[0] == "HCHDM" || (*message)[0] == "HCHDG")  // magnetic north
+  if(msg.id == "HDM" || msg.id == "HDG")  // magnetic north
   {
     myData.haveCompassHeadingMag = readFloatFromStringVec(message, 1, &myData.compassHeadingMag);
     if(myData.haveCompassHeadingMag) ++(myData.compassMagCounter);
@@ -389,6 +394,10 @@ void ArGPS::handleHCHDx(ArNMEAParser::Message msg)
 // GPS DOP and satellite IDs
 void ArGPS::handleGPGSA(ArNMEAParser::Message msg)
 {
+#ifdef DEBUG_ARGPS
+fprintf(stderr, "ArGPS: XXX GPGSA received\n");
+#endif
+
   ArNMEAParser::MessageVector *message = msg.message;
   // This message alse has satellite IDs, not sure if that information is
   // useful though.
@@ -694,14 +703,14 @@ void ArGPS::handleGPGST(ArNMEAParser::Message msg)
   // 0,       1,    2,         3,             4,             5,              6,       7,       8
   // "GPGST", time, inputsRMS, ellipse major, ellipse minor, ellipse orient, lat err, lon err, alt err
 #ifdef DEBUG_ARGPS
-  printf("XXX GPGST size=%d\n", message->size());
+  printf("ArGPS: XXX GPGST size=%d\n", message->size());
 #endif
   if(message->size() < 3) return;
   myData.haveInputsRMS = readFloatFromStringVec(message, 2, &(myData.inputsRMS));
   if(message->size() < 6) return;
 #ifdef DEBUG_ARGPS
-  printf("XXX GPGST inputsRMS=%s, ellipseMajor=%s, ellipseMinor=%s, ellipseOrient=%s\n", 
-      (*message)[2], (*message)[3].c_str(), (*message)[4].c_str(), (*message)[5].c_str());
+  printf("ArGPS: XXX GPGST inputsRMS=%s, ellipseMajor=%s, ellipseMinor=%s, ellipseOrient=%s\n", 
+      (*message)[2].c_str(), (*message)[3].c_str(), (*message)[4].c_str(), (*message)[5].c_str());
 #endif
   double major, minor, orient;
   myData.haveErrorEllipse = (
@@ -715,7 +724,7 @@ void ArGPS::handleGPGST(ArNMEAParser::Message msg)
   else myData.errorEllipse.setPose(0,0,0);
   if(message->size() < 7) return;
 #ifdef DEBUG_ARGPS
-  printf("XXX GPGST latErr=%s, lonErr=%s\n",
+  printf("ArGPS: XXX GPGST latErr=%s, lonErr=%s\n",
       (*message)[6].c_str(), (*message)[7].c_str());
 #endif
   double lat, lon;
@@ -724,13 +733,13 @@ void ArGPS::handleGPGST(ArNMEAParser::Message msg)
     &&
     readFloatFromStringVec(message, 7, &lon)
   );
-//printf("XXX GPGST haveLLE=%d, latErr=%f, lonErr=%f\n", myData.haveLatLonError, lat, lon);
+//printf("ArGPS: XXX GPGST haveLLE=%d, latErr=%f, lonErr=%f\n", myData.haveLatLonError, lat, lon);
   if(myData.haveLatLonError) myData.latLonError.setPose(lat, lon);
   else myData.latLonError.setPose(0,0,0);
-//printf("XXX GPGST lle.getX=%f, lle.getY=%f\n", myData.latLonError.getX(), myData.latLonError.getY());
+//printf("ArGPS: XXX GPGST lle.getX=%f, lle.getY=%f\n", myData.latLonError.getX(), myData.latLonError.getY());
   if(message->size() < 9) return;
 #ifdef DEBUG_ARGPS
-  printf("XXX GPGST altErr=%s", (*message)[8].c_str());
+  printf("ArGPS: XXX GPGST altErr=%s", (*message)[8].c_str());
 #endif
   myData.haveAltitudeError = readFloatFromStringVec(message, 8, &(myData.altitudeError));
 }
@@ -745,8 +754,6 @@ AREXPORT ArSimulatedGPS::ArSimulatedGPS(ArRobot *robot) :
 
 AREXPORT void ArSimulatedGPS::setDummyPosition(ArArgumentBuilder *args)
 {
-printf("%s | 0=%f | 1=%f | 2=%f\n", args->getFullString(),
-args->getArgDouble(0), args->getArgDouble(1), args->getArgDouble(2));
   double lat = 0;
   double lon = 0;
   double alt = 0;
@@ -774,24 +781,22 @@ args->getArgDouble(0), args->getArgDouble(1), args->getArgDouble(2));
 bool ArSimulatedGPS::handleSimStatPacket(ArRobotPacket *pkt)
 {
   if(pkt->getID() != 0x62) return false;
-  char c = pkt->bufToByte(); // skip
-  c = pkt->bufToByte(); // skip
+  //puts("SIMSTAT");
+  /*char c =*/ pkt->bufToByte(); // skip
+  /*c =*/ pkt->bufToByte(); // skip
   ArTypes::UByte4 flags = pkt->bufToUByte4();
   if(flags&ArUtil::BIT1)   // bit 1 is set if map has OriginLLA georeference point, and this packet will contain latitude and longitude.
   {
     myData.timeGotPosition.setToNow();
-    myData.fixType = SimulatedFix;
-    myData.HDOP = myData.VDOP = myData.PDOP = 1.0;
-    myData.haveHDOP = myData.haveVDOP = myData.havePDOP = true;
     //myData.numSatellitesTracked = 6;
     myData.numSatellitesTracked = 0;
-    int x = pkt->bufToUByte2(); // skip simint
-    x = pkt->bufToUByte2(); // skip realint
-    x = pkt->bufToUByte2(); // skip lastint
-    x = pkt->bufToByte4(); // skip truex
-    x = pkt->bufToByte4(); // skip truey
-    x = pkt->bufToByte4(); // skip truez
-    x = pkt->bufToByte4(); // skip trueth
+    pkt->bufToUByte2(); // skip simint
+    pkt->bufToUByte2(); // skip realint
+    pkt->bufToUByte2(); // skip lastint
+    pkt->bufToByte4(); // skip truex
+    pkt->bufToByte4(); // skip truey
+    pkt->bufToByte4(); // skip truez
+    pkt->bufToByte4(); // skip trueth
     // TODO check if packet is still long enough to contain latitude and longitude.
     myData.havePosition = true;
     myData.latitude = pkt->bufToByte4() / 10e6; 
@@ -800,9 +805,26 @@ bool ArSimulatedGPS::handleSimStatPacket(ArRobotPacket *pkt)
     // TODO check if packet is still long enough to contain altitude
     myData.haveAltitude = true;
     myData.altitude = pkt->bufToByte4() / 100.0;
+    // TODO check if packet is still long enough to contain dop
+    int d = pkt->bufToByte();
+    if(d == -1) {
+      myData.fixType = NoFix;
+      myData.haveHDOP = myData.haveVDOP = myData.havePDOP = false;
+      myData.HDOP = myData.VDOP = myData.PDOP = 0.0;
+    } else if(d == 0) {
+      myData.fixType = BadFix;
+      myData.haveHDOP = myData.haveVDOP = myData.havePDOP = true;
+      myData.HDOP = myData.VDOP = myData.PDOP = 0.0;
+    } else {
+      myData.fixType = SimulatedFix;
+      myData.haveHDOP = myData.haveVDOP = myData.havePDOP = true;
+      myData.HDOP = myData.VDOP = myData.PDOP = (double)d/100.0;
+    }
+      
   }
   else
   {
+   // puts("no GPS data in SIMSTAT packet");
     if(myData.havePosition && !myHaveDummyPosition)
       clearPosition();
   }
@@ -826,12 +848,12 @@ bool ArSimulatedGPS::connect(unsigned long connectTimeout)
   if(myRobot)
   {
     myRobot->addPacketHandler(&mySimStatHandlerCB);
-    ArLog::log(ArLog::Normal, "ArSimulatedGPS: Will receive data from the simulated robot.");
+    ArLog::log(ArLog::Normal, "ArSimulatedGPS: Requesting data from the simulated robot.");
     myRobot->comInt(ArCommands::SIM_STAT, 2);
   }
   else
   {
-    ArLog::log(ArLog::Normal, "ArSimulatedGPS: Can't receive data from a simulated robot; dummy position must be set manually instead");
+    ArLog::log(ArLog::Normal, "ArSimulatedGPS: Have no robot connection, can't receive data from a simulated robot; dummy position must be set manually instead");
   }
   return true;
 }

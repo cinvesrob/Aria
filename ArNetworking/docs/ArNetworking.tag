@@ -1,19 +1,19 @@
-<?xml version='1.0' encoding='ISO-8859-1' standalone='yes' ?>
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
 <tagfile>
   <compound kind="file">
     <name>all_options.dox</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/docs/options/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/docs/options/</path>
     <filename>all__options_8dox</filename>
   </compound>
   <compound kind="file">
     <name>ArCentralForwarder.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/src/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/src/</path>
     <filename>ArCentralForwarder_8cpp</filename>
     <includes id="ArCentralForwarder_8h" name="ArCentralForwarder.h" local="yes" imported="no">ArCentralForwarder.h</includes>
   </compound>
   <compound kind="file">
     <name>ArCentralForwarder.h</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/include/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
     <filename>ArCentralForwarder_8h</filename>
     <includes id="ArServerBase_8h" name="ArServerBase.h" local="yes" imported="no">ArServerBase.h</includes>
     <includes id="ArClientBase_8h" name="ArClientBase.h" local="yes" imported="no">ArClientBase.h</includes>
@@ -21,13 +21,13 @@
   </compound>
   <compound kind="file">
     <name>ArCentralManager.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/src/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/src/</path>
     <filename>ArCentralManager_8cpp</filename>
     <includes id="ArCentralManager_8h" name="ArCentralManager.h" local="yes" imported="no">ArCentralManager.h</includes>
   </compound>
   <compound kind="file">
     <name>ArCentralManager.h</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/include/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
     <filename>ArCentralManager_8h</filename>
     <includes id="ArServerBase_8h" name="ArServerBase.h" local="yes" imported="no">ArServerBase.h</includes>
     <includes id="ArCentralForwarder_8h" name="ArCentralForwarder.h" local="yes" imported="no">ArCentralForwarder.h</includes>
@@ -35,7 +35,7 @@
   </compound>
   <compound kind="file">
     <name>ArClientArgUtils.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/src/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/src/</path>
     <filename>ArClientArgUtils_8cpp</filename>
     <includes id="ArClientArgUtils_8h" name="ArClientArgUtils.h" local="yes" imported="no">ArClientArgUtils.h</includes>
     <includes id="ArNetPacket_8h" name="ArNetPacket.h" local="yes" imported="no">ArNetPacket.h</includes>
@@ -49,13 +49,13 @@
   </compound>
   <compound kind="file">
     <name>ArClientArgUtils.h</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/include/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
     <filename>ArClientArgUtils_8h</filename>
     <class kind="class">ArClientArg</class>
   </compound>
   <compound kind="file">
     <name>ArClientBase.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/src/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/src/</path>
     <filename>ArClientBase_8cpp</filename>
     <includes id="ArClientBase_8h" name="ArClientBase.h" local="yes" imported="no">ArClientBase.h</includes>
     <includes id="ArServerCommands_8h" name="ArServerCommands.h" local="yes" imported="no">ArServerCommands.h</includes>
@@ -71,7 +71,7 @@
   </compound>
   <compound kind="file">
     <name>ArClientBase.h</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/include/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
     <filename>ArClientBase_8h</filename>
     <includes id="ArClientCommands_8h" name="ArClientCommands.h" local="yes" imported="no">ArClientCommands.h</includes>
     <includes id="ArServerCommands_8h" name="ArServerCommands.h" local="yes" imported="no">ArServerCommands.h</includes>
@@ -85,32 +85,32 @@
   </compound>
   <compound kind="file">
     <name>ArClientCommands.h</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/include/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
     <filename>ArClientCommands_8h</filename>
     <class kind="class">ArClientCommands</class>
   </compound>
   <compound kind="file">
     <name>ArClientData.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/src/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/src/</path>
     <filename>ArClientData_8cpp</filename>
     <includes id="ArClientData_8h" name="ArClientData.h" local="yes" imported="no">ArClientData.h</includes>
     <includes id="ArNetPacket_8h" name="ArNetPacket.h" local="yes" imported="no">ArNetPacket.h</includes>
   </compound>
   <compound kind="file">
     <name>ArClientData.h</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/include/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
     <filename>ArClientData_8h</filename>
     <class kind="class">ArClientData</class>
   </compound>
   <compound kind="file">
     <name>ArClientFileUtils.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/src/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/src/</path>
     <filename>ArClientFileUtils_8cpp</filename>
     <includes id="ArClientFileUtils_8h" name="ArClientFileUtils.h" local="yes" imported="no">ArClientFileUtils.h</includes>
   </compound>
   <compound kind="file">
     <name>ArClientFileUtils.h</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/include/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
     <filename>ArClientFileUtils_8h</filename>
     <includes id="ArClientBase_8h" name="ArClientBase.h" local="yes" imported="no">ArClientBase.h</includes>
     <class kind="class">ArClientDeleteFileOnServer</class>
@@ -121,7 +121,7 @@
   </compound>
   <compound kind="file">
     <name>ArClientHandlerConfig.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/src/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/src/</path>
     <filename>ArClientHandlerConfig_8cpp</filename>
     <includes id="ArClientHandlerConfig_8h" name="ArClientHandlerConfig.h" local="yes" imported="no">ArClientHandlerConfig.h</includes>
     <includes id="ArClientArgUtils_8h" name="ArClientArgUtils.h" local="yes" imported="no">ArClientArgUtils.h</includes>
@@ -142,14 +142,14 @@
   </compound>
   <compound kind="file">
     <name>ArClientHandlerConfig.h</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/include/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
     <filename>ArClientHandlerConfig_8h</filename>
     <includes id="ArClientBase_8h" name="ArClientBase.h" local="yes" imported="no">ArClientBase.h</includes>
     <class kind="class">ArClientHandlerConfig</class>
   </compound>
   <compound kind="file">
     <name>ArClientHandlerRobotUpdate.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/src/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/src/</path>
     <filename>ArClientHandlerRobotUpdate_8cpp</filename>
     <includes id="ArClientHandlerRobotUpdate_8h" name="ArClientHandlerRobotUpdate.h" local="yes" imported="no">ArClientHandlerRobotUpdate.h</includes>
     <includes id="ArNetPacket_8h" name="ArNetPacket.h" local="yes" imported="no">ArNetPacket.h</includes>
@@ -157,33 +157,47 @@
   </compound>
   <compound kind="file">
     <name>ArClientHandlerRobotUpdate.h</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/include/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
     <filename>ArClientHandlerRobotUpdate_8h</filename>
     <class kind="class">ArClientHandlerRobotUpdate</class>
     <class kind="struct">ArClientHandlerRobotUpdate::RobotData</class>
   </compound>
   <compound kind="file">
+    <name>ArClientRatioDrive.cpp</name>
+    <path>/home/reed/amrsw/Aria/ArNetworking/src/</path>
+    <filename>ArClientRatioDrive_8cpp</filename>
+    <includes id="ArClientRatioDrive_8h" name="ArClientRatioDrive.h" local="yes" imported="no">ArClientRatioDrive.h</includes>
+    <includes id="ArClientBase_8h" name="ArClientBase.h" local="yes" imported="no">ArClientBase.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>ArClientRatioDrive.h</name>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
+    <filename>ArClientRatioDrive_8h</filename>
+    <includes id="ArNetworking_8h" name="ArNetworking.h" local="yes" imported="no">ArNetworking.h</includes>
+    <class kind="class">ArClientRatioDrive</class>
+  </compound>
+  <compound kind="file">
     <name>ArClientSimpleConnector.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/src/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/src/</path>
     <filename>ArClientSimpleConnector_8cpp</filename>
     <includes id="ArClientSimpleConnector_8h" name="ArClientSimpleConnector.h" local="yes" imported="no">ArClientSimpleConnector.h</includes>
   </compound>
   <compound kind="file">
     <name>ArClientSimpleConnector.h</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/include/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
     <filename>ArClientSimpleConnector_8h</filename>
     <includes id="ArClientBase_8h" name="ArClientBase.h" local="yes" imported="no">ArClientBase.h</includes>
     <class kind="class">ArClientSimpleConnector</class>
   </compound>
   <compound kind="file">
     <name>ArClientSwitchManager.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/src/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/src/</path>
     <filename>ArClientSwitchManager_8cpp</filename>
     <includes id="ArClientSwitchManager_8h" name="ArClientSwitchManager.h" local="yes" imported="no">ArClientSwitchManager.h</includes>
   </compound>
   <compound kind="file">
     <name>ArClientSwitchManager.h</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/include/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
     <filename>ArClientSwitchManager_8h</filename>
     <includes id="ArServerBase_8h" name="ArServerBase.h" local="yes" imported="no">ArServerBase.h</includes>
     <includes id="ArClientBase_8h" name="ArClientBase.h" local="yes" imported="no">ArClientBase.h</includes>
@@ -191,13 +205,13 @@
   </compound>
   <compound kind="file">
     <name>ArHybridForwarderVideo.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/src/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/src/</path>
     <filename>ArHybridForwarderVideo_8cpp</filename>
     <includes id="ArHybridForwarderVideo_8h" name="ArHybridForwarderVideo.h" local="yes" imported="no">ArHybridForwarderVideo.h</includes>
   </compound>
   <compound kind="file">
     <name>ArHybridForwarderVideo.h</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/include/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
     <filename>ArHybridForwarderVideo_8h</filename>
     <includes id="ArServerBase_8h" name="ArServerBase.h" local="yes" imported="no">ArServerBase.h</includes>
     <includes id="ArClientBase_8h" name="ArClientBase.h" local="yes" imported="no">ArClientBase.h</includes>
@@ -205,7 +219,7 @@
   </compound>
   <compound kind="file">
     <name>ArMapChanger.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/src/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/src/</path>
     <filename>ArMapChanger_8cpp</filename>
     <includes id="ArMapChanger_8h" name="ArMapChanger.h" local="yes" imported="no">ArMapChanger.h</includes>
     <member kind="define">
@@ -218,7 +232,7 @@
   </compound>
   <compound kind="file">
     <name>ArMapChanger.h</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/include/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
     <filename>ArMapChanger_8h</filename>
     <includes id="ArNetPacket_8h" name="ArNetPacket.h" local="yes" imported="no">ArNetPacket.h</includes>
     <includes id="ArCentralForwarder_8h" name="ArCentralForwarder.h" local="yes" imported="no">ArCentralForwarder.h</includes>
@@ -232,58 +246,58 @@
   </compound>
   <compound kind="file">
     <name>ArNetPacket.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/src/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/src/</path>
     <filename>ArNetPacket_8cpp</filename>
     <includes id="ArNetPacket_8h" name="ArNetPacket.h" local="yes" imported="no">ArNetPacket.h</includes>
   </compound>
   <compound kind="file">
     <name>ArNetPacket.h</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/include/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
     <filename>ArNetPacket_8h</filename>
     <class kind="class">ArNetPacket</class>
   </compound>
   <compound kind="file">
     <name>ArNetPacketReceiverTcp.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/src/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/src/</path>
     <filename>ArNetPacketReceiverTcp_8cpp</filename>
     <includes id="ArNetPacketReceiverTcp_8h" name="ArNetPacketReceiverTcp.h" local="yes" imported="no">ArNetPacketReceiverTcp.h</includes>
   </compound>
   <compound kind="file">
     <name>ArNetPacketReceiverTcp.h</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/include/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
     <filename>ArNetPacketReceiverTcp_8h</filename>
     <includes id="ArNetPacket_8h" name="ArNetPacket.h" local="yes" imported="no">ArNetPacket.h</includes>
     <class kind="class">ArNetPacketReceiverTcp</class>
   </compound>
   <compound kind="file">
     <name>ArNetPacketReceiverUdp.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/src/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/src/</path>
     <filename>ArNetPacketReceiverUdp_8cpp</filename>
     <includes id="ArNetPacketReceiverUdp_8h" name="ArNetPacketReceiverUdp.h" local="yes" imported="no">ArNetPacketReceiverUdp.h</includes>
   </compound>
   <compound kind="file">
     <name>ArNetPacketReceiverUdp.h</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/include/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
     <filename>ArNetPacketReceiverUdp_8h</filename>
     <includes id="ArNetPacket_8h" name="ArNetPacket.h" local="yes" imported="no">ArNetPacket.h</includes>
     <class kind="class">ArNetPacketReceiverUdp</class>
   </compound>
   <compound kind="file">
     <name>ArNetPacketSenderTcp.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/src/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/src/</path>
     <filename>ArNetPacketSenderTcp_8cpp</filename>
     <includes id="ArNetPacketSenderTcp_8h" name="ArNetPacketSenderTcp.h" local="yes" imported="no">ArNetPacketSenderTcp.h</includes>
   </compound>
   <compound kind="file">
     <name>ArNetPacketSenderTcp.h</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/include/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
     <filename>ArNetPacketSenderTcp_8h</filename>
     <includes id="ArNetPacket_8h" name="ArNetPacket.h" local="yes" imported="no">ArNetPacket.h</includes>
     <class kind="class">ArNetPacketSenderTcp</class>
   </compound>
   <compound kind="file">
     <name>ArNetworking.h</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/include/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
     <filename>ArNetworking_8h</filename>
     <includes id="ArServerBase_8h" name="ArServerBase.h" local="yes" imported="no">ArServerBase.h</includes>
     <includes id="ArServerClient_8h" name="ArServerClient.h" local="yes" imported="no">ArServerClient.h</includes>
@@ -325,7 +339,7 @@
   </compound>
   <compound kind="file">
     <name>ArServerBase.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/src/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/src/</path>
     <filename>ArServerBase_8cpp</filename>
     <includes id="ArServerBase_8h" name="ArServerBase.h" local="yes" imported="no">ArServerBase.h</includes>
     <includes id="ArServerCommands_8h" name="ArServerCommands.h" local="yes" imported="no">ArServerCommands.h</includes>
@@ -341,7 +355,7 @@
   </compound>
   <compound kind="file">
     <name>ArServerBase.h</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/include/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
     <filename>ArServerBase_8h</filename>
     <includes id="ArServerCommands_8h" name="ArServerCommands.h" local="yes" imported="no">ArServerCommands.h</includes>
     <includes id="ArServerClient_8h" name="ArServerClient.h" local="yes" imported="no">ArServerClient.h</includes>
@@ -354,7 +368,7 @@
   </compound>
   <compound kind="file">
     <name>ArServerClient.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/src/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/src/</path>
     <filename>ArServerClient_8cpp</filename>
     <includes id="ArServerClient_8h" name="ArServerClient.h" local="yes" imported="no">ArServerClient.h</includes>
     <includes id="ArServerCommands_8h" name="ArServerCommands.h" local="yes" imported="no">ArServerCommands.h</includes>
@@ -364,7 +378,7 @@
   </compound>
   <compound kind="file">
     <name>ArServerClient.h</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/include/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
     <filename>ArServerClient_8h</filename>
     <includes id="ArNetPacket_8h" name="ArNetPacket.h" local="yes" imported="no">ArNetPacket.h</includes>
     <includes id="ArServerCommands_8h" name="ArServerCommands.h" local="yes" imported="no">ArServerCommands.h</includes>
@@ -377,25 +391,25 @@
   </compound>
   <compound kind="file">
     <name>ArServerClientData.h</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/include/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
     <filename>ArServerClientData_8h</filename>
     <class kind="class">ArServerClientData</class>
   </compound>
   <compound kind="file">
     <name>ArServerClientIdentifier.h</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/include/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
     <filename>ArServerClientIdentifier_8h</filename>
     <class kind="class">ArServerClientIdentifier</class>
   </compound>
   <compound kind="file">
     <name>ArServerCommands.h</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/include/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
     <filename>ArServerCommands_8h</filename>
     <class kind="class">ArServerCommands</class>
   </compound>
   <compound kind="file">
     <name>ArServerData.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/src/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/src/</path>
     <filename>ArServerData_8cpp</filename>
     <includes id="ArServerData_8h" name="ArServerData.h" local="yes" imported="no">ArServerData.h</includes>
     <includes id="ArServerClient_8h" name="ArServerClient.h" local="yes" imported="no">ArServerClient.h</includes>
@@ -403,19 +417,19 @@
   </compound>
   <compound kind="file">
     <name>ArServerData.h</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/include/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
     <filename>ArServerData_8h</filename>
     <class kind="class">ArServerData</class>
   </compound>
   <compound kind="file">
     <name>ArServerFileUtils.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/src/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/src/</path>
     <filename>ArServerFileUtils_8cpp</filename>
     <includes id="ArServerFileUtils_8h" name="ArServerFileUtils.h" local="yes" imported="no">ArServerFileUtils.h</includes>
   </compound>
   <compound kind="file">
     <name>ArServerFileUtils.h</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/include/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
     <filename>ArServerFileUtils_8h</filename>
     <includes id="ArServerBase_8h" name="ArServerBase.h" local="yes" imported="no">ArServerBase.h</includes>
     <class kind="class">ArServerDeleteFileOnServer</class>
@@ -426,7 +440,7 @@
   </compound>
   <compound kind="file">
     <name>ArServerHandlerCamera.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/src/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/src/</path>
     <filename>ArServerHandlerCamera_8cpp</filename>
     <includes id="ArServerHandlerCamera_8h" name="ArServerHandlerCamera.h" local="yes" imported="no">ArServerHandlerCamera.h</includes>
     <member kind="define">
@@ -439,21 +453,21 @@
   </compound>
   <compound kind="file">
     <name>ArServerHandlerCamera.h</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/include/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
     <filename>ArServerHandlerCamera_8h</filename>
     <includes id="ArNetworking_8h" name="ArNetworking.h" local="yes" imported="no">ArNetworking.h</includes>
     <class kind="class">ArServerHandlerCamera</class>
   </compound>
   <compound kind="file">
     <name>ArServerHandlerCameraCollection.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/src/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/src/</path>
     <filename>ArServerHandlerCameraCollection_8cpp</filename>
     <includes id="ArServerHandlerCameraCollection_8h" name="ArServerHandlerCameraCollection.h" local="yes" imported="no">ArServerHandlerCameraCollection.h</includes>
     <includes id="ArClientArgUtils_8h" name="ArClientArgUtils.h" local="yes" imported="no">ArClientArgUtils.h</includes>
   </compound>
   <compound kind="file">
     <name>ArServerHandlerCameraCollection.h</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/include/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
     <filename>ArServerHandlerCameraCollection_8h</filename>
     <includes id="ArServerBase_8h" name="ArServerBase.h" local="yes" imported="no">ArServerBase.h</includes>
     <includes id="ArServerClient_8h" name="ArServerClient.h" local="yes" imported="no">ArServerClient.h</includes>
@@ -461,33 +475,33 @@
   </compound>
   <compound kind="file">
     <name>ArServerHandlerCommands.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/src/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/src/</path>
     <filename>ArServerHandlerCommands_8cpp</filename>
     <includes id="ArServerHandlerCommands_8h" name="ArServerHandlerCommands.h" local="yes" imported="no">ArServerHandlerCommands.h</includes>
   </compound>
   <compound kind="file">
     <name>ArServerHandlerCommands.h</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/include/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
     <filename>ArServerHandlerCommands_8h</filename>
     <includes id="ArServerBase_8h" name="ArServerBase.h" local="yes" imported="no">ArServerBase.h</includes>
     <class kind="class">ArServerHandlerCommands</class>
   </compound>
   <compound kind="file">
     <name>ArServerHandlerCommMonitor.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/src/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/src/</path>
     <filename>ArServerHandlerCommMonitor_8cpp</filename>
     <includes id="ArServerHandlerCommMonitor_8h" name="ArServerHandlerCommMonitor.h" local="yes" imported="no">ArServerHandlerCommMonitor.h</includes>
   </compound>
   <compound kind="file">
     <name>ArServerHandlerCommMonitor.h</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/include/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
     <filename>ArServerHandlerCommMonitor_8h</filename>
     <includes id="ArNetworking_8h" name="ArNetworking.h" local="yes" imported="no">ArNetworking.h</includes>
     <class kind="class">ArServerHandlerCommMonitor</class>
   </compound>
   <compound kind="file">
     <name>ArServerHandlerConfig.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/src/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/src/</path>
     <filename>ArServerHandlerConfig_8cpp</filename>
     <includes id="ArServerHandlerConfig_8h" name="ArServerHandlerConfig.h" local="yes" imported="no">ArServerHandlerConfig.h</includes>
     <includes id="ArClientArgUtils_8h" name="ArClientArgUtils.h" local="yes" imported="no">ArClientArgUtils.h</includes>
@@ -501,33 +515,33 @@
   </compound>
   <compound kind="file">
     <name>ArServerHandlerConfig.h</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/include/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
     <filename>ArServerHandlerConfig_8h</filename>
     <includes id="ArServerBase_8h" name="ArServerBase.h" local="yes" imported="no">ArServerBase.h</includes>
     <class kind="class">ArServerHandlerConfig</class>
   </compound>
   <compound kind="file">
     <name>ArServerHandlerMap.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/src/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/src/</path>
     <filename>ArServerHandlerMap_8cpp</filename>
     <includes id="ArServerHandlerMap_8h" name="ArServerHandlerMap.h" local="yes" imported="no">ArServerHandlerMap.h</includes>
   </compound>
   <compound kind="file">
     <name>ArServerHandlerMap.h</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/include/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
     <filename>ArServerHandlerMap_8h</filename>
     <includes id="ArServerBase_8h" name="ArServerBase.h" local="yes" imported="no">ArServerBase.h</includes>
     <class kind="class">ArServerHandlerMap</class>
   </compound>
   <compound kind="file">
     <name>ArServerHandlerMapping.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/src/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/src/</path>
     <filename>ArServerHandlerMapping_8cpp</filename>
     <includes id="ArServerHandlerMapping_8h" name="ArServerHandlerMapping.h" local="yes" imported="no">ArServerHandlerMapping.h</includes>
   </compound>
   <compound kind="file">
     <name>ArServerHandlerMapping.h</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/include/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
     <filename>ArServerHandlerMapping_8h</filename>
     <includes id="ArServerBase_8h" name="ArServerBase.h" local="yes" imported="no">ArServerBase.h</includes>
     <includes id="ArServerHandlerCommands_8h" name="ArServerHandlerCommands.h" local="yes" imported="no">ArServerHandlerCommands.h</includes>
@@ -536,13 +550,13 @@
   </compound>
   <compound kind="file">
     <name>ArServerHandlerPopup.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/src/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/src/</path>
     <filename>ArServerHandlerPopup_8cpp</filename>
     <includes id="ArServerHandlerPopup_8h" name="ArServerHandlerPopup.h" local="yes" imported="no">ArServerHandlerPopup.h</includes>
   </compound>
   <compound kind="file">
     <name>ArServerHandlerPopup.h</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/include/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
     <filename>ArServerHandlerPopup_8h</filename>
     <includes id="ArServerBase_8h" name="ArServerBase.h" local="yes" imported="no">ArServerBase.h</includes>
     <class kind="class">ArServerHandlerPopup</class>
@@ -551,80 +565,80 @@
   </compound>
   <compound kind="file">
     <name>ArServerInfoDrawings.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/src/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/src/</path>
     <filename>ArServerInfoDrawings_8cpp</filename>
     <includes id="ArServerInfoDrawings_8h" name="ArServerInfoDrawings.h" local="yes" imported="no">ArServerInfoDrawings.h</includes>
   </compound>
   <compound kind="file">
     <name>ArServerInfoDrawings.h</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/include/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
     <filename>ArServerInfoDrawings_8h</filename>
     <includes id="ArServerBase_8h" name="ArServerBase.h" local="yes" imported="no">ArServerBase.h</includes>
     <class kind="class">ArServerInfoDrawings</class>
   </compound>
   <compound kind="file">
     <name>ArServerInfoRobot.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/src/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/src/</path>
     <filename>ArServerInfoRobot_8cpp</filename>
     <includes id="ArServerInfoRobot_8h" name="ArServerInfoRobot.h" local="yes" imported="no">ArServerInfoRobot.h</includes>
     <includes id="ArServerMode_8h" name="ArServerMode.h" local="yes" imported="no">ArServerMode.h</includes>
   </compound>
   <compound kind="file">
     <name>ArServerInfoRobot.h</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/include/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
     <filename>ArServerInfoRobot_8h</filename>
     <includes id="ArServerBase_8h" name="ArServerBase.h" local="yes" imported="no">ArServerBase.h</includes>
     <class kind="class">ArServerInfoRobot</class>
   </compound>
   <compound kind="file">
     <name>ArServerInfoSensor.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/src/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/src/</path>
     <filename>ArServerInfoSensor_8cpp</filename>
     <includes id="ArServerInfoSensor_8h" name="ArServerInfoSensor.h" local="yes" imported="no">ArServerInfoSensor.h</includes>
   </compound>
   <compound kind="file">
     <name>ArServerInfoSensor.h</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/include/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
     <filename>ArServerInfoSensor_8h</filename>
     <includes id="ArServerBase_8h" name="ArServerBase.h" local="yes" imported="no">ArServerBase.h</includes>
     <class kind="class">ArServerInfoSensor</class>
   </compound>
   <compound kind="file">
     <name>ArServerInfoStrings.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/src/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/src/</path>
     <filename>ArServerInfoStrings_8cpp</filename>
     <includes id="ArServerInfoStrings_8h" name="ArServerInfoStrings.h" local="yes" imported="no">ArServerInfoStrings.h</includes>
   </compound>
   <compound kind="file">
     <name>ArServerInfoStrings.h</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/include/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
     <filename>ArServerInfoStrings_8h</filename>
     <includes id="ArServerBase_8h" name="ArServerBase.h" local="yes" imported="no">ArServerBase.h</includes>
     <class kind="class">ArServerInfoStrings</class>
   </compound>
   <compound kind="file">
     <name>ArServerMode.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/src/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/src/</path>
     <filename>ArServerMode_8cpp</filename>
     <includes id="ArServerMode_8h" name="ArServerMode.h" local="yes" imported="no">ArServerMode.h</includes>
     <includes id="ArServerModeIdle_8h" name="ArServerModeIdle.h" local="yes" imported="no">ArServerModeIdle.h</includes>
   </compound>
   <compound kind="file">
     <name>ArServerMode.h</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/include/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
     <filename>ArServerMode_8h</filename>
     <includes id="ArServerBase_8h" name="ArServerBase.h" local="yes" imported="no">ArServerBase.h</includes>
     <class kind="class">ArServerMode</class>
   </compound>
   <compound kind="file">
     <name>ArServerModeDrive.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/src/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/src/</path>
     <filename>ArServerModeDrive_8cpp</filename>
     <includes id="ArServerModeDrive_8h" name="ArServerModeDrive.h" local="yes" imported="no">ArServerModeDrive.h</includes>
   </compound>
   <compound kind="file">
     <name>ArServerModeDrive.h</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/include/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
     <filename>ArServerModeDrive_8h</filename>
     <includes id="ArNetworking_8h" name="ArNetworking.h" local="yes" imported="no">ArNetworking.h</includes>
     <includes id="ArServerMode_8h" name="ArServerMode.h" local="yes" imported="no">ArServerMode.h</includes>
@@ -632,53 +646,67 @@
   </compound>
   <compound kind="file">
     <name>ArServerModeIdle.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/src/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/src/</path>
     <filename>ArServerModeIdle_8cpp</filename>
     <includes id="ArServerModeIdle_8h" name="ArServerModeIdle.h" local="yes" imported="no">ArServerModeIdle.h</includes>
   </compound>
   <compound kind="file">
     <name>ArServerModeIdle.h</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/include/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
     <filename>ArServerModeIdle_8h</filename>
     <includes id="ArServerMode_8h" name="ArServerMode.h" local="yes" imported="no">ArServerMode.h</includes>
     <class kind="class">ArServerModeIdle</class>
   </compound>
   <compound kind="file">
+    <name>ArServerModeJogPosition.cpp</name>
+    <path>/home/reed/amrsw/Aria/ArNetworking/src/</path>
+    <filename>ArServerModeJogPosition_8cpp</filename>
+    <includes id="ArServerModeJogPosition_8h" name="ArServerModeJogPosition.h" local="yes" imported="no">ArServerModeJogPosition.h</includes>
+    <includes id="ArServerHandlerCommands_8h" name="ArServerHandlerCommands.h" local="yes" imported="no">ArServerHandlerCommands.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>ArServerModeJogPosition.h</name>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
+    <filename>ArServerModeJogPosition_8h</filename>
+    <includes id="ArServerMode_8h" name="ArServerMode.h" local="yes" imported="no">ArServerMode.h</includes>
+    <class kind="class">ArServerModeJogPosition</class>
+  </compound>
+  <compound kind="file">
     <name>ArServerModeRatioDrive.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/src/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/src/</path>
     <filename>ArServerModeRatioDrive_8cpp</filename>
     <includes id="ArServerModeRatioDrive_8h" name="ArServerModeRatioDrive.h" local="yes" imported="no">ArServerModeRatioDrive.h</includes>
     <includes id="ArServerHandlerCommands_8h" name="ArServerHandlerCommands.h" local="yes" imported="no">ArServerHandlerCommands.h</includes>
   </compound>
   <compound kind="file">
     <name>ArServerModeRatioDrive.h</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/include/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
     <filename>ArServerModeRatioDrive_8h</filename>
     <includes id="ArServerMode_8h" name="ArServerMode.h" local="yes" imported="no">ArServerMode.h</includes>
     <class kind="class">ArServerModeRatioDrive</class>
   </compound>
   <compound kind="file">
     <name>ArServerModeStop.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/src/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/src/</path>
     <filename>ArServerModeStop_8cpp</filename>
     <includes id="ArServerModeStop_8h" name="ArServerModeStop.h" local="yes" imported="no">ArServerModeStop.h</includes>
   </compound>
   <compound kind="file">
     <name>ArServerModeStop.h</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/include/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
     <filename>ArServerModeStop_8h</filename>
     <includes id="ArServerMode_8h" name="ArServerMode.h" local="yes" imported="no">ArServerMode.h</includes>
     <class kind="class">ArServerModeStop</class>
   </compound>
   <compound kind="file">
     <name>ArServerModeWander.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/src/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/src/</path>
     <filename>ArServerModeWander_8cpp</filename>
     <includes id="ArServerModeWander_8h" name="ArServerModeWander.h" local="yes" imported="no">ArServerModeWander.h</includes>
   </compound>
   <compound kind="file">
     <name>ArServerModeWander.h</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/include/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
     <filename>ArServerModeWander_8h</filename>
     <includes id="ArNetworking_8h" name="ArNetworking.h" local="yes" imported="no">ArNetworking.h</includes>
     <includes id="ArServerMode_8h" name="ArServerMode.h" local="yes" imported="no">ArServerMode.h</includes>
@@ -686,14 +714,14 @@
   </compound>
   <compound kind="file">
     <name>ArServerSimpleCommands.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/src/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/src/</path>
     <filename>ArServerSimpleCommands_8cpp</filename>
     <includes id="ArServerBase_8h" name="ArServerBase.h" local="yes" imported="no">ArServerBase.h</includes>
     <includes id="ArServerSimpleCommands_8h" name="ArServerSimpleCommands.h" local="yes" imported="no">ArServerSimpleCommands.h</includes>
   </compound>
   <compound kind="file">
     <name>ArServerSimpleCommands.h</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/include/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
     <filename>ArServerSimpleCommands_8h</filename>
     <includes id="ArServerBase_8h" name="ArServerBase.h" local="yes" imported="no">ArServerBase.h</includes>
     <includes id="ArServerHandlerCommands_8h" name="ArServerHandlerCommands.h" local="yes" imported="no">ArServerHandlerCommands.h</includes>
@@ -710,45 +738,93 @@
   </compound>
   <compound kind="file">
     <name>ArServerSimpleOpener.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/src/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/src/</path>
     <filename>ArServerSimpleOpener_8cpp</filename>
     <includes id="ArServerBase_8h" name="ArServerBase.h" local="yes" imported="no">ArServerBase.h</includes>
     <includes id="ArServerSimpleOpener_8h" name="ArServerSimpleOpener.h" local="yes" imported="no">ArServerSimpleOpener.h</includes>
   </compound>
   <compound kind="file">
     <name>ArServerSimpleOpener.h</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/include/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
     <filename>ArServerSimpleOpener_8h</filename>
     <class kind="class">ArServerSimpleOpener</class>
   </compound>
   <compound kind="file">
     <name>ArServerUserInfo.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/src/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/src/</path>
     <filename>ArServerUserInfo_8cpp</filename>
     <includes id="ArServerUserInfo_8h" name="ArServerUserInfo.h" local="yes" imported="no">ArServerUserInfo.h</includes>
     <includes id="md5_8h" name="md5.h" local="yes" imported="no">md5.h</includes>
   </compound>
   <compound kind="file">
     <name>ArServerUserInfo.h</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/include/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
     <filename>ArServerUserInfo_8h</filename>
     <class kind="class">ArServerUserInfo</class>
   </compound>
   <compound kind="file">
     <name>ArTempDirectoryHelper.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/src/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/src/</path>
     <filename>ArTempDirectoryHelper_8cpp</filename>
     <includes id="ArTempDirectoryHelper_8h" name="ArTempDirectoryHelper.h" local="yes" imported="no">ArTempDirectoryHelper.h</includes>
   </compound>
   <compound kind="file">
     <name>ArTempDirectoryHelper.h</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/include/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
     <filename>ArTempDirectoryHelper_8h</filename>
     <class kind="class">ArTempDirectoryHelper</class>
   </compound>
   <compound kind="file">
+    <name>changeMapOnServer.cpp</name>
+    <path>/home/reed/amrsw/Aria/ArNetworking/examples/</path>
+    <filename>changeMapOnServer_8cpp</filename>
+    <includes id="ArNetworking_8h" name="ArNetworking.h" local="yes" imported="no">ArNetworking.h</includes>
+    <member kind="function">
+      <type>void</type>
+      <name>gotConfig</name>
+      <anchorfile>changeMapOnServer_8cpp.html</anchorfile>
+      <anchor>ab8946d6e7cc5a808b5e38e0af5c59a1f</anchor>
+      <arglist>(void)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>main</name>
+      <anchorfile>changeMapOnServer_8cpp.html</anchorfile>
+      <anchor>a3c04138a5bfe5d72780bb7e82a18e627</anchor>
+      <arglist>(int argc, char **argv)</arglist>
+    </member>
+    <member kind="variable">
+      <type>ArClientBase *</type>
+      <name>client</name>
+      <anchorfile>changeMapOnServer_8cpp.html</anchorfile>
+      <anchor>afe594bfb305907ae82f259409cc214cb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>ArClientHandlerConfig *</type>
+      <name>configHandler</name>
+      <anchorfile>changeMapOnServer_8cpp.html</anchorfile>
+      <anchor>a23fc63bf087f036c9b9aeca16a881e0d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>done</name>
+      <anchorfile>changeMapOnServer_8cpp.html</anchorfile>
+      <anchor>a1d39aac66e12dae50a24cd7a9100ef33</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>newmapname</name>
+      <anchorfile>changeMapOnServer_8cpp.html</anchorfile>
+      <anchor>a7fbcf2b9c4e9e7018da2261c0274dec9</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
     <name>clientCommandLister.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/examples/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/examples/</path>
     <filename>clientCommandLister_8cpp</filename>
     <includes id="ArNetworking_8h" name="ArNetworking.h" local="yes" imported="no">ArNetworking.h</includes>
     <member kind="function">
@@ -761,11 +837,19 @@
   </compound>
   <compound kind="file">
     <name>clientDemo.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/examples/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/examples/</path>
     <filename>clientDemo_8cpp</filename>
     <includes id="ArNetworking_8h" name="ArNetworking.h" local="yes" imported="no">ArNetworking.h</includes>
+    <includes id="ArClientRatioDrive_8h" name="ArClientRatioDrive.h" local="yes" imported="no">ArClientRatioDrive.h</includes>
     <class kind="class">InputHandler</class>
     <class kind="class">OutputHandler</class>
+    <member kind="define">
+      <type>#define</type>
+      <name>VEL_AMOUNT</name>
+      <anchorfile>clientDemo_8cpp.html</anchorfile>
+      <anchor>a811508c0bfced9ad9ddbc0fe843e59c4</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type>void</type>
       <name>escape</name>
@@ -782,8 +866,65 @@
     </member>
   </compound>
   <compound kind="file">
+    <name>clientStringInfoExample.cpp</name>
+    <path>/home/reed/amrsw/Aria/ArNetworking/examples/</path>
+    <filename>clientStringInfoExample_8cpp</filename>
+    <includes id="ArNetworking_8h" name="ArNetworking.h" local="yes" imported="no">ArNetworking.h</includes>
+    <includes id="ArClientHandlerRobotUpdate_8h" name="ArClientHandlerRobotUpdate.h" local="yes" imported="no">ArClientHandlerRobotUpdate.h</includes>
+    <class kind="struct">Item</class>
+    <member kind="function">
+      <type>void</type>
+      <name>handleStringsData</name>
+      <anchorfile>clientStringInfoExample_8cpp.html</anchorfile>
+      <anchor>a1f680c75bc8f0316b50d84f79907352d</anchor>
+      <arglist>(ArNetPacket *)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>handleStringsInfo</name>
+      <anchorfile>clientStringInfoExample_8cpp.html</anchorfile>
+      <anchor>af21395aeb5e3dd032df3f9a46211a940</anchor>
+      <arglist>(ArNetPacket *)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>main</name>
+      <anchorfile>clientStringInfoExample_8cpp.html</anchorfile>
+      <anchor>a3c04138a5bfe5d72780bb7e82a18e627</anchor>
+      <arglist>(int argc, char **argv)</arglist>
+    </member>
+    <member kind="variable">
+      <type>ArClientBase</type>
+      <name>client</name>
+      <anchorfile>clientStringInfoExample_8cpp.html</anchorfile>
+      <anchor>a1c29a1d0b25060a8fc5beba569fbf5a8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; struct Item &gt;</type>
+      <name>data</name>
+      <anchorfile>clientStringInfoExample_8cpp.html</anchorfile>
+      <anchor>aa145b758b8385fd760f174780ccc5c69</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>ArMutex</type>
+      <name>dataMutex</name>
+      <anchorfile>clientStringInfoExample_8cpp.html</anchorfile>
+      <anchor>ab49a1c28e4503dd220ec740ce6ca1edc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>go</name>
+      <anchorfile>clientStringInfoExample_8cpp.html</anchorfile>
+      <anchor>aee8191c767bcded411aa8c5bd8581ce2</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
     <name>configClient.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/examples/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/examples/</path>
     <filename>configClient_8cpp</filename>
     <includes id="ArNetworking_8h" name="ArNetworking.h" local="yes" imported="no">ArNetworking.h</includes>
     <member kind="function">
@@ -824,7 +965,7 @@
   </compound>
   <compound kind="file">
     <name>configClientToServer.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/examples/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/examples/</path>
     <filename>configClientToServer_8cpp</filename>
     <includes id="ArNetworking_8h" name="ArNetworking.h" local="yes" imported="no">ArNetworking.h</includes>
     <member kind="function">
@@ -879,7 +1020,7 @@
   </compound>
   <compound kind="file">
     <name>configServer.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/examples/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/examples/</path>
     <filename>configServer_8cpp</filename>
     <includes id="ArNetworking_8h" name="ArNetworking.h" local="yes" imported="no">ArNetworking.h</includes>
     <member kind="function">
@@ -892,7 +1033,7 @@
   </compound>
   <compound kind="file">
     <name>configServerRobot.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/examples/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/examples/</path>
     <filename>configServerRobot_8cpp</filename>
     <includes id="ArNetworking_8h" name="ArNetworking.h" local="yes" imported="no">ArNetworking.h</includes>
     <member kind="function">
@@ -905,7 +1046,7 @@
   </compound>
   <compound kind="file">
     <name>drawingsExample.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/examples/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/examples/</path>
     <filename>drawingsExample_8cpp</filename>
     <includes id="ArNetworking_8h" name="ArNetworking.h" local="yes" imported="no">ArNetworking.h</includes>
     <class kind="class">Circle</class>
@@ -947,7 +1088,7 @@
   </compound>
   <compound kind="file">
     <name>drawingsExampleWithRobot.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/examples/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/examples/</path>
     <filename>drawingsExampleWithRobot_8cpp</filename>
     <includes id="ArNetworking_8h" name="ArNetworking.h" local="yes" imported="no">ArNetworking.h</includes>
     <member kind="function">
@@ -988,7 +1129,7 @@
   </compound>
   <compound kind="file">
     <name>getVideoExample.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/examples/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/examples/</path>
     <filename>getVideoExample_8cpp</filename>
     <includes id="ArNetworking_8h" name="ArNetworking.h" local="yes" imported="no">ArNetworking.h</includes>
     <member kind="function">
@@ -1036,7 +1177,7 @@
   </compound>
   <compound kind="file">
     <name>md5.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/src/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/src/</path>
     <filename>md5_8cpp</filename>
     <includes id="md5_8h" name="md5.h" local="yes" imported="no">md5.h</includes>
     <member kind="define">
@@ -1595,7 +1736,7 @@
   </compound>
   <compound kind="file">
     <name>md5.h</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/include/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/include/</path>
     <filename>md5_8h</filename>
     <class kind="struct">md5_state_s</class>
     <member kind="typedef">
@@ -1642,8 +1783,13 @@
     </member>
   </compound>
   <compound kind="file">
+    <name>overview.dox</name>
+    <path>/home/reed/amrsw/Aria/ArNetworking/docs/</path>
+    <filename>overview_8dox</filename>
+  </compound>
+  <compound kind="file">
     <name>popupExample.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/examples/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/examples/</path>
     <filename>popupExample_8cpp</filename>
     <includes id="ArNetworking_8h" name="ArNetworking.h" local="yes" imported="no">ArNetworking.h</includes>
     <class kind="class">SensorDetectPopup</class>
@@ -1657,7 +1803,7 @@
   </compound>
   <compound kind="file">
     <name>ptzCameraClientExample.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/examples/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/examples/</path>
     <filename>ptzCameraClientExample_8cpp</filename>
     <includes id="ArNetworking_8h" name="ArNetworking.h" local="yes" imported="no">ArNetworking.h</includes>
     <class kind="class">ArClientHandlerCamera</class>
@@ -1672,8 +1818,13 @@
     </member>
   </compound>
   <compound kind="file">
+    <name>RemoteRequestAPI.dox</name>
+    <path>/home/reed/amrsw/Aria/ArNetworking/docs/</path>
+    <filename>RemoteRequestAPI_8dox</filename>
+  </compound>
+  <compound kind="file">
     <name>robotUpdateExample.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/examples/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/examples/</path>
     <filename>robotUpdateExample_8cpp</filename>
     <includes id="ArNetworking_8h" name="ArNetworking.h" local="yes" imported="no">ArNetworking.h</includes>
     <includes id="ArClientHandlerRobotUpdate_8h" name="ArClientHandlerRobotUpdate.h" local="yes" imported="no">ArClientHandlerRobotUpdate.h</includes>
@@ -1687,9 +1838,10 @@
   </compound>
   <compound kind="file">
     <name>serverDemo.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/examples/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/examples/</path>
     <filename>serverDemo_8cpp</filename>
     <includes id="ArNetworking_8h" name="ArNetworking.h" local="yes" imported="no">ArNetworking.h</includes>
+    <includes id="ArServerModeJogPosition_8h" name="ArServerModeJogPosition.h" local="yes" imported="no">ArServerModeJogPosition.h</includes>
     <member kind="function">
       <type>int</type>
       <name>main</name>
@@ -1700,16 +1852,9 @@
   </compound>
   <compound kind="file">
     <name>simpleServerExample.cpp</name>
-    <path>/home/reed/Aria.aria_2_9/ArNetworking/examples/</path>
+    <path>/home/reed/amrsw/Aria/ArNetworking/examples/</path>
     <filename>simpleServerExample_8cpp</filename>
     <includes id="ArNetworking_8h" name="ArNetworking.h" local="yes" imported="no">ArNetworking.h</includes>
-    <member kind="function">
-      <type>void</type>
-      <name>customCommandHandler</name>
-      <anchorfile>simpleServerExample_8cpp.html</anchorfile>
-      <anchor>add1c721702b296b8849e0e3be7775bc2</anchor>
-      <arglist>(ArArgumentBuilder *args)</arglist>
-    </member>
     <member kind="function">
       <type>int</type>
       <name>main</name>
@@ -1840,76 +1985,138 @@
       <anchor>a485f9ceb0e8496dc89961700552958d6</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="enumeration">
-      <name>ReturnType</name>
-      <anchorfile>classArCentralForwarder.html</anchorfile>
-      <anchor>a6844773eaf1c1b39a53c8cc4417f8342</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>RETURN_NONE</name>
-      <anchorfile>classArCentralForwarder.html</anchorfile>
-      <anchor>a6844773eaf1c1b39a53c8cc4417f8342a3496674755d46a601dc2fb00d69133cd</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>RETURN_SINGLE</name>
-      <anchorfile>classArCentralForwarder.html</anchorfile>
-      <anchor>a6844773eaf1c1b39a53c8cc4417f8342ad34fc048337b251fd1f13da3344ca6b7</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>RETURN_VIDEO</name>
-      <anchorfile>classArCentralForwarder.html</anchorfile>
-      <anchor>a6844773eaf1c1b39a53c8cc4417f8342a68e36b9520ff2c7fe7dac930d7f962d4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>RETURN_UNTIL_EMPTY</name>
-      <anchorfile>classArCentralForwarder.html</anchorfile>
-      <anchor>a6844773eaf1c1b39a53c8cc4417f8342aa751b0656ccd8d0d58239dad19b09f30</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
       <name>RETURN_COMPLEX</name>
       <anchorfile>classArCentralForwarder.html</anchorfile>
       <anchor>a6844773eaf1c1b39a53c8cc4417f8342a94947964d4fc67e0b62cc5c7f4abece2</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
+      <name>RETURN_NONE</name>
+      <anchorfile>classArCentralForwarder.html</anchorfile>
+      <anchor>a6844773eaf1c1b39a53c8cc4417f8342a3496674755d46a601dc2fb00d69133cd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>RETURN_SINGLE</name>
+      <anchorfile>classArCentralForwarder.html</anchorfile>
+      <anchor>a6844773eaf1c1b39a53c8cc4417f8342ad34fc048337b251fd1f13da3344ca6b7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>RETURN_UNTIL_EMPTY</name>
+      <anchorfile>classArCentralForwarder.html</anchorfile>
+      <anchor>a6844773eaf1c1b39a53c8cc4417f8342aa751b0656ccd8d0d58239dad19b09f30</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>RETURN_VIDEO</name>
+      <anchorfile>classArCentralForwarder.html</anchorfile>
+      <anchor>a6844773eaf1c1b39a53c8cc4417f8342a68e36b9520ff2c7fe7dac930d7f962d4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
       <name>RETURN_VIDEO_OPTIM</name>
       <anchorfile>classArCentralForwarder.html</anchorfile>
       <anchor>a6844773eaf1c1b39a53c8cc4417f8342af87ab227a1afa28adf8787473c3e98f3</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumeration">
+    <member kind="enumeration" protection="protected">
+      <type></type>
+      <name>ReturnType</name>
+      <anchorfile>classArCentralForwarder.html</anchorfile>
+      <anchor>a6844773eaf1c1b39a53c8cc4417f8342</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>RETURN_NONE</name>
+      <anchorfile>classArCentralForwarder.html</anchorfile>
+      <anchor>a6844773eaf1c1b39a53c8cc4417f8342a3496674755d46a601dc2fb00d69133cd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>RETURN_SINGLE</name>
+      <anchorfile>classArCentralForwarder.html</anchorfile>
+      <anchor>a6844773eaf1c1b39a53c8cc4417f8342ad34fc048337b251fd1f13da3344ca6b7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>RETURN_VIDEO</name>
+      <anchorfile>classArCentralForwarder.html</anchorfile>
+      <anchor>a6844773eaf1c1b39a53c8cc4417f8342a68e36b9520ff2c7fe7dac930d7f962d4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>RETURN_UNTIL_EMPTY</name>
+      <anchorfile>classArCentralForwarder.html</anchorfile>
+      <anchor>a6844773eaf1c1b39a53c8cc4417f8342aa751b0656ccd8d0d58239dad19b09f30</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>RETURN_COMPLEX</name>
+      <anchorfile>classArCentralForwarder.html</anchorfile>
+      <anchor>a6844773eaf1c1b39a53c8cc4417f8342a94947964d4fc67e0b62cc5c7f4abece2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>RETURN_VIDEO_OPTIM</name>
+      <anchorfile>classArCentralForwarder.html</anchorfile>
+      <anchor>a6844773eaf1c1b39a53c8cc4417f8342af87ab227a1afa28adf8787473c3e98f3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration" protection="protected">
+      <type></type>
       <name>State</name>
       <anchorfile>classArCentralForwarder.html</anchorfile>
       <anchor>a2b8bbbfa0a3271f11f61e54576e0131c</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
       <name>STATE_STARTING</name>
       <anchorfile>classArCentralForwarder.html</anchorfile>
       <anchor>a2b8bbbfa0a3271f11f61e54576e0131ca0e6f96762eb4c07dea30e200e7f40350</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
       <name>STATE_CONNECTING</name>
       <anchorfile>classArCentralForwarder.html</anchorfile>
       <anchor>a2b8bbbfa0a3271f11f61e54576e0131ca52c612de7b1a40a4c197a543df6c0099</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
       <name>STATE_GATHERING</name>
       <anchorfile>classArCentralForwarder.html</anchorfile>
       <anchor>a2b8bbbfa0a3271f11f61e54576e0131cadc22bf7017a315ad9a497fcbf0b53da6</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
       <name>STATE_CONNECTED</name>
       <anchorfile>classArCentralForwarder.html</anchorfile>
       <anchor>a2b8bbbfa0a3271f11f61e54576e0131ca1deabe169e195fb6169450a9ebdff59a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>STATE_CONNECTED</name>
+      <anchorfile>classArCentralForwarder.html</anchorfile>
+      <anchor>a2b8bbbfa0a3271f11f61e54576e0131ca1deabe169e195fb6169450a9ebdff59a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>STATE_CONNECTING</name>
+      <anchorfile>classArCentralForwarder.html</anchorfile>
+      <anchor>a2b8bbbfa0a3271f11f61e54576e0131ca52c612de7b1a40a4c197a543df6c0099</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>STATE_GATHERING</name>
+      <anchorfile>classArCentralForwarder.html</anchorfile>
+      <anchor>a2b8bbbfa0a3271f11f61e54576e0131cadc22bf7017a315ad9a497fcbf0b53da6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>STATE_STARTING</name>
+      <anchorfile>classArCentralForwarder.html</anchorfile>
+      <anchor>a2b8bbbfa0a3271f11f61e54576e0131ca0e6f96762eb4c07dea30e200e7f40350</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected">
@@ -2670,7 +2877,13 @@
       <anchor>a1ce072950f177923a8c014402abdedee</anchor>
       <arglist>(const ArConfigArg &amp;arg, bool isIncludeSeparator=true)</arglist>
     </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
+      <name>BUFFER_LENGTH</name>
+      <anchorfile>classArClientArg.html</anchorfile>
+      <anchor>a7ef127dda08f47d8ea2c7b62d52672caaf9ca3a828ed347da4b93e3122b7dc582</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
       <name>BUFFER_LENGTH</name>
       <anchorfile>classArClientArg.html</anchorfile>
       <anchor>a7ef127dda08f47d8ea2c7b62d52672caaf9ca3a828ed347da4b93e3122b7dc582</anchor>
@@ -2744,7 +2957,14 @@
       <anchor>a307d45f7ff6432775c9f6a6be2a46b9cafa66f83897cf6fac0c909e409984730a</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumvalue">
+      <name>CLIENT_KEY_LENGTH</name>
+      <anchorfile>classArClientBase.html</anchorfile>
+      <anchor>a307d45f7ff6432775c9f6a6be2a46b9cafa66f83897cf6fac0c909e409984730a</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="enumeration">
+      <type></type>
       <name>ClientState</name>
       <anchorfile>classArClientBase.html</anchorfile>
       <anchor>af81d1a763266af658676640386e0bdf0</anchor>
@@ -2798,7 +3018,26 @@
       <anchor>af81d1a763266af658676640386e0bdf0a00a87398679ccc603667d8df5863f528</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumvalue">
+      <name>NON_BLOCKING_CONNECTED</name>
+      <anchorfile>classArClientBase.html</anchorfile>
+      <anchor>a5566cb8173dd4c9ab4bcd3927c6af08fab549562d74947d93718d2e84d26c83e2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>NON_BLOCKING_CONTINUE</name>
+      <anchorfile>classArClientBase.html</anchorfile>
+      <anchor>a5566cb8173dd4c9ab4bcd3927c6af08fa5247a113a022404af73587ada6251d55</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>NON_BLOCKING_FAILED</name>
+      <anchorfile>classArClientBase.html</anchorfile>
+      <anchor>a5566cb8173dd4c9ab4bcd3927c6af08fa33c6c425717634c2e0988d8ed09cc5a1</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="enumeration">
+      <type></type>
       <name>NonBlockingConnectReturn</name>
       <anchorfile>classArClientBase.html</anchorfile>
       <anchor>a5566cb8173dd4c9ab4bcd3927c6af08f</anchor>
@@ -2820,6 +3059,54 @@
       <name>NON_BLOCKING_FAILED</name>
       <anchorfile>classArClientBase.html</anchorfile>
       <anchor>a5566cb8173dd4c9ab4bcd3927c6af08fa33c6c425717634c2e0988d8ed09cc5a1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>STATE_CONNECTED</name>
+      <anchorfile>classArClientBase.html</anchorfile>
+      <anchor>af81d1a763266af658676640386e0bdf0ae25062edaf7738d1b4bb46824fecb562</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>STATE_EXCHANGED_INTROS</name>
+      <anchorfile>classArClientBase.html</anchorfile>
+      <anchor>af81d1a763266af658676640386e0bdf0a2d6dea49e2382d59c9ef98685f1e8e2b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>STATE_FAILED_CONNECTION</name>
+      <anchorfile>classArClientBase.html</anchorfile>
+      <anchor>af81d1a763266af658676640386e0bdf0a68d3d360258b80db85e7b0eb2220e7e4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>STATE_LOST_CONNECTION</name>
+      <anchorfile>classArClientBase.html</anchorfile>
+      <anchor>af81d1a763266af658676640386e0bdf0a00a87398679ccc603667d8df5863f528</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>STATE_NO_CONNECTION</name>
+      <anchorfile>classArClientBase.html</anchorfile>
+      <anchor>af81d1a763266af658676640386e0bdf0a2dc9a243a788b28855a2120ff03d91c1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>STATE_OPENED_SOCKET</name>
+      <anchorfile>classArClientBase.html</anchorfile>
+      <anchor>af81d1a763266af658676640386e0bdf0ae8788d50c4490a33e2d1d1532913001f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>STATE_REJECTED</name>
+      <anchorfile>classArClientBase.html</anchorfile>
+      <anchor>af81d1a763266af658676640386e0bdf0a02f2e7a7258afdcb09500599fce5e34a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>STATE_WAITING_LIST</name>
+      <anchorfile>classArClientBase.html</anchorfile>
+      <anchor>af81d1a763266af658676640386e0bdf0ae2760604361ba1d0263e9ad255afdc79</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -2975,6 +3262,13 @@
       <anchorfile>classArClientBase.html</anchorfile>
       <anchor>ad331af6cfcbc37079d4f1bb283cd509e</anchor>
       <arglist>(unsigned int command, bool internalCall=false)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>getPort</name>
+      <anchorfile>classArClientBase.html</anchorfile>
+      <anchor>a9f5d72f8951f20a3bea6094fcbb9af52</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -3202,6 +3496,27 @@
     </member>
     <member kind="function">
       <type>bool</type>
+      <name>requestOnceWithDouble</name>
+      <anchorfile>classArClientBase.html</anchorfile>
+      <anchor>a972cebefaa57d709158b5b0d2c459d0f</anchor>
+      <arglist>(const char *name, double val)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>requestOnceWithInt16</name>
+      <anchorfile>classArClientBase.html</anchorfile>
+      <anchor>ad70a1f142b30a08ab54a02146a4c2005</anchor>
+      <arglist>(const char *name, ArTypes::Byte2 val)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>requestOnceWithInt32</name>
+      <anchorfile>classArClientBase.html</anchorfile>
+      <anchor>a539a9fd371bade04042cf48191afd674</anchor>
+      <arglist>(const char *name, ArTypes::Byte4 val)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
       <name>requestOnceWithString</name>
       <anchorfile>classArClientBase.html</anchorfile>
       <anchor>a3b3783c386707050eb83287cb53dd07b</anchor>
@@ -3333,25 +3648,44 @@
       <anchor>aabd8d349c5ab2432da4f70bccbbaa40d</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="enumeration">
-      <name>NonBlockingConnectState</name>
-      <anchorfile>classArClientBase.html</anchorfile>
-      <anchor>a35dcde5f344eaa074ca8f9d24f8eff98</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
       <name>NON_BLOCKING_STATE_NONE</name>
       <anchorfile>classArClientBase.html</anchorfile>
       <anchor>a35dcde5f344eaa074ca8f9d24f8eff98acfa60790190c56dbc6ac2c6d6a28b9e6</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
       <name>NON_BLOCKING_STATE_TCP</name>
       <anchorfile>classArClientBase.html</anchorfile>
       <anchor>a35dcde5f344eaa074ca8f9d24f8eff98a4d7debec8a6eb594197dd7e8bd923df5</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
+      <name>NON_BLOCKING_STATE_UDP</name>
+      <anchorfile>classArClientBase.html</anchorfile>
+      <anchor>a35dcde5f344eaa074ca8f9d24f8eff98aad33312bd96237d4ac9921ab1e7f1609</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration" protection="protected">
+      <type></type>
+      <name>NonBlockingConnectState</name>
+      <anchorfile>classArClientBase.html</anchorfile>
+      <anchor>a35dcde5f344eaa074ca8f9d24f8eff98</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>NON_BLOCKING_STATE_NONE</name>
+      <anchorfile>classArClientBase.html</anchorfile>
+      <anchor>a35dcde5f344eaa074ca8f9d24f8eff98acfa60790190c56dbc6ac2c6d6a28b9e6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>NON_BLOCKING_STATE_TCP</name>
+      <anchorfile>classArClientBase.html</anchorfile>
+      <anchor>a35dcde5f344eaa074ca8f9d24f8eff98a4d7debec8a6eb594197dd7e8bd923df5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
       <name>NON_BLOCKING_STATE_UDP</name>
       <anchorfile>classArClientBase.html</anchorfile>
       <anchor>a35dcde5f344eaa074ca8f9d24f8eff98aad33312bd96237d4ac9921ab1e7f1609</anchor>
@@ -3593,6 +3927,13 @@
       <name>myPassword</name>
       <anchorfile>classArClientBase.html</anchorfile>
       <anchor>acad6369b983172d3092c65def1a36edc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>myPort</name>
+      <anchorfile>classArClientBase.html</anchorfile>
+      <anchor>a1486b59cf86991bc2d34c975146d7294</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
@@ -3856,62 +4197,10 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>ArClientBase::Tracker</name>
-    <filename>classArClientBase_1_1Tracker.html</filename>
-    <member kind="function">
-      <type>void</type>
-      <name>reset</name>
-      <anchorfile>classArClientBase_1_1Tracker.html</anchorfile>
-      <anchor>a1ef7cf1c3e03ce9de72f74d251623117</anchor>
-      <arglist>(void)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Tracker</name>
-      <anchorfile>classArClientBase_1_1Tracker.html</anchorfile>
-      <anchor>af61907fd5b4b257530e45f0d5e25e305</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~Tracker</name>
-      <anchorfile>classArClientBase_1_1Tracker.html</anchorfile>
-      <anchor>a7a23f36b23aeeeb0800a5ffbf11ae76a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="variable">
-      <type>long</type>
-      <name>myBytesTcp</name>
-      <anchorfile>classArClientBase_1_1Tracker.html</anchorfile>
-      <anchor>ae77db0fcc4a56b7c1e3b05fcb6b5f13d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>long</type>
-      <name>myBytesUdp</name>
-      <anchorfile>classArClientBase_1_1Tracker.html</anchorfile>
-      <anchor>aa6a98130c77bddfe81cd311e617b24b5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>long</type>
-      <name>myPacketsTcp</name>
-      <anchorfile>classArClientBase_1_1Tracker.html</anchorfile>
-      <anchor>a7e4d641248b576a3b36b6614c6fe8eb7</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>long</type>
-      <name>myPacketsUdp</name>
-      <anchorfile>classArClientBase_1_1Tracker.html</anchorfile>
-      <anchor>a943ac46100272dcf90af50b2ddb58ad9</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>ArClientCommands</name>
     <filename>classArClientCommands.html</filename>
     <member kind="enumeration">
+      <type></type>
       <name>ClientCommands</name>
       <anchorfile>classArClientCommands.html</anchorfile>
       <anchor>a00074f9d9e04007dc302b68f345da0ad</anchor>
@@ -3963,6 +4252,54 @@
       <name>REQUESTSTOP</name>
       <anchorfile>classArClientCommands.html</anchorfile>
       <anchor>a00074f9d9e04007dc302b68f345da0ada63841de4a0664fd8b95d08a3f5dc5db6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>INTRODUCTION</name>
+      <anchorfile>classArClientCommands.html</anchorfile>
+      <anchor>a00074f9d9e04007dc302b68f345da0ada540fe9469c4660435421e6d76b6122ec</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>LIST</name>
+      <anchorfile>classArClientCommands.html</anchorfile>
+      <anchor>a00074f9d9e04007dc302b68f345da0ada689ad2b0f8a71ff17e861afc5edf9cae</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>REQUEST</name>
+      <anchorfile>classArClientCommands.html</anchorfile>
+      <anchor>a00074f9d9e04007dc302b68f345da0adab3479a9230678a1654c9da450b378631</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>REQUESTSTOP</name>
+      <anchorfile>classArClientCommands.html</anchorfile>
+      <anchor>a00074f9d9e04007dc302b68f345da0ada63841de4a0664fd8b95d08a3f5dc5db6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>SHUTDOWN</name>
+      <anchorfile>classArClientCommands.html</anchorfile>
+      <anchor>a00074f9d9e04007dc302b68f345da0ada998b99926df0606489a735001fcff084</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TCP_ONLY</name>
+      <anchorfile>classArClientCommands.html</anchorfile>
+      <anchor>a00074f9d9e04007dc302b68f345da0ada7bea5a2b6ce1afe50f03230575e6b840</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>UDP_CONFIRMATION</name>
+      <anchorfile>classArClientCommands.html</anchorfile>
+      <anchor>a00074f9d9e04007dc302b68f345da0ada6012f0c13f7cb9cdd2565472fd32c2e8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>UDP_INTRODUCTION</name>
+      <anchorfile>classArClientCommands.html</anchorfile>
+      <anchor>a00074f9d9e04007dc302b68f345da0adad734901cda4673894786109803a3d48c</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -4356,9 +4693,28 @@
     <name>ArClientFileFromClient</name>
     <filename>classArClientFileFromClient.html</filename>
     <member kind="enumeration">
+      <type></type>
       <name>SendSpeed</name>
       <anchorfile>classArClientFileFromClient.html</anchorfile>
       <anchor>af616d7009ffc1d4da0ceb4a4f14c50f3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>SPEED_AUTO</name>
+      <anchorfile>classArClientFileFromClient.html</anchorfile>
+      <anchor>af616d7009ffc1d4da0ceb4a4f14c50f3a5e5bdd437c73ed0f1bd66a85e067b7ee</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>SPEED_FAST</name>
+      <anchorfile>classArClientFileFromClient.html</anchorfile>
+      <anchor>af616d7009ffc1d4da0ceb4a4f14c50f3a6c5c85759206d70311afe5e5f004687e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>SPEED_SLOW</name>
+      <anchorfile>classArClientFileFromClient.html</anchorfile>
+      <anchor>af616d7009ffc1d4da0ceb4a4f14c50f3a9bbda9b413fa78dbd49ebf09d8dfe59d</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
@@ -5450,83 +5806,6 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>void</type>
-      <name>handleGetConfig</name>
-      <anchorfile>classArClientHandlerConfig.html</anchorfile>
-      <anchor>aec6a51ce354f65d6493ed830df03d152</anchor>
-      <arglist>(ArNetPacket *packet)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>handleGetConfigBySections</name>
-      <anchorfile>classArClientHandlerConfig.html</anchorfile>
-      <anchor>ac99e70ade9c9a5a23c312fc167876f57</anchor>
-      <arglist>(ArNetPacket *packet)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>handleGetConfigBySectionsV2</name>
-      <anchorfile>classArClientHandlerConfig.html</anchorfile>
-      <anchor>aa8c20a314bd78f4b9352dd0d7238f67a</anchor>
-      <arglist>(ArNetPacket *packet)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>handleGetConfigBySectionsV3</name>
-      <anchorfile>classArClientHandlerConfig.html</anchorfile>
-      <anchor>a7c739ea3474ca306f20ca9772becbed2</anchor>
-      <arglist>(ArNetPacket *packet)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>handleGetConfigBySectionsV4</name>
-      <anchorfile>classArClientHandlerConfig.html</anchorfile>
-      <anchor>a937a1aa320a0bb7d3caa487f3029502a</anchor>
-      <arglist>(ArNetPacket *packet)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>handleGetConfigDefaults</name>
-      <anchorfile>classArClientHandlerConfig.html</anchorfile>
-      <anchor>a82b10a0f6dbdf7997999820d7573f366</anchor>
-      <arglist>(ArNetPacket *packet)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>handleGetConfigSectionFlags</name>
-      <anchorfile>classArClientHandlerConfig.html</anchorfile>
-      <anchor>ab8fe538b60f984a360f39849ff9fcd60</anchor>
-      <arglist>(ArNetPacket *packet)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>handleGetLastEditablePriority</name>
-      <anchorfile>classArClientHandlerConfig.html</anchorfile>
-      <anchor>afd0f6a5788125c307a6619db83e3d01e</anchor>
-      <arglist>(ArNetPacket *packet)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>handleSetConfig</name>
-      <anchorfile>classArClientHandlerConfig.html</anchorfile>
-      <anchor>abcb44e52fec449e7846719cd5766c5ae</anchor>
-      <arglist>(ArNetPacket *packet)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>handleSetConfigBySections</name>
-      <anchorfile>classArClientHandlerConfig.html</anchorfile>
-      <anchor>a35d08d7486c2010799a7a8df28f11a04</anchor>
-      <arglist>(ArNetPacket *packet)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>handleSetConfigBySectionsV2</name>
-      <anchorfile>classArClientHandlerConfig.html</anchorfile>
-      <anchor>a81dde1f8bf5c913f175419de46d8367f</anchor>
-      <arglist>(ArNetPacket *packet)</arglist>
-    </member>
-    <member kind="function">
       <type>bool</type>
       <name>haveGottenConfig</name>
       <anchorfile>classArClientHandlerConfig.html</anchorfile>
@@ -5687,244 +5966,6 @@
       <anchor>aee7bfb5dee20a46069a52741109ea668</anchor>
       <arglist>(void)</arglist>
     </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>handleGetConfigData</name>
-      <anchorfile>classArClientHandlerConfig.html</anchorfile>
-      <anchor>a0d46f82fde2c50a0ef54d414fa49ab4e</anchor>
-      <arglist>(ArNetPacket *packet, bool isMultiplePackets, int version)</arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>ArMutex</type>
-      <name>myCallbackMutex</name>
-      <anchorfile>classArClientHandlerConfig.html</anchorfile>
-      <anchor>a6be0af25a5f3b5dbbafe86fe62fa102c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>ArClientBase *</type>
-      <name>myClient</name>
-      <anchorfile>classArClientHandlerConfig.html</anchorfile>
-      <anchor>a572d7412012a1b4cdc36bbba9e98ab0f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>ArConfig</type>
-      <name>myConfig</name>
-      <anchorfile>classArClientHandlerConfig.html</anchorfile>
-      <anchor>aa8d1594939b445dcb99e37245e6f6967</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>ArMutex</type>
-      <name>myDataMutex</name>
-      <anchorfile>classArClientHandlerConfig.html</anchorfile>
-      <anchor>afe8bdf17477c79495e37920438158b5e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>ArConfig *</type>
-      <name>myDefaultConfig</name>
-      <anchorfile>classArClientHandlerConfig.html</anchorfile>
-      <anchor>a3d46c1d4eaa774ba808dbe9b01adcd92</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>std::list&lt; ArFunctor * &gt;</type>
-      <name>myGotConfigCBList</name>
-      <anchorfile>classArClientHandlerConfig.html</anchorfile>
-      <anchor>a5c37090710e383c484ebac08465a1f9d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>std::list&lt; ArFunctor * &gt;</type>
-      <name>myGotConfigDefaultsCBList</name>
-      <anchorfile>classArClientHandlerConfig.html</anchorfile>
-      <anchor>a299d4b90f5ada62eed20105561637868</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>ArCallbackList</type>
-      <name>myGotLastEditablePriorityCBList</name>
-      <anchorfile>classArClientHandlerConfig.html</anchorfile>
-      <anchor>a886e7f86231dc9303e2498381293c53d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>ArFunctor1C&lt; ArClientHandlerConfig, ArNetPacket * &gt;</type>
-      <name>myHandleGetConfigBySectionsCB</name>
-      <anchorfile>classArClientHandlerConfig.html</anchorfile>
-      <anchor>ab3aa371e5726e2580a133025b5d00a53</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>ArFunctor1C&lt; ArClientHandlerConfig, ArNetPacket * &gt;</type>
-      <name>myHandleGetConfigBySectionsV2CB</name>
-      <anchorfile>classArClientHandlerConfig.html</anchorfile>
-      <anchor>ad95bc4cc74abbc314d76d0d3f3bb706c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>ArFunctor1C&lt; ArClientHandlerConfig, ArNetPacket * &gt;</type>
-      <name>myHandleGetConfigBySectionsV3CB</name>
-      <anchorfile>classArClientHandlerConfig.html</anchorfile>
-      <anchor>ac3dd141b1754e22d7d6aa6883817836a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>ArFunctor1C&lt; ArClientHandlerConfig, ArNetPacket * &gt;</type>
-      <name>myHandleGetConfigBySectionsV4CB</name>
-      <anchorfile>classArClientHandlerConfig.html</anchorfile>
-      <anchor>abc2f5b4a45ad764808bb7095c8cba2f0</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>ArFunctor1C&lt; ArClientHandlerConfig, ArNetPacket * &gt;</type>
-      <name>myHandleGetConfigCB</name>
-      <anchorfile>classArClientHandlerConfig.html</anchorfile>
-      <anchor>a47519beb38ecfc1fad2e1d019a74a5cc</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>ArFunctor1C&lt; ArClientHandlerConfig, ArNetPacket * &gt;</type>
-      <name>myHandleGetConfigDefaultsCB</name>
-      <anchorfile>classArClientHandlerConfig.html</anchorfile>
-      <anchor>a3638c70beb90b068ada124b9ccd2a713</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>ArFunctor1C&lt; ArClientHandlerConfig, ArNetPacket * &gt;</type>
-      <name>myHandleGetConfigSectionFlagsCB</name>
-      <anchorfile>classArClientHandlerConfig.html</anchorfile>
-      <anchor>a3544b2c991eba5800a792df9ee7131ba</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>ArFunctor1C&lt; ArClientHandlerConfig, ArNetPacket * &gt;</type>
-      <name>myHandleGetDefaultConfigCB</name>
-      <anchorfile>classArClientHandlerConfig.html</anchorfile>
-      <anchor>a2e8d0c9a5228893425a353c8de8ff4f9</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>ArFunctor1C&lt; ArClientHandlerConfig, ArNetPacket * &gt;</type>
-      <name>myHandleGetLastEditablePriorityCB</name>
-      <anchorfile>classArClientHandlerConfig.html</anchorfile>
-      <anchor>aa550f9771ee94ad86690e016c900dad9</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>ArFunctor1C&lt; ArClientHandlerConfig, ArNetPacket * &gt;</type>
-      <name>myHandleSetConfigBySectionsCB</name>
-      <anchorfile>classArClientHandlerConfig.html</anchorfile>
-      <anchor>a28d6a692413f91eaa5216023b9aa331e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>ArFunctor1C&lt; ArClientHandlerConfig, ArNetPacket * &gt;</type>
-      <name>myHandleSetConfigBySectionsV2CB</name>
-      <anchorfile>classArClientHandlerConfig.html</anchorfile>
-      <anchor>a4192fc920410d3a7a00ed7f4b1130170</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>ArFunctor1C&lt; ArClientHandlerConfig, ArNetPacket * &gt;</type>
-      <name>myHandleSetConfigCB</name>
-      <anchorfile>classArClientHandlerConfig.html</anchorfile>
-      <anchor>aea49a8ce96c18c981edfb05e0e375ba4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>bool</type>
-      <name>myHaveGottenConfig</name>
-      <anchorfile>classArClientHandlerConfig.html</anchorfile>
-      <anchor>aa51243851ee822769b0951bab192ed4d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>bool</type>
-      <name>myHaveGottenDefaults</name>
-      <anchorfile>classArClientHandlerConfig.html</anchorfile>
-      <anchor>a7b676ed086a5919e0c1c1b521db816b1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>bool</type>
-      <name>myHaveGottenLastEditablePriority</name>
-      <anchorfile>classArClientHandlerConfig.html</anchorfile>
-      <anchor>a819b369192e9bbae7c5136b87899c953</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>bool</type>
-      <name>myHaveRequestedConfig</name>
-      <anchorfile>classArClientHandlerConfig.html</anchorfile>
-      <anchor>a283f083e68f5181756d25c2078213a59</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>bool</type>
-      <name>myHaveRequestedDefaultCopy</name>
-      <anchorfile>classArClientHandlerConfig.html</anchorfile>
-      <anchor>a35ae17b289f1b1bc7cf0e273dcef9388</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>bool</type>
-      <name>myHaveRequestedDefaults</name>
-      <anchorfile>classArClientHandlerConfig.html</anchorfile>
-      <anchor>ac3bdb53ae5178300ca51fa2ee8012f6f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>bool</type>
-      <name>myHaveRequestedLastEditablePriority</name>
-      <anchorfile>classArClientHandlerConfig.html</anchorfile>
-      <anchor>adcf129fd4b49d509a6aac78545807119</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>bool</type>
-      <name>myIsQuiet</name>
-      <anchorfile>classArClientHandlerConfig.html</anchorfile>
-      <anchor>aa8c190aa3adc7b4cfb61fffb2856c3db</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>ArPriority::Priority</type>
-      <name>myLastEditablePriority</name>
-      <anchorfile>classArClientHandlerConfig.html</anchorfile>
-      <anchor>ab2819be6e5995d712a002b6ba73d1a98</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>std::string</type>
-      <name>myLogPrefix</name>
-      <anchorfile>classArClientHandlerConfig.html</anchorfile>
-      <anchor>a9a231a982dd11ed2c0998082a6033595</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>std::string</type>
-      <name>myRobotName</name>
-      <anchorfile>classArClientHandlerConfig.html</anchorfile>
-      <anchor>a61d8cadc264033e5005fe4bb23d6a9a2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>std::list&lt; ArFunctor1&lt; const char * &gt; * &gt;</type>
-      <name>mySaveConfigFailedCBList</name>
-      <anchorfile>classArClientHandlerConfig.html</anchorfile>
-      <anchor>ace19cea8f6710fb800d3ae765baee83b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>std::list&lt; ArFunctor * &gt;</type>
-      <name>mySaveConfigSucceededCBList</name>
-      <anchorfile>classArClientHandlerConfig.html</anchorfile>
-      <anchor>a8a324cd130a52dcbe51a82d8cd23c234</anchor>
-      <arglist></arglist>
-    </member>
   </compound>
   <compound kind="class">
     <name>ArClientHandlerRobotUpdate</name>
@@ -5941,8 +5982,8 @@
       <type>void</type>
       <name>addStatusChangedCB</name>
       <anchorfile>classArClientHandlerRobotUpdate.html</anchorfile>
-      <anchor>a890c0680bcd9345d073f6b6e68e5871d</anchor>
-      <arglist>(ArFunctor1&lt; const char * &gt; *cb)</arglist>
+      <anchor>a3f058fc89de776228734b773d4f04bd4</anchor>
+      <arglist>(ArFunctor2&lt; const char *, const char * &gt; *cb)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -5990,8 +6031,8 @@
       <type>void</type>
       <name>remStatusChangedCB</name>
       <anchorfile>classArClientHandlerRobotUpdate.html</anchorfile>
-      <anchor>ad4c0bdb21f089fe1c49b2104ce317593</anchor>
-      <arglist>(ArFunctor1&lt; const char * &gt; *cb)</arglist>
+      <anchor>abaeefbbc9c5d045d071a987a39481e0a</anchor>
+      <arglist>(ArFunctor2&lt; const char *, const char * &gt; *cb)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -6020,6 +6061,20 @@
       <anchorfile>classArClientHandlerRobotUpdate.html</anchorfile>
       <anchor>a2b2e2dbf3cd1fdc44cc93b4a37a1e339</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>waitForMode</name>
+      <anchorfile>classArClientHandlerRobotUpdate.html</anchorfile>
+      <anchor>ae861fa0542620624287b4c2323607a5e</anchor>
+      <arglist>(const char *mode, long timeout)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>waitForStatus</name>
+      <anchorfile>classArClientHandlerRobotUpdate.html</anchorfile>
+      <anchor>a144ae2b9f9b25c861fc4f3d86d9a4934</anchor>
+      <arglist>(const char *status, long timeout)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -6204,6 +6259,13 @@
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>myRequestFreq</name>
+      <anchorfile>classArClientHandlerRobotUpdate.html</anchorfile>
+      <anchor>ad72c512a9e4a8e0536f1bde845bd4c80</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
       <type>std::string</type>
       <name>myStatus</name>
       <anchorfile>classArClientHandlerRobotUpdate.html</anchorfile>
@@ -6211,10 +6273,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>ArCallbackList1&lt; const char * &gt;</type>
+      <type>ArCallbackList2&lt; const char *, const char * &gt;</type>
       <name>myStatusChangedCBList</name>
       <anchorfile>classArClientHandlerRobotUpdate.html</anchorfile>
-      <anchor>a234a355ad77ef8cccde9340b63c6ebfb</anchor>
+      <anchor>a8b552d71e180635db11f9968ec89ae31</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
@@ -6224,85 +6286,246 @@
       <anchor>a2af775ecf21b6395953948933e93fc85</anchor>
       <arglist></arglist>
     </member>
-  </compound>
-  <compound kind="struct">
-    <name>ArClientHandlerRobotUpdate::RobotData</name>
-    <filename>structArClientHandlerRobotUpdate_1_1RobotData.html</filename>
     <member kind="function">
-      <type></type>
-      <name>RobotData</name>
-      <anchorfile>structArClientHandlerRobotUpdate_1_1RobotData.html</anchorfile>
-      <anchor>a52c31a22fdc9bb410934a9dcb327d866</anchor>
+      <type>RobotData</type>
+      <name>getData</name>
+      <anchorfile>classArClientHandlerRobotUpdate.html</anchorfile>
+      <anchor>a20403933a7cde91876995b7737feeaf3</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="variable">
+    <member kind="function">
+      <type>double</type>
+      <name>getX</name>
+      <anchorfile>classArClientHandlerRobotUpdate.html</anchorfile>
+      <anchor>aa8bddfe447a9e409085a6f679d7e961a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>getY</name>
+      <anchorfile>classArClientHandlerRobotUpdate.html</anchorfile>
+      <anchor>a45972dbed0a0a76d41c65ec3ed8174ec</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>getTh</name>
+      <anchorfile>classArClientHandlerRobotUpdate.html</anchorfile>
+      <anchor>af4a9df940976c360a684f48b613b7d93</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>ArPose</type>
+      <name>getPose</name>
+      <anchorfile>classArClientHandlerRobotUpdate.html</anchorfile>
+      <anchor>abffb67d38870da2cb80643d33da5454e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>getVel</name>
+      <anchorfile>classArClientHandlerRobotUpdate.html</anchorfile>
+      <anchor>a5e1e34e06e0daad656186d24081ac05b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>getRotVel</name>
+      <anchorfile>classArClientHandlerRobotUpdate.html</anchorfile>
+      <anchor>a13a63841f9e9188e2ab1bf6fe0ed5a3c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>getLatVel</name>
+      <anchorfile>classArClientHandlerRobotUpdate.html</anchorfile>
+      <anchor>abcdee791aeed3e74ff88bbca5a1cb495</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
       <type>bool</type>
       <name>haveStateOfCharge</name>
-      <anchorfile>structArClientHandlerRobotUpdate_1_1RobotData.html</anchorfile>
-      <anchor>aacf16af23d9c6ce24c7821675bf0e144</anchor>
-      <arglist></arglist>
+      <anchorfile>classArClientHandlerRobotUpdate.html</anchorfile>
+      <anchor>a47609e30e0438eaf17f07e5ffac9d732</anchor>
+      <arglist>()</arglist>
     </member>
-    <member kind="variable">
-      <type>bool</type>
-      <name>haveTemperature</name>
-      <anchorfile>structArClientHandlerRobotUpdate_1_1RobotData.html</anchorfile>
-      <anchor>aecf54125671599e6279c47fc674943f6</anchor>
-      <arglist></arglist>
+    <member kind="function">
+      <type>double</type>
+      <name>getStateOfCharge</name>
+      <anchorfile>classArClientHandlerRobotUpdate.html</anchorfile>
+      <anchor>a6316887244cfa172f21c499bdc96f2a5</anchor>
+      <arglist>()</arglist>
     </member>
-    <member kind="variable">
+    <member kind="function">
       <type>bool</type>
       <name>haveVoltage</name>
-      <anchorfile>structArClientHandlerRobotUpdate_1_1RobotData.html</anchorfile>
-      <anchor>a5f4dce429d08ec51d47d25271ecd8ca5</anchor>
-      <arglist></arglist>
+      <anchorfile>classArClientHandlerRobotUpdate.html</anchorfile>
+      <anchor>ae8be85a05eccb0749500b437179bf28d</anchor>
+      <arglist>()</arglist>
     </member>
-    <member kind="variable">
+    <member kind="function">
       <type>double</type>
-      <name>latVel</name>
-      <anchorfile>structArClientHandlerRobotUpdate_1_1RobotData.html</anchorfile>
-      <anchor>a29f099e4efb19dc5b1dd860743fac7d3</anchor>
-      <arglist></arglist>
+      <name>getVoltage</name>
+      <anchorfile>classArClientHandlerRobotUpdate.html</anchorfile>
+      <anchor>a42a17bf8772a89f2a2c3f64ec823e927</anchor>
+      <arglist>()</arglist>
     </member>
-    <member kind="variable">
-      <type>ArPose</type>
-      <name>pose</name>
-      <anchorfile>structArClientHandlerRobotUpdate_1_1RobotData.html</anchorfile>
-      <anchor>a75022fca1e4a823f5262504996a9212f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
+    <member kind="function">
       <type>double</type>
-      <name>rotVel</name>
-      <anchorfile>structArClientHandlerRobotUpdate_1_1RobotData.html</anchorfile>
-      <anchor>a453a3a9492b288d81b4379e578f0b27d</anchor>
+      <name>getTemperature</name>
+      <anchorfile>classArClientHandlerRobotUpdate.html</anchorfile>
+      <anchor>ad725f0742412edf8bfd8878ac97693bd</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ArClientRatioDrive</name>
+    <filename>classArClientRatioDrive.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>ArClientRatioDrive</name>
+      <anchorfile>classArClientRatioDrive.html</anchorfile>
+      <anchor>a19e32862948ddd6aa6222f735f7dd4df</anchor>
+      <arglist>(ArClientBase *client)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>safeDrive</name>
+      <anchorfile>classArClientRatioDrive.html</anchorfile>
+      <anchor>a1c3c070f66917838db46b6d15b51a38a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setDebugPrint</name>
+      <anchorfile>classArClientRatioDrive.html</anchorfile>
+      <anchor>acda1b11000c9ac18ec81a7e863ccabbc</anchor>
+      <arglist>(bool p=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setLatVelRatio</name>
+      <anchorfile>classArClientRatioDrive.html</anchorfile>
+      <anchor>acb7d006d7207ba49db67d68948b06811</anchor>
+      <arglist>(double r)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setRotVelRatio</name>
+      <anchorfile>classArClientRatioDrive.html</anchorfile>
+      <anchor>a8339880d5a71531e6965092f2ed75882</anchor>
+      <arglist>(double r)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setThrottle</name>
+      <anchorfile>classArClientRatioDrive.html</anchorfile>
+      <anchor>aabf47208f3919dd6d33d5233b7eda109</anchor>
+      <arglist>(double t)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setTransVelRatio</name>
+      <anchorfile>classArClientRatioDrive.html</anchorfile>
+      <anchor>aa276867ce61847ada15f522b505063cc</anchor>
+      <arglist>(double r)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>stop</name>
+      <anchorfile>classArClientRatioDrive.html</anchorfile>
+      <anchor>ad23591cb8795f2c9b79b977f9ad5d9fb</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>unsafeDrive</name>
+      <anchorfile>classArClientRatioDrive.html</anchorfile>
+      <anchor>a189500484f44d98f2d0a07ac69fbd974</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~ArClientRatioDrive</name>
+      <anchorfile>classArClientRatioDrive.html</anchorfile>
+      <anchor>ae86a81dedee892fa43335570d3c2982a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>sendInput</name>
+      <anchorfile>classArClientRatioDrive.html</anchorfile>
+      <anchor>aeadb515ed24cfb0c4483e528e2fb4bd6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>task</name>
+      <anchorfile>classArClientRatioDrive.html</anchorfile>
+      <anchor>a2a9c26bdbd3bb73053c7b55efea12426</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ArClientBase *</type>
+      <name>myClient</name>
+      <anchorfile>classArClientRatioDrive.html</anchorfile>
+      <anchor>ae5d251e47c30c24b3d16a34b7682b9f4</anchor>
       <arglist></arglist>
     </member>
-    <member kind="variable">
-      <type>double</type>
-      <name>stateOfCharge</name>
-      <anchorfile>structArClientHandlerRobotUpdate_1_1RobotData.html</anchorfile>
-      <anchor>a76330c5621dd101d79f0480e7d3702b8</anchor>
+    <member kind="variable" protection="protected">
+      <type>ArFunctorC&lt; ArClientRatioDrive &gt;</type>
+      <name>myCycleCB</name>
+      <anchorfile>classArClientRatioDrive.html</anchorfile>
+      <anchor>a31969ffef3df1ea10ad9aa0c1c3ebd5b</anchor>
       <arglist></arglist>
     </member>
-    <member kind="variable">
-      <type>double</type>
-      <name>temperature</name>
-      <anchorfile>structArClientHandlerRobotUpdate_1_1RobotData.html</anchorfile>
-      <anchor>af29419008c30f9c0357791ef670771ec</anchor>
+    <member kind="variable" protection="protected">
+      <type>ArKeyHandler *</type>
+      <name>myKeyHandler</name>
+      <anchorfile>classArClientRatioDrive.html</anchorfile>
+      <anchor>a7e69eb630e14baa6367a781d77a09ed0</anchor>
       <arglist></arglist>
     </member>
-    <member kind="variable">
+    <member kind="variable" protection="protected">
       <type>double</type>
-      <name>vel</name>
-      <anchorfile>structArClientHandlerRobotUpdate_1_1RobotData.html</anchorfile>
-      <anchor>a343e254c53003bdf3dd3f07a79711ebe</anchor>
+      <name>myLatRatio</name>
+      <anchorfile>classArClientRatioDrive.html</anchorfile>
+      <anchor>ad38b311f384b95ea3693c66e3245e8e2</anchor>
       <arglist></arglist>
     </member>
-    <member kind="variable">
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>myPrinting</name>
+      <anchorfile>classArClientRatioDrive.html</anchorfile>
+      <anchor>ab7890a80c33e53791c29697a5e2bdb9c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
       <type>double</type>
-      <name>voltage</name>
-      <anchorfile>structArClientHandlerRobotUpdate_1_1RobotData.html</anchorfile>
-      <anchor>a6c7fbd6c5b50f10aa96e02666af3f02c</anchor>
+      <name>myRotRatio</name>
+      <anchorfile>classArClientRatioDrive.html</anchorfile>
+      <anchor>a2cdc6e153e7671658464ed13889877fb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>myStop</name>
+      <anchorfile>classArClientRatioDrive.html</anchorfile>
+      <anchor>a97b6e11006da4a46bd3bbb12b2eb7d8e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>double</type>
+      <name>myThrottle</name>
+      <anchorfile>classArClientRatioDrive.html</anchorfile>
+      <anchor>a7adc41eb4e7d4eefa222fe3216bee488</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>double</type>
+      <name>myTransRatio</name>
+      <anchorfile>classArClientRatioDrive.html</anchorfile>
+      <anchor>a7f2fc7415810285da1fa98098d4ace37</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -6622,40 +6845,71 @@
       <anchor>af16b82736c4ac19ab0b2a0aca2d414e7</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="enumeration">
-      <name>State</name>
-      <anchorfile>classArClientSwitchManager.html</anchorfile>
-      <anchor>a47d2af2da63155fee05665a1172f2ca7</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>IDLE</name>
-      <anchorfile>classArClientSwitchManager.html</anchorfile>
-      <anchor>a47d2af2da63155fee05665a1172f2ca7aa7306774388491dd141b3a4692934d2a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>TRYING_CONNECTION</name>
-      <anchorfile>classArClientSwitchManager.html</anchorfile>
-      <anchor>a47d2af2da63155fee05665a1172f2ca7a1069b62b4ade904243c160454a3abe6d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CONNECTING</name>
-      <anchorfile>classArClientSwitchManager.html</anchorfile>
-      <anchor>a47d2af2da63155fee05665a1172f2ca7a149242cfb43d615b05a45e25f0bfeb10</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
       <name>CONNECTED</name>
       <anchorfile>classArClientSwitchManager.html</anchorfile>
       <anchor>a47d2af2da63155fee05665a1172f2ca7a70869eb22f373a95b08a5edb3282abcd</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
+      <name>CONNECTING</name>
+      <anchorfile>classArClientSwitchManager.html</anchorfile>
+      <anchor>a47d2af2da63155fee05665a1172f2ca7a149242cfb43d615b05a45e25f0bfeb10</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>IDLE</name>
+      <anchorfile>classArClientSwitchManager.html</anchorfile>
+      <anchor>a47d2af2da63155fee05665a1172f2ca7aa7306774388491dd141b3a4692934d2a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
       <name>LOST_CONNECTION</name>
       <anchorfile>classArClientSwitchManager.html</anchorfile>
       <anchor>a47d2af2da63155fee05665a1172f2ca7abf6fc6dea0c54c87a9d93158ab8dfe2b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration" protection="protected">
+      <type></type>
+      <name>State</name>
+      <anchorfile>classArClientSwitchManager.html</anchorfile>
+      <anchor>a47d2af2da63155fee05665a1172f2ca7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>IDLE</name>
+      <anchorfile>classArClientSwitchManager.html</anchorfile>
+      <anchor>a47d2af2da63155fee05665a1172f2ca7aa7306774388491dd141b3a4692934d2a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>TRYING_CONNECTION</name>
+      <anchorfile>classArClientSwitchManager.html</anchorfile>
+      <anchor>a47d2af2da63155fee05665a1172f2ca7a1069b62b4ade904243c160454a3abe6d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>CONNECTING</name>
+      <anchorfile>classArClientSwitchManager.html</anchorfile>
+      <anchor>a47d2af2da63155fee05665a1172f2ca7a149242cfb43d615b05a45e25f0bfeb10</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>CONNECTED</name>
+      <anchorfile>classArClientSwitchManager.html</anchorfile>
+      <anchor>a47d2af2da63155fee05665a1172f2ca7a70869eb22f373a95b08a5edb3282abcd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>LOST_CONNECTION</name>
+      <anchorfile>classArClientSwitchManager.html</anchorfile>
+      <anchor>a47d2af2da63155fee05665a1172f2ca7abf6fc6dea0c54c87a9d93158ab8dfe2b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>TRYING_CONNECTION</name>
+      <anchorfile>classArClientSwitchManager.html</anchorfile>
+      <anchor>a47d2af2da63155fee05665a1172f2ca7a1069b62b4ade904243c160454a3abe6d</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected">
@@ -7249,7 +7503,20 @@
     <name>ArMapChanger</name>
     <filename>classArMapChanger.html</filename>
     <class kind="struct">ArMapChanger::ClientChangeInfo</class>
+    <member kind="enumvalue">
+      <name>CHANGE_FAILED</name>
+      <anchorfile>classArMapChanger.html</anchorfile>
+      <anchor>a852654bd4cf1c91a28ca21a538c42fafabef9c86892f69ab8092734f5aba909ad</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>CHANGE_SUCCESS</name>
+      <anchorfile>classArMapChanger.html</anchorfile>
+      <anchor>a852654bd4cf1c91a28ca21a538c42fafa9cea6a58aa34cba65bcdd300aee2f37c</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="enumeration">
+      <type></type>
       <name>MapChangeReplyType</name>
       <anchorfile>classArMapChanger.html</anchorfile>
       <anchor>a852654bd4cf1c91a28ca21a538c42faf</anchor>
@@ -7421,118 +7688,222 @@
       <anchor>af224c506b1308943284d7e7da5efc86e</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
       <name>CHANGE_DATA_TYPE_COUNT</name>
       <anchorfile>classArMapChanger.html</anchorfile>
       <anchor>ac56296aec0c3ed853fd3eb59962bfdf1a9888e3d405aaf2b49425378cbb97552c</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
       <name>CHANGE_COMMAND_COUNT</name>
       <anchorfile>classArMapChanger.html</anchorfile>
       <anchor>ac56296aec0c3ed853fd3eb59962bfdf1abbadb91de7aa82fbca854bd6091ba5ec</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
       <name>MAX_POINTS_IN_PACKET</name>
       <anchorfile>classArMapChanger.html</anchorfile>
       <anchor>ac56296aec0c3ed853fd3eb59962bfdf1afc12e915661b82fdf0641adb10d1d66d</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
       <name>MAX_LINES_IN_PACKET</name>
       <anchorfile>classArMapChanger.html</anchorfile>
       <anchor>ac56296aec0c3ed853fd3eb59962bfdf1a0e319207548f675f31bee1dc7255c5a2</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumeration">
-      <name>MapChangeCommand</name>
-      <anchorfile>classArMapChanger.html</anchorfile>
-      <anchor>ab1549ef7090ace709ceed5f4ca68e376</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>START_CHANGES</name>
-      <anchorfile>classArMapChanger.html</anchorfile>
-      <anchor>ab1549ef7090ace709ceed5f4ca68e376a4960b8a8b46e1fab434a2077f3049d60</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CONTINUE_CHANGES</name>
-      <anchorfile>classArMapChanger.html</anchorfile>
-      <anchor>ab1549ef7090ace709ceed5f4ca68e376a4508920597914ab8400fbffa627825a9</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>FINISH_CHANGES</name>
-      <anchorfile>classArMapChanger.html</anchorfile>
-      <anchor>ab1549ef7090ace709ceed5f4ca68e376a3107cef001e3a43aeb660535782a5498</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
       <name>CANCEL_CHANGES</name>
       <anchorfile>classArMapChanger.html</anchorfile>
       <anchor>ab1549ef7090ace709ceed5f4ca68e376a2edc48967c8486823d9a29301d981fab</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
-      <name>LAST_CHANGE_COMMAND</name>
+    <member kind="enumvalue" protection="protected">
+      <name>CHANGE_COMMAND_COUNT</name>
       <anchorfile>classArMapChanger.html</anchorfile>
-      <anchor>ab1549ef7090ace709ceed5f4ca68e376ad12cedf203986d18aa8a480afad867a0</anchor>
+      <anchor>ac56296aec0c3ed853fd3eb59962bfdf1abbadb91de7aa82fbca854bd6091ba5ec</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumeration">
-      <name>MapChangeDataType</name>
+    <member kind="enumvalue" protection="protected">
+      <name>CHANGE_DATA_TYPE_COUNT</name>
       <anchorfile>classArMapChanger.html</anchorfile>
-      <anchor>ad3195fa44ecad890c3db1c4886996aba</anchor>
+      <anchor>ac56296aec0c3ed853fd3eb59962bfdf1a9888e3d405aaf2b49425378cbb97552c</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
-      <name>NO_CHANGE</name>
+    <member kind="enumvalue" protection="protected">
+      <name>CONTINUE_CHANGES</name>
       <anchorfile>classArMapChanger.html</anchorfile>
-      <anchor>ad3195fa44ecad890c3db1c4886996abaa456e025f2b60c4dfe936f2ae19a58588</anchor>
+      <anchor>ab1549ef7090ace709ceed5f4ca68e376a4508920597914ab8400fbffa627825a9</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
-      <name>SUMMARY_DATA</name>
+    <member kind="enumvalue" protection="protected">
+      <name>FINISH_CHANGES</name>
       <anchorfile>classArMapChanger.html</anchorfile>
-      <anchor>ad3195fa44ecad890c3db1c4886996abaaef383b85b35c07dbec6355b066dee955</anchor>
+      <anchor>ab1549ef7090ace709ceed5f4ca68e376a3107cef001e3a43aeb660535782a5498</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
       <name>INFO_DATA</name>
       <anchorfile>classArMapChanger.html</anchorfile>
       <anchor>ad3195fa44ecad890c3db1c4886996abaa893e8a782e6fadd7e4c58699de319d77</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
-      <name>SUPPLEMENT_DATA</name>
+    <member kind="enumvalue" protection="protected">
+      <name>LAST_CHANGE_COMMAND</name>
       <anchorfile>classArMapChanger.html</anchorfile>
-      <anchor>ad3195fa44ecad890c3db1c4886996abaa042468b4c8964c702a38e27e58e74ee9</anchor>
+      <anchor>ab1549ef7090ace709ceed5f4ca68e376ad12cedf203986d18aa8a480afad867a0</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
-      <name>OBJECTS_DATA</name>
+    <member kind="enumvalue" protection="protected">
+      <name>LAST_CHANGE_DATA_TYPE</name>
       <anchorfile>classArMapChanger.html</anchorfile>
-      <anchor>ad3195fa44ecad890c3db1c4886996abaa56c4d61c5a32300a4a912288b684c920</anchor>
+      <anchor>ad3195fa44ecad890c3db1c4886996abaaab87abd5e0e5e2c13f85e841f652a438</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
-      <name>POINTS_DATA</name>
-      <anchorfile>classArMapChanger.html</anchorfile>
-      <anchor>ad3195fa44ecad890c3db1c4886996abaa08d04cdc16d4991988ea51ba86de5cdc</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
       <name>LINES_DATA</name>
       <anchorfile>classArMapChanger.html</anchorfile>
       <anchor>ad3195fa44ecad890c3db1c4886996abaa52a65e1244a57df9dd2626da27c693e6</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
+    <member kind="enumeration" protection="protected">
+      <type></type>
+      <name>MapChangeCommand</name>
+      <anchorfile>classArMapChanger.html</anchorfile>
+      <anchor>ab1549ef7090ace709ceed5f4ca68e376</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>START_CHANGES</name>
+      <anchorfile>classArMapChanger.html</anchorfile>
+      <anchor>ab1549ef7090ace709ceed5f4ca68e376a4960b8a8b46e1fab434a2077f3049d60</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>CONTINUE_CHANGES</name>
+      <anchorfile>classArMapChanger.html</anchorfile>
+      <anchor>ab1549ef7090ace709ceed5f4ca68e376a4508920597914ab8400fbffa627825a9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>FINISH_CHANGES</name>
+      <anchorfile>classArMapChanger.html</anchorfile>
+      <anchor>ab1549ef7090ace709ceed5f4ca68e376a3107cef001e3a43aeb660535782a5498</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>CANCEL_CHANGES</name>
+      <anchorfile>classArMapChanger.html</anchorfile>
+      <anchor>ab1549ef7090ace709ceed5f4ca68e376a2edc48967c8486823d9a29301d981fab</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>LAST_CHANGE_COMMAND</name>
+      <anchorfile>classArMapChanger.html</anchorfile>
+      <anchor>ab1549ef7090ace709ceed5f4ca68e376ad12cedf203986d18aa8a480afad867a0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration" protection="protected">
+      <type></type>
+      <name>MapChangeDataType</name>
+      <anchorfile>classArMapChanger.html</anchorfile>
+      <anchor>ad3195fa44ecad890c3db1c4886996aba</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>NO_CHANGE</name>
+      <anchorfile>classArMapChanger.html</anchorfile>
+      <anchor>ad3195fa44ecad890c3db1c4886996abaa456e025f2b60c4dfe936f2ae19a58588</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>SUMMARY_DATA</name>
+      <anchorfile>classArMapChanger.html</anchorfile>
+      <anchor>ad3195fa44ecad890c3db1c4886996abaaef383b85b35c07dbec6355b066dee955</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>INFO_DATA</name>
+      <anchorfile>classArMapChanger.html</anchorfile>
+      <anchor>ad3195fa44ecad890c3db1c4886996abaa893e8a782e6fadd7e4c58699de319d77</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>SUPPLEMENT_DATA</name>
+      <anchorfile>classArMapChanger.html</anchorfile>
+      <anchor>ad3195fa44ecad890c3db1c4886996abaa042468b4c8964c702a38e27e58e74ee9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>OBJECTS_DATA</name>
+      <anchorfile>classArMapChanger.html</anchorfile>
+      <anchor>ad3195fa44ecad890c3db1c4886996abaa56c4d61c5a32300a4a912288b684c920</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>POINTS_DATA</name>
+      <anchorfile>classArMapChanger.html</anchorfile>
+      <anchor>ad3195fa44ecad890c3db1c4886996abaa08d04cdc16d4991988ea51ba86de5cdc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>LINES_DATA</name>
+      <anchorfile>classArMapChanger.html</anchorfile>
+      <anchor>ad3195fa44ecad890c3db1c4886996abaa52a65e1244a57df9dd2626da27c693e6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
       <name>LAST_CHANGE_DATA_TYPE</name>
       <anchorfile>classArMapChanger.html</anchorfile>
       <anchor>ad3195fa44ecad890c3db1c4886996abaaab87abd5e0e5e2c13f85e841f652a438</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>MAX_LINES_IN_PACKET</name>
+      <anchorfile>classArMapChanger.html</anchorfile>
+      <anchor>ac56296aec0c3ed853fd3eb59962bfdf1a0e319207548f675f31bee1dc7255c5a2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>MAX_POINTS_IN_PACKET</name>
+      <anchorfile>classArMapChanger.html</anchorfile>
+      <anchor>ac56296aec0c3ed853fd3eb59962bfdf1afc12e915661b82fdf0641adb10d1d66d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>NO_CHANGE</name>
+      <anchorfile>classArMapChanger.html</anchorfile>
+      <anchor>ad3195fa44ecad890c3db1c4886996abaa456e025f2b60c4dfe936f2ae19a58588</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>OBJECTS_DATA</name>
+      <anchorfile>classArMapChanger.html</anchorfile>
+      <anchor>ad3195fa44ecad890c3db1c4886996abaa56c4d61c5a32300a4a912288b684c920</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>POINTS_DATA</name>
+      <anchorfile>classArMapChanger.html</anchorfile>
+      <anchor>ad3195fa44ecad890c3db1c4886996abaa08d04cdc16d4991988ea51ba86de5cdc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>START_CHANGES</name>
+      <anchorfile>classArMapChanger.html</anchorfile>
+      <anchor>ab1549ef7090ace709ceed5f4ca68e376a4960b8a8b46e1fab434a2077f3049d60</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>SUMMARY_DATA</name>
+      <anchorfile>classArMapChanger.html</anchorfile>
+      <anchor>ad3195fa44ecad890c3db1c4886996abaaef383b85b35c07dbec6355b066dee955</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>SUPPLEMENT_DATA</name>
+      <anchorfile>classArMapChanger.html</anchorfile>
+      <anchor>ad3195fa44ecad890c3db1c4886996abaa042468b4c8964c702a38e27e58e74ee9</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected">
@@ -7928,73 +8299,6 @@
       <arglist></arglist>
     </member>
   </compound>
-  <compound kind="struct">
-    <name>ArMapChanger::ClientChangeInfo</name>
-    <filename>structArMapChanger_1_1ClientChangeInfo.html</filename>
-    <member kind="function">
-      <type>void</type>
-      <name>addPacket</name>
-      <anchorfile>structArMapChanger_1_1ClientChangeInfo.html</anchorfile>
-      <anchor>a33385e43a211f2d5632603e0861d206e</anchor>
-      <arglist>(ArNetPacket *packet)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>ClientChangeInfo</name>
-      <anchorfile>structArMapChanger_1_1ClientChangeInfo.html</anchorfile>
-      <anchor>a99e542b23c62fc532cc3287bb7912cf6</anchor>
-      <arglist>(ArServerClient *client)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>ClientChangeInfo</name>
-      <anchorfile>structArMapChanger_1_1ClientChangeInfo.html</anchorfile>
-      <anchor>a0bf8ff496b8521b438854f35e8679c33</anchor>
-      <arglist>(ArCentralForwarder *forwarder)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>~ClientChangeInfo</name>
-      <anchorfile>structArMapChanger_1_1ClientChangeInfo.html</anchorfile>
-      <anchor>a8b6cc12262b85f5fa4cc35a6182bd01d</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="variable">
-      <type>ArServerClient *</type>
-      <name>myClient</name>
-      <anchorfile>structArMapChanger_1_1ClientChangeInfo.html</anchorfile>
-      <anchor>afe06e716e74b880957d6254883977801</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>ArCentralForwarder *</type>
-      <name>myForwarder</name>
-      <anchorfile>structArMapChanger_1_1ClientChangeInfo.html</anchorfile>
-      <anchor>a95be9ed68f5389a29119d81ad8eab5a2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>ArTime</type>
-      <name>myLastActivityTime</name>
-      <anchorfile>structArMapChanger_1_1ClientChangeInfo.html</anchorfile>
-      <anchor>a56af8410e1a09d5ef844ff892d52c1e4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>std::list&lt; ArNetPacket * &gt;</type>
-      <name>myPacketList</name>
-      <anchorfile>structArMapChanger_1_1ClientChangeInfo.html</anchorfile>
-      <anchor>a5f6e6eb4f38231bc2823d7a445c31720</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>ArTime</type>
-      <name>myStartTime</name>
-      <anchorfile>structArMapChanger_1_1ClientChangeInfo.html</anchorfile>
-      <anchor>ab03148ce83fe28142eec3ac6c51b8e3d</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
   <compound kind="class">
     <name>ArNetCameraRequest</name>
     <filename>classArNetCameraRequest.html</filename>
@@ -8062,10 +8366,53 @@
       <anchor>a11c6eb7a86ddc6ea04a49cc0ea307a64a340ff1cfb7242c223236b0a6568afddc</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumvalue">
+      <name>FOOTER_LENGTH</name>
+      <anchorfile>classArNetPacket.html</anchorfile>
+      <anchor>a11c6eb7a86ddc6ea04a49cc0ea307a64a143233cf777bfe992c946039dd006548</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>HEADER_LENGTH</name>
+      <anchorfile>classArNetPacket.html</anchorfile>
+      <anchor>a11c6eb7a86ddc6ea04a49cc0ea307a64a4e7fdf73911e38ef8031b03e27cc157e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MAX_DATA_LENGTH</name>
+      <anchorfile>classArNetPacket.html</anchorfile>
+      <anchor>a11c6eb7a86ddc6ea04a49cc0ea307a64a340ff1cfb7242c223236b0a6568afddc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MAX_LENGTH</name>
+      <anchorfile>classArNetPacket.html</anchorfile>
+      <anchor>a11c6eb7a86ddc6ea04a49cc0ea307a64a233ff463989369cb076795dd20c44d22</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="enumeration">
+      <type></type>
       <name>PacketSource</name>
       <anchorfile>classArNetPacket.html</anchorfile>
       <anchor>a699c1b74aac44c20113ba6412655de1d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TCP</name>
+      <anchorfile>classArNetPacket.html</anchorfile>
+      <anchor>a699c1b74aac44c20113ba6412655de1dada3588583303835c7ded0f5767d8df6a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>UDP</name>
+      <anchorfile>classArNetPacket.html</anchorfile>
+      <anchor>a699c1b74aac44c20113ba6412655de1daff33666d202e647f4c668e8397578cf5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>SIZE_OF_LENGTH</name>
+      <anchorfile>classArNetPacket.html</anchorfile>
+      <anchor>a11c6eb7a86ddc6ea04a49cc0ea307a64a7e723695f5dc573ce73549d9db39465b</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
@@ -8322,88 +8669,162 @@
       <anchor>adb12f0d5d88ee25ae60c724d14f14baf</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
       <name>TOTAL_PACKET_LENGTH</name>
       <anchorfile>classArNetPacketReceiverTcp.html</anchorfile>
       <anchor>aa01aaec8940d7485a0ee84c7d11bc52fa146ac460febcaa693e081e42f0608fe8</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumeration">
+    <member kind="enumeration" protection="protected">
+      <type></type>
       <name>Ret</name>
       <anchorfile>classArNetPacketReceiverTcp.html</anchorfile>
       <anchor>a76116a42ec47264c061e8cfe3565e97e</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
       <name>RET_CONN_CLOSED</name>
       <anchorfile>classArNetPacketReceiverTcp.html</anchorfile>
       <anchor>a76116a42ec47264c061e8cfe3565e97ea381e44166e13fdac40b28aa969a541a4</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
       <name>RET_CONN_ERROR</name>
       <anchorfile>classArNetPacketReceiverTcp.html</anchorfile>
       <anchor>a76116a42ec47264c061e8cfe3565e97ea10030506b4e96909b898a8d689c928b2</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
       <name>RET_GOT_PACKET</name>
       <anchorfile>classArNetPacketReceiverTcp.html</anchorfile>
       <anchor>a76116a42ec47264c061e8cfe3565e97ea5e75e477ac45985b70b4b10cf8a9ad0f</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
       <name>RET_BAD_PACKET</name>
       <anchorfile>classArNetPacketReceiverTcp.html</anchorfile>
       <anchor>a76116a42ec47264c061e8cfe3565e97eadcad0df1074a8869eb2284ce912b31c0</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
       <name>RET_FAILED_READ</name>
       <anchorfile>classArNetPacketReceiverTcp.html</anchorfile>
       <anchor>a76116a42ec47264c061e8cfe3565e97ea9e54270eeecfb3325d45e3b452aef2a0</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
       <name>RET_TIMED_OUT</name>
       <anchorfile>classArNetPacketReceiverTcp.html</anchorfile>
       <anchor>a76116a42ec47264c061e8cfe3565e97ea475e41d0d8e5b063f9da0bf16e1981ac</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumeration">
+    <member kind="enumvalue" protection="protected">
+      <name>RET_BAD_PACKET</name>
+      <anchorfile>classArNetPacketReceiverTcp.html</anchorfile>
+      <anchor>a76116a42ec47264c061e8cfe3565e97eadcad0df1074a8869eb2284ce912b31c0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>RET_CONN_CLOSED</name>
+      <anchorfile>classArNetPacketReceiverTcp.html</anchorfile>
+      <anchor>a76116a42ec47264c061e8cfe3565e97ea381e44166e13fdac40b28aa969a541a4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>RET_CONN_ERROR</name>
+      <anchorfile>classArNetPacketReceiverTcp.html</anchorfile>
+      <anchor>a76116a42ec47264c061e8cfe3565e97ea10030506b4e96909b898a8d689c928b2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>RET_FAILED_READ</name>
+      <anchorfile>classArNetPacketReceiverTcp.html</anchorfile>
+      <anchor>a76116a42ec47264c061e8cfe3565e97ea9e54270eeecfb3325d45e3b452aef2a0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>RET_GOT_PACKET</name>
+      <anchorfile>classArNetPacketReceiverTcp.html</anchorfile>
+      <anchor>a76116a42ec47264c061e8cfe3565e97ea5e75e477ac45985b70b4b10cf8a9ad0f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>RET_TIMED_OUT</name>
+      <anchorfile>classArNetPacketReceiverTcp.html</anchorfile>
+      <anchor>a76116a42ec47264c061e8cfe3565e97ea475e41d0d8e5b063f9da0bf16e1981ac</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration" protection="protected">
+      <type></type>
       <name>State</name>
       <anchorfile>classArNetPacketReceiverTcp.html</anchorfile>
       <anchor>a010c068eb5b149fac6ebc2d62605e877</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
       <name>STATE_SYNC1</name>
       <anchorfile>classArNetPacketReceiverTcp.html</anchorfile>
       <anchor>a010c068eb5b149fac6ebc2d62605e877a4e57959ccd21fb855a979515c4492f0d</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
       <name>STATE_SYNC2</name>
       <anchorfile>classArNetPacketReceiverTcp.html</anchorfile>
       <anchor>a010c068eb5b149fac6ebc2d62605e877aa7a3c6c802f9dd464fcc25fa6e4ba9f9</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
       <name>STATE_LENGTH1</name>
       <anchorfile>classArNetPacketReceiverTcp.html</anchorfile>
       <anchor>a010c068eb5b149fac6ebc2d62605e877ad9a41316161b3e85f52f6974fd8a1d7f</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
       <name>STATE_LENGTH2</name>
       <anchorfile>classArNetPacketReceiverTcp.html</anchorfile>
       <anchor>a010c068eb5b149fac6ebc2d62605e877a03926065d783b5bc47b2992a03b38254</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
       <name>STATE_ACQUIRE_DATA</name>
       <anchorfile>classArNetPacketReceiverTcp.html</anchorfile>
       <anchor>a010c068eb5b149fac6ebc2d62605e877af750144bc35173846e7c61d49c970cd4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>STATE_ACQUIRE_DATA</name>
+      <anchorfile>classArNetPacketReceiverTcp.html</anchorfile>
+      <anchor>a010c068eb5b149fac6ebc2d62605e877af750144bc35173846e7c61d49c970cd4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>STATE_LENGTH1</name>
+      <anchorfile>classArNetPacketReceiverTcp.html</anchorfile>
+      <anchor>a010c068eb5b149fac6ebc2d62605e877ad9a41316161b3e85f52f6974fd8a1d7f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>STATE_LENGTH2</name>
+      <anchorfile>classArNetPacketReceiverTcp.html</anchorfile>
+      <anchor>a010c068eb5b149fac6ebc2d62605e877a03926065d783b5bc47b2992a03b38254</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>STATE_SYNC1</name>
+      <anchorfile>classArNetPacketReceiverTcp.html</anchorfile>
+      <anchor>a010c068eb5b149fac6ebc2d62605e877a4e57959ccd21fb855a979515c4492f0d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>STATE_SYNC2</name>
+      <anchorfile>classArNetPacketReceiverTcp.html</anchorfile>
+      <anchor>a010c068eb5b149fac6ebc2d62605e877aa7a3c6c802f9dd464fcc25fa6e4ba9f9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>TOTAL_PACKET_LENGTH</name>
+      <anchorfile>classArNetPacketReceiverTcp.html</anchorfile>
+      <anchor>aa01aaec8940d7485a0ee84c7d11bc52fa146ac460febcaa693e081e42f0608fe8</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected">
@@ -9801,43 +10222,11 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>ArServerBase::SlowIdleThread</name>
-    <filename>classArServerBase_1_1SlowIdleThread.html</filename>
-    <base>ArASyncTask</base>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void *</type>
-      <name>runThread</name>
-      <anchorfile>classArServerBase_1_1SlowIdleThread.html</anchorfile>
-      <anchor>aeda78edd767f917477a1f762237cd408</anchor>
-      <arglist>(void *arg)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>SlowIdleThread</name>
-      <anchorfile>classArServerBase_1_1SlowIdleThread.html</anchorfile>
-      <anchor>ae9e164dfdf752e6dc258c1d7c8eddfc9</anchor>
-      <arglist>(ArServerBase *serverBase)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~SlowIdleThread</name>
-      <anchorfile>classArServerBase_1_1SlowIdleThread.html</anchorfile>
-      <anchor>a64452651fe85afcdbe7af121d2a6e5e2</anchor>
-      <arglist>(void)</arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>ArServerBase *</type>
-      <name>myServerBase</name>
-      <anchorfile>classArServerBase_1_1SlowIdleThread.html</anchorfile>
-      <anchor>a23257ec80c6ab58689cc272bd8c6cee7</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>ArServerClient</name>
     <filename>classArServerClient.html</filename>
     <class kind="class">ArServerClient::Tracker</class>
     <member kind="enumeration">
+      <type></type>
       <name>ServerState</name>
       <anchorfile>classArServerClient.html</anchorfile>
       <anchor>a43cb5a7523682cd393fd67c81eaff459</anchor>
@@ -9865,6 +10254,30 @@
       <name>STATE_DISCONNECTED</name>
       <anchorfile>classArServerClient.html</anchorfile>
       <anchor>a43cb5a7523682cd393fd67c81eaff459a0c32b15d037637d34fec49a59ed26c8d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>STATE_CONNECTED</name>
+      <anchorfile>classArServerClient.html</anchorfile>
+      <anchor>a43cb5a7523682cd393fd67c81eaff459ab9b261bf5131df42b84685b7e4ecaff7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>STATE_DISCONNECTED</name>
+      <anchorfile>classArServerClient.html</anchorfile>
+      <anchor>a43cb5a7523682cd393fd67c81eaff459a0c32b15d037637d34fec49a59ed26c8d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>STATE_REJECTED</name>
+      <anchorfile>classArServerClient.html</anchorfile>
+      <anchor>a43cb5a7523682cd393fd67c81eaff459a29ec9812aa65c462b4bf2620a2139ae6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>STATE_SENT_INTRO</name>
+      <anchorfile>classArServerClient.html</anchorfile>
+      <anchor>a43cb5a7523682cd393fd67c81eaff459ae3c16ad5623af30630dc389afdca5e28</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -10583,59 +10996,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>ArServerClient::Tracker</name>
-    <filename>classArServerClient_1_1Tracker.html</filename>
-    <member kind="function">
-      <type>void</type>
-      <name>reset</name>
-      <anchorfile>classArServerClient_1_1Tracker.html</anchorfile>
-      <anchor>a08f51042e4b59b031d2a8588c5f0862d</anchor>
-      <arglist>(void)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Tracker</name>
-      <anchorfile>classArServerClient_1_1Tracker.html</anchorfile>
-      <anchor>a38c92ae808bb1c1e70bc2478e8372794</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~Tracker</name>
-      <anchorfile>classArServerClient_1_1Tracker.html</anchorfile>
-      <anchor>a67325888f78f78b150f95cb140fd9e53</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="variable">
-      <type>long</type>
-      <name>myBytesTcp</name>
-      <anchorfile>classArServerClient_1_1Tracker.html</anchorfile>
-      <anchor>a652e240f97ceff91d00a8f38423b5a7f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>long</type>
-      <name>myBytesUdp</name>
-      <anchorfile>classArServerClient_1_1Tracker.html</anchorfile>
-      <anchor>a786627dc857fa0705906f06fdaaa21b8</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>long</type>
-      <name>myPacketsTcp</name>
-      <anchorfile>classArServerClient_1_1Tracker.html</anchorfile>
-      <anchor>a5a63f8ae70b93d45727861748daa7ad9</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>long</type>
-      <name>myPacketsUdp</name>
-      <anchorfile>classArServerClient_1_1Tracker.html</anchorfile>
-      <anchor>a042e19619e1d9abf5adb8427eba40dc2</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>ArServerClientData</name>
     <filename>classArServerClientData.html</filename>
     <member kind="function">
@@ -10849,7 +11209,62 @@
   <compound kind="class">
     <name>ArServerCommands</name>
     <filename>classArServerCommands.html</filename>
+    <member kind="enumvalue">
+      <name>CONNECTED</name>
+      <anchorfile>classArServerCommands.html</anchorfile>
+      <anchor>a4b1d453536c145108110dd2e1eee89c4acab3bf86441a65c24cc045e8b0192ce2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>INTRODUCTION</name>
+      <anchorfile>classArServerCommands.html</anchorfile>
+      <anchor>a4b1d453536c145108110dd2e1eee89c4af0d0401b61666b52feac6d5851263733</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>LIST</name>
+      <anchorfile>classArServerCommands.html</anchorfile>
+      <anchor>a4b1d453536c145108110dd2e1eee89c4a141500872f293f3a2e7763562b728301</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>LISTARGRET</name>
+      <anchorfile>classArServerCommands.html</anchorfile>
+      <anchor>a4b1d453536c145108110dd2e1eee89c4af789d41c3ea7728e740a6a10a46b882d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>LISTARGRETSINGLE</name>
+      <anchorfile>classArServerCommands.html</anchorfile>
+      <anchor>a4b1d453536c145108110dd2e1eee89c4a00142b7d8bbdb4d4264d6e4c85135b00</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>LISTGROUPANDFLAGS</name>
+      <anchorfile>classArServerCommands.html</anchorfile>
+      <anchor>a4b1d453536c145108110dd2e1eee89c4a46ba97bce7f0fd78036ea0395fd75b49</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>LISTGROUPANDFLAGSSINGLE</name>
+      <anchorfile>classArServerCommands.html</anchorfile>
+      <anchor>a4b1d453536c145108110dd2e1eee89c4acff7f30183e09b5722f66f20390c6fe1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>LISTSINGLE</name>
+      <anchorfile>classArServerCommands.html</anchorfile>
+      <anchor>a4b1d453536c145108110dd2e1eee89c4aa22a779d0c5e4aba20a6273dc24c3fe4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>REJECTED</name>
+      <anchorfile>classArServerCommands.html</anchorfile>
+      <anchor>a4b1d453536c145108110dd2e1eee89c4adee1cad7b02f1ea54bb37b17213f1a75</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="enumeration">
+      <type></type>
       <name>ServerCommands</name>
       <anchorfile>classArServerCommands.html</anchorfile>
       <anchor>a4b1d453536c145108110dd2e1eee89c4</anchor>
@@ -10933,7 +11348,20 @@
       <anchor>a4b1d453536c145108110dd2e1eee89c4acff7f30183e09b5722f66f20390c6fe1</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumvalue">
+      <name>SHUTDOWN</name>
+      <anchorfile>classArServerCommands.html</anchorfile>
+      <anchor>a4b1d453536c145108110dd2e1eee89c4ac8bd4e692eabfb24d487705728b0fb6e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TCP_ONLY</name>
+      <anchorfile>classArServerCommands.html</anchorfile>
+      <anchor>a4b1d453536c145108110dd2e1eee89c4afbeb928f4be2b6d4b1d4d34311e12ae7</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="enumeration">
+      <type></type>
       <name>Type</name>
       <anchorfile>classArServerCommands.html</anchorfile>
       <anchor>a17e8a1248f23b0f1dde4606af34b0efd</anchor>
@@ -10961,6 +11389,42 @@
       <name>TYPE_NONE</name>
       <anchorfile>classArServerCommands.html</anchorfile>
       <anchor>a17e8a1248f23b0f1dde4606af34b0efdaaaecfa9e450c08cc965e23798c977deb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TYPE_NONE</name>
+      <anchorfile>classArServerCommands.html</anchorfile>
+      <anchor>a17e8a1248f23b0f1dde4606af34b0efdaaaecfa9e450c08cc965e23798c977deb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TYPE_REAL</name>
+      <anchorfile>classArServerCommands.html</anchorfile>
+      <anchor>a17e8a1248f23b0f1dde4606af34b0efda04341eabfc9c8b186c83fe279bd30fe0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TYPE_SIMULATED</name>
+      <anchorfile>classArServerCommands.html</anchorfile>
+      <anchor>a17e8a1248f23b0f1dde4606af34b0efda04379d0d398a69a22056e190fbb6be2a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TYPE_UNSPECIFIED</name>
+      <anchorfile>classArServerCommands.html</anchorfile>
+      <anchor>a17e8a1248f23b0f1dde4606af34b0efdaebd1dc6f46009b607589b0ea2cea27c5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>UDP_CONFIRMATION</name>
+      <anchorfile>classArServerCommands.html</anchorfile>
+      <anchor>a4b1d453536c145108110dd2e1eee89c4a346278536dfe0300374f5fbaba1d6ff2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>UDP_INTRODUCTION</name>
+      <anchorfile>classArServerCommands.html</anchorfile>
+      <anchor>a4b1d453536c145108110dd2e1eee89c4a6d63f5cecb9f92808a62954496bfe279</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" static="yes">
@@ -11475,80 +11939,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>ArServerFileFromClient::FileInfo</name>
-    <filename>classArServerFileFromClient_1_1FileInfo.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>FileInfo</name>
-      <anchorfile>classArServerFileFromClient_1_1FileInfo.html</anchorfile>
-      <anchor>ab672d9d984b6ca335f6daa24eb3c5da7</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~FileInfo</name>
-      <anchorfile>classArServerFileFromClient_1_1FileInfo.html</anchorfile>
-      <anchor>ac438717d9c7fbddd0cccef3dc3836031</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="variable">
-      <type>ArServerClient *</type>
-      <name>myClient</name>
-      <anchorfile>classArServerFileFromClient_1_1FileInfo.html</anchorfile>
-      <anchor>a1936b5bdd4fb22e80ff981d2679473e7</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>ArTime</type>
-      <name>myClientCreationTime</name>
-      <anchorfile>classArServerFileFromClient_1_1FileInfo.html</anchorfile>
-      <anchor>ae6f082bf104e8dee1f06801934819bb1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>FILE *</type>
-      <name>myFile</name>
-      <anchorfile>classArServerFileFromClient_1_1FileInfo.html</anchorfile>
-      <anchor>a3cdd6669254a1e77d4e2871b8e24ae2a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>time_t</type>
-      <name>myFileTimestamp</name>
-      <anchorfile>classArServerFileFromClient_1_1FileInfo.html</anchorfile>
-      <anchor>ab3bf44d80537a959194801e01cf8d54d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>ArTime</type>
-      <name>myLastActivity</name>
-      <anchorfile>classArServerFileFromClient_1_1FileInfo.html</anchorfile>
-      <anchor>affbd0e74152faff0ab5346b9bc785708</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>std::string</type>
-      <name>myRealFileName</name>
-      <anchorfile>classArServerFileFromClient_1_1FileInfo.html</anchorfile>
-      <anchor>acd687ac54128e26bb5bfd69d6809971b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>ArTime</type>
-      <name>myStartedTransfer</name>
-      <anchorfile>classArServerFileFromClient_1_1FileInfo.html</anchorfile>
-      <anchor>af6c83590aabc5343ab684ac27b489871</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>std::string</type>
-      <name>myTempFileName</name>
-      <anchorfile>classArServerFileFromClient_1_1FileInfo.html</anchorfile>
-      <anchor>affae5b7e5fe9303bd4c40868c52d0126</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>ArServerFileLister</name>
     <filename>classArServerFileLister.html</filename>
     <member kind="function">
@@ -11896,34 +12286,59 @@
       <anchor>a27c7b5fcd78d65a799509fea63bd11a1</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
       <name>DOUBLE_FACTOR</name>
       <anchorfile>classArServerHandlerCamera.html</anchorfile>
       <anchor>a25665b69b5fe8533d1e985499843e0c9a39eb99d13930f3a85c1607ed4e2b53c2</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumeration">
-      <name>CameraMode</name>
-      <anchorfile>classArServerHandlerCamera.html</anchorfile>
-      <anchor>a8214b7d46f1a140f848a4f6f68b09d9e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CAMERA_MODE_POSITION</name>
-      <anchorfile>classArServerHandlerCamera.html</anchorfile>
-      <anchor>a8214b7d46f1a140f848a4f6f68b09d9ea39dc1af6698ef397131353473655e159</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
       <name>CAMERA_MODE_LOOK_AT_GOAL</name>
       <anchorfile>classArServerHandlerCamera.html</anchorfile>
       <anchor>a8214b7d46f1a140f848a4f6f68b09d9ea300a160b478ea07ed5a585f471cf1390</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumvalue">
+    <member kind="enumvalue" protection="protected">
       <name>CAMERA_MODE_LOOK_AT_POINT</name>
       <anchorfile>classArServerHandlerCamera.html</anchorfile>
       <anchor>a8214b7d46f1a140f848a4f6f68b09d9ea869e7b00121f0964a49f759f6fab7a8c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>CAMERA_MODE_POSITION</name>
+      <anchorfile>classArServerHandlerCamera.html</anchorfile>
+      <anchor>a8214b7d46f1a140f848a4f6f68b09d9ea39dc1af6698ef397131353473655e159</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration" protection="protected">
+      <type></type>
+      <name>CameraMode</name>
+      <anchorfile>classArServerHandlerCamera.html</anchorfile>
+      <anchor>a8214b7d46f1a140f848a4f6f68b09d9e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>CAMERA_MODE_POSITION</name>
+      <anchorfile>classArServerHandlerCamera.html</anchorfile>
+      <anchor>a8214b7d46f1a140f848a4f6f68b09d9ea39dc1af6698ef397131353473655e159</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>CAMERA_MODE_LOOK_AT_GOAL</name>
+      <anchorfile>classArServerHandlerCamera.html</anchorfile>
+      <anchor>a8214b7d46f1a140f848a4f6f68b09d9ea300a160b478ea07ed5a585f471cf1390</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>CAMERA_MODE_LOOK_AT_POINT</name>
+      <anchorfile>classArServerHandlerCamera.html</anchorfile>
+      <anchor>a8214b7d46f1a140f848a4f6f68b09d9ea869e7b00121f0964a49f759f6fab7a8c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>DOUBLE_FACTOR</name>
+      <anchorfile>classArServerHandlerCamera.html</anchorfile>
+      <anchor>a25665b69b5fe8533d1e985499843e0c9a39eb99d13930f3a85c1607ed4e2b53c2</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected">
@@ -12431,6 +12846,18 @@
       <name>DEFAULT_HEARTBEAT_INTERVAL</name>
       <anchorfile>classArServerHandlerCommMonitor.html</anchorfile>
       <anchor>af665f126df849ea488e741fa3e21a02ca8786dd9a908afcdfc6dfc75e97076244</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>DEFAULT_HEARTBEAT_INTERVAL</name>
+      <anchorfile>classArServerHandlerCommMonitor.html</anchorfile>
+      <anchor>af665f126df849ea488e741fa3e21a02ca8786dd9a908afcdfc6dfc75e97076244</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MIN_HEARTBEAT_INTERVAL</name>
+      <anchorfile>classArServerHandlerCommMonitor.html</anchorfile>
+      <anchor>af665f126df849ea488e741fa3e21a02caaac450a7bfaf45350cfd519b5cbb316b</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -13162,7 +13589,14 @@
   <compound kind="class">
     <name>ArServerHandlerMap</name>
     <filename>classArServerHandlerMap.html</filename>
+    <member kind="enumvalue">
+      <name>BOTH</name>
+      <anchorfile>classArServerHandlerMap.html</anchorfile>
+      <anchor>a4502e33d8544d0fa70a8de3a1f74f4c6abb44d30e3d44b0286f4587d179dc0733</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="enumeration">
+      <type></type>
       <name>DataToSend</name>
       <anchorfile>classArServerHandlerMap.html</anchorfile>
       <anchor>a4502e33d8544d0fa70a8de3a1f74f4c6</anchor>
@@ -13184,6 +13618,18 @@
       <name>BOTH</name>
       <anchorfile>classArServerHandlerMap.html</anchorfile>
       <anchor>a4502e33d8544d0fa70a8de3a1f74f4c6abb44d30e3d44b0286f4587d179dc0733</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>LINES</name>
+      <anchorfile>classArServerHandlerMap.html</anchorfile>
+      <anchor>a4502e33d8544d0fa70a8de3a1f74f4c6a644280b9178f0aed24aa9f31069e2b5f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>POINTS</name>
+      <anchorfile>classArServerHandlerMap.html</anchorfile>
+      <anchor>a4502e33d8544d0fa70a8de3a1f74f4c6acc7ba38e370d8bf62645b705876f1d30</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -13958,7 +14404,26 @@
     <name>ArServerHandlerPopup</name>
     <filename>classArServerHandlerPopup.html</filename>
     <class kind="class">ArServerHandlerPopup::PopupData</class>
+    <member kind="enumvalue">
+      <name>CRITICAL</name>
+      <anchorfile>classArServerHandlerPopup.html</anchorfile>
+      <anchor>af3fd6c866c5fd0ceecb8c74a0ab2a9a8a3bd20d52dadb84183c9d8bd1dcb89deb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>INFORMATION</name>
+      <anchorfile>classArServerHandlerPopup.html</anchorfile>
+      <anchor>af3fd6c866c5fd0ceecb8c74a0ab2a9a8ab99a3f402f6cff49cbc4bc7ad015e94c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>NOICON</name>
+      <anchorfile>classArServerHandlerPopup.html</anchorfile>
+      <anchor>af3fd6c866c5fd0ceecb8c74a0ab2a9a8a1e37e84c4ca0acc655ad3ba26465db78</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="enumeration">
+      <type></type>
       <name>PopupType</name>
       <anchorfile>classArServerHandlerPopup.html</anchorfile>
       <anchor>af3fd6c866c5fd0ceecb8c74a0ab2a9a8</anchor>
@@ -13992,6 +14457,18 @@
       <name>QUESTION</name>
       <anchorfile>classArServerHandlerPopup.html</anchorfile>
       <anchor>af3fd6c866c5fd0ceecb8c74a0ab2a9a8a35c85152314909e4443e0f7f3b346157</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>QUESTION</name>
+      <anchorfile>classArServerHandlerPopup.html</anchorfile>
+      <anchor>af3fd6c866c5fd0ceecb8c74a0ab2a9a8a35c85152314909e4443e0f7f3b346157</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>WARNING</name>
+      <anchorfile>classArServerHandlerPopup.html</anchorfile>
+      <anchor>af3fd6c866c5fd0ceecb8c74a0ab2a9a8a34dde11a5f4bcf08dcd2d1be90d8c33d</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -14104,52 +14581,6 @@
       <name>myServerCycleCB</name>
       <anchorfile>classArServerHandlerPopup.html</anchorfile>
       <anchor>a48ade8cae1ca2a1a33874ad084458748</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>ArServerHandlerPopup::PopupData</name>
-    <filename>classArServerHandlerPopup_1_1PopupData.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>PopupData</name>
-      <anchorfile>classArServerHandlerPopup_1_1PopupData.html</anchorfile>
-      <anchor>aed5a2d8c3fdc65a8a9d091a7eaab6f8a</anchor>
-      <arglist>(ArServerHandlerPopupInfo *popupInfo, ArTypes::Byte4 id, ArFunctor2&lt; ArTypes::Byte4, int &gt; *callback)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~PopupData</name>
-      <anchorfile>classArServerHandlerPopup_1_1PopupData.html</anchorfile>
-      <anchor>ad44bf197df47820294e17b9d332f01de</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="variable">
-      <type>ArFunctor2&lt; ArTypes::Byte4, int &gt; *</type>
-      <name>myCallback</name>
-      <anchorfile>classArServerHandlerPopup_1_1PopupData.html</anchorfile>
-      <anchor>a505723a68c4627c997ba381f9104cb17</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>ArTypes::Byte4</type>
-      <name>myID</name>
-      <anchorfile>classArServerHandlerPopup_1_1PopupData.html</anchorfile>
-      <anchor>a1b6bf5e55c74d6a492efca6e36a48fc4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>ArServerHandlerPopupInfo *</type>
-      <name>myPopupInfo</name>
-      <anchorfile>classArServerHandlerPopup_1_1PopupData.html</anchorfile>
-      <anchor>a5fd8ff43b3e1cce71ece78b26e2842d0</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>ArTime</type>
-      <name>myStarted</name>
-      <anchorfile>classArServerHandlerPopup_1_1PopupData.html</anchorfile>
-      <anchor>a04a55773508583fc62ad93b532494fc7</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -16004,6 +16435,256 @@
       <name>myUseLocationDependentDevices</name>
       <anchorfile>classArServerModeIdle.html</anchorfile>
       <anchor>a2e8798325b9814b7de88ea1daecbe415</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ArServerModeJogPosition</name>
+    <filename>classArServerModeJogPosition.html</filename>
+    <base>ArServerMode</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>activate</name>
+      <anchorfile>classArServerModeJogPosition.html</anchorfile>
+      <anchor>a6157251fc3b3ca735af747c84ee3a235</anchor>
+      <arglist>(void)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>addToConfig</name>
+      <anchorfile>classArServerModeJogPosition.html</anchorfile>
+      <anchor>ae804b49ae43c71bca7bd425ed1dd75c0</anchor>
+      <arglist>(ArConfig *config, const char *section=&quot;Jog Robot Position&quot;)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>ArServerModeJogPosition</name>
+      <anchorfile>classArServerModeJogPosition.html</anchorfile>
+      <anchor>a154ee4fbdf5629e5df295c8a9bd7e4d2</anchor>
+      <arglist>(ArServerBase *server, ArRobot *robot, const char *name=&quot;jogPositionMode&quot;, ArServerHandlerCommands *customCommands=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>deactivate</name>
+      <anchorfile>classArServerModeJogPosition.html</anchorfile>
+      <anchor>ac0be44b91245424cc158f620084478c0</anchor>
+      <arglist>(void)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual ArActionGroup *</type>
+      <name>getActionGroup</name>
+      <anchorfile>classArServerModeJogPosition.html</anchorfile>
+      <anchor>a72a2780024cd1891be31bcfb4b08d6fa</anchor>
+      <arglist>(void)</arglist>
+    </member>
+    <member kind="function">
+      <type>ArActionDriveDistance *</type>
+      <name>getDriveAction</name>
+      <anchorfile>classArServerModeJogPosition.html</anchorfile>
+      <anchor>ab0c1b1875042a8cb838e06a2ce4a3d81</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>ArActionInput *</type>
+      <name>getTurnAction</name>
+      <anchorfile>classArServerModeJogPosition.html</anchorfile>
+      <anchor>a020c424ed87126722ff0c50a68691d3c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>heading</name>
+      <anchorfile>classArServerModeJogPosition.html</anchorfile>
+      <anchor>ab8928d2b01fa6c68bfc6c8ea03caf47a</anchor>
+      <arglist>(double angle)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>move</name>
+      <anchorfile>classArServerModeJogPosition.html</anchorfile>
+      <anchor>a73a0d95fef4dac3f11f8daff6a340d12</anchor>
+      <arglist>(double distance)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>turn</name>
+      <anchorfile>classArServerModeJogPosition.html</anchorfile>
+      <anchor>a69b33cd7db01379423918dd363cd201c</anchor>
+      <arglist>(double angle)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~ArServerModeJogPosition</name>
+      <anchorfile>classArServerModeJogPosition.html</anchorfile>
+      <anchor>ade84ccfcbdf3c5b781de6efe3b4a262a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>serverHeading</name>
+      <anchorfile>classArServerModeJogPosition.html</anchorfile>
+      <anchor>a1cb08262d57f01599f2893d800240b7f</anchor>
+      <arglist>(ArServerClient *client, ArNetPacket *packet)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>serverMove</name>
+      <anchorfile>classArServerModeJogPosition.html</anchorfile>
+      <anchor>a607784b5a45fbe6a1b5ee02f12bb5824</anchor>
+      <arglist>(ArServerClient *client, ArNetPacket *packet)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>serverTurn</name>
+      <anchorfile>classArServerModeJogPosition.html</anchorfile>
+      <anchor>ae5469c8ce840463a9def466db0086030</anchor>
+      <arglist>(ArServerClient *client, ArNetPacket *packet)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>stringCmdHeading</name>
+      <anchorfile>classArServerModeJogPosition.html</anchorfile>
+      <anchor>a4f7829a043fa1087a4955f244595177e</anchor>
+      <arglist>(ArArgumentBuilder *args)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>stringCmdMove</name>
+      <anchorfile>classArServerModeJogPosition.html</anchorfile>
+      <anchor>ad97477a6ca9db6e65de1a505f94e962e</anchor>
+      <arglist>(ArArgumentBuilder *args)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>stringCmdTurn</name>
+      <anchorfile>classArServerModeJogPosition.html</anchorfile>
+      <anchor>a8dc1e4fc99bf6f10259d6bab313c2aee</anchor>
+      <arglist>(ArArgumentBuilder *args)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ArActionGroup</type>
+      <name>myActionGroup</name>
+      <anchorfile>classArServerModeJogPosition.html</anchorfile>
+      <anchor>abd08a182f4b6766fd8862c28e46d5da3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ArServerHandlerCommands *</type>
+      <name>myCustomCommandServer</name>
+      <anchorfile>classArServerModeJogPosition.html</anchorfile>
+      <anchor>a4b8bb2d25ada220a00d835a741c491b2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ArActionDriveDistance *</type>
+      <name>myDriveAction</name>
+      <anchorfile>classArServerModeJogPosition.html</anchorfile>
+      <anchor>a0cf74c5a141a45757643f17a8fc7f6c6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ArTime</type>
+      <name>myLastCommand</name>
+      <anchorfile>classArServerModeJogPosition.html</anchorfile>
+      <anchor>a5ee6d3c937d6dd71acd7c4be71ad5d7d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ArActionDeceleratingLimiter *</type>
+      <name>myLimiterBackward</name>
+      <anchorfile>classArServerModeJogPosition.html</anchorfile>
+      <anchor>a5b721dcf9eea7f659b77ced1359f90d6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ArActionDeceleratingLimiter *</type>
+      <name>myLimiterForward</name>
+      <anchorfile>classArServerModeJogPosition.html</anchorfile>
+      <anchor>a0684a7240e1a876a418d4b25273a6b9e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ArActionDeceleratingLimiter *</type>
+      <name>myLimiterLateralLeft</name>
+      <anchorfile>classArServerModeJogPosition.html</anchorfile>
+      <anchor>a9d82f6adaf96514c52befe272c0bd34c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ArActionDeceleratingLimiter *</type>
+      <name>myLimiterLateralRight</name>
+      <anchorfile>classArServerModeJogPosition.html</anchorfile>
+      <anchor>a37b128d249129d7eec76a1a3e88b65fc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ArActionLimiterRot *</type>
+      <name>myLimiterRot</name>
+      <anchorfile>classArServerModeJogPosition.html</anchorfile>
+      <anchor>af67a4b3692f8b839080ea54edf190551</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ArActionMovementParameters *</type>
+      <name>myMovementParameters</name>
+      <anchorfile>classArServerModeJogPosition.html</anchorfile>
+      <anchor>a897029f9d17d11fa6950e9fd83af4057</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>myPrinting</name>
+      <anchorfile>classArServerModeJogPosition.html</anchorfile>
+      <anchor>a98d43b2d015181fcf93bff08728c5549</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ArFunctor2C&lt; ArServerModeJogPosition, ArServerClient *, ArNetPacket * &gt;</type>
+      <name>myServerHeadingCB</name>
+      <anchorfile>classArServerModeJogPosition.html</anchorfile>
+      <anchor>a50d90a6f055581f251ad63615b158b6d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ArFunctor2C&lt; ArServerModeJogPosition, ArServerClient *, ArNetPacket * &gt;</type>
+      <name>myServerMoveCB</name>
+      <anchorfile>classArServerModeJogPosition.html</anchorfile>
+      <anchor>a27353ed9109db5ef588bf9b5cc9cda0d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ArFunctor2C&lt; ArServerModeJogPosition, ArServerClient *, ArNetPacket * &gt;</type>
+      <name>myServerTurnCB</name>
+      <anchorfile>classArServerModeJogPosition.html</anchorfile>
+      <anchor>a1ff694a720435d1a127f7a9fb0c5b3ee</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ArFunctor1C&lt; ArServerModeJogPosition, ArArgumentBuilder * &gt;</type>
+      <name>myStringCommandHeadingCB</name>
+      <anchorfile>classArServerModeJogPosition.html</anchorfile>
+      <anchor>acc63b3da7e98a861fb2502df8dec3e3a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ArFunctor1C&lt; ArServerModeJogPosition, ArArgumentBuilder * &gt;</type>
+      <name>myStringCommandMoveCB</name>
+      <anchorfile>classArServerModeJogPosition.html</anchorfile>
+      <anchor>a82fc0b354cd0c7c09e25f72322e32007</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ArFunctor1C&lt; ArServerModeJogPosition, ArArgumentBuilder * &gt;</type>
+      <name>myStringCommandTurnCB</name>
+      <anchorfile>classArServerModeJogPosition.html</anchorfile>
+      <anchor>aa5c57d90b94f08c3aff6aa0fe9bbf431</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ArActionInput *</type>
+      <name>myTurnAction</name>
+      <anchorfile>classArServerModeJogPosition.html</anchorfile>
+      <anchor>a34cb7f7a539fe4c0c7e891db1a61cbe7</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -18125,16 +18806,150 @@
       <arglist>()</arglist>
     </member>
   </compound>
+  <compound kind="struct">
+    <name>ArMapChanger::ClientChangeInfo</name>
+    <filename>structArMapChanger_1_1ClientChangeInfo.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>addPacket</name>
+      <anchorfile>structArMapChanger_1_1ClientChangeInfo.html</anchorfile>
+      <anchor>a33385e43a211f2d5632603e0861d206e</anchor>
+      <arglist>(ArNetPacket *packet)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>ClientChangeInfo</name>
+      <anchorfile>structArMapChanger_1_1ClientChangeInfo.html</anchorfile>
+      <anchor>a99e542b23c62fc532cc3287bb7912cf6</anchor>
+      <arglist>(ArServerClient *client)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>ClientChangeInfo</name>
+      <anchorfile>structArMapChanger_1_1ClientChangeInfo.html</anchorfile>
+      <anchor>a0bf8ff496b8521b438854f35e8679c33</anchor>
+      <arglist>(ArCentralForwarder *forwarder)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~ClientChangeInfo</name>
+      <anchorfile>structArMapChanger_1_1ClientChangeInfo.html</anchorfile>
+      <anchor>a8b6cc12262b85f5fa4cc35a6182bd01d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>ArServerClient *</type>
+      <name>myClient</name>
+      <anchorfile>structArMapChanger_1_1ClientChangeInfo.html</anchorfile>
+      <anchor>afe06e716e74b880957d6254883977801</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>ArCentralForwarder *</type>
+      <name>myForwarder</name>
+      <anchorfile>structArMapChanger_1_1ClientChangeInfo.html</anchorfile>
+      <anchor>a95be9ed68f5389a29119d81ad8eab5a2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>ArTime</type>
+      <name>myLastActivityTime</name>
+      <anchorfile>structArMapChanger_1_1ClientChangeInfo.html</anchorfile>
+      <anchor>a56af8410e1a09d5ef844ff892d52c1e4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::list&lt; ArNetPacket * &gt;</type>
+      <name>myPacketList</name>
+      <anchorfile>structArMapChanger_1_1ClientChangeInfo.html</anchorfile>
+      <anchor>a5f6e6eb4f38231bc2823d7a445c31720</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>ArTime</type>
+      <name>myStartTime</name>
+      <anchorfile>structArMapChanger_1_1ClientChangeInfo.html</anchorfile>
+      <anchor>ab03148ce83fe28142eec3ac6c51b8e3d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ArServerFileFromClient::FileInfo</name>
+    <filename>classArServerFileFromClient_1_1FileInfo.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>FileInfo</name>
+      <anchorfile>classArServerFileFromClient_1_1FileInfo.html</anchorfile>
+      <anchor>ab672d9d984b6ca335f6daa24eb3c5da7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~FileInfo</name>
+      <anchorfile>classArServerFileFromClient_1_1FileInfo.html</anchorfile>
+      <anchor>ac438717d9c7fbddd0cccef3dc3836031</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>ArServerClient *</type>
+      <name>myClient</name>
+      <anchorfile>classArServerFileFromClient_1_1FileInfo.html</anchorfile>
+      <anchor>a1936b5bdd4fb22e80ff981d2679473e7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>ArTime</type>
+      <name>myClientCreationTime</name>
+      <anchorfile>classArServerFileFromClient_1_1FileInfo.html</anchorfile>
+      <anchor>ae6f082bf104e8dee1f06801934819bb1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>FILE *</type>
+      <name>myFile</name>
+      <anchorfile>classArServerFileFromClient_1_1FileInfo.html</anchorfile>
+      <anchor>a3cdd6669254a1e77d4e2871b8e24ae2a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>time_t</type>
+      <name>myFileTimestamp</name>
+      <anchorfile>classArServerFileFromClient_1_1FileInfo.html</anchorfile>
+      <anchor>ab3bf44d80537a959194801e01cf8d54d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>ArTime</type>
+      <name>myLastActivity</name>
+      <anchorfile>classArServerFileFromClient_1_1FileInfo.html</anchorfile>
+      <anchor>affbd0e74152faff0ab5346b9bc785708</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>myRealFileName</name>
+      <anchorfile>classArServerFileFromClient_1_1FileInfo.html</anchorfile>
+      <anchor>acd687ac54128e26bb5bfd69d6809971b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>ArTime</type>
+      <name>myStartedTransfer</name>
+      <anchorfile>classArServerFileFromClient_1_1FileInfo.html</anchorfile>
+      <anchor>af6c83590aabc5343ab684ac27b489871</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>myTempFileName</name>
+      <anchorfile>classArServerFileFromClient_1_1FileInfo.html</anchorfile>
+      <anchor>affae5b7e5fe9303bd4c40868c52d0126</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
   <compound kind="class">
     <name>InputHandler</name>
     <filename>classInputHandler.html</filename>
-    <member kind="function">
-      <type>void</type>
-      <name>down</name>
-      <anchorfile>classInputHandler.html</anchorfile>
-      <anchor>aff05fcab709f52242af2ab0394c71bbc</anchor>
-      <arglist>(void)</arglist>
-    </member>
     <member kind="function">
       <type></type>
       <name>InputHandler</name>
@@ -18144,93 +18959,114 @@
     </member>
     <member kind="function">
       <type>void</type>
-      <name>lateralLeft</name>
-      <anchorfile>classInputHandler.html</anchorfile>
-      <anchor>a3b88e23e1699f11fad5a959b86ba8337</anchor>
-      <arglist>(void)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>lateralRight</name>
-      <anchorfile>classInputHandler.html</anchorfile>
-      <anchor>af1195a9ad1ba1e914aab851326d77dbe</anchor>
-      <arglist>(void)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>left</name>
-      <anchorfile>classInputHandler.html</anchorfile>
-      <anchor>acaf4c6a33e622cd02291d7b26ee5eafa</anchor>
-      <arglist>(void)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>listData</name>
-      <anchorfile>classInputHandler.html</anchorfile>
-      <anchor>ae6c404a77a50561dfbec6d75ad110a47</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>logTrackingTerse</name>
-      <anchorfile>classInputHandler.html</anchorfile>
-      <anchor>ac2de3644ad0e689bd1e299db0b81be91</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>logTrackingVerbose</name>
-      <anchorfile>classInputHandler.html</anchorfile>
-      <anchor>a8a20cb3c607fcdf8659e76410a4c9c19</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>resetTracking</name>
-      <anchorfile>classInputHandler.html</anchorfile>
-      <anchor>a720c051d91b5522dbd6cb1ea4d598d3c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>right</name>
-      <anchorfile>classInputHandler.html</anchorfile>
-      <anchor>ad046e535db8aa2945fd016ef2f2df2ca</anchor>
-      <arglist>(void)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
       <name>safeDrive</name>
       <anchorfile>classInputHandler.html</anchorfile>
       <anchor>a89a0f358138d6145c870a94a2992fc76</anchor>
       <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>sendInput</name>
-      <anchorfile>classInputHandler.html</anchorfile>
-      <anchor>a9e6368d486d4ccf4e2c3e9eebbcc7ddb</anchor>
-      <arglist>(void)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>unsafeDrive</name>
-      <anchorfile>classInputHandler.html</anchorfile>
-      <anchor>a69d8487cec0c65dca3b2ec9688270070</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>up</name>
-      <anchorfile>classInputHandler.html</anchorfile>
-      <anchor>adf7f859e5468b9c3f45eff1440757d12</anchor>
-      <arglist>(void)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual</type>
       <name>~InputHandler</name>
       <anchorfile>classInputHandler.html</anchorfile>
       <anchor>abe1e27d192d86058ad04ca6e16008110</anchor>
+      <arglist>(void)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>down</name>
+      <anchorfile>classInputHandler.html</anchorfile>
+      <anchor>aff05fcab709f52242af2ab0394c71bbc</anchor>
+      <arglist>(void)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>lateralLeft</name>
+      <anchorfile>classInputHandler.html</anchorfile>
+      <anchor>a3b88e23e1699f11fad5a959b86ba8337</anchor>
+      <arglist>(void)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>lateralRight</name>
+      <anchorfile>classInputHandler.html</anchorfile>
+      <anchor>af1195a9ad1ba1e914aab851326d77dbe</anchor>
+      <arglist>(void)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>left</name>
+      <anchorfile>classInputHandler.html</anchorfile>
+      <anchor>acaf4c6a33e622cd02291d7b26ee5eafa</anchor>
+      <arglist>(void)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>listData</name>
+      <anchorfile>classInputHandler.html</anchorfile>
+      <anchor>ae6c404a77a50561dfbec6d75ad110a47</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>logTrackingTerse</name>
+      <anchorfile>classInputHandler.html</anchorfile>
+      <anchor>ac2de3644ad0e689bd1e299db0b81be91</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>logTrackingVerbose</name>
+      <anchorfile>classInputHandler.html</anchorfile>
+      <anchor>a8a20cb3c607fcdf8659e76410a4c9c19</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>resetTracking</name>
+      <anchorfile>classInputHandler.html</anchorfile>
+      <anchor>a720c051d91b5522dbd6cb1ea4d598d3c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>right</name>
+      <anchorfile>classInputHandler.html</anchorfile>
+      <anchor>ad046e535db8aa2945fd016ef2f2df2ca</anchor>
+      <arglist>(void)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>sendInput</name>
+      <anchorfile>classInputHandler.html</anchorfile>
+      <anchor>a9e6368d486d4ccf4e2c3e9eebbcc7ddb</anchor>
+      <arglist>(void)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>space</name>
+      <anchorfile>classInputHandler.html</anchorfile>
+      <anchor>aa691a2145a3aa3be4da293331f97010c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>toggleDebug</name>
+      <anchorfile>classInputHandler.html</anchorfile>
+      <anchor>aa7b0fbdc4cffd8aa1dd37cb54242a020</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>unsafeDrive</name>
+      <anchorfile>classInputHandler.html</anchorfile>
+      <anchor>a69d8487cec0c65dca3b2ec9688270070</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>up</name>
+      <anchorfile>classInputHandler.html</anchorfile>
+      <anchor>adf7f859e5468b9c3f45eff1440757d12</anchor>
       <arglist>(void)</arglist>
     </member>
     <member kind="variable" protection="protected">
@@ -18241,6 +19077,13 @@
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
+      <type>ArClientRatioDrive</type>
+      <name>myDriveClient</name>
+      <anchorfile>classInputHandler.html</anchorfile>
+      <anchor>a378156dd4ba64c4cfed4c1c4ca12dcaf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
       <type>ArKeyHandler *</type>
       <name>myKeyHandler</name>
       <anchorfile>classInputHandler.html</anchorfile>
@@ -18248,31 +19091,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>double</type>
-      <name>myLatRatio</name>
-      <anchorfile>classInputHandler.html</anchorfile>
-      <anchor>a81b7a70343e12a53d00439de90f70c73</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
       <type>bool</type>
       <name>myPrinting</name>
       <anchorfile>classInputHandler.html</anchorfile>
       <anchor>af7cae761984e970db4da4c0bcebec2df</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>double</type>
-      <name>myRotRatio</name>
-      <anchorfile>classInputHandler.html</anchorfile>
-      <anchor>aff320bc5b21c04e01a0e2de840dc1a21</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>double</type>
-      <name>myTransRatio</name>
-      <anchorfile>classInputHandler.html</anchorfile>
-      <anchor>a8bae738326cc350bc8dcc5e672c7a540</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
@@ -18357,6 +19179,136 @@
       <name>myResetTrackingCB</name>
       <anchorfile>classInputHandler.html</anchorfile>
       <anchor>aa7775177aea65a54fcd8c28b922b1956</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ArFunctorC&lt; InputHandler &gt;</type>
+      <name>mySpaceCB</name>
+      <anchorfile>classInputHandler.html</anchorfile>
+      <anchor>ac574c44d47590afe8186ac716eb5985e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ArFunctorC&lt; InputHandler &gt;</type>
+      <name>myToggleDebugCB</name>
+      <anchorfile>classInputHandler.html</anchorfile>
+      <anchor>ad6a239ddd6d35320155f25c6bd8db7e9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ArFunctorC&lt; InputHandler &gt;</type>
+      <name>myUpCB</name>
+      <anchorfile>classInputHandler.html</anchorfile>
+      <anchor>aff0e09208e220a4d3607fce986e9885d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ArFunctorC&lt; InputHandler &gt;</type>
+      <name>myDownCB</name>
+      <anchorfile>classInputHandler.html</anchorfile>
+      <anchor>a97fe4edc677bd1e2abf5b0d27bbc844e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ArFunctorC&lt; InputHandler &gt;</type>
+      <name>myLeftCB</name>
+      <anchorfile>classInputHandler.html</anchorfile>
+      <anchor>afa781fa14a8f584ba6bcbe9f2235acec</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ArFunctorC&lt; InputHandler &gt;</type>
+      <name>myRightCB</name>
+      <anchorfile>classInputHandler.html</anchorfile>
+      <anchor>a76e7550c0e9aaccff8cd1a129bf17493</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ArFunctorC&lt; InputHandler &gt;</type>
+      <name>myLateralLeftCB</name>
+      <anchorfile>classInputHandler.html</anchorfile>
+      <anchor>afc023f75d4bffdaa0835c09280acee81</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ArFunctorC&lt; InputHandler &gt;</type>
+      <name>myLateralRightCB</name>
+      <anchorfile>classInputHandler.html</anchorfile>
+      <anchor>ae588fe08a9dcc08347d638cf46beeb77</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ArFunctorC&lt; InputHandler &gt;</type>
+      <name>mySafeDriveCB</name>
+      <anchorfile>classInputHandler.html</anchorfile>
+      <anchor>aece58b4cf845670cc05396343e20698d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ArFunctorC&lt; InputHandler &gt;</type>
+      <name>myUnsafeDriveCB</name>
+      <anchorfile>classInputHandler.html</anchorfile>
+      <anchor>a0639257dc6a5fa165f33b03a3b0f004a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ArFunctorC&lt; InputHandler &gt;</type>
+      <name>myListDataCB</name>
+      <anchorfile>classInputHandler.html</anchorfile>
+      <anchor>a6c7e0a52967d6bcf1f8a22a3acde54df</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ArFunctorC&lt; InputHandler &gt;</type>
+      <name>myLogTrackingTerseCB</name>
+      <anchorfile>classInputHandler.html</anchorfile>
+      <anchor>a0b4371011416a9e9ed03fc373554111f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ArFunctorC&lt; InputHandler &gt;</type>
+      <name>myLogTrackingVerboseCB</name>
+      <anchorfile>classInputHandler.html</anchorfile>
+      <anchor>a1c80c4a76397ee2f4a8d7f533d02fdfc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ArFunctorC&lt; InputHandler &gt;</type>
+      <name>myResetTrackingCB</name>
+      <anchorfile>classInputHandler.html</anchorfile>
+      <anchor>aa7775177aea65a54fcd8c28b922b1956</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ArFunctorC&lt; InputHandler &gt;</type>
+      <name>mySpaceCB</name>
+      <anchorfile>classInputHandler.html</anchorfile>
+      <anchor>ac574c44d47590afe8186ac716eb5985e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ArFunctorC&lt; InputHandler &gt;</type>
+      <name>myToggleDebugCB</name>
+      <anchorfile>classInputHandler.html</anchorfile>
+      <anchor>ad6a239ddd6d35320155f25c6bd8db7e9</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>Item</name>
+    <filename>structItem.html</filename>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>name</name>
+      <anchorfile>structItem.html</anchorfile>
+      <anchor>a342b7a351c9ae1c5430aa3ef65b670bd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>value</name>
+      <anchorfile>structItem.html</anchorfile>
+      <anchor>a49aec685c872d1b9a221c8592ab52a8c</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -18598,6 +19550,178 @@
       <anchor>ab5a1348da0b79fb90c0567be2329581a</anchor>
       <arglist></arglist>
     </member>
+    <member kind="variable" protection="protected">
+      <type>double</type>
+      <name>myX</name>
+      <anchorfile>classOutputHandler.html</anchorfile>
+      <anchor>a74d763d85ded5089cc624ac393811441</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>double</type>
+      <name>myY</name>
+      <anchorfile>classOutputHandler.html</anchorfile>
+      <anchor>a3b7e68a82fb5766b4fb7aa007db179d3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>double</type>
+      <name>myTh</name>
+      <anchorfile>classOutputHandler.html</anchorfile>
+      <anchor>a6850953e5a07353f6527b988c5642354</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>double</type>
+      <name>myVel</name>
+      <anchorfile>classOutputHandler.html</anchorfile>
+      <anchor>a2b46970e9ed26fb2bee64841818ad2aa</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>double</type>
+      <name>myRotVel</name>
+      <anchorfile>classOutputHandler.html</anchorfile>
+      <anchor>a42092465da6636c238e471857cfd4ef9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>double</type>
+      <name>myLatVel</name>
+      <anchorfile>classOutputHandler.html</anchorfile>
+      <anchor>a7ad4184316ad70dfce0b4926d0f56b58</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>myVoltageIsStateOfCharge</name>
+      <anchorfile>classOutputHandler.html</anchorfile>
+      <anchor>ad0cc364b968e6ceb41850e10c8a71daa</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>char</type>
+      <name>myTemperature</name>
+      <anchorfile>classOutputHandler.html</anchorfile>
+      <anchor>af1c43d0f34cc5063377e7359a03231f7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>double</type>
+      <name>myVoltage</name>
+      <anchorfile>classOutputHandler.html</anchorfile>
+      <anchor>a3deda3b62c95efc36b1ee8220bb3264a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>char</type>
+      <name>myStatus</name>
+      <anchorfile>classOutputHandler.html</anchorfile>
+      <anchor>a28b028e781294ad07ac3ff2de8cc36fd</anchor>
+      <arglist>[256]</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>char</type>
+      <name>myMode</name>
+      <anchorfile>classOutputHandler.html</anchorfile>
+      <anchor>a566c4ba4f70b9384fcdf6f0abc5aa9fa</anchor>
+      <arglist>[256]</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ArFunctor1C&lt; OutputHandler, ArNetPacket * &gt;</type>
+      <name>myHandleOutputCB</name>
+      <anchorfile>classOutputHandler.html</anchorfile>
+      <anchor>a25ae6efce0648ffbba357e5413ddac6d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ArFunctor1C&lt; OutputHandler, ArNetPacket * &gt;</type>
+      <name>myHandleOutputNumbersCB</name>
+      <anchorfile>classOutputHandler.html</anchorfile>
+      <anchor>ac28bd01f78c6717c36162078b4247172</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ArFunctor1C&lt; OutputHandler, ArNetPacket * &gt;</type>
+      <name>myHandleOutputStringsCB</name>
+      <anchorfile>classOutputHandler.html</anchorfile>
+      <anchor>abe0155203bf50a4de570f744123ee4df</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ArFunctor1C&lt; OutputHandler, ArNetPacket * &gt;</type>
+      <name>myHandleBatteryInfoCB</name>
+      <anchorfile>classOutputHandler.html</anchorfile>
+      <anchor>a5c0972cf1fa1cb4c384c3f6afd350993</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ArFunctor1C&lt; OutputHandler, ArNetPacket * &gt;</type>
+      <name>myHandlePhysicalInfoCB</name>
+      <anchorfile>classOutputHandler.html</anchorfile>
+      <anchor>ae9ff2c6ae5ad93dbcc9697b6a78cbe56</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ArFunctor1C&lt; OutputHandler, ArNetPacket * &gt;</type>
+      <name>myHandleTemperatureInfoCB</name>
+      <anchorfile>classOutputHandler.html</anchorfile>
+      <anchor>a94c63949c607554bc7375e657df11010</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ArFunctor1C&lt; OutputHandler, ArNetPacket * &gt;</type>
+      <name>myHandleMapUpdatedCB</name>
+      <anchorfile>classOutputHandler.html</anchorfile>
+      <anchor>ab5a1348da0b79fb90c0567be2329581a</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ArServerHandlerPopup::PopupData</name>
+    <filename>classArServerHandlerPopup_1_1PopupData.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>PopupData</name>
+      <anchorfile>classArServerHandlerPopup_1_1PopupData.html</anchorfile>
+      <anchor>aed5a2d8c3fdc65a8a9d091a7eaab6f8a</anchor>
+      <arglist>(ArServerHandlerPopupInfo *popupInfo, ArTypes::Byte4 id, ArFunctor2&lt; ArTypes::Byte4, int &gt; *callback)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~PopupData</name>
+      <anchorfile>classArServerHandlerPopup_1_1PopupData.html</anchorfile>
+      <anchor>ad44bf197df47820294e17b9d332f01de</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>ArFunctor2&lt; ArTypes::Byte4, int &gt; *</type>
+      <name>myCallback</name>
+      <anchorfile>classArServerHandlerPopup_1_1PopupData.html</anchorfile>
+      <anchor>a505723a68c4627c997ba381f9104cb17</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>ArTypes::Byte4</type>
+      <name>myID</name>
+      <anchorfile>classArServerHandlerPopup_1_1PopupData.html</anchorfile>
+      <anchor>a1b6bf5e55c74d6a492efca6e36a48fc4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>ArServerHandlerPopupInfo *</type>
+      <name>myPopupInfo</name>
+      <anchorfile>classArServerHandlerPopup_1_1PopupData.html</anchorfile>
+      <anchor>a5fd8ff43b3e1cce71ece78b26e2842d0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>ArTime</type>
+      <name>myStarted</name>
+      <anchorfile>classArServerHandlerPopup_1_1PopupData.html</anchorfile>
+      <anchor>a04a55773508583fc62ad93b532494fc7</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>PtzCameraExample</name>
@@ -18622,6 +19746,87 @@
       <anchorfile>classPtzCameraExample.html</anchorfile>
       <anchor>abebd051cf8fc085f1d3d7b505e1a8c67</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>ArClientHandlerRobotUpdate::RobotData</name>
+    <filename>structArClientHandlerRobotUpdate_1_1RobotData.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>RobotData</name>
+      <anchorfile>structArClientHandlerRobotUpdate_1_1RobotData.html</anchorfile>
+      <anchor>a52c31a22fdc9bb410934a9dcb327d866</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>haveStateOfCharge</name>
+      <anchorfile>structArClientHandlerRobotUpdate_1_1RobotData.html</anchorfile>
+      <anchor>aacf16af23d9c6ce24c7821675bf0e144</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>haveTemperature</name>
+      <anchorfile>structArClientHandlerRobotUpdate_1_1RobotData.html</anchorfile>
+      <anchor>aecf54125671599e6279c47fc674943f6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>haveVoltage</name>
+      <anchorfile>structArClientHandlerRobotUpdate_1_1RobotData.html</anchorfile>
+      <anchor>a5f4dce429d08ec51d47d25271ecd8ca5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>latVel</name>
+      <anchorfile>structArClientHandlerRobotUpdate_1_1RobotData.html</anchorfile>
+      <anchor>a29f099e4efb19dc5b1dd860743fac7d3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>ArPose</type>
+      <name>pose</name>
+      <anchorfile>structArClientHandlerRobotUpdate_1_1RobotData.html</anchorfile>
+      <anchor>a75022fca1e4a823f5262504996a9212f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>rotVel</name>
+      <anchorfile>structArClientHandlerRobotUpdate_1_1RobotData.html</anchorfile>
+      <anchor>a453a3a9492b288d81b4379e578f0b27d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>stateOfCharge</name>
+      <anchorfile>structArClientHandlerRobotUpdate_1_1RobotData.html</anchorfile>
+      <anchor>a76330c5621dd101d79f0480e7d3702b8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>temperature</name>
+      <anchorfile>structArClientHandlerRobotUpdate_1_1RobotData.html</anchorfile>
+      <anchor>af29419008c30f9c0357791ef670771ec</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>vel</name>
+      <anchorfile>structArClientHandlerRobotUpdate_1_1RobotData.html</anchorfile>
+      <anchor>a343e254c53003bdf3dd3f07a79711ebe</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>voltage</name>
+      <anchorfile>structArClientHandlerRobotUpdate_1_1RobotData.html</anchorfile>
+      <anchor>a6c7fbd6c5b50f10aa96e02666af3f02c</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -18691,16 +19896,277 @@
       <arglist></arglist>
     </member>
   </compound>
+  <compound kind="class">
+    <name>ArServerBase::SlowIdleThread</name>
+    <filename>classArServerBase_1_1SlowIdleThread.html</filename>
+    <base>ArASyncTask</base>
+    <member kind="function">
+      <type>void</type>
+      <name>addCycleCallback</name>
+      <anchorfile>classArServerBase_1_1SlowIdleThread.html</anchorfile>
+      <anchor>aaa54387077f70c5e30682d62a2c465dd</anchor>
+      <arglist>(ArFunctor *functor)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>remCycleCallback</name>
+      <anchorfile>classArServerBase_1_1SlowIdleThread.html</anchorfile>
+      <anchor>acdb2130da4e071f93a5fff4466cc44c8</anchor>
+      <arglist>(ArFunctor *functor)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void *</type>
+      <name>runThread</name>
+      <anchorfile>classArServerBase_1_1SlowIdleThread.html</anchorfile>
+      <anchor>aeda78edd767f917477a1f762237cd408</anchor>
+      <arglist>(void *arg)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>SlowIdleThread</name>
+      <anchorfile>classArServerBase_1_1SlowIdleThread.html</anchorfile>
+      <anchor>ae9e164dfdf752e6dc258c1d7c8eddfc9</anchor>
+      <arglist>(ArServerBase *serverBase)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~SlowIdleThread</name>
+      <anchorfile>classArServerBase_1_1SlowIdleThread.html</anchorfile>
+      <anchor>a64452651fe85afcdbe7af121d2a6e5e2</anchor>
+      <arglist>(void)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::list&lt; ArFunctor * &gt;</type>
+      <name>myCycleCallbacks</name>
+      <anchorfile>classArServerBase_1_1SlowIdleThread.html</anchorfile>
+      <anchor>a8424c9d8188210381455304b8c3bacc9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ArMutex</type>
+      <name>myCycleCallbacksMutex</name>
+      <anchorfile>classArServerBase_1_1SlowIdleThread.html</anchorfile>
+      <anchor>a24144f12a024f219f18048a4e9e1e9d4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ArServerBase *</type>
+      <name>myServerBase</name>
+      <anchorfile>classArServerBase_1_1SlowIdleThread.html</anchorfile>
+      <anchor>a23257ec80c6ab58689cc272bd8c6cee7</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ArClientBase::Tracker</name>
+    <filename>classArClientBase_1_1Tracker.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>reset</name>
+      <anchorfile>classArClientBase_1_1Tracker.html</anchorfile>
+      <anchor>a1ef7cf1c3e03ce9de72f74d251623117</anchor>
+      <arglist>(void)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Tracker</name>
+      <anchorfile>classArClientBase_1_1Tracker.html</anchorfile>
+      <anchor>af61907fd5b4b257530e45f0d5e25e305</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~Tracker</name>
+      <anchorfile>classArClientBase_1_1Tracker.html</anchorfile>
+      <anchor>a7a23f36b23aeeeb0800a5ffbf11ae76a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>long</type>
+      <name>myBytesTcp</name>
+      <anchorfile>classArClientBase_1_1Tracker.html</anchorfile>
+      <anchor>ae77db0fcc4a56b7c1e3b05fcb6b5f13d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>long</type>
+      <name>myBytesUdp</name>
+      <anchorfile>classArClientBase_1_1Tracker.html</anchorfile>
+      <anchor>aa6a98130c77bddfe81cd311e617b24b5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>long</type>
+      <name>myPacketsTcp</name>
+      <anchorfile>classArClientBase_1_1Tracker.html</anchorfile>
+      <anchor>a7e4d641248b576a3b36b6614c6fe8eb7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>long</type>
+      <name>myPacketsUdp</name>
+      <anchorfile>classArClientBase_1_1Tracker.html</anchorfile>
+      <anchor>a943ac46100272dcf90af50b2ddb58ad9</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ArServerClient::Tracker</name>
+    <filename>classArServerClient_1_1Tracker.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>reset</name>
+      <anchorfile>classArServerClient_1_1Tracker.html</anchorfile>
+      <anchor>a08f51042e4b59b031d2a8588c5f0862d</anchor>
+      <arglist>(void)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Tracker</name>
+      <anchorfile>classArServerClient_1_1Tracker.html</anchorfile>
+      <anchor>a38c92ae808bb1c1e70bc2478e8372794</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~Tracker</name>
+      <anchorfile>classArServerClient_1_1Tracker.html</anchorfile>
+      <anchor>a67325888f78f78b150f95cb140fd9e53</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>long</type>
+      <name>myBytesTcp</name>
+      <anchorfile>classArServerClient_1_1Tracker.html</anchorfile>
+      <anchor>a652e240f97ceff91d00a8f38423b5a7f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>long</type>
+      <name>myBytesUdp</name>
+      <anchorfile>classArServerClient_1_1Tracker.html</anchorfile>
+      <anchor>a786627dc857fa0705906f06fdaaa21b8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>long</type>
+      <name>myPacketsTcp</name>
+      <anchorfile>classArServerClient_1_1Tracker.html</anchorfile>
+      <anchor>a5a63f8ae70b93d45727861748daa7ad9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>long</type>
+      <name>myPacketsUdp</name>
+      <anchorfile>classArServerClient_1_1Tracker.html</anchorfile>
+      <anchor>a042e19619e1d9abf5adb8427eba40dc2</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="page">
+    <name>RemoteRequestAPI</name>
+    <title>ArNetworking Remote Request API List</title>
+    <filename>RemoteRequestAPI</filename>
+    <docanchor file="RemoteRequestAPI" title="Robot Control Modes">modes</docanchor>
+    <docanchor file="RemoteRequestAPI" title="Stop mode">stopmode</docanchor>
+    <docanchor file="RemoteRequestAPI" title="Ratio Drive Mode">ratiodrivemode</docanchor>
+    <docanchor file="RemoteRequestAPI" title="Jog Position Mode">jogpositionmode</docanchor>
+    <docanchor file="RemoteRequestAPI" title="Wander Mode">wandermode</docanchor>
+    <docanchor file="RemoteRequestAPI" title="Dock Mode (ARNL only)">dockmode</docanchor>
+    <docanchor file="RemoteRequestAPI" title="Goal Mode (Navigation with ARNL/MOGS only)">gotopointmode</docanchor>
+    <docanchor file="RemoteRequestAPI" title="Tour Goals Mode">tourgoalsmode</docanchor>
+    <docanchor file="RemoteRequestAPI" title="Robot and Server Status Updates">status</docanchor>
+    <docanchor file="RemoteRequestAPI" title="General Application-specific Data Set">strings</docanchor>
+    <docanchor file="RemoteRequestAPI" title="Host OS Status">systemstatus</docanchor>
+    <docanchor file="RemoteRequestAPI" title="Camera Pan/Tilt/Zoom Controls">camera</docanchor>
+    <docanchor file="RemoteRequestAPI" title="Requests Received">camerarequests</docanchor>
+    <docanchor file="RemoteRequestAPI" title="Packets Sent">camerareplies</docanchor>
+    <docanchor file="RemoteRequestAPI" title="Application Configuration">config</docanchor>
+    <docanchor file="RemoteRequestAPI" title="Map Data">map</docanchor>
+    <docanchor file="RemoteRequestAPI" title="Control Scanning for Making Maps">mapscanning</docanchor>
+    <docanchor file="RemoteRequestAPI" title="File Upload, Download and Listing">files</docanchor>
+    <docanchor file="RemoteRequestAPI" title="Network Communications Monitoring">commMonitor</docanchor>
+    <docanchor file="RemoteRequestAPI" title="Display Popup Windows in Client">popups</docanchor>
+    <docanchor file="RemoteRequestAPI" title="Visualization Graphics">drawings</docanchor>
+    <docanchor file="RemoteRequestAPI" title="Custom User Commands">customcommands</docanchor>
+    <docanchor file="RemoteRequestAPI" title="Basic User Authentication">auth</docanchor>
+    <docanchor file="RemoteRequestAPI" title="ARNL and MOGS Autonomous Navigation">ARNL</docanchor>
+  </compound>
   <compound kind="page">
     <name>index</name>
     <title>ArNetworking</title>
     <filename>index</filename>
-    <docanchor file="index">PreMadeServices</docanchor>
-    <docanchor file="index">Clients</docanchor>
-    <docanchor file="index">Auth</docanchor>
-    <docanchor file="index">SimpleServerCommands</docanchor>
-    <docanchor file="index">ARNLServerClasses</docanchor>
-    <docanchor file="index">Servers</docanchor>
-    <docanchor file="index">ServerModes</docanchor>
+    <docanchor file="index" title="Introduction">overviewintro</docanchor>
+    <docanchor file="index" title="Servers">Servers</docanchor>
+    <docanchor file="index" title="Server Modes">ServerModes</docanchor>
+    <docanchor file="index" title="Simple Server Commands">SimpleServerCommands</docanchor>
+    <docanchor file="index" title="Networking in ARNL and SONARNL">ARNLServerClasses</docanchor>
+    <docanchor file="index" title="Standard Services Available in ArNetworking">PreMadeServices</docanchor>
+    <docanchor file="index" title="Clients">Clients</docanchor>
+    <docanchor file="index" title="Authenticated Connections">Auth</docanchor>
+    <docanchor file="index" title="Contents">toc</docanchor>
+    <docanchor file="index" title="Additional tools in the ARIA toolbox:">tocToolbox</docanchor>
+    <docanchor file="index" title="Helpful information about C++ development with ARIA:">tocDevHelp</docanchor>
+    <docanchor file="index" title="Advanced Usage:">tocAdv</docanchor>
+    <docanchor file="index" title="Introduction">intro</docanchor>
+    <docanchor file="index" title="What is ARIA? How does it relate to other MobileRobots software?">whouses</docanchor>
+    <docanchor file="index" title="Java and Python">javapython</docanchor>
+    <docanchor file="index" title="Matlab">matlab</docanchor>
+    <docanchor file="index" title="License and Sharing">licensing</docanchor>
+    <docanchor file="index" title="The ARIA Package">AriaPackage</docanchor>
+    <docanchor file="index" title="ARIA/">arpack</docanchor>
+    <docanchor file="index" title="Other ARIA Files of Note">arpackother</docanchor>
+    <docanchor file="index" title="Documentation and Coding Convention">codingConventions</docanchor>
+    <docanchor file="index" title="ARIA-Robot Client-Server Relationship">arCliServ</docanchor>
+    <docanchor file="index" title="Robot Communication">commClasses</docanchor>
+    <docanchor file="index" title="Connecting with a Robot or the Simulator">connectRobot</docanchor>
+    <docanchor file="index" title="Specifying Details about Robot and Device Connections">HardwareConfiguration</docanchor>
+    <docanchor file="index" title="Robot Parameter Files">RobotParameterFiles</docanchor>
+    <docanchor file="index" title="Program Runtime Options">RuntimeOptions</docanchor>
+    <docanchor file="index" title="ArRobot">robot</docanchor>
+    <docanchor file="index" title="Client Commands and Server Information Packets">commands</docanchor>
+    <docanchor file="index" title="Packet Handlers">packetHandlers</docanchor>
+    <docanchor file="index" title="Command Packets">CommandPackets</docanchor>
+    <docanchor file="index" title="Robot Synchronization Cycle">syncRobot</docanchor>
+    <docanchor file="index" title="State Reflection">stateReflection</docanchor>
+    <docanchor file="index" title="Robot Callbacks">callback</docanchor>
+    <docanchor file="index" title="Controlling the robot with Commands and Actions">ClientCommands</docanchor>
+    <docanchor file="index" title="Direct Commands">robotDirectCommands</docanchor>
+    <docanchor file="index" title="Motion Command Functions">robotMotionCommands</docanchor>
+    <docanchor file="index" title="Actions">actions</docanchor>
+    <docanchor file="index" title="Action Desired">actionDesired</docanchor>
+    <docanchor file="index" title="The Action Resolver">resolvers</docanchor>
+    <docanchor file="index" title="Predefined Actions">predefinedActions</docanchor>
+    <docanchor file="index" title="Mixing Actions">actionInteractions</docanchor>
+    <docanchor file="index" title="Action Groups">actionGroups</docanchor>
+    <docanchor file="index" title="Range Devices">rangeDevices</docanchor>
+    <docanchor file="index" title="Functors">functors</docanchor>
+    <docanchor file="index" title="Keyboard and Joystick Input">userInput</docanchor>
+    <docanchor file="index" title="Threading">threading</docanchor>
+    <docanchor file="index" title="Thread Syncronizing Objects">syncObject</docanchor>
+    <docanchor file="index" title="Asynchronous Task Class">asynctasks</docanchor>
+    <docanchor file="index" title="Global Data">aria</docanchor>
+    <docanchor file="index" title="Device and Accessory Interface Classes">devices</docanchor>
+    <docanchor file="index" title="Utility Classes">utility</docanchor>
+    <docanchor file="index" title="ArConfig">arconfig</docanchor>
+    <docanchor file="index" title="Shared Info Groups">arinfogroup</docanchor>
+    <docanchor file="index" title="Maps">maps</docanchor>
+    <docanchor file="index" title="Sockets">sockets</docanchor>
+    <docanchor file="index" title="ArNetworking">ArNetworking</docanchor>
+    <docanchor file="index" title="Sound and Speech">sound</docanchor>
+    <docanchor file="index" title="Emacs">emacs</docanchor>
+    <docanchor file="index" title="Non-everyday use of C++">noneverydayC</docanchor>
+    <docanchor file="index" title="Standard Template Library">stl</docanchor>
+    <docanchor file="index" title="Default Arguments">defaultArgs</docanchor>
+    <docanchor file="index" title="Constructor Chaining">constructorChaining</docanchor>
+    <docanchor file="index" title="Chars and Strings, Win workaround">charsAndStrings</docanchor>
+    <docanchor file="index" title="AREXPORT">arexport</docanchor>
+    <docanchor file="index" title="Exceptions">exceptions</docanchor>
+    <docanchor file="index" title="Topics and Esoterica">Advanced</docanchor>
+    <docanchor file="index" title="Piecemeal Use of ARIA">pieceMealUse</docanchor>
+    <docanchor file="index" title="Connecting with a Robot or the Simulator the hard way">hardConnectRobot</docanchor>
+    <docanchor file="index" title="Opening the Connection">openDevice</docanchor>
+    <docanchor file="index" title="Robot Client-Server Connection">devConnect</docanchor>
+    <docanchor file="index" title="Connection Read, Write, Close and Timestamping">connrw</docanchor>
   </compound>
 </tagfile>

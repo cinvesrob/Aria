@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -363,6 +364,7 @@ AREXPORT bool ArRobotConnector::setupRobot(ArRobot *robot)
     myRobotTcpConn.setPort("localhost", myRemoteRobotTcpPort);
 
   // see if we can get to the simulator  (true is success)
+  ArLog::log(ArLog::Normal, "Connnecting to robot using TCP connection to %s...", myRobotTcpConn.getPortName());// , myRemoteHost, myRobotTcpConn.getPort());
   if (myRobotTcpConn.openSimple())
   {
     robot->setDeviceConnection(&myRobotTcpConn);

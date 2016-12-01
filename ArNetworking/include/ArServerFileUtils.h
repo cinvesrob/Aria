@@ -1,3 +1,29 @@
+/*
+Adept MobileRobots Robotics Interface for Applications (ARIA)
+Copyright (C) 2004-2005 ActivMedia Robotics LLC
+Copyright (C) 2006-2010 MobileRobots Inc.
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
+
+     This program is free software; you can redistribute it and/or modify
+     it under the terms of the GNU General Public License as published by
+     the Free Software Foundation; either version 2 of the License, or
+     (at your option) any later version.
+
+     This program is distributed in the hope that it will be useful,
+     but WITHOUT ANY WARRANTY; without even the implied warranty of
+     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+     GNU General Public License for more details.
+
+     You should have received a copy of the GNU General Public License
+     along with this program; if not, write to the Free Software
+     Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+If you wish to redistribute ARIA under different terms, contact 
+Adept MobileRobots for information about a commercial version of ARIA at 
+robots@mobilerobots.com or 
+Adept MobileRobots, 10 Columbia Drive, Amherst, NH 03031; +1-603-881-7960
+*/
 #ifndef ARSERVERFILEUTILS_H
 #define ARSERVERFILEUTILS_H
 
@@ -7,7 +33,7 @@
 
 /// Provides a list of files to clients
 /**
- * @note Linux only
+ * @linuxonly
  *
    This class is set up so that a client can get file information from
    the robot, this class ONLY lists files, and doesn't do any
@@ -52,7 +78,7 @@ protected:
 
 /// Gets files from the server
 /**
- * @note Linux only
+ * @linuxonly
  *
    This class is set up so that a client can get files the robot, this
    class ONLY gets files.  You should use this class by using
@@ -102,13 +128,13 @@ protected:
 
 /// Puts files onto the server
 /**
- * @note Linux only
+ * @linuxonly
  *
    This class is set up so that a client can put files on the robot,
    this class ONLY puts files.  This class will take a file from a
    client, writing it into the tempDir given in the constructor, then
    after receiving the file it'll move it over to the actual location
-   requested.  You should use this class by using ArClientFileToClient
+   requested.  You should use this class by using ArClientFileFromClient
    and NOT by using this classes interface directly, this is because
    the API is and will remain fairly volatile... if you need more
    functionality let us know and we'll add it if its reasonable.
@@ -198,7 +224,7 @@ protected:
 
 /// Deletes files from the server
 /**
- * @note Linux only
+ * @linuxonly
  *
    This class is set up so that a client can get delete files on the
    robot, this class ONLY deletes files.  You should use this class by

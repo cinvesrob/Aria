@@ -1,6 +1,17 @@
 var classArLMS1XX =
 [
-    [ "LaserModel", "classArLMS1XX.html#a5988236f8ae8a509599be6deb7b9bc57", null ],
+    [ "LaserModel", "classArLMS1XX.html#a5988236f8ae8a509599be6deb7b9bc57", [
+      [ "LMS1XX", "classArLMS1XX.html#a5988236f8ae8a509599be6deb7b9bc57aa54aa073ace80774d7d725298010ee4e", null ],
+      [ "LMS5XX", "classArLMS1XX.html#a5988236f8ae8a509599be6deb7b9bc57ad876b495d79287870e890a186d96010a", null ],
+      [ "TiM3XX", "classArLMS1XX.html#a5988236f8ae8a509599be6deb7b9bc57a7a55dbc3749d3e9165e942f8f340d421", null ],
+      [ "TiM551", "classArLMS1XX.html#a5988236f8ae8a509599be6deb7b9bc57a328ee5a9019a1495159b03f1537aa6a7", null ],
+      [ "TiM561", "classArLMS1XX.html#a5988236f8ae8a509599be6deb7b9bc57a5985b3904a2241a15a3e2974a8303e4e", null ],
+      [ "TiM571", "classArLMS1XX.html#a5988236f8ae8a509599be6deb7b9bc57ad94e1c5873370a3943985b621693d81b", null ]
+    ] ],
+    [ "LaserModelFamily", "classArLMS1XX.html#af2a56db3dda3e5001df809865b238e48", [
+      [ "LMS", "classArLMS1XX.html#af2a56db3dda3e5001df809865b238e48a52863b411932ba48b207c1d797472f2f", null ],
+      [ "TiM", "classArLMS1XX.html#af2a56db3dda3e5001df809865b238e48aa2a7901b92d9d5ab2e1e049090798567", null ]
+    ] ],
     [ "ArLMS1XX", "classArLMS1XX.html#abcc385d24557abb5ec93485e3ffcb308", null ],
     [ "~ArLMS1XX", "classArLMS1XX.html#a606cfce20cef704dd4ae28f972e8bed7", null ],
     [ "asyncConnect", "classArLMS1XX.html#ad9220b8c0f5f7e11c23e5d57b7437c49", null ],
@@ -18,7 +29,7 @@ var classArLMS1XX =
     [ "sendAndRecv", "classArLMS1XX.html#aa3f9967309d8cce160a30c4b0062b81f", null ],
     [ "sensorInterp", "classArLMS1XX.html#a461175c9692528716f3e673e48a58017", null ],
     [ "setRobot", "classArLMS1XX.html#abbbb4b82cdb464ff1e113bc85ee1004d", null ],
-    [ "tim3xxConnect", "classArLMS1XX.html#a7a305c01d5b7c2e3f372b4e019a3c07e", null ],
+    [ "timConnect", "classArLMS1XX.html#a21a5265cfc158f7065a9eb6091cb4087", null ],
     [ "validateCheckSum", "classArLMS1XX.html#a21daf48cf5afb26fb6e041a8257da9cf", null ],
     [ "myAriaExitCB", "classArLMS1XX.html#a20a8e0cdf0bc0128665a8058a66f3b31", null ],
     [ "myDataMutex", "classArLMS1XX.html#a555d190455e012020bb8fa891a212876", null ],
@@ -31,6 +42,7 @@ var classArLMS1XX =
     [ "myInputStatus2", "classArLMS1XX.html#a2f209bb0c4d30b176b3a365ff53267e7", null ],
     [ "myIsConnected", "classArLMS1XX.html#af213c9c3f9323a3a1b2bc3e9f6b0b315", null ],
     [ "myLaserModel", "classArLMS1XX.html#aac65fa4d8f35ae0b29708f77e99041ff", null ],
+    [ "myLaserModelFamily", "classArLMS1XX.html#a88cbf598032b49cd859c5dd0cc4b4b6d", null ],
     [ "myLogLevel", "classArLMS1XX.html#a099cf28de351eb04aa349fb72e658a1f", null ],
     [ "myMeasurementFreq", "classArLMS1XX.html#a5617fa4f5a759d718d992cc3225986b6", null ],
     [ "myMessageCounter", "classArLMS1XX.html#a57af1138bda161d87b2905f744443f5e", null ],

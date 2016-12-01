@@ -1,5 +1,6 @@
 var classArSonarConnector =
 [
+    [ "SonarData", "classArSonarConnector_1_1SonarData.html", "classArSonarConnector_1_1SonarData" ],
     [ "ArSonarConnector", "classArSonarConnector.html#ac37f03297a9f3158a7f1daf5bdb40de3", null ],
     [ "~ArSonarConnector", "classArSonarConnector.html#a8142dd593a44010ccec69cf9a197084a", null ],
     [ "addSonar", "classArSonarConnector.html#a8746703bfabfac28f5165ac21e56a998", null ],

@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -115,13 +116,16 @@ public:
   AREXPORT bool parseArgs(void);
   /// Function to parse the arguments given in an arbitrary parser
   AREXPORT bool parseArgs(ArArgumentParser *parser);
-  /// Log the options the simple connector has
+  /// Log the command-line options available to the user
   AREXPORT void logOptions(void) const;
   /// Internal function to get the laser (only useful between parseArgs and connectLasers)
   AREXPORT ArLaser *getLaser(int laserNumber);
 
   /// Internal function to replace the laser (only useful between parseArgs and connectLasers) but not the laser data
   AREXPORT bool replaceLaser(ArLaser *laser, int laserNumber);
+
+  /// Log all currently set paramter values
+  AREXPORT void logLaserData();
   
 protected:
   /// Class that holds information about the laser data

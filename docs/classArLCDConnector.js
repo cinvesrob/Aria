@@ -1,5 +1,6 @@
 var classArLCDConnector =
 [
+    [ "LCDData", "classArLCDConnector_1_1LCDData.html", "classArLCDConnector_1_1LCDData" ],
     [ "ArLCDConnector", "classArLCDConnector.html#a37fab797364dac72e738a013315819d8", null ],
     [ "~ArLCDConnector", "classArLCDConnector.html#a370ca6c048736c69e4e47ea27e3e0d13", null ],
     [ "addLCD", "classArLCDConnector.html#a0e5c977459a45f7d427527fed2400309", null ],

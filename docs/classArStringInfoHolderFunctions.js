@@ -1,6 +1,7 @@
 var classArStringInfoHolderFunctions =
 [
     [ "boolWrapper", "classArStringInfoHolderFunctions.html#afb474f893f9dcde811a550dc35f55543", null ],
+    [ "cppStringWrapper", "classArStringInfoHolderFunctions.html#af6adaee2d1b6aebe2d92d58e73594371", null ],
     [ "doubleWrapper", "classArStringInfoHolderFunctions.html#a0ee84120e9b421967551ea5e15a9648e", null ],
     [ "intWrapper", "classArStringInfoHolderFunctions.html#a8a6a557ca9d9c8e5973399124feff64f", null ],
     [ "longWrapper", "classArStringInfoHolderFunctions.html#a5da6eb1671fefe78f98019b6ccf0bbdb", null ],

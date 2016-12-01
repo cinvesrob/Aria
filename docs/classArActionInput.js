@@ -1,6 +1,11 @@
 var classArActionInput =
 [
-    [ "RotRegime", "classArActionInput.html#ac4f76647601b9775cc4307967ed41077", null ],
+    [ "RotRegime", "classArActionInput.html#ac4f76647601b9775cc4307967ed41077", [
+      [ "NONE", "classArActionInput.html#ac4f76647601b9775cc4307967ed41077a41153ca2f9c9009b51682602f63b2f45", null ],
+      [ "ROTVEL", "classArActionInput.html#ac4f76647601b9775cc4307967ed41077a770b1681f1cda046ffbabfb05f9b2670", null ],
+      [ "DELTAHEADING", "classArActionInput.html#ac4f76647601b9775cc4307967ed41077a180850530d93fe2cf87b2e89a12f245d", null ],
+      [ "SETHEADING", "classArActionInput.html#ac4f76647601b9775cc4307967ed41077ae7b0bd7fa4ba60f8e216e1cdca05cda9", null ]
+    ] ],
     [ "ArActionInput", "classArActionInput.html#ae4e6c668c854e62b9fc1e718a1e00d20", null ],
     [ "~ArActionInput", "classArActionInput.html#a9a30bb98aa497b550084dc8b3f37b967", null ],
     [ "clear", "classArActionInput.html#a752302f72209c9bcbed3f779679d960e", null ],

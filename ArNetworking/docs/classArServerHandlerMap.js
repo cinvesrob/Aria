@@ -1,6 +1,10 @@
 var classArServerHandlerMap =
 [
-    [ "DataToSend", "classArServerHandlerMap.html#a4502e33d8544d0fa70a8de3a1f74f4c6", null ],
+    [ "DataToSend", "classArServerHandlerMap.html#a4502e33d8544d0fa70a8de3a1f74f4c6", [
+      [ "LINES", "classArServerHandlerMap.html#a4502e33d8544d0fa70a8de3a1f74f4c6a644280b9178f0aed24aa9f31069e2b5f", null ],
+      [ "POINTS", "classArServerHandlerMap.html#a4502e33d8544d0fa70a8de3a1f74f4c6acc7ba38e370d8bf62645b705876f1d30", null ],
+      [ "BOTH", "classArServerHandlerMap.html#a4502e33d8544d0fa70a8de3a1f74f4c6abb44d30e3d44b0286f4587d179dc0733", null ]
+    ] ],
     [ "ArServerHandlerMap", "classArServerHandlerMap.html#a95166d757b0915e5dca239f44d739e99", null ],
     [ "~ArServerHandlerMap", "classArServerHandlerMap.html#adfdece6ac41876d3febb32189216d088", null ],
     [ "getDataToSend", "classArServerHandlerMap.html#a451a22172e968ec6c7416a9ada3e1673", null ],

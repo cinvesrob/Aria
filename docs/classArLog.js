@@ -1,18 +1,32 @@
 var classArLog =
 [
-    [ "LogLevel", "classArLog.html#ac8cc0fb3aa323ab2a1c21340fdd1dce3", null ],
-    [ "LogType", "classArLog.html#aa62617e816d9caa5853bf4ce9b34ca10", null ],
+    [ "LogLevel", "classArLog.html#ac8cc0fb3aa323ab2a1c21340fdd1dce3", [
+      [ "Terse", "classArLog.html#ac8cc0fb3aa323ab2a1c21340fdd1dce3a012daf6573594f91242f8dd7c02eb74b", null ],
+      [ "Normal", "classArLog.html#ac8cc0fb3aa323ab2a1c21340fdd1dce3a7040faf60eeb155eaa85d439b1066ca1", null ],
+      [ "Verbose", "classArLog.html#ac8cc0fb3aa323ab2a1c21340fdd1dce3a6e80d09c67dad73e9ba736e91ec893be", null ]
+    ] ],
+    [ "LogType", "classArLog.html#aa62617e816d9caa5853bf4ce9b34ca10", [
+      [ "StdOut", "classArLog.html#aa62617e816d9caa5853bf4ce9b34ca10a9b9548406090127b57f335d9ecb35e41", null ],
+      [ "StdErr", "classArLog.html#aa62617e816d9caa5853bf4ce9b34ca10acc775da407aa66d7ad368b9d1f80b70c", null ],
+      [ "File", "classArLog.html#aa62617e816d9caa5853bf4ce9b34ca10a35b2c9a3d5c6bb0f2dbe2064cc0163db", null ],
+      [ "Colbert", "classArLog.html#aa62617e816d9caa5853bf4ce9b34ca10ab09ef7c8ec14d623c0aad3f78a596a77", null ],
+      [ "None", "classArLog.html#aa62617e816d9caa5853bf4ce9b34ca10a24413a3b5b7242dbd446adcae533ad76", null ]
+    ] ],
     [ "addToConfig", "classArLog.html#a830b6edab2079ae1ffeb7e164e30636b", null ],
     [ "aramInit", "classArLog.html#abab863c9ebf66262b4cc3afcee3bf0e9", null ],
     [ "aramProcessFile", "classArLog.html#a5cbc24c02c33e4bcd150817657a6803a", null ],
     [ "checkFileSize", "classArLog.html#a0484f84696a63835f76701f20fe48bc3", null ],
     [ "clearFunctor", "classArLog.html#a971bb1ab47f4a2c0ab8d72b523d7d617", null ],
     [ "close", "classArLog.html#a9cd0b4b08ef0ef0a0f51ebbfaaad1b98", null ],
+    [ "debug", "classArLog.html#a2f4cc82023fcaaab0d41bc9603fda8e4", null ],
+    [ "error", "classArLog.html#ac30a111c39fe705140fdcdc4221bef8e", null ],
     [ "filledAramLog", "classArLog.html#a33f17dc122c0d2431c3e1c311387c897", null ],
+    [ "info", "classArLog.html#acb3d1663148daf8fa0a29cfc9dda09e5", null ],
     [ "init", "classArLog.html#a74fa320b89ec1ece70053722c91f7c71", null ],
     [ "internalForceLockup", "classArLog.html#aeb1eee01332bd15f3cc150928239980a", null ],
     [ "invokeFunctor", "classArLog.html#abaff4909c9b35cb7ba68517dc05d52e0", null ],
     [ "log", "classArLog.html#a43a8b3789126c818f390f24bdbceccce", null ],
+    [ "log_v", "classArLog.html#afe74cf86b304c8eb6abc75e7937a8cc9", null ],
     [ "logBacktrace", "classArLog.html#adce6969b47e8bfbc0d98d5875dfc3483", null ],
     [ "logErrorFromOS", "classArLog.html#a402af42ce9e591ff8a43fa749aebfb5b", null ],
     [ "logErrorFromOSNoLock", "classArLog.html#ab31af89bff2fc0b81ca067646de83111", null ],
@@ -23,6 +37,8 @@ var classArLog =
     [ "logPlain", "classArLog.html#a252879acad25b3c1e9f0c58aad8d27a3", null ],
     [ "processFile", "classArLog.html#a7c397fa2b4c813db5d33ee56afe393b4", null ],
     [ "setFunctor", "classArLog.html#a386868be5c2bbdd02683ac99973b54fb", null ],
+    [ "setLogLevel", "classArLog.html#a91fba572e55221e5b01f45d94ed871be", null ],
+    [ "warning", "classArLog.html#aaba300bc3c468faba6fd5cd03d7a7c34", null ],
     [ "colbertPrint", "classArLog.html#a052c8e9891ff891c9a66b709d608bb67", null ],
     [ "ourAlsoPrint", "classArLog.html#a2464534dfbc5850b6e5a482e01d907fe", null ],
     [ "ourAramConfigLogLevel", "classArLog.html#ae3124a628f613fdb0319701fd0d6f48a", null ],

@@ -1,7 +1,11 @@
 var classArMutex =
 [
     [ "MutexType", "classArMutex.html#ae40660428bf6083d5d3ce14f98ace19f", null ],
-    [ "Status", "classArMutex.html#a5b6ab50205f1004c939f3946cfca3c62", null ],
+    [ "Status", "classArMutex.html#a5b6ab50205f1004c939f3946cfca3c62", [
+      [ "STATUS_FAILED_INIT", "classArMutex.html#a5b6ab50205f1004c939f3946cfca3c62a410e62490f5c6ca8e320d60d1a25081b", null ],
+      [ "STATUS_FAILED", "classArMutex.html#a5b6ab50205f1004c939f3946cfca3c62afef90eab73ec7c605c7d2093572db8ad", null ],
+      [ "STATUS_ALREADY_LOCKED", "classArMutex.html#a5b6ab50205f1004c939f3946cfca3c62a5a52964b5d55e36a0d170a49a8384961", null ]
+    ] ],
     [ "ArMutex", "classArMutex.html#a69c6e7a984d23363faabf5969a0aa51b", null ],
     [ "~ArMutex", "classArMutex.html#a0993ae31527043d9c9c7fa75b6529080", null ],
     [ "ArMutex", "classArMutex.html#a3eb0fbf29060b36c2c61d590104fa8f3", null ],

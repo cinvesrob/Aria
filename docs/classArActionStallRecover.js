@@ -1,7 +1,18 @@
 var classArActionStallRecover =
 [
-    [ "State", "classArActionStallRecover.html#aaee8529f205da0f5399c5a75a23d4294", null ],
-    [ "What", "classArActionStallRecover.html#a961898714f13a6d9e286d540c4cbe426", null ],
+    [ "State", "classArActionStallRecover.html#aaee8529f205da0f5399c5a75a23d4294", [
+      [ "STATE_NOTHING", "classArActionStallRecover.html#aaee8529f205da0f5399c5a75a23d4294a4f06854175ad861337a5af4b6750cb75", null ],
+      [ "STATE_GOING", "classArActionStallRecover.html#aaee8529f205da0f5399c5a75a23d4294a47cbdf701bbc56d213549c99d3905bca", null ]
+    ] ],
+    [ "What", "classArActionStallRecover.html#a961898714f13a6d9e286d540c4cbe426", [
+      [ "BACK", "classArActionStallRecover.html#a961898714f13a6d9e286d540c4cbe426a1ffb262a5ed4e8bb76a52f286145ec1f", null ],
+      [ "FORWARD", "classArActionStallRecover.html#a961898714f13a6d9e286d540c4cbe426a720ceea86abd7b924fce43e034816221", null ],
+      [ "TURN", "classArActionStallRecover.html#a961898714f13a6d9e286d540c4cbe426acd22907c55c4fe5f19a814ad8535d5c3", null ],
+      [ "TURN_LEFT", "classArActionStallRecover.html#a961898714f13a6d9e286d540c4cbe426a7dca05f5eca54a554ce0f03e3a29e11c", null ],
+      [ "TURN_RIGHT", "classArActionStallRecover.html#a961898714f13a6d9e286d540c4cbe426a21069c09c1fd8a58563fa39f63bc7314", null ],
+      [ "MOVEMASK", "classArActionStallRecover.html#a961898714f13a6d9e286d540c4cbe426a8621daf36ffae51ea0bfb2071f47b51e", null ],
+      [ "TURNMASK", "classArActionStallRecover.html#a961898714f13a6d9e286d540c4cbe426a1b24d023b9fbd83ea2518656f215d616", null ]
+    ] ],
     [ "ArActionStallRecover", "classArActionStallRecover.html#ad557c66045527426b193c433bfbe5215", null ],
     [ "~ArActionStallRecover", "classArActionStallRecover.html#ab78548506683e33d86bcb567ff133993", null ],
     [ "activate", "classArActionStallRecover.html#abda3ab5128c6bbf87aa071c62c7c76a2", null ],

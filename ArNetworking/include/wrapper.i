@@ -1,4 +1,33 @@
-/* SWIG Wrapper for ArNetworking */
+/*
+Adept MobileRobots Robotics Interface for Applications (ARIA)
+Copyright (C) 2004-2005 ActivMedia Robotics LLC
+Copyright (C) 2006-2010 MobileRobots Inc.
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
+
+     This program is free software; you can redistribute it and/or modify
+     it under the terms of the GNU General Public License as published by
+     the Free Software Foundation; either version 2 of the License, or
+     (at your option) any later version.
+
+     This program is distributed in the hope that it will be useful,
+     but WITHOUT ANY WARRANTY; without even the implied warranty of
+     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+     GNU General Public License for more details.
+
+     You should have received a copy of the GNU General Public License
+     along with this program; if not, write to the Free Software
+     Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+If you wish to redistribute ARIA under different terms, contact 
+Adept MobileRobots for information about a commercial version of ARIA at 
+robots@mobilerobots.com or 
+Adept MobileRobots, 10 Columbia Drive, Amherst, NH 03031; +1-603-881-7960
+*/
+
+%{
+/* SWIG wrapper.i for ArNetworking */
+%}
 
 #ifdef SWIGPYTHON
 %module(docstring="Python wrapper library for ArNetworking", directors="1") ArNetworkingPy
@@ -23,6 +52,8 @@
 #include "Aria.h"
 #include "ArNetworking.h"
 #include "ArClientHandlerRobotUpdate.h"
+#include "ArClientRatioDrive.h"
+#include "ArServerModeJogPosition.h"
 #include "../include/wrapper_ExtraClasses.h"
 %}
 %warnfilter(451) ArUtil;
@@ -100,8 +131,15 @@
 
 /* In Python, use typemaps to convert functions to functors: */
 #ifdef SWIGPYTHON
+
 %{
-  #include "../include/wrapper_Functors.h"
+#include "../include/wrapper_Functors.h"
+%}
+
+
+
+/*
+%{
 
   class ArPyFunctor_ServerData : 
     public ArFunctor2<ArServerClient*, ArNetPacket*>
@@ -150,54 +188,37 @@
   };
 
 
-  class ArPyFunctor_NetPacket: 
-    public ArFunctor1<ArNetPacket*>,
-    ArPyFunctor
-  {
-  public:
-    ArPyFunctor_NetPacket(PyObject* f) : ArFunctor1<ArNetPacket*>(), ArPyFunctor(f)
-    {
-    }
-
-    virtual void invoke()
-    {
-      Py_FatalError("ArPyFonctor_NetPacket (for <ArNetPacket*>) invoked with no arguments!");
-    }
-
-    virtual void invoke(ArNetPacket* pkt)
-    {
-      PyObject *args = PyTuple_New(1);
-      PyObject *pktObj = SWIG_Python_NewPointerObj(pkt, SWIGTYPE_p_ArNetPacket, 0);
-      PyTuple_SetItem(args, 0, pktObj);
-      PyObject *r = PyObject_CallObject(pyFunction, args);
-      if(!r)
-      {
-        fputs("** ArPyFunctor_NetPacket: Error calling python function: ", stderr);
-        PyErr_Print();
-      }
-      Py_DECREF(args);
-    }
-
-    virtual const char* getName() {
-      return ArPyFunctor::getName();
-    }
-  };
 %}
+*/
 
+%typemap(in) ArFunctor1<ArNetPacket *>* {
+  $1 = new ArPyFunctor1<ArNetPacket *>($input);
+}
+%typecheck(SWIG_TYPECHECK_POINTER) ArFunctor1<ArNetPacket *>* {
+  $1 = PyCallable_Check($input);
+}
 
+/*
 %typemap(in) ArFunctor2<ArServerClient*, ArNetPacket*>* {
   $1 = new ArPyFunctor_ServerData($input); // XXX memory leak
 }
+%typecheck(SWIG_TYPECHECK_POINTER) ArFunctor2<ArServerClient*, ArNetPacket*>* {
+  $1 = PyCallable_Check($input);
+}
+*/
 
+%typemap(in) ArFunctor2<ArServerClient*, ArNetPacket*>* {
+  $1 = new ArPyFunctor2<ArServerClient*, ArNetPacket*>($input);
+}
 %typecheck(SWIG_TYPECHECK_POINTER) ArFunctor2<ArServerClient*, ArNetPacket*>* {
   $1 = PyCallable_Check($input);
 }
 
-%typemap(in) ArFunctor1<ArNetPacket*>* {
-  $1 = new ArPyFunctor_NetPacket($input); // XXX memory leak
-}
 
-%typecheck(SWIG_TYPECHECK_POINTER) ArFunctor1<ArNetPacket*>* {
+%typemap(in) ArFunctor1<const char*>* {
+  $1 = new ArPyFunctor1_String($input);
+}
+%typecheck(SWIG_TYPECHECK_POINTER) ArFunctor1<const char*>* {
   $1 = PyCallable_Check($input);
 }
 
@@ -267,4 +288,7 @@
 
 #include "../include/wrapper_ExtraClasses.h"
 
-/* The End. */
+%{
+/* End SWIG wraper.i for ArNetworking */
+%}
+

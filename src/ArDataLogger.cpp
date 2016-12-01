@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -55,7 +56,7 @@ AREXPORT ArDataLogger::ArDataLogger(ArRobot *robot, const char *fileName) :
     myPermanentFileName = fileName;
   myRobot->addUserTask("DataLogger", 50, &myUserTaskCB);
   myRobot->requestIOPackets();
-  myConfig = false;
+  myConfig = NULL;
   myAddToConfigAtConnect = false;
   myAddedToConfig = false;
   myConfigLogging = false;
@@ -587,7 +588,7 @@ AREXPORT void ArDataLogger::userTask(void)
 	    myRobot->getEncoderPose().getY(), 
 	    myRobot->getEncoderPose().getTh());
   if (myLogEncoders)
-    fprintf(myFile, "\t%10d\t%10d", 
+    fprintf(myFile, "\t%10ld\t%10ld", 
 	    myRobot->getLeftEncoder(), myRobot->getRightEncoder());
   if (myLogLeftVel)
     fprintf(myFile, "\t%.0f", myRobot->getLeftVel());
@@ -665,7 +666,7 @@ AREXPORT void ArDataLogger::addString(
 
   myMutex.lock();
   if (maxLength < strlen(name))
-    len = strlen(name);
+    len = (ArTypes::UByte2) strlen(name);
   else
     len = maxLength;  
   if (myMaxMaxLength < len)

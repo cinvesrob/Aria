@@ -1,6 +1,11 @@
 var classArServerHandlerCamera =
 [
-    [ "CameraMode", "classArServerHandlerCamera.html#a8214b7d46f1a140f848a4f6f68b09d9e", null ],
+    [ "DOUBLE_FACTOR", "classArServerHandlerCamera.html#a25665b69b5fe8533d1e985499843e0c9a39eb99d13930f3a85c1607ed4e2b53c2", null ],
+    [ "CameraMode", "classArServerHandlerCamera.html#a8214b7d46f1a140f848a4f6f68b09d9e", [
+      [ "CAMERA_MODE_POSITION", "classArServerHandlerCamera.html#a8214b7d46f1a140f848a4f6f68b09d9ea39dc1af6698ef397131353473655e159", null ],
+      [ "CAMERA_MODE_LOOK_AT_GOAL", "classArServerHandlerCamera.html#a8214b7d46f1a140f848a4f6f68b09d9ea300a160b478ea07ed5a585f471cf1390", null ],
+      [ "CAMERA_MODE_LOOK_AT_POINT", "classArServerHandlerCamera.html#a8214b7d46f1a140f848a4f6f68b09d9ea869e7b00121f0964a49f759f6fab7a8c", null ]
+    ] ],
     [ "ArServerHandlerCamera", "classArServerHandlerCamera.html#a62d84d39d59422be307cfa9ee8ae3114", null ],
     [ "ArServerHandlerCamera", "classArServerHandlerCamera.html#a28008a201b19aa0a1d7e56055a578636", null ],
     [ "~ArServerHandlerCamera", "classArServerHandlerCamera.html#a27c7b5fcd78d65a799509fea63bd11a1", null ],

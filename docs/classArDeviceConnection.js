@@ -1,6 +1,12 @@
 var classArDeviceConnection =
 [
-    [ "Status", "classArDeviceConnection.html#a347c85b1f6dad521cabfbca6833712ab", null ],
+    [ "Status", "classArDeviceConnection.html#a347c85b1f6dad521cabfbca6833712ab", [
+      [ "STATUS_NEVER_OPENED", "classArDeviceConnection.html#a347c85b1f6dad521cabfbca6833712aba2a32337db15deac68c28c6c6073614f8", null ],
+      [ "STATUS_OPEN", "classArDeviceConnection.html#a347c85b1f6dad521cabfbca6833712abaab61fc67dfa26013b7940bbac62449da", null ],
+      [ "STATUS_OPEN_FAILED", "classArDeviceConnection.html#a347c85b1f6dad521cabfbca6833712aba57899a6a6454d556eb07b44d26d09ab2", null ],
+      [ "STATUS_CLOSED_NORMALLY", "classArDeviceConnection.html#a347c85b1f6dad521cabfbca6833712abad66561776078f16b133e18a67a31a6b2", null ],
+      [ "STATUS_CLOSED_ERROR", "classArDeviceConnection.html#a347c85b1f6dad521cabfbca6833712aba3d77512ad91a4c2ff4c57ead86546aaf", null ]
+    ] ],
     [ "ArDeviceConnection", "classArDeviceConnection.html#a17585f2fab7b9fb61d2308400f909c30", null ],
     [ "~ArDeviceConnection", "classArDeviceConnection.html#a620e4464627f5f898d212eb11661f150", null ],
     [ "buildStrMap", "classArDeviceConnection.html#a776d6ae9b073c01388089c373b38d2f7", null ],

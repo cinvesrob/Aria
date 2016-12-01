@@ -1,5 +1,8 @@
 var classArRobotPacketReceiver =
 [
+    [ "STATE_SYNC1", "classArRobotPacketReceiver.html#a6f74aa6ab82eb70eaf5ad1b6b17e3255a385f33d7bc95d9a02d6d80097b19dd26", null ],
+    [ "STATE_SYNC2", "classArRobotPacketReceiver.html#a6f74aa6ab82eb70eaf5ad1b6b17e3255abc0fd8ef15bef23a3cbd21e0a59f1235", null ],
+    [ "STATE_ACQUIRE_DATA", "classArRobotPacketReceiver.html#a6f74aa6ab82eb70eaf5ad1b6b17e3255ab7fb455c2e5e7790df31f78a0a5dbfcf", null ],
     [ "ArRobotPacketReceiver", "classArRobotPacketReceiver.html#ad977f81f61fa0424e6629c0d69703ce8", null ],
     [ "ArRobotPacketReceiver", "classArRobotPacketReceiver.html#a7300c31a57c8d270840c60ca2dc30db8", null ],
     [ "ArRobotPacketReceiver", "classArRobotPacketReceiver.html#a9e086e269bdfc7f027cd9e95cc612716", null ],

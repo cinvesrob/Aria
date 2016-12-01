@@ -10,7 +10,7 @@ var classArGlobalRetFunctor2 =
     [ "invokeR", "classArGlobalRetFunctor2.html#ad2024e1c984432e2f073ebc574206147", null ],
     [ "setP1", "classArGlobalRetFunctor2.html#a212209c06ab740ed196802b9f748c5f6", null ],
     [ "setP2", "classArGlobalRetFunctor2.html#a1523d019731e9adccfe6a74c6f35215e", null ],
-    [ "myFunc", "classArGlobalRetFunctor2.html#ab97d7c8eb85f9d3664568ea866457a80", null ],
+    [ "myFunc", "classArGlobalRetFunctor2.html#a223141a7737f4eeac416c98d3762a95a", null ],
     [ "myP1", "classArGlobalRetFunctor2.html#a6faa2b9c338ab135041d5039ea7b1c50", null ],
     [ "myP2", "classArGlobalRetFunctor2.html#acc8aaaf7772e218cb1ec066d5706326c", null ]
 ];

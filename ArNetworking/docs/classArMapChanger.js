@@ -1,8 +1,31 @@
 var classArMapChanger =
 [
-    [ "MapChangeCommand", "classArMapChanger.html#ab1549ef7090ace709ceed5f4ca68e376", null ],
-    [ "MapChangeDataType", "classArMapChanger.html#ad3195fa44ecad890c3db1c4886996aba", null ],
-    [ "MapChangeReplyType", "classArMapChanger.html#a852654bd4cf1c91a28ca21a538c42faf", null ],
+    [ "ClientChangeInfo", "structArMapChanger_1_1ClientChangeInfo.html", "structArMapChanger_1_1ClientChangeInfo" ],
+    [ "CHANGE_DATA_TYPE_COUNT", "classArMapChanger.html#ac56296aec0c3ed853fd3eb59962bfdf1a9888e3d405aaf2b49425378cbb97552c", null ],
+    [ "CHANGE_COMMAND_COUNT", "classArMapChanger.html#ac56296aec0c3ed853fd3eb59962bfdf1abbadb91de7aa82fbca854bd6091ba5ec", null ],
+    [ "MAX_POINTS_IN_PACKET", "classArMapChanger.html#ac56296aec0c3ed853fd3eb59962bfdf1afc12e915661b82fdf0641adb10d1d66d", null ],
+    [ "MAX_LINES_IN_PACKET", "classArMapChanger.html#ac56296aec0c3ed853fd3eb59962bfdf1a0e319207548f675f31bee1dc7255c5a2", null ],
+    [ "MapChangeCommand", "classArMapChanger.html#ab1549ef7090ace709ceed5f4ca68e376", [
+      [ "START_CHANGES", "classArMapChanger.html#ab1549ef7090ace709ceed5f4ca68e376a4960b8a8b46e1fab434a2077f3049d60", null ],
+      [ "CONTINUE_CHANGES", "classArMapChanger.html#ab1549ef7090ace709ceed5f4ca68e376a4508920597914ab8400fbffa627825a9", null ],
+      [ "FINISH_CHANGES", "classArMapChanger.html#ab1549ef7090ace709ceed5f4ca68e376a3107cef001e3a43aeb660535782a5498", null ],
+      [ "CANCEL_CHANGES", "classArMapChanger.html#ab1549ef7090ace709ceed5f4ca68e376a2edc48967c8486823d9a29301d981fab", null ],
+      [ "LAST_CHANGE_COMMAND", "classArMapChanger.html#ab1549ef7090ace709ceed5f4ca68e376ad12cedf203986d18aa8a480afad867a0", null ]
+    ] ],
+    [ "MapChangeDataType", "classArMapChanger.html#ad3195fa44ecad890c3db1c4886996aba", [
+      [ "NO_CHANGE", "classArMapChanger.html#ad3195fa44ecad890c3db1c4886996abaa456e025f2b60c4dfe936f2ae19a58588", null ],
+      [ "SUMMARY_DATA", "classArMapChanger.html#ad3195fa44ecad890c3db1c4886996abaaef383b85b35c07dbec6355b066dee955", null ],
+      [ "INFO_DATA", "classArMapChanger.html#ad3195fa44ecad890c3db1c4886996abaa893e8a782e6fadd7e4c58699de319d77", null ],
+      [ "SUPPLEMENT_DATA", "classArMapChanger.html#ad3195fa44ecad890c3db1c4886996abaa042468b4c8964c702a38e27e58e74ee9", null ],
+      [ "OBJECTS_DATA", "classArMapChanger.html#ad3195fa44ecad890c3db1c4886996abaa56c4d61c5a32300a4a912288b684c920", null ],
+      [ "POINTS_DATA", "classArMapChanger.html#ad3195fa44ecad890c3db1c4886996abaa08d04cdc16d4991988ea51ba86de5cdc", null ],
+      [ "LINES_DATA", "classArMapChanger.html#ad3195fa44ecad890c3db1c4886996abaa52a65e1244a57df9dd2626da27c693e6", null ],
+      [ "LAST_CHANGE_DATA_TYPE", "classArMapChanger.html#ad3195fa44ecad890c3db1c4886996abaaab87abd5e0e5e2c13f85e841f652a438", null ]
+    ] ],
+    [ "MapChangeReplyType", "classArMapChanger.html#a852654bd4cf1c91a28ca21a538c42faf", [
+      [ "CHANGE_FAILED", "classArMapChanger.html#a852654bd4cf1c91a28ca21a538c42fafabef9c86892f69ab8092734f5aba909ad", null ],
+      [ "CHANGE_SUCCESS", "classArMapChanger.html#a852654bd4cf1c91a28ca21a538c42fafa9cea6a58aa34cba65bcdd300aee2f37c", null ]
+    ] ],
     [ "ArMapChanger", "classArMapChanger.html#a3c4275b2fe1eb11f0937a805b21e8eb1", null ],
     [ "ArMapChanger", "classArMapChanger.html#a9f5aa19aee09e5745e786c6d76ba5836", null ],
     [ "ArMapChanger", "classArMapChanger.html#aff206ab7c8c77f5c3da8abaf77f515ed", null ],

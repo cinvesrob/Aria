@@ -1,6 +1,11 @@
 var classArTcpConnection =
 [
-    [ "Open", "classArTcpConnection.html#abccb5841a624f42faceabff0703637b8", null ],
+    [ "Open", "classArTcpConnection.html#abccb5841a624f42faceabff0703637b8", [
+      [ "OPEN_NET_FAIL", "classArTcpConnection.html#abccb5841a624f42faceabff0703637b8a00f2ba5a1c44e0cef03a2f466e7a8590", null ],
+      [ "OPEN_BAD_HOST", "classArTcpConnection.html#abccb5841a624f42faceabff0703637b8a44cd8a79a2d8c28e68dae6e637a2eb04", null ],
+      [ "OPEN_NO_ROUTE", "classArTcpConnection.html#abccb5841a624f42faceabff0703637b8a601216afe9155ecee3394942e50a4a89", null ],
+      [ "OPEN_CON_REFUSED", "classArTcpConnection.html#abccb5841a624f42faceabff0703637b8ac154c44ceb177cf41bebfadf81c6a6a3", null ]
+    ] ],
     [ "ArTcpConnection", "classArTcpConnection.html#a3d9e274eb2de1d9fbb04f8582e9219e0", null ],
     [ "~ArTcpConnection", "classArTcpConnection.html#a8705c9b0c2ac7d30a0e6f390c932fd0f", null ],
     [ "buildStrMap", "classArTcpConnection.html#ae84c9be27f3e8beec01f0b4c8ada49bf", null ],

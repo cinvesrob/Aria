@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -108,6 +109,8 @@ public:
   AREXPORT void loadDefaultArguments(int positon = 1);
   /// Checks for the help strings and warns about unparsed arguments
   AREXPORT bool checkHelpAndWarnUnparsed(unsigned int numArgsOkay = 0);
+  /// Checks for the help argument  
+  AREXPORT bool checkHelp();
   /// Gets how many arguments are left in this parser
   AREXPORT size_t getArgc(void) const;
   /// Gets the argv

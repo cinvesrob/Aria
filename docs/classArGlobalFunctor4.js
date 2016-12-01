@@ -16,7 +16,7 @@ var classArGlobalFunctor4 =
     [ "setP2", "classArGlobalFunctor4.html#a63e34a0c0c07fed3002a6e6bff1d07ee", null ],
     [ "setP3", "classArGlobalFunctor4.html#a5a13e564e17104a71834986917e5c29e", null ],
     [ "setP4", "classArGlobalFunctor4.html#af26fc1647cf64c9875c25645b582e2d9", null ],
-    [ "myFunc", "classArGlobalFunctor4.html#a3cf52bda5dc2f6fccd36e554f73383d2", null ],
+    [ "myFunc", "classArGlobalFunctor4.html#a6c447daed6cce2f4caa70a40c6cc887f", null ],
     [ "myP1", "classArGlobalFunctor4.html#a7ae6d6f4eeade0acab74f32f6d3a7c1d", null ],
     [ "myP2", "classArGlobalFunctor4.html#af933a93e668bae5ff4f0ffa1a0f836ef", null ],
     [ "myP3", "classArGlobalFunctor4.html#a81f8511b2472bc646380cd488a16da0b", null ],

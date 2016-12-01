@@ -1,5 +1,7 @@
 var classArServerHandlerCommMonitor =
 [
+    [ "MIN_HEARTBEAT_INTERVAL", "classArServerHandlerCommMonitor.html#af665f126df849ea488e741fa3e21a02caaac450a7bfaf45350cfd519b5cbb316b", null ],
+    [ "DEFAULT_HEARTBEAT_INTERVAL", "classArServerHandlerCommMonitor.html#af665f126df849ea488e741fa3e21a02ca8786dd9a908afcdfc6dfc75e97076244", null ],
     [ "ArServerHandlerCommMonitor", "classArServerHandlerCommMonitor.html#a4552a255904740d8b3fd9cb04ef075b1", null ],
     [ "~ArServerHandlerCommMonitor", "classArServerHandlerCommMonitor.html#a3b86b8c47e7c643c61473fbb77ba8195", null ],
     [ "cycleCallback", "classArServerHandlerCommMonitor.html#a43e31a53641f6f94f99cf52e6abbe709", null ],

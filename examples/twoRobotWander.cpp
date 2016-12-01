@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -25,7 +26,13 @@ Adept MobileRobots, 10 Columbia Drive, Amherst, NH 03031; +1-603-881-7960
 */
 #include "Aria.h"
 
-/* Example showing how two ArRobot objects can be used in one program.
+/** @example twoRobotWander.cpp Example showing how one program can connect to
+   two robots using TCP network connection via ArTcpConnection objects (in simulator or to Amigobot or Pioneer with
+   wireless-serial bridge device).
+
+  To use with MobileSim, expand "More Options" and create 2 robots, and select
+  a map.   Or run from the command line like this:
+    MobileSim -r p3dx-sh -r p3dx-sh -map ../maps/columbia.map
  
   Normally, a program will only connect to one robot, and will only have
   one ArRobot object.   However, it is possible to connect to more than
@@ -49,17 +56,18 @@ Adept MobileRobots, 10 Columbia Drive, Amherst, NH 03031; +1-603-881-7960
 
 int main(int argc, char** argv)
 {
-  int ret;
-  std::string str;
-  int curRobot;
+
+  // initialize ARIA
+  Aria::init();
+
+  // used to parse command-line arguments. only one instance needed.
+  ArArgumentParser argParser(&argc, argv);
 
   // get hostnames and port numbers for connecting to the robots.
-  ArArgumentParser argParser(&argc, argv);
   const char* host1 = argParser.checkParameterArgument("-rh1");
   if(!host1) host1 = "localhost";
   const char* host2 = argParser.checkParameterArgument("-rh2");
   if(!host2) host2 = "localhost";
-
   int port1 = 8101;
   int port2 = 8101;
   if(strcmp(host1, host2) == 0 )
@@ -95,11 +103,11 @@ int main(int argc, char** argv)
   //
   // the first robot connection
   ArTcpConnection con1;
-  // the first robot
+  // the first robot interface
   ArRobot robot1;
-  // sonar, must be added to the first robot
+  // sonar interface
   ArSonarDevice sonar1;
-  // the actions we'll use to wander for the first robot
+  // the actions we'll use to cause wander behavior for the first robot
   ArActionStallRecover recover1;
   ArActionBumpers bumpers1;
   ArActionAvoidFront avoidFront1;
@@ -112,7 +120,7 @@ int main(int argc, char** argv)
   ArTcpConnection con2;
   // the second robot
   ArRobot robot2;
-  // sonar, must be added to the second robot
+  // sonar
   ArSonarDevice sonar2;
   // the actions we'll use to wander for the second robot
   ArActionStallRecover recover2;
@@ -120,12 +128,12 @@ int main(int argc, char** argv)
   ArActionAvoidFront avoidFront2;
   ArActionConstantVelocity constantVelocity2("Constant Velocity", 400);
 
-  // mandatory init
-  Aria::init();
 
   //
   // Lets get robot 1 going
   //
+  int ret;
+  std::string str;
 
   // open the connection, if this fails exit
   ArLog::log(ArLog::Normal, "Connecting to first robot at %s:%d...", host1, port1);
@@ -206,26 +214,36 @@ int main(int argc, char** argv)
   robot2.runAsync(true);
 
   // As long as both robot loops are running, lets alternate between the
-  // two wandering around.
-  curRobot=1;
+  // two wandering around every 10 sec.  mutex lock/unlock calls are neccesary since 
+  // the ArRobot objects are running in background threads after runAsync()
+  // calls above.
+  int curRobot=1;
   while (robot1.isRunning() && robot2.isRunning())
   {
     ArUtil::sleep(10000);
+    robot1.lock();
+    robot2.lock();
     if (curRobot == 1)
     {
+      ArLog::log(ArLog::Normal, "Switching to robot 2.");
       robot1.stop();
       robot2.clearDirectMotion();
       curRobot=2;
     }
     else
     {
+      ArLog::log(ArLog::Normal, "Switching to robot 1.");
       robot2.stop();
       robot1.clearDirectMotion();
       curRobot=1;
     }
+    robot2.unlock();
+    robot1.unlock();
   }
   
-  // now exit
+  
+  // exit program if both robots disconnect.
+  ArLog::log(ArLog::Normal, "Both robots disconnected.");
   Aria::exit(0);
   return 0;
 }

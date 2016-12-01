@@ -1,3 +1,29 @@
+/*
+Adept MobileRobots Robotics Interface for Applications (ARIA)
+Copyright (C) 2004-2005 ActivMedia Robotics LLC
+Copyright (C) 2006-2010 MobileRobots Inc.
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
+
+     This program is free software; you can redistribute it and/or modify
+     it under the terms of the GNU General Public License as published by
+     the Free Software Foundation; either version 2 of the License, or
+     (at your option) any later version.
+
+     This program is distributed in the hope that it will be useful,
+     but WITHOUT ANY WARRANTY; without even the implied warranty of
+     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+     GNU General Public License for more details.
+
+     You should have received a copy of the GNU General Public License
+     along with this program; if not, write to the Free Software
+     Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+If you wish to redistribute ARIA under different terms, contact 
+Adept MobileRobots for information about a commercial version of ARIA at 
+robots@mobilerobots.com or 
+Adept MobileRobots, 10 Columbia Drive, Amherst, NH 03031; +1-603-881-7960
+*/
 #ifndef ARSERVERHANDLERCAMERA_H
 #define ARSERVERHANDLERCAMERA_H
 
@@ -15,32 +41,38 @@
     <code>packet.byte2ToBuf((ArTypes::Byte2)(100.0 * doubleVal));</code> or 
     see also getDoubleFromPacket() and addDoubleToPacket().)
     
-    Each request name is suffixed by the name of the camera to control.   If more than one 
+    Each request name is suffixed by the name (<i>Name</i> in the table below)  of the camera to control.   If more than one 
     camera is used, each can have a different name (given in the constructor), and commands for the different cameras
     are differentiated by appending the camera name to the command requests listed below.  For example,
     an ArServerHandlerCamera  with camera name of "A" would receive "setCameraRelA". while the
     handler with camera name of "B" would receive "setCameraAbsB".   If no camera name is given 
-    (typical if just one ArServerHandlerCamera object is created),
-    just the base requests are used.  To provide information to the client about the multiple cameras and their names, use ArCameraCollection and an ArServerHandlerCameraCollection object.
+    (typical if just one ArServerHandlerCamera object is created), <i>Name</i>
+    is empty, and
+    just the base requests are used.  A list of cameras can be provided to a
+client via ArCameraCollection and ArServerHandlerCameraCollection. 
 
     <table>
-      <tr><td>setCameraRel</td> <td> Command to pan and tilt the camera from the 
+      <tr><th>Request</th> <th>Arguments</th> <th>Description</th></tr>
+      <tr><td>setCameraRel<i>Name</i></td> <td>double: pan amount; double: tilt
+amount;
+[double: zoom amount]</td> <td> Command to pan and tilt the camera from the 
                                      current position by the values given in the 
                                      first two arguments. If a third argument is 
                                      given, zoom from the current position.</td></tr>
-      <tr><td>setCameraAbs</td> <td> Command to pan and tilt the camera to the 
+      <tr><td>setCameraAbs<i>Name</i></td> <td>double: pan position; double:
+tilt position; [double: zoom position]</td> <td> Command to pan and tilt the camera to the 
                                      absolute positions given by the first two 
                                      arguments. If a third argument is given, set 
                                      the zoom to that absolute position.</td></tr>
-      <tr><td>setCameraPct</td> <td> Command to pan and tilt the camera to the 
+      <tr><td>setCameraPct<i>Name</i></td> <td>double: pan position; double tilt
+position</td> <td> Command to pan and tilt the camera to the 
                                      given positions as percentage of their overall 
                                      ranges.</td></tr>
-      <tr><td>getCameraData</td> <td>Data request to get current pan and tilt values. 
+      <tr><td>getCameraData<i>Name</i></td> <td>none</td> <td>Data request to get current pan and tilt values. 
                                      Also get zoom value if available.</td></tr>
-      <tr><td>getCameraInfo</td> <td>Data request to get pan and tilt ranges. Also 
+      <tr><td>getCameraInfo<i>Name</i></td> <td>None</td> <td>Data request to get pan and tilt ranges. Also 
                                      gets the zoom range if available.</td></tr>
-				     
-    </tr>
+</table>
 
     In addition, some older camera requests are accepted for partial backwards 
     compatability with old clients: cameraUpdate, cameraInfo, cameraAbs, camera, 
@@ -51,12 +83,17 @@
     These requests are in a user permission group called CameraControl.
 
     In addition to positioning the camera, ArServerHandlerCamera can support additional "modes" for camera control, if additional code is added to update ArServerHandlerCamera with the state of other systems such as navigation.  The additional modes are LookAtGoal and LookAtPoint.  An external system such as navigation (e.g. ARNL) must keep the camera handler object updated with its current goal by calling cameraModeLookAtGoalSetGoal() and cameraModeLookAtGoalClearGoal(), and ArServerHandlerCamera will continuously point the camera at that point or goal as the robot moves. The network requests associated with setting modes are:
-    <ul>
-      <li>getCameraModeList<CameraName>:   Gets the list of modes that this camera 
-                                     supports  </li>
-      <li>getCameraModeUpdated<CameraName>:   Sent when the mode is changed </li>
-      <li>setCameraMode<CameraName>:   Command to change the camera mode (give mode name) </li>
-    </ul>
+  <table>
+      <tr><td>getCameraModeList<i>Name</i></td> <td>none</td> <td>Gets the list of modes that camera with name <i>Name</i> supports. Replies with a message containing a list  of mode names as strings, ending with an empty string (or end of packet is
+      <tr><td>setCameraMode<i>Name</i></td> <td>string: mode name</td> <td> change the camera mode of camera with name <i>Name</i> </td></tr>
+reached) </td></tr>
+   </table>
+
+    The following messages may be broadcast:
+   <table>
+      <tr><td>getCameraModeUpdated<i>Name</i></td> <td>string: mode name</td>
+<td>Sent when the mode is changed of the camera with name <i>Name</i></td></tr>
+    </table>
 */
 class ArServerHandlerCamera : public ArCameraCollectionItem
 {

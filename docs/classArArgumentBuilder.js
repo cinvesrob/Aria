@@ -1,6 +1,11 @@
 var classArArgumentBuilder =
 [
-    [ "ArgSeparatorType", "classArArgumentBuilder.html#afd4245098081d1f1a9bf4ee785928a14", null ],
+    [ "ArgSeparatorType", "classArArgumentBuilder.html#afd4245098081d1f1a9bf4ee785928a14", [
+      [ "SPACE", "classArArgumentBuilder.html#afd4245098081d1f1a9bf4ee785928a14a1f7adad8c6879aeecc835de2790cd259", null ],
+      [ "SPECIAL", "classArArgumentBuilder.html#afd4245098081d1f1a9bf4ee785928a14af5c36c823345fe98b5e17fc4a8511794", null ],
+      [ "ANY_SPACE", "classArArgumentBuilder.html#afd4245098081d1f1a9bf4ee785928a14a971833f5c0f68e1d97b9330fa75e531a", null ],
+      [ "QUOTE", "classArArgumentBuilder.html#afd4245098081d1f1a9bf4ee785928a14a1ce0f14554d56b29aeca0d7abefc56b5", null ]
+    ] ],
     [ "ArArgumentBuilder", "classArArgumentBuilder.html#ad73480bd86aad72418fb786494cda06f", null ],
     [ "ArArgumentBuilder", "classArArgumentBuilder.html#a116e2a878b9fb1197af611b9acfc262b", null ],
     [ "~ArArgumentBuilder", "classArArgumentBuilder.html#a08f6ae33d714449ac2baf733cad9f624", null ],

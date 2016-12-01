@@ -1,6 +1,10 @@
 var classAria =
 [
-    [ "SigHandleMethod", "classAria.html#a4bc18753e51734bdf7743a9e7ca56a25", null ],
+    [ "SigHandleMethod", "classAria.html#a4bc18753e51734bdf7743a9e7ca56a25", [
+      [ "SIGHANDLE_SINGLE", "classAria.html#a4bc18753e51734bdf7743a9e7ca56a25ad660028ed08bb904b86d16651e56a8a3", null ],
+      [ "SIGHANDLE_THREAD", "classAria.html#a4bc18753e51734bdf7743a9e7ca56a25a604a8b71847ee3c5af650f96404053d6", null ],
+      [ "SIGHANDLE_NONE", "classAria.html#a4bc18753e51734bdf7743a9e7ca56a25a7a7ad2c4f31056bbd2c3ada3c170ba7c", null ]
+    ] ],
     [ "addExitCallback", "classAria.html#a5c4bfae6980dd3a7655a4cc7b32d1aa4", null ],
     [ "addInitCallBack", "classAria.html#a3777666ca7191888f762c8f40f8a9b46", null ],
     [ "addLogOptionsCB", "classAria.html#aaf44455d5342f42850bc0c4670a03b49", null ],

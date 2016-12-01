@@ -1,5 +1,6 @@
 var classArLaserConnector =
 [
+    [ "LaserData", "classArLaserConnector_1_1LaserData.html", "classArLaserConnector_1_1LaserData" ],
     [ "ArLaserConnector", "classArLaserConnector.html#a6a5f821d02aee9232e6efc0e8defa39a", null ],
     [ "~ArLaserConnector", "classArLaserConnector.html#aceceb24f39adc2383fe2fd6d4d715994", null ],
     [ "addLaser", "classArLaserConnector.html#a56f7cd0494ca739b156c7fb40481c154", null ],
@@ -8,6 +9,7 @@ var classArLaserConnector =
     [ "connectLasers", "classArLaserConnector.html#ab97ce6a5fedebf44526773bc674b970e", null ],
     [ "getLaser", "classArLaserConnector.html#ae6beda0c6c5a45092dae687b94110a7f", null ],
     [ "internalConfigureLaser", "classArLaserConnector.html#a47b0cb6800a77d7ed7c8c76709c0a51b", null ],
+    [ "logLaserData", "classArLaserConnector.html#a60d4485340c08e6faf6745df23804b20", null ],
     [ "logLaserOptions", "classArLaserConnector.html#a1beb3dd1ff246bb15e06c99c2a3ebda4", null ],
     [ "logOptions", "classArLaserConnector.html#a2269b39b5c02bfc2b38eb96fd6c89558", null ],
     [ "parseArgs", "classArLaserConnector.html#a710b647a8bec2df3ecd07758657648d1", null ],

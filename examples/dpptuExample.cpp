@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -201,13 +202,13 @@ KeyPTU::KeyPTU(ArRobot *robot) :
   // set the robot pointer and add the KeyPTU as user task
   ArKeyHandler *keyHandler;
   myRobot = robot;
-  myRobot->addSensorInterpTask("KeyPTU", 50, &myDriveCB);
+  if(myRobot) myRobot->addSensorInterpTask("KeyPTU", 50, &myDriveCB);
 
   if ((keyHandler = Aria::getKeyHandler()) == NULL)
   {
     keyHandler = new ArKeyHandler;
     Aria::setKeyHandler(keyHandler);
-    myRobot->attachKeyHandler(keyHandler);
+    if(myRobot) myRobot->attachKeyHandler(keyHandler);
   }
 
   if (!keyHandler->addKeyHandler(ArKeyHandler::UP, &myUpCB))
@@ -480,7 +481,7 @@ void KeyPTU::drive(void)
   // if the PTU isn't initialized, initialize it here... it has to be 
   // done here instead of above because it needs to be done when the 
   // robot is connected
-  if (!myPTUInited && myRobot->isConnected())
+  if (!myPTUInited)
   {
     ArLog::log(ArLog::Normal, "Initializing ArDPPTU...");
     myPTU.init();
@@ -563,6 +564,7 @@ int main(int argc, char **argv)
     Aria::init();
     ArArgumentParser parser(&argc, argv);
     parser.loadDefaultArguments();
+    ArRobot *userobot = NULL;
     ArRobot robot;
     ArRobotConnector robotConnector(&parser, &robot);
     if(!robotConnector.connectRobot())
@@ -570,30 +572,39 @@ int main(int argc, char **argv)
       ArLog::log(ArLog::Terse, "dpptuExample: Could not connect to the robot.");
       if(parser.checkHelpAndWarnUnparsed())
       {
-          Aria::logOptions();
-          Aria::exit(1);
+        userobot = NULL;
       }
     }
+    else
+    {
+      ArLog::log(ArLog::Normal, "dpptuExample: Connected to robot.");
+      robot.runAsync(true);
+      userobot = &robot;
+    }
+
     if (!Aria::parseArgs() || !parser.checkHelpAndWarnUnparsed())
     {
       Aria::logOptions();
       Aria::exit(1);
     }
-    ArLog::log(ArLog::Normal, "dpptuExample: Connected to robot.");
-
-  robot.runAsync(true);
 
   // an object for keyboard control, class defined above, this also adds itself as a user task
-  KeyPTU ptu(&robot);
+  KeyPTU ptu(userobot);
 
 
   // turn off the sonar
-  robot.comInt(ArCommands::SONAR, 0);
+  if(userobot)
+    robot.comInt(ArCommands::SONAR, 0);
 
   printf("Press '?' for available commands\r\n");
 
   // run, if we lose connection to the robot, exit
-  robot.waitForRunExit();
+  if(userobot)
+    robot.waitForRunExit();
+  else
+  {
+      while(true) ArUtil::sleep(10000);
+  }
 
   Aria::exit(0);
 }

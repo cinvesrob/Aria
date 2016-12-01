@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -918,12 +919,12 @@ void ArRobotParams::addVideoToConfig(int i, ArConfig *config)
   //if (i == 0)
   //  printf("XXX added VideoType param for Video 1, its target is 0x%x, initial value is %s\n", &(myVideoParams[i].type), myVideoParams[i].type.c_str());
   config->addParam(ArConfigArg("VideoInverted", &(myVideoParams[i].inverted), "If image should be flipped (for cameras mounted inverted/upside-down)"), section.c_str());
-  config->addParam(ArConfigArg("VideoWidth", &(myVideoParams[i].imageWidth), "Desired width of image"), section.c_str());
-  addParam(ArConfigArg("VideoHeight", &(myVideoParams[i].imageHeight), "Desired height of image"), section.c_str());
-  addParam(ArConfigArg("VideoDeviceIndex", &(myVideoParams[i].deviceIndex), "Device index"), section.c_str());
+  config->addParam(ArConfigArg("VideoWidth", &(myVideoParams[i].imageWidth), "Desired width of image, or -1 for default"), section.c_str());
+  addParam(ArConfigArg("VideoHeight", &(myVideoParams[i].imageHeight), "Desired height of image, or -1 for default"), section.c_str());
+  addParam(ArConfigArg("VideoDeviceIndex", &(myVideoParams[i].deviceIndex), "Device index, or -1 for default"), section.c_str());
   config->addParam(ArConfigArg("VideoDeviceName", &(myVideoParams[i].deviceName), "Device name (overrides VideoDeviceIndex)"), section.c_str());
-  config->addParam(ArConfigArg("VideoChannel", &(myVideoParams[i].channel), "Input channel"), section.c_str());
-  addParam(ArConfigArg("VideoAnalogSignalFormat", &(myVideoParams[i].analogSignalFormat), "NTSC or PAL"), section.c_str(), ArPriority::NORMAL, "Choices:NTSC;;PAL");
+  config->addParam(ArConfigArg("VideoChannel", &(myVideoParams[i].channel), "Input channel, or -1 for default"), section.c_str());
+  addParam(ArConfigArg("VideoAnalogSignalFormat", &(myVideoParams[i].analogSignalFormat), "NTSC or PAL, or empty for default. Only used for analog framegrabbers."), section.c_str(), ArPriority::NORMAL, "Choices:NTSC;;PAL");
   config->addParam(ArConfigArg("VideoAddress", &(myVideoParams[i].address), "IP address or hostname, or none if not using network communication."), section.c_str());
   config->addParam(ArConfigArg("VideoTCPPort", &(myVideoParams[i].tcpPort), "TCP Port to use for HTTP network connection"), section.c_str());
 }
@@ -1146,7 +1147,7 @@ AREXPORT const std::list<ArArgumentBuilder *> *ArRobotParams::getSonarUnits(void
 //  ArLog::log(ArLog::Normal, "Saving sonar units?");
 
   std::map<int, std::map<int, int> >::iterator it;
-  int unitNum, x, y, th, boardNum, boardUnitPosition, gain, noiseDelta, detectionThreshold, numEchoSamples;
+  int unitNum, x, y, th, boardNum, boardUnitPosition, gain, /*noiseDelta,*/ detectionThreshold, numEchoSamples;
 	bool useForAutonomousDriving;
   ArArgumentBuilder *builder;
 
@@ -1621,15 +1622,15 @@ void ArRobotParams::processSonarCommercial(ArConfig *config)
 
 AREXPORT void ArVideoParams::merge(const ArVideoParams& other)
 {
-  //printf("merge: other.type=%s, this.type=%s.\n", other.type.c_str(), type.c_str());
+//  printf("ArVideoParams::merge: other.type=%s, this.type=%s.\n", other.type.c_str(), type.c_str());
   if(other.type != "unknown" && other.type != "none" && other.type != "")
   {
-    //printf("merge: replacing this type %s with other %s\n", type.c_str(), other.type.c_str());
+    //printf("ArVideoParams::merge: replacing this type %s with other %s\n", type.c_str(), other.type.c_str());
     type = other.type;
   }
   if(other.connectSet)
   {
-    //printf("merge: replacing this connect %d with other %d\n", connect, other.connect);
+ //   printf("ArVideoParams::merge: replacing this connect %d with other %d. other.connectSet=%d, this.connectSet=%d\n", connect, other.connect, other.connectSet, connectSet);
     connect = other.connect;
     connectSet = true;
   }
@@ -1657,10 +1658,10 @@ AREXPORT void ArVideoParams::merge(const ArVideoParams& other)
   {
     analogSignalFormat = other.analogSignalFormat;
   }
-  //printf("merge: this address is %s, other address is %s\n", address.c_str(), other.address.c_str());
+  //printf("ArVideoParams::merge: this address is %s, other address is %s\n", address.c_str(), other.address.c_str());
   if(other.address != "none" && other.address != "")
   {
-	  //printf("merge: replacing this address %s with other %s\n", address.c_str(), other.address.c_str());
+	  //printf("ArVideoParams::merge: replacing this address %s with other %s\n", address.c_str(), other.address.c_str());
     address = other.address;
   }
   if(other.tcpPortSet)
@@ -1670,7 +1671,7 @@ AREXPORT void ArVideoParams::merge(const ArVideoParams& other)
   }
   if(other.invertedSet)
   {
-    //printf("merge: replacing this inverted %d with other %d\n", inverted, other.inverted);
+    //printf("ArVideoParams::merge: replacing this inverted %d with other %d\n", inverted, other.inverted);
     inverted = other.inverted;
     invertedSet = true;
   }
@@ -1678,41 +1679,43 @@ AREXPORT void ArVideoParams::merge(const ArVideoParams& other)
 
 void ArPTZParams::merge(const ArPTZParams& other)
 {
+  //printf("ArPTZParams::merge: other.type=%s, this.type=%s.\n", other.type.c_str(), type.c_str());
   if(other.type != "unknown" && other.type != "none" && other.type != "")
   {
-    //printf("merge: replacing this type %s with other %s\n", type.c_str(), other.type.c_str());
+    //printf("ArPTZParams::merge: replacing this type %s with other %s\n", type.c_str(), other.type.c_str());
     type = other.type;
   }
   if(other.connectSet)
   {
-    //printf("merge: replacing this connect %d with other %d\n", connect, other.connect);
+    //pgintf("ArPTZParams::merge: replacing this connect %d with other %d\n", connect, other.connect);
+    //printf("ArPTZParams::merge: replacing this connect %d with other %d. other.connectSet=%d, this.connectSet=%d\n", connect, other.connect, other.connectSet, connectSet);
     connect = other.connect;
     connectSet = true;
   }
   if(other.serialPort != "none" && other.serialPort != "")
   {
-    //printf("merge: replacing this serialPort %s with other %s\n", serialPort.c_str(), other.serialPort.c_str());
+    //printf("ArPTZParams::merge: replacing this serialPort %s with other %s\n", serialPort.c_str(), other.serialPort.c_str());
     serialPort = other.serialPort;
   }
   if(other.robotAuxPort != -1)
   {
-    //printf("merge: replacing this robotAuxPort %d with other %d\n", robotAuxPort, other.robotAuxPort);
+    //printf("ArPTZParams::merge: replacing this robotAuxPort %d with other %d\n", robotAuxPort, other.robotAuxPort);
     robotAuxPort = other.robotAuxPort;
   }
   if(other.address != "none")
   {
-    //printf("merge: replacing this address %s with other %s\n", address.c_str(), other.address.c_str());
+    //printf("ArPTZParams::merge: replacing this address %s with other %s\n", address.c_str(), other.address.c_str());
     address = other.address;
   }
   if(other.tcpPortSet)
   {
-    //printf("merge: replacing this tcpPort %d with other %d\n", tcpPort, other.tcpPort);
+    //printf("ArPTZParams::merge: replacing this tcpPort %d with other %d\n", tcpPort, other.tcpPort);
     tcpPort = other.tcpPort;
     tcpPortSet = true;
   }
   if(other.invertedSet)
   {
-    //printf("merge: replacing this inverted %d with other %d\n", inverted, other.inverted);
+    //printf("ArPTZParams::merge: replacing this inverted %d with other %d\n", inverted, other.inverted);
     inverted = other.inverted;
     invertedSet = true;
   }

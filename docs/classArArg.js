@@ -1,6 +1,17 @@
 var classArArg =
 [
-    [ "Type", "classArArg.html#ad3874ce82232b3fd733e6c73d16af3db", null ],
+    [ "TYPE_COUNT", "classArArg.html#aa34e89e31a2957a7966c85f15f82c625a5c08e556acef344b196dc6bdf5e0c0dd", null ],
+    [ "Type", "classArArg.html#ad3874ce82232b3fd733e6c73d16af3db", [
+      [ "INVALID", "classArArg.html#ad3874ce82232b3fd733e6c73d16af3dba07763b1a9cd6b1df7c84f0f1b492b2cb", null ],
+      [ "INT", "classArArg.html#ad3874ce82232b3fd733e6c73d16af3dbaf5cbede93e0728c4962f2c2fb8188c89", null ],
+      [ "DOUBLE", "classArArg.html#ad3874ce82232b3fd733e6c73d16af3dba1c9d5a82c790c5e8b182afd56316173d", null ],
+      [ "STRING", "classArArg.html#ad3874ce82232b3fd733e6c73d16af3dba00a31db4b5e914c3e3f4d5be7e501feb", null ],
+      [ "BOOL", "classArArg.html#ad3874ce82232b3fd733e6c73d16af3dba55fa4f7ed305e0e1362acd5280a6a58f", null ],
+      [ "POSE", "classArArg.html#ad3874ce82232b3fd733e6c73d16af3dba4e06d574996893d7b298e9eb67870999", null ],
+      [ "FUNCTOR", "classArArg.html#ad3874ce82232b3fd733e6c73d16af3dba1601d51f58d4b06228096c1eafcc2c6d", null ],
+      [ "DESCRIPTION_HOLDER", "classArArg.html#ad3874ce82232b3fd733e6c73d16af3dba2203dfcbe9165c3b737fa92476e04077", null ],
+      [ "LAST_TYPE", "classArArg.html#ad3874ce82232b3fd733e6c73d16af3dbad3ffcff46c0a5522021a0d667f6ab679", null ]
+    ] ],
     [ "ArArg", "classArArg.html#a8d2f37f0bf185bb782655fcc535f80d5", null ],
     [ "ArArg", "classArArg.html#af95c23b9ad936c75e549092f87afb086", null ],
     [ "ArArg", "classArArg.html#a68926e5b78fca078359d1c9037909fb2", null ],

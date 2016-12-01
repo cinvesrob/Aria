@@ -1,10 +1,39 @@
 var classArLCDMTX =
 [
-    [ "Commands", "classArLCDMTX.html#a71f39a2f15382be542df1e0f0b5368f2", null ],
-    [ "Headers", "classArLCDMTX.html#a257e1a950f2ea4bd287f62971abe02f0", null ],
-    [ "Screens", "classArLCDMTX.html#a1b8195f8abbdd8d96c76a14ac3eaf2b1", null ],
-    [ "SYS_INFO", "classArLCDMTX.html#a9a0a9022da4cb64a9e00f50d8a2e787e", null ],
-    [ "TextNumbers", "classArLCDMTX.html#accf81194daad61868d4491299209de84", null ],
+    [ "Commands", "classArLCDMTX.html#a71f39a2f15382be542df1e0f0b5368f2", [
+      [ "KEEP_ALIVE", "classArLCDMTX.html#a71f39a2f15382be542df1e0f0b5368f2afce7c5d1b4e182bd022aa9dbfb448d2b", null ],
+      [ "VERSION", "classArLCDMTX.html#a71f39a2f15382be542df1e0f0b5368f2a884491237fff21f16b6a20bd1d50d046", null ],
+      [ "SYSTEM_INFO", "classArLCDMTX.html#a71f39a2f15382be542df1e0f0b5368f2a2b132c7ea242de02254b7a7bc25f6bb7", null ],
+      [ "REBOOT", "classArLCDMTX.html#a71f39a2f15382be542df1e0f0b5368f2a46e95e526d00bc1c2882913942aaa5be", null ],
+      [ "GET_CURRENT_SCREEN_NUM", "classArLCDMTX.html#a71f39a2f15382be542df1e0f0b5368f2abbadb82378bf1db6a9e88ea7f8496454", null ],
+      [ "GET_TEXT_FIELD", "classArLCDMTX.html#a71f39a2f15382be542df1e0f0b5368f2a9a7f7d9bbeace0fb2d180af83b483ad4", null ],
+      [ "GET_BACKLIGHT", "classArLCDMTX.html#a71f39a2f15382be542df1e0f0b5368f2a0b2458b8ebff4002d8cf3c22cd643b49", null ],
+      [ "GET_SYSTEM_METERS", "classArLCDMTX.html#a71f39a2f15382be542df1e0f0b5368f2a9e82858bc9329e11ac999b3a308a59d8", null ],
+      [ "SET_SCREEN_NUM", "classArLCDMTX.html#a71f39a2f15382be542df1e0f0b5368f2aabd6e474f4ea253d7a412300e5149f2b", null ],
+      [ "SET_TEXT_FIELD", "classArLCDMTX.html#a71f39a2f15382be542df1e0f0b5368f2ab507799be3c228c5c86123574d34fc13", null ],
+      [ "SET_BACKLIGHT", "classArLCDMTX.html#a71f39a2f15382be542df1e0f0b5368f2aadd15057be23e74d035f35270672e9d9", null ],
+      [ "SET_BATTERY_WIFI", "classArLCDMTX.html#a71f39a2f15382be542df1e0f0b5368f2a752e882d87c3c6f4ecae60d86244796c", null ]
+    ] ],
+    [ "Headers", "classArLCDMTX.html#a257e1a950f2ea4bd287f62971abe02f0", [
+      [ "HEADER1", "classArLCDMTX.html#a257e1a950f2ea4bd287f62971abe02f0ad48140b82f28068056a1b4e47a7da906", null ],
+      [ "HEADER2", "classArLCDMTX.html#a257e1a950f2ea4bd287f62971abe02f0a38bd38cc0c00044bba037f925a6d8211", null ]
+    ] ],
+    [ "Screens", "classArLCDMTX.html#a1b8195f8abbdd8d96c76a14ac3eaf2b1", [
+      [ "BOOT_SCREEN", "classArLCDMTX.html#a1b8195f8abbdd8d96c76a14ac3eaf2b1acf79105951bfe6524d840006d0d079b4", null ],
+      [ "STATUS_SCREEN", "classArLCDMTX.html#a1b8195f8abbdd8d96c76a14ac3eaf2b1a08538228dd6659c3366243c2ce7fbd7f", null ]
+    ] ],
+    [ "SYS_INFO", "classArLCDMTX.html#a9a0a9022da4cb64a9e00f50d8a2e787e", [
+      [ "SYS_INFO_STOP", "classArLCDMTX.html#a9a0a9022da4cb64a9e00f50d8a2e787ead710d2b076fa3409a287b2651f40a13f", null ],
+      [ "SYS_INFO_ONCE", "classArLCDMTX.html#a9a0a9022da4cb64a9e00f50d8a2e787ea8cef709eebb39bd866746266c031c507", null ],
+      [ "SYS_INFO_CONTINUOUS", "classArLCDMTX.html#a9a0a9022da4cb64a9e00f50d8a2e787ea22f5eb2a94fd6e50e4def91118caee14", null ]
+    ] ],
+    [ "TextNumbers", "classArLCDMTX.html#accf81194daad61868d4491299209de84", [
+      [ "BOOT_STATUS_TEXT", "classArLCDMTX.html#accf81194daad61868d4491299209de84ac695db38820b10d26ceadbc4361d3c02", null ],
+      [ "MAIN_STATUS_TEXT", "classArLCDMTX.html#accf81194daad61868d4491299209de84a43bb3be955e4c058262726bdeeca96cd", null ],
+      [ "MODE_TEXT", "classArLCDMTX.html#accf81194daad61868d4491299209de84a2eff9fc9e7db5cd4faffb8dfa402e3bd", null ],
+      [ "ROBOT_ID_TEXT", "classArLCDMTX.html#accf81194daad61868d4491299209de84acc6074be980a921e18416c0f20ffd0d8", null ],
+      [ "ROBOT_IP_TEXT", "classArLCDMTX.html#accf81194daad61868d4491299209de84a8751e758fee08f5a2ab9b7104595e774", null ]
+    ] ],
     [ "ArLCDMTX", "classArLCDMTX.html#a041af97b8167c78432d8e8cd7427c3ca", null ],
     [ "~ArLCDMTX", "classArLCDMTX.html#a6c0e43bc9c8ea58a9e7c15d0fd342eb1", null ],
     [ "addDisconnectOnErrorCB", "classArLCDMTX.html#acbbed457a335bff24ea5a713cd994c92", null ],

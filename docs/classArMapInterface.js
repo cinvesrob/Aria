@@ -1,5 +1,6 @@
 var classArMapInterface =
 [
+    [ "MAX_MAP_NAME_LENGTH", "classArMapInterface.html#af7fa23936aff2ed8a39aa0566d1d2773a40732d41ab529094aace100632e2c16b", null ],
     [ "ArMapInterface", "classArMapInterface.html#afe8e08b6c419a144dc5622b785c584df", null ],
     [ "~ArMapInterface", "classArMapInterface.html#ab3a168bc2130af13b415979a75e536fa", null ],
     [ "addMapChangedCB", "classArMapInterface.html#a4473ac4e92936dab506739e7a20b9810", null ],

@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -603,7 +604,7 @@ bool ArLaserConnector::internalConfigureLaser(
   if ((laserData->myPort != NULL && strlen(laserData->myPort) > 0) &&
       (laserData->myPortType != NULL && strlen(laserData->myPortType) > 0))
   {
-    ArLog::log(ArLog::Normal, "ArLaserConnector: Connection type and port given for laser %d (%s), so overriding everything and using that information",
+    ArLog::log(ArLog::Normal, "ArLaserConnector: Connection type and port command arguments given for laser %d (%s), so overriding everything and using that information",
 	       laserData->myNumber, laser->getName());
     if ((laserData->myConn = Aria::deviceConnectionCreate(
 		 laserData->myPortType, laserData->myPort, portBuf, 
@@ -1075,7 +1076,7 @@ AREXPORT bool ArLaserConnector::setupLaser(ArLaser *laser,
 
   std::map<int, LaserData *>::iterator it;
   LaserData *laserData = NULL;
-  const ArRobotParams *params;
+  //const ArRobotParams *params;
 
   if ((it = myLasers.find(laserNumber)) != myLasers.end())
     laserData = (*it).second;
@@ -1567,3 +1568,27 @@ AREXPORT bool ArLaserConnector::connectLasers(
 	     "ArLaserConnector: Done connecting lasers");
   return true;
 }
+
+AREXPORT void ArLaserConnector::logLaserData()
+{
+  for(std::map<int, LaserData*>::const_iterator i = myLasers.begin(); i != myLasers.end(); ++i)
+  {
+    int li = i->first;
+    LaserData *ld = i->second;
+    if(!ld)
+    {
+      ArLog::log(ArLog::Normal, "ArLaserConnector: no data for laser #%d", li);
+      continue;
+    }
+    ArLog::log(ArLog::Normal, "ArLaserConnector: laser #%d: %s: %s, port=%s, portType=%s, remoteTCPPort=%d, flipped=%d, fov=(%0.2f, %0.2f), increment=%0.2f.", 
+      li, ld->myLaser->getName(), 
+      ld->myConnect?"will connect to this laser":"will NOT connect to this laser", 
+      ld->myPort, ld->myPortType, ld->myRemoteTcpPort, 
+      ld->myFlipped, ld->myDegreesStart, ld->myDegreesEnd, ld->myIncrementByDegrees);
+  }
+  if(myParsedArgs)
+    ArLog::log(ArLog::Normal, "ArLaserConnector: command-line arguments have been parsed.");
+  else
+    ArLog::log(ArLog::Normal, "ArLaserConnector: command-line arguments have not yet been parsed");
+}
+

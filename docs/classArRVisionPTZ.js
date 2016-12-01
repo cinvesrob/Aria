@@ -1,5 +1,13 @@
 var classArRVisionPTZ =
 [
+    [ "MAX_PAN", "classArRVisionPTZ.html#aed9159757eaa7a66b0910d7a273c6865a954531bac9685a574b6caef6f89e9827", null ],
+    [ "MIN_PAN", "classArRVisionPTZ.html#aed9159757eaa7a66b0910d7a273c6865a1d1102e76b7c854447dfd568675930e6", null ],
+    [ "MIN_TILT", "classArRVisionPTZ.html#aed9159757eaa7a66b0910d7a273c6865ab5f15634c6d7162a1e9a091375a777b4", null ],
+    [ "MAX_TILT", "classArRVisionPTZ.html#aed9159757eaa7a66b0910d7a273c6865a173ffd932d9acce0a0b89ff067b8408e", null ],
+    [ "MIN_ZOOM", "classArRVisionPTZ.html#aed9159757eaa7a66b0910d7a273c6865af96f35467f7e73e26f2287d85e5d57f2", null ],
+    [ "MAX_ZOOM", "classArRVisionPTZ.html#aed9159757eaa7a66b0910d7a273c6865a2d5f77fcf078b0a1c948234981e08848", null ],
+    [ "TILT_OFFSET_IN_DEGREES", "classArRVisionPTZ.html#aed9159757eaa7a66b0910d7a273c6865a7618b88c6602a9dd2caf4f1e37d70e55", null ],
+    [ "PAN_OFFSET_IN_DEGREES", "classArRVisionPTZ.html#aed9159757eaa7a66b0910d7a273c6865ac6fe586aed33ab49f83c4b9a073c1c36", null ],
     [ "ArRVisionPTZ", "classArRVisionPTZ.html#aa642a22d0138da6cc27b8a6e450ddcdb", null ],
     [ "~ArRVisionPTZ", "classArRVisionPTZ.html#a3e46a7c0a758aa00b86b18ddebd1e33e", null ],
     [ "canGetFOV", "classArRVisionPTZ.html#a66f82266a458e72804feeafe5e954af9", null ],

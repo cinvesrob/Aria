@@ -1,5 +1,8 @@
 var classArCameraCollection =
 [
+    [ "CameraInfo", "structArCameraCollection_1_1CameraInfo.html", "structArCameraCollection_1_1CameraInfo" ],
+    [ "CommandInfo", "structArCameraCollection_1_1CommandInfo.html", "structArCameraCollection_1_1CommandInfo" ],
+    [ "ParamInfo", "structArCameraCollection_1_1ParamInfo.html", "structArCameraCollection_1_1ParamInfo" ],
     [ "ArCameraCollection", "classArCameraCollection.html#a02b8d3ef249800ef72c4fcc048a7e9f4", null ],
     [ "~ArCameraCollection", "classArCameraCollection.html#a31aa9bd6524c6ef2200f4e908d18f317", null ],
     [ "addCamera", "classArCameraCollection.html#a4298508408621d2db978f1408a8dc27e", null ],

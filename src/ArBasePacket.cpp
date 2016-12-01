@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -741,6 +742,14 @@ AREXPORT void ArBasePacket::bufToStr(char *buf, int len)
   // Make absolutely sure that the string is null-terminated...
   buf[len - 1] = '\0';
 
+}
+
+/// Note the string obtained from the packet can have at most 512 characters.
+AREXPORT std::string ArBasePacket::bufToString()
+{
+  char buf[512];
+  bufToStr(buf, 512);
+  return buf;
 }
 
 /**

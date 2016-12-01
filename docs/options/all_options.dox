@@ -127,7 +127,7 @@ For laser type "lms1xx" (SICK LMS-100, LMS-111, etc.):
 -lf &lt;true|false&gt;
 -laserMaxRange &lt;maxRange&gt;
 -lmr &lt;maxRange&gt;
-	&lt;maxRange&gt; is an unsigned int less than 20000
+	&lt;maxRange&gt; is an unsigned int less than 50000
 -laserDegreesStart &lt;startAngle&gt;
 -lds &lt;startAngle&gt;
 	&lt;startAngle&gt; is a double between -135 and 135
@@ -140,8 +140,6 @@ For laser type "lms1xx" (SICK LMS-100, LMS-111, etc.):
 -lrb &lt;none|8bits&gt;
 -laserPowerControlled &lt;true|false&gt;
 -lpc &lt;true|false&gt;
--laserStartingBaud &lt;9600|57600|115200&gt;
--lsb &lt;9600|57600|115200&gt;
 -laserAdditionalIgnoreReadings &lt;readings&gt;
 -lair &lt;readings&gt;
 	&lt;readings&gt; is a string that contains readings to ignore separated by commas, where ranges are acceptable with a -, example '75,76,90-100,-75,-76,-90--100'
@@ -218,15 +216,19 @@ For laser type "lms5XX" (SICK LMS-500):
 -lf &lt;true|false&gt;
 -laserMaxRange &lt;maxRange&gt;
 -lmr &lt;maxRange&gt;
-	&lt;maxRange&gt; is an unsigned int less than 20000
+	&lt;maxRange&gt; is an unsigned int less than 80000
+-laserDegreesStart &lt;startAngle&gt;
+-lds &lt;startAngle&gt;
+	&lt;startAngle&gt; is a double between -95 and 95
+-laserDegreesEnd &lt;endAngle&gt;
+-lde &lt;endAngle&gt;
+	&lt;endAngle&gt; is a double between -95 and 95
 -laserIncrement &lt;half|one|quarter&gt;
 -li &lt;half|one|quarter&gt;
 -laserReflectorBits &lt;none|8bits&gt;
 -lrb &lt;none|8bits&gt;
 -laserPowerControlled &lt;true|false&gt;
 -lpc &lt;true|false&gt;
--laserStartingBaud &lt;9600|57600|115200&gt;
--lsb &lt;9600|57600|115200&gt;
 -laserAdditionalIgnoreReadings &lt;readings&gt;
 -lair &lt;readings&gt;
 	&lt;readings&gt; is a string that contains readings to ignore separated by commas, where ranges are acceptable with a -, example '75,76,90-100,-75,-76,-90--100'
@@ -290,7 +292,7 @@ For laser type "s3series" (SICK S-300, S-3000, etc.):
 -lair &lt;readings&gt;
 	&lt;readings&gt; is a string that contains readings to ignore separated by commas, where ranges are acceptable with a -, example '75,76,90-100,-75,-76,-90--100'
 
-For laser type "tim3XX" (SICK TiM300):
+For laser type "tim510" or "tim3XX" (SICK TiM310 and TiM510):
 
 -laserPort &lt;laserPort&gt;
 -lp &lt;laserPort&gt;
@@ -302,21 +304,108 @@ For laser type "tim3XX" (SICK TiM300):
 -lf &lt;true|false&gt;
 -laserMaxRange &lt;maxRange&gt;
 -lmr &lt;maxRange&gt;
-	&lt;maxRange&gt; is an unsigned int less than 20000
+	&lt;maxRange&gt; is an unsigned int less than 4000
 -laserDegreesStart &lt;startAngle&gt;
 -lds &lt;startAngle&gt;
 	&lt;startAngle&gt; is a double between -135 and 135
 -laserDegreesEnd &lt;endAngle&gt;
 -lde &lt;endAngle&gt;
 	&lt;endAngle&gt; is a double between -135 and 135
--laserIncrement &lt;half|quarter|three&gt;
--li &lt;half|quarter|three&gt;
+-laserIncrement &lt;three&gt;
+-li &lt;three&gt;
 -laserReflectorBits &lt;none|8bits&gt;
 -lrb &lt;none|8bits&gt;
 -laserPowerControlled &lt;true|false&gt;
 -lpc &lt;true|false&gt;
 -laserStartingBaud &lt;115200&gt;
 -lsb &lt;115200&gt;
+-laserAdditionalIgnoreReadings &lt;readings&gt;
+-lair &lt;readings&gt;
+	&lt;readings&gt; is a string that contains readings to ignore separated by commas, where ranges are acceptable with a -, example '75,76,90-100,-75,-76,-90--100'
+
+For laser type "tim551" (SICK TiM551):
+
+-laserPort &lt;laserPort&gt;
+-lp &lt;laserPort&gt;
+-laserPortType &lt;serial|serial422|tcp&gt;
+-lpt &lt;serial|serial422|tcp&gt;
+-remoteLaserTcpPort &lt;remoteLaserTcpPort&gt;
+-rltp &lt;remoteLaserTcpPort&gt;
+-laserFlipped &lt;true|false&gt;
+-lf &lt;true|false&gt;
+-laserMaxRange &lt;maxRange&gt;
+-lmr &lt;maxRange&gt;
+	&lt;maxRange&gt; is an unsigned int less than 10000
+-laserDegreesStart &lt;startAngle&gt;
+-lds &lt;startAngle&gt;
+	&lt;startAngle&gt; is a double between -135 and 135
+-laserDegreesEnd &lt;endAngle&gt;
+-lde &lt;endAngle&gt;
+	&lt;endAngle&gt; is a double between -135 and 135
+-laserIncrement &lt;one&gt;
+-li &lt;one&gt;
+-laserReflectorBits &lt;none|8bits&gt;
+-lrb &lt;none|8bits&gt;
+-laserPowerControlled &lt;true|false&gt;
+-lpc &lt;true|false&gt;
+-laserAdditionalIgnoreReadings &lt;readings&gt;
+-lair &lt;readings&gt;
+	&lt;readings&gt; is a string that contains readings to ignore separated by commas, where ranges are acceptable with a -, example '75,76,90-100,-75,-76,-90--100'
+
+For laser type "tim561" (SICK TiM561):
+
+-laserPort &lt;laserPort&gt;
+-lp &lt;laserPort&gt;
+-laserPortType &lt;serial|serial422|tcp&gt;
+-lpt &lt;serial|serial422|tcp&gt;
+-remoteLaserTcpPort &lt;remoteLaserTcpPort&gt;
+-rltp &lt;remoteLaserTcpPort&gt;
+-laserFlipped &lt;true|false&gt;
+-lf &lt;true|false&gt;
+-laserMaxRange &lt;maxRange&gt;
+-lmr &lt;maxRange&gt;
+	&lt;maxRange&gt; is an unsigned int less than 10000
+-laserDegreesStart &lt;startAngle&gt;
+-lds &lt;startAngle&gt;
+	&lt;startAngle&gt; is a double between -135 and 135
+-laserDegreesEnd &lt;endAngle&gt;
+-lde &lt;endAngle&gt;
+	&lt;endAngle&gt; is a double between -135 and 135
+-laserIncrement &lt;one&gt;
+-li &lt;one&gt;
+-laserReflectorBits &lt;none|8bits&gt;
+-lrb &lt;none|8bits&gt;
+-laserPowerControlled &lt;true|false&gt;
+-lpc &lt;true|false&gt;
+-laserAdditionalIgnoreReadings &lt;readings&gt;
+-lair &lt;readings&gt;
+	&lt;readings&gt; is a string that contains readings to ignore separated by commas, where ranges are acceptable with a -, example '75,76,90-100,-75,-76,-90--100'
+
+For laser type "tim571" (SICK TiM571):
+
+-laserPort &lt;laserPort&gt;
+-lp &lt;laserPort&gt;
+-laserPortType &lt;serial|serial422|tcp&gt;
+-lpt &lt;serial|serial422|tcp&gt;
+-remoteLaserTcpPort &lt;remoteLaserTcpPort&gt;
+-rltp &lt;remoteLaserTcpPort&gt;
+-laserFlipped &lt;true|false&gt;
+-lf &lt;true|false&gt;
+-laserMaxRange &lt;maxRange&gt;
+-lmr &lt;maxRange&gt;
+	&lt;maxRange&gt; is an unsigned int less than 25000
+-laserDegreesStart &lt;startAngle&gt;
+-lds &lt;startAngle&gt;
+	&lt;startAngle&gt; is a double between -135 and 135
+-laserDegreesEnd &lt;endAngle&gt;
+-lde &lt;endAngle&gt;
+	&lt;endAngle&gt; is a double between -135 and 135
+-laserIncrement &lt;third&gt;
+-li &lt;third&gt;
+-laserReflectorBits &lt;none|8bits&gt;
+-lrb &lt;none|8bits&gt;
+-laserPowerControlled &lt;true|false&gt;
+-lpc &lt;true|false&gt;
 -laserAdditionalIgnoreReadings &lt;readings&gt;
 -lair &lt;readings&gt;
 	&lt;readings&gt; is a string that contains readings to ignore separated by commas, where ranges are acceptable with a -, example '75,76,90-100,-75,-76,-90--100'
@@ -336,6 +425,7 @@ Common PTU and Camera PTZ options:
 		vcc
 		vcc4
 		vcc50i
+		none
 	-ptzInverted &lt;true|false&gt;	If true, reverse tilt and pan axes for cameras mounted upside down.
 
 Only one of the following sets of connection parameters may be given:

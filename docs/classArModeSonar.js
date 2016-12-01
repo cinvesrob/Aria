@@ -1,6 +1,12 @@
 var classArModeSonar =
 [
-    [ "State", "classArModeSonar.html#aa0b63779968052f6786088f9a4018e95", null ],
+    [ "State", "classArModeSonar.html#aa0b63779968052f6786088f9a4018e95", [
+      [ "STATE_ALL", "classArModeSonar.html#aa0b63779968052f6786088f9a4018e95ad2132736d3569796ef11d7fe85930c22", null ],
+      [ "STATE_FIRST", "classArModeSonar.html#aa0b63779968052f6786088f9a4018e95a3c0a5b16a0cd38d85e1bb26f3883dd4d", null ],
+      [ "STATE_SECOND", "classArModeSonar.html#aa0b63779968052f6786088f9a4018e95a98b14b9cc23c08141ffb65c54470429c", null ],
+      [ "STATE_THIRD", "classArModeSonar.html#aa0b63779968052f6786088f9a4018e95a5d46dddcbcee92bc245a38c0416fb944", null ],
+      [ "STATE_FOURTH", "classArModeSonar.html#aa0b63779968052f6786088f9a4018e95a00dccd3e849e2d2d87e48adc664155c7", null ]
+    ] ],
     [ "ArModeSonar", "classArModeSonar.html#a8b9424f136116a328657e78ebebb9cd5", null ],
     [ "~ArModeSonar", "classArModeSonar.html#a2b0bc9b6af9b9e31c31ffc8adda14860", null ],
     [ "activate", "classArModeSonar.html#a50b72003f81817777d4f2721fdc349f5", null ],

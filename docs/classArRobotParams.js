@@ -1,7 +1,22 @@
 var classArRobotParams =
 [
-    [ "IRInfo", "classArRobotParams.html#a65635fd0e0d3099732a88d6e571fe71b", null ],
-    [ "SonarInfo", "classArRobotParams.html#a462b1be73180c681f6dd787e8929dc7b", null ],
+    [ "IRInfo", "classArRobotParams.html#a65635fd0e0d3099732a88d6e571fe71b", [
+      [ "IR_X", "classArRobotParams.html#a65635fd0e0d3099732a88d6e571fe71ba87be82fffcdcbca1e3cc0c27736f4db0", null ],
+      [ "IR_Y", "classArRobotParams.html#a65635fd0e0d3099732a88d6e571fe71ba03d34d7c0f3ef0d4faf47fe084b4c86e", null ],
+      [ "IR_TYPE", "classArRobotParams.html#a65635fd0e0d3099732a88d6e571fe71baf9bdc1b740bda2b865588d856962afb6", null ],
+      [ "IR_CYCLES", "classArRobotParams.html#a65635fd0e0d3099732a88d6e571fe71ba6aec123b5e1c68447a29ef9a30dd080a", null ]
+    ] ],
+    [ "SonarInfo", "classArRobotParams.html#a462b1be73180c681f6dd787e8929dc7b", [
+      [ "SONAR_X", "classArRobotParams.html#a462b1be73180c681f6dd787e8929dc7bac311dfa1e5db8409b12b859c22148e05", null ],
+      [ "SONAR_Y", "classArRobotParams.html#a462b1be73180c681f6dd787e8929dc7ba868bb44b847a645fadd73e0e87913612", null ],
+      [ "SONAR_TH", "classArRobotParams.html#a462b1be73180c681f6dd787e8929dc7ba8fe9c9429bfd9f77a432d824cd3570fc", null ],
+      [ "SONAR_BOARD", "classArRobotParams.html#a462b1be73180c681f6dd787e8929dc7ba801b4a8efd2f53772c0dda1e4ce98cc0", null ],
+      [ "SONAR_BOARDUNITPOSITION", "classArRobotParams.html#a462b1be73180c681f6dd787e8929dc7babe131afa72604e59561d6275fd2695b1", null ],
+      [ "SONAR_GAIN", "classArRobotParams.html#a462b1be73180c681f6dd787e8929dc7babc5fc7e7bf39639f865e44f61112357f", null ],
+      [ "SONAR_DETECTION_THRESHOLD", "classArRobotParams.html#a462b1be73180c681f6dd787e8929dc7ba9dc2e474dd39f46b06f9a177e9919cab", null ],
+      [ "SONAR_MAX_RANGE", "classArRobotParams.html#a462b1be73180c681f6dd787e8929dc7baa9027d70a74d0e34b968ba2ff8c3268a", null ],
+      [ "SONAR_USE_FOR_AUTONOMOUS_DRIVING", "classArRobotParams.html#a462b1be73180c681f6dd787e8929dc7babadb1b3ac20aaa19fc688500350e619f", null ]
+    ] ],
     [ "ArRobotParams", "classArRobotParams.html#a0410d65a3a11a1acaf350fc342b2374e", null ],
     [ "~ArRobotParams", "classArRobotParams.html#abac503685ebef084e87476ca66ce15b4", null ],
     [ "addBatteryToConfig", "classArRobotParams.html#a5ec91e24ba5558d1e9730d33d21bdeec", null ],

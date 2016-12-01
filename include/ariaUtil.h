@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -38,6 +39,7 @@ Adept MobileRobots, 10 Columbia Drive, Amherst, NH 03031; +1-603-881-7960
 #include <limits.h>
 #include <string.h>
 #include <float.h>
+#include <vector>
 
 #if defined(_WIN32) || defined(WIN32)
 #include <sys/timeb.h>
@@ -100,6 +102,7 @@ public:
 #endif
 
   /// Sleep for the given number of milliseconds
+  /// @ingroup easy
   AREXPORT static void sleep(unsigned int ms);
   
   /// Get the time in milliseconds
@@ -134,16 +137,29 @@ public:
     }
 
   /// Returns the minimum of the two values
+  /// @ingroup easy
   static int findMin(int first, int second) 
     { if (first < second) return first; else return second; }
   /// Returns the maximum of the two values
+  /// @ingroup easy
   static int findMax(int first, int second) 
     { if (first > second) return first; else return second; }
 
   /// Returns the minimum of the two values
+  /// @ingroup easy
+  static unsigned int findMinU(unsigned int first, unsigned int second) 
+    { if (first < second) return first; else return second; }
+  /// Returns the maximum of the two values
+  /// @ingroup easy
+  static unsigned int findMaxU(unsigned int first, unsigned int second) 
+    { if (first > second) return first; else return second; }
+
+  /// Returns the minimum of the two values
+  /// @ingroup easy
   static double findMin(double first, double second) 
     { if (first < second) return first; else return second; }
   /// Returns the maximum of the two values
+  /// @ingroup easy
   static double findMax(double first, double second) 
     { if (first > second) return first; else return second; }
 
@@ -275,10 +291,17 @@ public:
   AREXPORT static const char *convertBool(int val);
 
 #ifndef SWIG
-  /// Function for doing a printf style call to a functor
-  /** @swigomit */
+  /** Invoke a functor with a string generated via sprintf format conversion
+      @param functor The functor to invoke with the formatted string
+      @param formatstr The format string into which additional argument values are inserted using vsnprintf() 
+      @param ... Additional arguments are values to interpolate into @a formatstr to generate the final string passed as the argument in the functor invocation.
+      @swigomit
+  */
   AREXPORT static void functorPrintf(ArFunctor1<const char *> *functor,
-				     char *str, ...);
+				     const char *formatstr, ...);
+  /// @deprecated format string should be a const char*
+  AREXPORT static void functorPrintf(ArFunctor1<const char *> *functor,
+				     char *formatstr, ...);
 #endif
 
   /// Function for doing a fprintf to a file (here to make a functor for)
@@ -306,7 +329,7 @@ public:
 					     int len);
 
   /// Returns a string from the Windows registry, searching each of the following registry root paths in order: REGKEY_CURRENT_USER, REGKEY_LOCAL_MACHINE
-  AREXPORT static bool findFirstStringInRegistry(const char* key, const char* value, char* str, int len) {
+ static bool findFirstStringInRegistry(const char* key, const char* value, char* str, int len) {
 	if(!getStringFromRegistry(REGKEY_CURRENT_USER, key, value, str, len))
 		return getStringFromRegistry(REGKEY_LOCAL_MACHINE, key, value, str, len);
 	return true;
@@ -426,6 +449,7 @@ public:
   /// Opens a file, defaulting it so that the file will close on exec
   AREXPORT static int open(const char *pathname, int flags, mode_t mode, 
 			   bool closeOnExec = true);
+  AREXPORT static int close(int fd);
   /// Opens a file, defaulting it so that the file will close on exec
   AREXPORT static int creat(const char *pathname, mode_t mode,
 			    bool closeOnExec = true);
@@ -480,6 +504,7 @@ private:
 
 /** Common math operations
     @ingroup UtilityClasses
+    @ingroup easy
 */
 class ArMath
 {
@@ -493,7 +518,8 @@ private:
 public:
    
   /** @return a very small number which can be used for comparisons of floating 
-   * point values, etc. */
+   * point values, etc. 
+   */
   AREXPORT static double epsilon();
 
 
@@ -503,7 +529,9 @@ public:
      @param ang2 second angle, added to first
      @return sum of the angles, in range [-180,180]
      @see subAngle
-     @see fixAngle */
+     @see fixAngle 
+     @ingroup easy
+  */
   static double addAngle(double ang1, double ang2) 
     { return fixAngle(ang1 + ang2); }
 
@@ -514,6 +542,7 @@ public:
      @return resulting angle, in range [-180,180]
      @see addAngle
      @see fixAngle
+     @ingroup easy
   */
   static double subAngle(double ang1, double ang2) 
     { return fixAngle(ang1 - ang2); }
@@ -524,6 +553,7 @@ public:
      @return the angle in range (-180,180]
      @see addAngle
      @see subAngle
+     @ingroup easy
   */
   static double fixAngle(double angle) 
     {
@@ -543,6 +573,7 @@ public:
      @param deg the angle in degrees
      @return the angle in radians
      @see radToDeg
+     @ingroup easy
   */     
   static double degToRad(double deg) { return deg * M_PI / 180.0; }
 
@@ -551,6 +582,7 @@ public:
      @param rad the angle in radians
      @return the angle in degrees
      @see degToRad
+     @ingroup easy
   */
   static double radToDeg(double rad) { return rad * 180.0 / M_PI; }
 
@@ -559,6 +591,7 @@ public:
      @param angle angle to find the cos of, in degrees
      @return the cos of the angle
      @see sin
+     @ingroup easy
   */
   static double cos(double angle) { return ::cos(ArMath::degToRad(angle)); }
 
@@ -567,6 +600,7 @@ public:
      @param angle angle to find the sin of, in degrees
      @return the sin of the angle
      @see cos
+     @ingroup easy
   */
   static double sin(double angle) { return ::sin(ArMath::degToRad(angle)); }
 
@@ -574,6 +608,7 @@ public:
   /**
      @param angle angle to find the tan of, in degrees
      @return the tan of the angle
+     @ingroup easy
   */
   static double tan(double angle) { return ::tan(ArMath::degToRad(angle)); }
 
@@ -582,11 +617,13 @@ public:
      @param y the y distance
      @param x the x distance
      @return the angle y and x form
+     @ingroup easy
   */
   static double atan2(double y, double x) 
     { return ArMath::radToDeg(::atan2(y, x)); }
 
   /// Finds if one angle is between two other angles
+  /// @ingroup easy
   static bool angleBetween(double angle, double startAngle, double endAngle)
     {
       angle = fixAngle(angle);
@@ -674,7 +711,9 @@ public:
   AREXPORT static long getRandMax();
 
   /** Returns a random number between @a m and @a n. On Windows, rand() is used,
-   * on Linux lrand48(). */
+   * on Linux lrand48(). 
+   * @ingroup easy
+  */
   AREXPORT static long randomInRange(long m, long n);
 
   /// Finds the distance between two coordinates
@@ -684,6 +723,7 @@ public:
      @param x2 the second coords x position
      @param y2 the second coords y position
      @return the distance between (x1, y1) and (x2, y2)
+   * @ingroup easy
   **/
   static double distanceBetween(double x1, double y1, double x2, double y2)
     { return sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));  }
@@ -760,6 +800,8 @@ public:
     positions.)  Everything in the class is inline so it should be fast.
 
   @ingroup UtilityClasses
+  @ingroup easy
+  @sa ArPoseWithTime
 */
 class ArPose
 {
@@ -966,6 +1008,30 @@ public:
     { return ArMath::distanceBetween(pose1.getX(), pose1.getY(), 
 				     pose2.getX(), pose2.getY()); }
 
+  /// Return true if the X value of p1 is less than the X value of p2
+  static bool compareX(const ArPose& p1, const ArPose &p2)
+    { return (p1.getX() < p2.getX()); } 
+  /// Return true if the Y value of p1 is less than the X value of p2
+  static bool compareY(const ArPose& p1, const ArPose &p2)
+    { return (p1.getY() < p2.getY()); } 
+
+  bool isInsidePolygon(const std::vector<ArPose>& vertices) const
+  {
+    bool inside = false;
+    const size_t n = vertices.size();
+    size_t i = 0;
+    size_t j = n-1;
+    for(; i < n; j = i++)
+    {
+      const double x1 = vertices[i].getX();
+      const double x2 = vertices[j].getX();
+      const double y1 = vertices[i].getY();
+      const double y2 = vertices[j].getY();
+      if((((y1 < getY()) && (getY() < y2)) || ((y2 <= getY()) && (getY() < y1))) && (getX() <= (x2 - x1) * (getY() - y1) / (y2 - y1) + x1))
+        inside = !inside;
+    }
+    return inside;
+  }
 
 protected:
 
@@ -1008,6 +1074,7 @@ class ArTime
 {
 public:
   /// Constructor. Time is initialized to the current time.
+  /// @ingroup easy
   ArTime() { setToNow(); }
 
   /// Copy constructor
@@ -1032,6 +1099,7 @@ public:
   ~ArTime() {}
   
   /// Gets the number of milliseconds since the given timestamp to this one
+  /// @ingroup easy
   long mSecSince(ArTime since) const 
     {
       long long ret = mSecSinceLL(since);
@@ -1058,6 +1126,7 @@ public:
       return timeSince - timeThis;
     }
   /// Gets the number of seconds since the given timestamp to this one
+  /// @ingroup easy
   long secSince(ArTime since) const
     {
       return mSecSince(since)/1000;
@@ -1068,6 +1137,7 @@ public:
       return mSecSinceLL(since)/1000;
     }
   /// Finds the number of millisecs from when this timestamp is set to to now (the inverse of mSecSince())
+  /// @ingroup easy
   long mSecTo(void) const
     {
       ArTime now;
@@ -1082,6 +1152,7 @@ public:
       return -mSecSinceLL(now);
     }
   /// Finds the number of seconds from when this timestamp is set to to now (the inverse of secSince())
+  /// @ingroup easy
   long secTo(void) const
     {
       return mSecTo()/1000;
@@ -1116,6 +1187,7 @@ public:
       return mSecSinceLL()/1000;
     }
   /// returns whether the given time is before this one or not
+  /// @ingroup easy
   bool isBefore(ArTime testTime) const
     {
       if (mSecSince(testTime) < 0)
@@ -1132,6 +1204,7 @@ public:
 	return false;
     }
   /// returns whether the given time is after this one or not
+  /// @ingroup easy
   bool isAfter(ArTime testTime) const
     {
       if (mSecSince(testTime) > 0)
@@ -1140,6 +1213,7 @@ public:
 	return false;
     }
   /// Resets the time
+  /// @ingroup easy
   AREXPORT void setToNow(void);
   /// Add some milliseconds (can be negative) to this time
   bool addMSec(long ms)
@@ -1206,6 +1280,7 @@ public:
   /// Gets the milliseconds value (occuring after the seconds value)
   unsigned long long getMSecLL(void) const { return myMSec; }
   /// Logs the time
+  /// @ingroup easy
   void log(const char *prefix = NULL) const
     { ArLog::log(ArLog::Terse, 
                  "%sTime: %lld.%lld", 
@@ -1236,10 +1311,17 @@ public:
   }
  
   // Less than operator for sets
+  /// @ingroup easy
   bool operator<(const ArTime& other) const
   {
     return isBefore(other);
   } // end operator <
+
+  /// @ingroup easy
+  bool operator>(const ArTime& other) const
+  {
+    return isAfter(other);
+  }
 
 protected:
   unsigned long long mySec;
@@ -1946,6 +2028,14 @@ public:
 			    const char *format)
   { snprintf(buffer, bufferLen - 1, format, functor->invokeR()); 
   buffer[bufferLen-1] = '\0'; }
+
+  static void cppStringWrapper(char *buffer, ArTypes::UByte2 bufferLen, 
+          ArRetFunctor<std::string> *functor)
+  { 
+    snprintf(buffer, bufferLen - 1, "%s", functor->invokeR().c_str());
+    buffer[bufferLen-1] = '\0'; 
+  }
+
   static void unsignedLongWrapper(char * buffer, ArTypes::UByte2 bufferLen, 
 			 ArRetFunctor<unsigned long> *functor, const char *format)
     { snprintf(buffer, bufferLen - 1, format, functor->invokeR()); 
@@ -1956,20 +2046,7 @@ public:
     buffer[bufferLen-1] = '\0'; }
 };
 
-/** A class to hold a list of callbacks to call
-    GenericFunctor must be a pointer to an ArFunctor or subclass.
-    e.g. declare like this:
-    @code
-      ArGenericCallbackList< ArFunctorC<MyClass> * > callbackList;
-    @endcode
-    then invoke it like this:
-    @code
-      callbackList.invoke();
-    @endcode
-    To pass an argument to the callbacks, use ArCallbackList1 instead.
-    @ingroup UtilityClasses
-**/
-
+/** @see ArCallbackList */
 template<class GenericFunctor> 
 class ArGenericCallbackList
 {
@@ -2068,9 +2145,42 @@ protected:
   bool myLogging;
 };
 
-/** A class to hold a list of callbacks to call sequentially. 
-  @ingroup UtilityClasses
-*/
+/** Stores a list of ArFunctor objects together.
+    invoke() will invoke each of the ArFunctor objects.
+    The functors added to the list must be pointers to the same ArFunctor subclass.
+    Use ArCallbackList for ArFunctor objects with no arguments.
+    Use ArCallbackList1 for ArFunctor1 objects with 1 argument.
+    Use ArCallbackList2 for ArFunctor2 objects with 2 arguments.
+    Use ArCallbackList3 for ArFunctor3 objects with 3 arguments.
+    Use ArCallbackListp for ArFunctor4 objects with 4 arguments.
+
+    Example: Declare a callback list for callbacks accepting one argument like this:
+    @code
+      ArCallbackList1<int> callbackList;
+    @endcode
+    then add a functor like this:
+    @code
+      ArFunctor1C<MyClass, int> func;
+      ...
+      callbackList.addCallback(&func);
+    @endcode
+    then invoke it like this:
+    @code
+      callbackList.invoke(23);
+    @endcode
+
+    A "singleShot" flag may be set, in which case the ArFunctor objects are removed
+    from the list after being invoked.
+    This list is threadsafe: the list contains a mutex (ArMutex), which is locked when 
+    modifying the list and when invoking the ArFunctor objects.  Set singleShot
+    in the constructor or call setSingleShot().
+
+    Call setLogging() to enable more detailed logging including names of
+    ArFunctor objects being invoked (if the ArFunctor objects have been given
+    names.) Call setLogLevel() to select ArLog log level.
+
+    @ingroup UtilityClasses
+**/
 class ArCallbackList : public ArGenericCallbackList<ArFunctor *>
 {
 public:
@@ -2094,7 +2204,7 @@ public:
       ArFunctor *functor;
       
       if(myLogging)
-	ArLog::log(myLogLevel, "%s: Starting calls", myName.c_str());
+        ArLog::log( myLogLevel,  "%s: Starting calls to %d functors", myName.c_str(), myList.size());
       
       for (it = myList.begin(); 
 	   it != myList.end(); 
@@ -2130,24 +2240,7 @@ public:
 protected:
 };
 
-/** A class to hold a list of callbacks to call with an argument of type P1
-    The functors added to the list must be pointers to a subclass of ArFunctor1<P1>.
-    Declare like this:
-    @code
-      ArCallbackList1<int> callbackList;
-    @endcode
-    then add a functor like this:
-    @code
-      ArFunctor1C<MyClass, int> func;
-      ...
-      callbackList.addCallback(&func);
-    @endcode
-    then invoke it like this:
-    @code
-      callbackList.invoke(23);
-    @endcode
-    @ingroup UtilityClasses
-**/
+/** @copydoc ArCallbackList */
 template<class P1>
 class ArCallbackList1 : public ArGenericCallbackList<ArFunctor1<P1> *>
 {
@@ -2174,8 +2267,9 @@ public:
       if(ArGenericCallbackList<ArFunctor1<P1> *>::myLogging)
 	ArLog::log(
 		ArGenericCallbackList<ArFunctor1<P1> *>::myLogLevel, 
-		"%s: Starting calls1", 
-		ArGenericCallbackList<ArFunctor1<P1> *>::myName.c_str());
+		"%s: Starting calls to %d functors", 
+		ArGenericCallbackList<ArFunctor1<P1> *>::myName.c_str(),
+    ArGenericCallbackList<ArFunctor1<P1> *>::myList.size());
       
       for (it = ArGenericCallbackList<ArFunctor1<P1> *>::myList.begin(); 
 	   it != ArGenericCallbackList<ArFunctor1<P1> *>::myList.end(); 
@@ -2217,6 +2311,178 @@ public:
 protected:
 };
 
+/** @copydoc ArCallbackList */
+template<class P1, class P2>
+class ArCallbackList2 : public ArGenericCallbackList<ArFunctor2<P1, P2> *>
+{
+public:
+  typedef ArFunctor2<P1, P2> FunctorType;
+  typedef ArGenericCallbackList<FunctorType*> Super;
+
+  ArCallbackList2(const char *name = "", 
+			  ArLog::LogLevel logLevel = ArLog::Verbose,
+			  bool singleShot = false) : 
+    Super(name, logLevel, singleShot)
+  {
+  }
+
+  void invoke(P1 p1, P2 p2)
+  {
+    Super::myDataMutex.lock();
+      
+    typename std::multimap<int, FunctorType*>::iterator it;
+    FunctorType *functor;
+      
+    if(Super::myLogging)
+      ArLog::log(Super::myLogLevel, "%s: Starting calls to %d functors", Super::myName.c_str(), Super::myList.size());
+      
+    for (it = Super::myList.begin(); it != Super::myList.end(); ++it)
+    {
+      functor = (*it).second;
+      if (functor == NULL) 
+        continue;
+      
+      if(Super::myLogging)
+      {
+        if (functor->getName() != NULL && functor->getName()[0] != '\0')
+          ArLog::log(Super::myLogLevel, "%s: Calling functor '%s' at %d", Super::myName.c_str(), functor->getName(), -(*it).first);
+        else
+          ArLog::log(Super::myLogLevel, "%s: Calling unnamed functor at %d", Super::myName.c_str(), -(*it).first);
+      }
+      functor->invoke(p1, p2);
+    }
+          
+    if(Super::myLogging)
+      ArLog::log(Super::myLogLevel, "%s: Ended calls", Super::myName.c_str());
+          
+    if (Super::mySingleShot)
+    {
+      if(Super::myLogging)
+        ArLog::log(Super::myLogLevel, "%s: Clearing callbacks", Super::myName.c_str()); Super::myList.clear();
+    }
+    Super::myDataMutex.unlock();
+  }
+};
+
+
+/** @copydoc ArCallbackList */
+template<class P1, class P2, class P3>
+class ArCallbackList3 : public ArGenericCallbackList<ArFunctor3<P1, P2, P3> *>
+{
+public:
+  typedef ArFunctor3<P1, P2, P3> FunctorType;
+  typedef ArGenericCallbackList<FunctorType*> Super;
+
+  ArCallbackList3(const char *name = "", 
+			  ArLog::LogLevel logLevel = ArLog::Verbose,
+			  bool singleShot = false) : 
+    Super(name, logLevel, singleShot)
+  {
+  }
+
+  void invoke(P1 p1, P2 p2, P3 p3)
+  {
+    Super::myDataMutex.lock();
+      
+    typename std::multimap<int, FunctorType*>::iterator it;
+    FunctorType *functor;
+      
+    if(Super::myLogging)
+      ArLog::log(Super::myLogLevel, "%s: Starting calls to %d functors", Super::myName.c_str(), Super::myList.size());
+      
+    for (it = Super::myList.begin(); it != Super::myList.end(); ++it)
+    {
+      functor = (*it).second;
+      if (functor == NULL) 
+        continue;
+      
+      if(Super::myLogging)
+      {
+        if (functor->getName() != NULL && functor->getName()[0] != '\0')
+          ArLog::log(Super::myLogLevel, "%s: Calling functor '%s' at %d", Super::myName.c_str(), functor->getName(), -(*it).first);
+        else
+          ArLog::log(Super::myLogLevel, "%s: Calling unnamed functor at %d", Super::myName.c_str(), -(*it).first);
+      }
+      functor->invoke(p1, p2, p3);
+    }
+          
+    if(Super::myLogging)
+      ArLog::log(Super::myLogLevel, "%s: Ended calls", Super::myName.c_str());
+          
+    if (Super::mySingleShot)
+    {
+      if(Super::myLogging)
+        ArLog::log(Super::myLogLevel, "%s: Clearing callbacks", Super::myName.c_str()); Super::myList.clear();
+    }
+    Super::myDataMutex.unlock();
+  }
+};
+
+
+/** @copydoc ArCallbackList */
+template<class P1, class P2, class P3, class P4>
+class ArCallbackList4 : public ArGenericCallbackList<ArFunctor4<P1, P2, P3, P4>*>
+{
+public:
+  ArCallbackList4(const char *name = "", 
+			  ArLog::LogLevel logLevel = ArLog::Verbose,
+			  bool singleShot = false) : 
+    ArGenericCallbackList<ArFunctor4<P1, P2, P3, P4> *>(name, logLevel, singleShot)
+    {
+    }
+  virtual ~ArCallbackList4()
+    {
+    }
+  void invoke(P1 p1, P2 p2, P3 p3, P4 p4)
+    {
+      // references to members of parent class for clarity below
+      ArMutex &mutex = ArGenericCallbackList<ArFunctor4<P1, P2, P3, P4> *>::myDataMutex;
+      ArLog::LogLevel &loglevel = ArGenericCallbackList<ArFunctor4<P1, P2, P3, P4> *>::myLogLevel;
+      const char *name = ArGenericCallbackList<ArFunctor4<P1, P2, P3, P4> *>::myName.c_str();
+	    std::multimap< int, ArFunctor4<P1, P2, P3, P4>* > &list = ArGenericCallbackList<ArFunctor4<P1, P2, P3, P4> *>::myList; 
+      bool &singleshot = ArGenericCallbackList<ArFunctor4<P1, P2, P3, P4> *>::mySingleShot;
+      bool &logging = ArGenericCallbackList<ArFunctor4<P1, P2, P3, P4> *>::myLogging;
+      
+      mutex.lock();
+      
+      typename std::multimap<int, ArFunctor4<P1, P2, P3, P4> *>::iterator it;
+      ArFunctor4<P1, P2, P3, P4> *functor;
+      
+      if(logging)
+        ArLog::log( loglevel,  "%s: Starting calls to %d functors", name, list.size());
+      
+      for (it = list.begin();  it != list.end(); ++it)
+      {
+        functor = (*it).second;
+        if (functor == NULL) 
+          continue;
+	
+        if(logging)
+        {
+          if (functor->getName() != NULL && functor->getName()[0] != '\0')
+            ArLog::log(loglevel, "%s: Calling functor '%s' (0x%x) at %d", name, functor->getName(), functor, -(*it).first);
+          else
+            ArLog::log(loglevel, "%s: Calling unnamed functor (0x%x) at %d", name, functor, -(*it).first);
+        }
+        functor->invoke(p1, p2, p3, p4);
+      }
+      
+      if(logging)
+        ArLog::log(loglevel, "%s: Ended calls", name);
+      
+      if (singleshot)
+      {
+        if(logging)
+          ArLog::log(loglevel, "%s: Clearing callbacks", name);
+        list.clear();
+      }
+
+      mutex.unlock();
+    }
+};
+
+
+
 #ifndef ARINTERFACE
 #ifndef SWIG
 /// @internal
@@ -2235,6 +2501,7 @@ public:
   static ArLaser *createLMS1XX(int laserNumber, const char *logPrefix);
   /// Gets functor for creating an ArLMS1XX
   static ArRetFunctor2<ArLaser *, int, const char *> *getCreateLMS1XXCB(void);
+
   /// Creates an ArUrg using SCIP 2.0
   static ArLaser *createUrg_2_0(int laserNumber, const char *logPrefix);
   /// Gets functor for creating an ArUrg
@@ -2251,6 +2518,9 @@ public:
   static ArLaser *createTiM3XX(int laserNumber, const char *logPrefix);
   /// Gets functor for creating an ArTiM3XX
   static ArRetFunctor2<ArLaser *, int, const char *> *getCreateTiM3XXCB(void);
+  static ArRetFunctor2<ArLaser *, int, const char *> *getCreateTiM551CB(void);
+  static ArRetFunctor2<ArLaser *, int, const char *> *getCreateTiM561CB(void);
+  static ArRetFunctor2<ArLaser *, int, const char *> *getCreateTiM571CB(void);
   /// Creates an ArSZSeries
   static ArLaser *createSZSeries(int laserNumber, const char *logPrefix);
   /// Gets functor for creating an ArSZSeries

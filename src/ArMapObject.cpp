@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -216,25 +217,9 @@ AREXPORT ArMapObject::ArMapObject(const char *type,
 {
   if (myHasFromTo)
   {
-    double angle = myPose.getTh();
-    double sa = ArMath::sin(angle);
-    double ca = ArMath::cos(angle);
-    double fx = fromPose.getX();
-    double fy = fromPose.getY();
-    double tx = toPose.getX();
-    double ty = toPose.getY();
-    ArPose P0((fx*ca - fy*sa), (fx*sa + fy*ca));
-    ArPose P1((tx*ca - fy*sa), (tx*sa + fy*ca));
-    ArPose P2((tx*ca - ty*sa), (tx*sa + ty*ca));
-    ArPose P3((fx*ca - ty*sa), (fx*sa + ty*ca));
-    myFromToSegments.push_back(ArLineSegment(P0, P1));
-    myFromToSegments.push_back(ArLineSegment(P1, P2));
-    myFromToSegments.push_back(ArLineSegment(P2, P3));
-    myFromToSegments.push_back(ArLineSegment(P3, P0));
-    
-    myFromToSegment.newEndPoints(fromPose, toPose);
+    setFromTo(fromPose, toPose);
   }
-  else { // pose
+  else { // pose only
     size_t whPos = myType.rfind("WithHeading");
     size_t whLen = 11;
     if (whPos > 0) {
@@ -251,6 +236,30 @@ AREXPORT ArMapObject::ArMapObject(const char *type,
   );
 
 } // end ctor
+
+AREXPORT void ArMapObject::setFromTo(ArPose fromPose, ArPose toPose)
+{
+    double angle = myPose.getTh();
+    double sa = ArMath::sin(angle);
+    double ca = ArMath::cos(angle);
+    double fx = fromPose.getX();
+    double fy = fromPose.getY();
+    double tx = toPose.getX();
+    double ty = toPose.getY();
+    ArPose P0((fx*ca - fy*sa), (fx*sa + fy*ca));
+    ArPose P1((tx*ca - fy*sa), (tx*sa + fy*ca));
+    ArPose P2((tx*ca - ty*sa), (tx*sa + ty*ca));
+    ArPose P3((fx*ca - ty*sa), (fx*sa + ty*ca));
+    myFromToSegments.clear();
+    myFromToSegments.push_back(ArLineSegment(P0, P1));
+    myFromToSegments.push_back(ArLineSegment(P1, P2));
+    myFromToSegments.push_back(ArLineSegment(P2, P3));
+    myFromToSegments.push_back(ArLineSegment(P3, P0));
+    myFromToSegment.newEndPoints(fromPose, toPose);
+    myFromPose = fromPose;
+    myToPose = toPose;
+    myHasFromTo = true;
+}
 
 /// Copy constructor
 AREXPORT ArMapObject::ArMapObject(const ArMapObject &mapObject) :
@@ -585,4 +594,24 @@ AREXPORT bool ArMapObject::operator<(const ArMapObject& other) const
 
 
 } // end operator<
+
+AREXPORT  std::vector<ArPose> ArMapObject::getRegionVertices() const 
+{
+  std::vector<ArPose> v;
+  if(!hasFromTo())
+    return v;  // return empty list
+  const double a = getFromToRotation();
+  const double sa = ArMath::sin(a);
+  const double ca = ArMath::cos(a);
+  const double fx = getFromPose().getX();
+  const double fy = getFromPose().getY();
+  const double tx = getToPose().getX();
+  const double ty = getToPose().getY();
+  v.reserve(4);
+  v.push_back(ArPose((fx*ca - fy*sa), (fx*sa + fy*ca)));
+  v.push_back(ArPose((tx*ca - fy*sa), (tx*sa + fy*ca)));
+  v.push_back(ArPose((tx*ca - ty*sa), (tx*sa + ty*ca)));
+  v.push_back(ArPose((fx*ca - ty*sa), (fx*sa + ty*ca)));
+  return v;
+}
 

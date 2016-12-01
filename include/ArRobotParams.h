@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -59,13 +60,16 @@ public:
 		deviceName("none"),
 		channel(-1),
 		analogSignalFormat(""),
-		address("192.168.0.90"),
+		address("none"),
 		tcpPort(80),
 		tcpPortSet(false),
 		inverted(false),
 		invertedSet(false)
 	{}
-	/// Copy values of any parameters in @a other into @a this, if given in @a other
+	/// Copy values of any parameters from @a other into @a this, if the param in
+	/// @a other is not a missing/null/empty value (exactly how
+	///"empty/null/missing/default" is represented depends on the specific
+	///parameter, see parameter documentation and definition of merge() method in ArRobotParams.cpp)
 	AREXPORT void merge(const ArVideoParams& other);
 	void setType(const std::string& t) { type = t; }
 	void setConnect(bool c) { connect = c; connectSet = true; }
@@ -100,7 +104,7 @@ public:
 		connectSet(false),
 		serialPort("none"),
 		robotAuxPort(-1),
-		address("192.168.0.90"),
+		address("none"),
 		tcpPort(80),
 		tcpPortSet(false),
 		inverted(false),

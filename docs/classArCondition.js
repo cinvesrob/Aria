@@ -1,6 +1,13 @@
 var classArCondition =
 [
     [ "CondType", "classArCondition.html#a2849eecdd137e22386c433c1b4c920ef", null ],
+    [ "STATUS_FAILED", "classArCondition.html#a4382a649f89fb9d07ab9f58b19a6d936a3f6f29f645b2ea501e9488a4d96ea6f4", null ],
+    [ "STATUS_FAILED_DESTROY", "classArCondition.html#a4382a649f89fb9d07ab9f58b19a6d936ae43052d595425a1bfe513b595644ad45", null ],
+    [ "STATUS_FAILED_INIT", "classArCondition.html#a4382a649f89fb9d07ab9f58b19a6d936aa37fed77069fa1ac5d22adb77bbf361e", null ],
+    [ "STATUS_WAIT_TIMEDOUT", "classArCondition.html#a4382a649f89fb9d07ab9f58b19a6d936ae06d2c7cba91b1db65a1d7beceba88ba", null ],
+    [ "STATUS_WAIT_INTR", "classArCondition.html#a4382a649f89fb9d07ab9f58b19a6d936a1d3f032f0e06ee4095a1feb7e3af00f5", null ],
+    [ "STATUS_MUTEX_FAILED_INIT", "classArCondition.html#a4382a649f89fb9d07ab9f58b19a6d936adeeec5c6ab916d4c79763f3e9e548e07", null ],
+    [ "STATUS_MUTEX_FAILED", "classArCondition.html#a4382a649f89fb9d07ab9f58b19a6d936a55ca5a24fcc970ab4df4119c881ead71", null ],
     [ "ArCondition", "classArCondition.html#a884fc06f69e555ed143081716e9acc14", null ],
     [ "~ArCondition", "classArCondition.html#aef9a7212064acc4fdec147f6ce0d93c8", null ],
     [ "broadcast", "classArCondition.html#a7f5564bc60a636bcedcbb9eb6a0304ff", null ],

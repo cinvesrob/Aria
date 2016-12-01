@@ -1,3 +1,29 @@
+/*
+Adept MobileRobots Robotics Interface for Applications (ARIA)
+Copyright (C) 2004-2005 ActivMedia Robotics LLC
+Copyright (C) 2006-2010 MobileRobots Inc.
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
+
+     This program is free software; you can redistribute it and/or modify
+     it under the terms of the GNU General Public License as published by
+     the Free Software Foundation; either version 2 of the License, or
+     (at your option) any later version.
+
+     This program is distributed in the hope that it will be useful,
+     but WITHOUT ANY WARRANTY; without even the implied warranty of
+     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+     GNU General Public License for more details.
+
+     You should have received a copy of the GNU General Public License
+     along with this program; if not, write to the Free Software
+     Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+If you wish to redistribute ARIA under different terms, contact 
+Adept MobileRobots for information about a commercial version of ARIA at 
+robots@mobilerobots.com or 
+Adept MobileRobots, 10 Columbia Drive, Amherst, NH 03031; +1-603-881-7960
+*/
 
 #include "Aria.h"
 #include "ArExport.h"
@@ -9,7 +35,8 @@ AREXPORT ArClientHandlerRobotUpdate::ArClientHandlerRobotUpdate(ArClientBase *cl
 	myClient(client),
 	myHandleUpdateOldCB(this, &ArClientHandlerRobotUpdate::handleUpdateOld),
 	myHandleUpdateNumbersCB(this, &ArClientHandlerRobotUpdate::handleUpdateNumbers),
-	myHandleUpdateStringsCB(this, &ArClientHandlerRobotUpdate::handleUpdateStrings)
+	myHandleUpdateStringsCB(this, &ArClientHandlerRobotUpdate::handleUpdateStrings),
+    myRequestFreq(100)
 {
 	myHandleUpdateOldCB.setName("ArClientHandlerRobotUpdate::myHandelUpdateOldCB");
 	myHandleUpdateStringsCB.setName("ArClientHandlerRobotUpdate::myHandelUpdateStringsCB");
@@ -31,17 +58,22 @@ AREXPORT ArClientHandlerRobotUpdate::~ArClientHandlerRobotUpdate()
 
 AREXPORT void ArClientHandlerRobotUpdate::stopUpdates()
 {
+  if(myClient)
+  {
 		myClient->remHandler("update", &myHandleUpdateOldCB);
 		myClient->requestStop("update");
 		myClient->remHandler("updateNumbers", &myHandleUpdateNumbersCB);
 		myClient->requestStop("updateNumbers");
 		myClient->remHandler("updateStrings", &myHandleUpdateStringsCB);
 		myClient->requestStop("updateStrings");
+  }
 }
 
 AREXPORT void ArClientHandlerRobotUpdate::requestUpdates(int freq)
 {
+    myRequestFreq = freq;
     //if(!myClient->isConnected()) ArLog::log(ArLog::Normal, "warning client not connected");
+  if(!myClient) return;
 	if(myClient->dataExists("updateStrings") && myClient->dataExists("updateNumbers"))
 	{
 		myClient->addHandler("updateStrings", &myHandleUpdateStringsCB);
@@ -95,7 +127,7 @@ void ArClientHandlerRobotUpdate::handleUpdateOld(ArNetPacket *packet)
   if(modeChanged)
 	  myModeChangedCBList.invoke(m);
   if(statusChanged)
-	  myStatusChangedCBList.invoke(s);
+	  myStatusChangedCBList.invoke(m, s);
 
   myUpdateCBList.invoke(data);
 }
@@ -148,7 +180,7 @@ void ArClientHandlerRobotUpdate::handleUpdateStrings(ArNetPacket *packet)
   if(modeChanged)
 	  myModeChangedCBList.invoke(m);
   if(statusChanged)
-	  myStatusChangedCBList.invoke(s);
+	  myStatusChangedCBList.invoke(m, s);
 }
 
 
@@ -165,4 +197,44 @@ void ArClientHandlerRobotUpdate::parseData(ArNetPacket *packet)
   myData.latVel = (double) packet->bufToByte2();
   myData.haveTemperature = true;
   myData.temperature = (double) packet->bufToByte();
+}
+
+AREXPORT bool ArClientHandlerRobotUpdate::waitForStatus(const char *status, long timeout)
+{
+  ArTime start;
+  while(myClient && myClient->getRunningWithLock())
+  {
+    lock();
+    if(ArUtil::strcmp(myStatus, status) == 0)
+    {
+      unlock();
+      return true;
+    }
+    unlock();
+    if(timeout > 0 && start.mSecSince() >= timeout)
+      return false;
+    ArUtil::sleep(myRequestFreq);
+  }
+  return false;
+    
+}
+
+AREXPORT bool ArClientHandlerRobotUpdate::waitForMode(const char *mode, long timeout)
+{
+  ArTime start;
+  while(myClient && myClient->getRunningWithLock())
+  {
+    lock();
+    if(ArUtil::strcmp(myMode, mode) == 0)
+    {
+      unlock();
+      return true;
+    }
+    unlock();
+    if(timeout > 0 && start.mSecSince() >= timeout)
+      return false;
+    ArUtil::sleep(myRequestFreq);
+  }
+  return false;
+    
 }

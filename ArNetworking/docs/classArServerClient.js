@@ -1,6 +1,12 @@
 var classArServerClient =
 [
-    [ "ServerState", "classArServerClient.html#a43cb5a7523682cd393fd67c81eaff459", null ],
+    [ "Tracker", "classArServerClient_1_1Tracker.html", "classArServerClient_1_1Tracker" ],
+    [ "ServerState", "classArServerClient.html#a43cb5a7523682cd393fd67c81eaff459", [
+      [ "STATE_SENT_INTRO", "classArServerClient.html#a43cb5a7523682cd393fd67c81eaff459ae3c16ad5623af30630dc389afdca5e28", null ],
+      [ "STATE_REJECTED", "classArServerClient.html#a43cb5a7523682cd393fd67c81eaff459a29ec9812aa65c462b4bf2620a2139ae6", null ],
+      [ "STATE_CONNECTED", "classArServerClient.html#a43cb5a7523682cd393fd67c81eaff459ab9b261bf5131df42b84685b7e4ecaff7", null ],
+      [ "STATE_DISCONNECTED", "classArServerClient.html#a43cb5a7523682cd393fd67c81eaff459a0c32b15d037637d34fec49a59ed26c8d", null ]
+    ] ],
     [ "ArServerClient", "classArServerClient.html#aeb58f2cfcc533a91bb89e4e6cff36975", null ],
     [ "~ArServerClient", "classArServerClient.html#a347ea0462ddb58e5b93cd01268cbfe44", null ],
     [ "broadcastPacketTcp", "classArServerClient.html#a12cdbaae7a6a207a8d027a1d41c89ff9", null ],

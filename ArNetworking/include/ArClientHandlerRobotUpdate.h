@@ -1,3 +1,29 @@
+/*
+Adept MobileRobots Robotics Interface for Applications (ARIA)
+Copyright (C) 2004-2005 ActivMedia Robotics LLC
+Copyright (C) 2006-2010 MobileRobots Inc.
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
+
+     This program is free software; you can redistribute it and/or modify
+     it under the terms of the GNU General Public License as published by
+     the Free Software Foundation; either version 2 of the License, or
+     (at your option) any later version.
+
+     This program is distributed in the hope that it will be useful,
+     but WITHOUT ANY WARRANTY; without even the implied warranty of
+     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+     GNU General Public License for more details.
+
+     You should have received a copy of the GNU General Public License
+     along with this program; if not, write to the Free Software
+     Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+If you wish to redistribute ARIA under different terms, contact 
+Adept MobileRobots for information about a commercial version of ARIA at 
+robots@mobilerobots.com or 
+Adept MobileRobots, 10 Columbia Drive, Amherst, NH 03031; +1-603-881-7960
+*/
 #ifndef ARCLIENTHANDLERROBOTUPDATE_H
 #define ARCLIENTHANDLERROBOTUPDATE_H
 
@@ -17,7 +43,10 @@ class ArClientBase;
     These callbacks will be called from the ArNetworking
     client thread (managed by ArClientBase), so these callbacks must 
     not lock any mutex used by that thread, and they must return quickly to
-    avoid stalling the ArNetworking client thread.
+    avoid stalling/blocking the ArNetworking client thread. To avoid blocking
+    the ArNetworking thread, monitor the state of ArClientHandlerRobotUpdate
+    from your programs main thread or from another monitor thread, or if using
+    ARNL, use RemoteArnlTask.
 
     If the server supports separate "updateNumbers" and "updateStrings"
     requests, then ArClientHandlerRobotUpdate uses these requests when
@@ -74,11 +103,12 @@ public:
 	AREXPORT void stopUpdates();
 
   /** Add a callback function which is invoked if a new, different status
-    * string is received from the server. */
-	void addStatusChangedCB(ArFunctor1<const char*> *cb) { myStatusChangedCBList.addCallback(cb); }
+    * string is received from the server. The callback is passed the mode and
+    * the status. */
+	void addStatusChangedCB(ArFunctor2<const char*, const char*> *cb) { myStatusChangedCBList.addCallback(cb); }
 
   /** Remove status-changed callback function */
-	void remStatusChangedCB(ArFunctor1<const char*> *cb) { myStatusChangedCBList.remCallback(cb); }
+	void remStatusChangedCB(ArFunctor2<const char*, const char*> *cb) { myStatusChangedCBList.remCallback(cb); }
 
   /** Add a callback function which is invoked if a new, different status
     * string is received from the server. */
@@ -147,6 +177,9 @@ public:
    */
 	const char *getMode() { return myMode.c_str(); }
 
+  AREXPORT bool waitForStatus(const char *status, long timeout); 
+  AREXPORT bool waitForMode(const char *mode, long timeout);
+
 protected:
 	void handleUpdateOld(ArNetPacket *pkt);
 	void handleUpdateNumbers(ArNetPacket *pkt);
@@ -160,9 +193,10 @@ protected:
 	ArFunctor1C<ArClientHandlerRobotUpdate,  ArNetPacket*> myHandleUpdateStringsCB;
 	ArFunctor1C<ArClientHandlerRobotUpdate, ArNetPacket*> myHandleUpdateNumbersCB;
 	ArFunctor1C<ArClientHandlerRobotUpdate, ArNetPacket*> myHandleUpdateOldCB;
-	ArCallbackList1<const char*> myStatusChangedCBList;
+	ArCallbackList2<const char*, const char*> myStatusChangedCBList;
 	ArCallbackList1<const char*> myModeChangedCBList;
 	ArCallbackList1<RobotData> myUpdateCBList;
+  int myRequestFreq;
 };
 
 #endif

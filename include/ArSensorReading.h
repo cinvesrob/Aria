@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -30,15 +31,47 @@ Adept MobileRobots, 10 Columbia Drive, Amherst, NH 03031; +1-603-881-7960
 #include "ariaUtil.h"
 #include "ArTransform.h"
 
-/// A class to hold a sensor reading, should be one instance per sensor
-/** This class holds sensor data and a sensor reading... it can happen
-    that it contains the data for a sonar, but not the reading, in
-    which case the range (from getRange) will be -1, and the counter
-    it was taken (from getCounterTaken) will be 0, also it will never
-    be new (from isNew).  If ignoreThisReading returns true then
-    ignore this reading (its still here since this is used for raw
-    data).
+/// Used to convert and store data from  and/or about a range sensor
+/** This class holds sensor information and a sensor reading position and other
+  data
+    (X,Y location of the reading (typically in robot's global coordinate system) plus a counter and timestamp for that reading,
+    position of the robot when the reading was taken, and other information).
+
+    This class can optionally be used to only store information about the sensor, but no reading
+    data, in which case the range (getRange()) will be -1, and the counter
+    (getCounterTaken()) value will be 0, and isNew() will return false as well.
+   
+    The ignoreThisReading() indicates whether applications should ignore the
+    data or not.   (Used to disable sensors data in robot and application
+    configuration.)
+
+    Typical use is to create an ArSensorReading object representing an indidiual
+    sensor that can sense distance (range) in one direction, or a set of
+    ArSensorReadings corresponding to the set of range data returned by a sensor
+    that provides multiple range measurements (e.g. most scanning laser
+    rangefinders provide a set of readings, each at different angles but from the
+    same measurement origin point. The ArRangeDevice subclasses for laser
+    rangefinders in ARIA use a set of ArSensorReading objects to store and convert
+    the raw range data read from the laser rangefinder device, then those are used
+    to update the "raw", "current" and other ArRangeBuffer objects in
+    ArRangeDevice.)
+
+    Provide the position and orientation of the sensor reading relative to the
+    center of the robot in the ArSensorReading constructor, or call
+    resetSensorPosition() to change.  
+
+    Update data in an ArSensorReading object by calling newData().  The range
+    value provided will be projected to a local cartesian cooridate based on the
+    ArSensorReadings sensor position on the robot as supplied in the constructor or call to
+    resetSensorPosition(), and alrso transformed a global coordinate system based on a supplied 
+    transform (usually this is the robot's global coordinate system using
+    ArRobot::getToGlobalTransform()).  An incrementing counter must also be provided, and
+    a timestamp.  The counter is used to check for updated data (by this class
+    and other classes using ArSensorReading objects), so it should 
+    increment when data is updated.  The timestamp may be used by other classes 
+    to determine age of data.  
 */
+
 class ArSensorReading
 {
 public:
@@ -157,13 +190,28 @@ public:
 
   ArTime getTimeTaken(void) const { return myTimeTaken; }
   
-  /// Takes the data and makes the reading reflect it
+  /**
+    Update data. 
+    @param range Sensed distance. Will be projected to a global X,Y position based on the sensor position and @a robotPose
+    @param robotPose Robot position in global coordinates space when the sensor data was received.
+    @param encoderPose Robot encoder-only position in global coordinate space when the sensor data was received.
+    @param trans Transform reading position from robot-local coordinate system.
+For example, pass result of ArRobot::getToGlobalTransform() transform to robot's global
+coordinate system.
+    @param counter an incrementing counter used to check for updated data (by this class
+    and other classes using ArSensorReading objects)
+    @param timeTaken System time when this measurement was taken or received.
+    @param ignoreThisReading Set the "ignore" flag for this reading. Data is stored but applications (e.g. navigation) may use this flag to ignore some sensor readings based on robot or user configuration.
+    @param extraInt extra device-specific data. @see getExtraInt()
+*/
   AREXPORT void newData(int range, ArPose robotPose, ArPose encoderPose,
 			ArTransform trans, unsigned int counter, 
 			ArTime timeTaken, bool ignoreThisReading = false,
 			int extraInt = 0);
 
- /// Takes the data and makes the reading reflect it
+  /**
+    @copydoc newData(int, ArPose, ArPose, ArTransform, unsigned int, ArTime, bool, int)
+  */
   AREXPORT void newData(int sx, int sy, ArPose robotPose,
 			ArPose encoderPose,
 			ArTransform trans, 

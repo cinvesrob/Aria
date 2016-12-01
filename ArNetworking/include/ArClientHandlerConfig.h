@@ -1,3 +1,29 @@
+/*
+Adept MobileRobots Robotics Interface for Applications (ARIA)
+Copyright (C) 2004-2005 ActivMedia Robotics LLC
+Copyright (C) 2006-2010 MobileRobots Inc.
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
+
+     This program is free software; you can redistribute it and/or modify
+     it under the terms of the GNU General Public License as published by
+     the Free Software Foundation; either version 2 of the License, or
+     (at your option) any later version.
+
+     This program is distributed in the hope that it will be useful,
+     but WITHOUT ANY WARRANTY; without even the implied warranty of
+     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+     GNU General Public License for more details.
+
+     You should have received a copy of the GNU General Public License
+     along with this program; if not, write to the Free Software
+     Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+If you wish to redistribute ARIA under different terms, contact 
+Adept MobileRobots for information about a commercial version of ARIA at 
+robots@mobilerobots.com or 
+Adept MobileRobots, 10 Columbia Drive, Amherst, NH 03031; +1-603-881-7960
+*/
 #ifndef ARCLIENTCONFIGHANDLER_H
 #define ARCLIENTCONFIGHANDLER_H
 
@@ -136,48 +162,44 @@ public:
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   // Packet Handlers
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
- 
+private: 
   /// Handles the packet from the GetConfigBySectionsV4
-  AREXPORT void handleGetConfigBySectionsV4(ArNetPacket *packet);
+  void handleGetConfigBySectionsV4(ArNetPacket *packet);
   
    /// Handles the packet from the GetConfigBySectionsV3
-  AREXPORT void handleGetConfigBySectionsV3(ArNetPacket *packet);
+  void handleGetConfigBySectionsV3(ArNetPacket *packet);
 
   /// Handles the packet from the GetConfigBySectionsV2
-  AREXPORT void handleGetConfigBySectionsV2(ArNetPacket *packet);
+  void handleGetConfigBySectionsV2(ArNetPacket *packet);
 
   /// Handles the packet from the GetConfigBySections
-  AREXPORT void handleGetConfigBySections(ArNetPacket *packet);
+  void handleGetConfigBySections(ArNetPacket *packet);
 
   /// Handles the packet from the GetConfigSectionFlags
-  AREXPORT void handleGetConfigSectionFlags(ArNetPacket *packet);
+  void handleGetConfigSectionFlags(ArNetPacket *packet);
 
   /// Handles the packet from the getConfig
-  AREXPORT void handleGetConfig(ArNetPacket *packet);
+  void handleGetConfig(ArNetPacket *packet);
 
   /// Handles the return packet from the setConfig (saveConfigToServer)
-  AREXPORT void handleSetConfig(ArNetPacket *packet);
+  void handleSetConfig(ArNetPacket *packet);
 
   /// Handles the return packet from the setConfigBySections (saveConfigToServer)
-  AREXPORT void handleSetConfigBySections(ArNetPacket *packet);
+  void handleSetConfigBySections(ArNetPacket *packet);
 
   /// Handles the return packet from the setConfigBySectionsV2 (saveConfigToServer)
-  AREXPORT void handleSetConfigBySectionsV2(ArNetPacket *packet);
+  void handleSetConfigBySectionsV2(ArNetPacket *packet);
 
   /// Handles the return packet from getConfigDefaults
-  AREXPORT void handleGetConfigDefaults(ArNetPacket *packet);
+  void handleGetConfigDefaults(ArNetPacket *packet);
 
   /// Handles the return packet from getLastEditablePriority
-  AREXPORT void handleGetLastEditablePriority(ArNetPacket *packet);
+  void handleGetLastEditablePriority(ArNetPacket *packet);
 
-protected:
-
-  AREXPORT void handleGetConfigData(ArNetPacket *packet,
+  void handleGetConfigData(ArNetPacket *packet,
                                     bool isMultiplePackets,
                                     int version);
 
-
-protected:
 
   std::string myRobotName;
   std::string myLogPrefix;

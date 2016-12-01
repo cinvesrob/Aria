@@ -20,7 +20,7 @@ Holonomic true           ; turns in own radius
 MaxRVelocity 180         ; absolute maximum degrees / sec
 MaxVelocity 2500         ; absolute maximum mm / sec
 MaxLatVelocity 0         ; absolute lateral maximum mm / sec
-HasMoveCommand true      ; has built in move command
+HasMoveCommand false     ; has built in move command
 RequestIOPackets true    ; automatically request IO packets
 RequestEncoderPackets false ; automatically request encoder packets
 SwitchToBaudRate 38400   ; switch to this baud if non-0 and supported on robot
@@ -42,8 +42,8 @@ TableSensingIR false     ; if robot has upwards facing table sensing IR
 NewTableSensingIR false  ; if table sensing IR are sent in IO packet
 FrontBumpers true        ; if robot has a front bump ring
 NumFrontBumpers 3        ; number of front bumpers on the robot
-RearBumpers false        ; if the robot has a rear bump ring
-NumRearBumpers 0         ; number of rear bumpers on the robot
+RearBumpers true         ; if the robot has a rear bump ring
+NumRearBumpers 3         ; number of rear bumpers on the robot
 
 Section IR parameters
 ;SectionFlags for IR parameters: 
@@ -88,8 +88,8 @@ SonarNum 4               ; Number of sonars on the robot.
 ;  SonarUnit <sonarNumber> <x position, mm> <y position, mm> <heading of disc,
  degrees> <MTX sonar board> <MTX sonar board unit position> <MTX gain> <MTX
  detection threshold> <MTX max range> <autonomous driving sensor flag>
-SonarUnit 0 331 61 10 1 1 0 500 400 1
-SonarUnit 1 331 -61 -10 1 2 0 500 400 1
+SonarUnit 0 331 61 10 1 1 0 600 400 1
+SonarUnit 1 331 -61 -10 1 2 0 600 400 1
 SonarUnit 2 -317 90 164 1 3 0 500 500 1
 SonarUnit 3 -317 -90 -164 1 4 0 500 500 1
 
@@ -274,7 +274,7 @@ PTZSerialPort none       ; serial port, or none if not using serial port
                          ; communication
 PTZRobotAuxSerialPort -1 ; Pioneer aux. serial port, or -1 if not using aux.
                          ; serial port for communication.
-PTZAddress 192.168.0.90  ; IP address or hostname, or none if not using network
+PTZAddress none          ; IP address or hostname, or none if not using network
                          ; communication.
 PTZTCPPort 80            ; TCP Port to use for HTTP network connection
 
@@ -289,7 +289,7 @@ PTZSerialPort none       ; serial port, or none if not using serial port
                          ; communication
 PTZRobotAuxSerialPort -1 ; Pioneer aux. serial port, or -1 if not using aux.
                          ; serial port for communication.
-PTZAddress 192.168.0.90  ; IP address or hostname, or none if not using network
+PTZAddress none          ; IP address or hostname, or none if not using network
                          ; communication.
 PTZTCPPort 80            ; TCP Port to use for HTTP network connection
 
@@ -304,7 +304,7 @@ PTZSerialPort none       ; serial port, or none if not using serial port
                          ; communication
 PTZRobotAuxSerialPort -1 ; Pioneer aux. serial port, or -1 if not using aux.
                          ; serial port for communication.
-PTZAddress 192.168.0.90  ; IP address or hostname, or none if not using network
+PTZAddress none          ; IP address or hostname, or none if not using network
                          ; communication.
 PTZTCPPort 80            ; TCP Port to use for HTTP network connection
 
@@ -319,7 +319,7 @@ PTZSerialPort none       ; serial port, or none if not using serial port
                          ; communication
 PTZRobotAuxSerialPort -1 ; Pioneer aux. serial port, or -1 if not using aux.
                          ; serial port for communication.
-PTZAddress 192.168.0.90  ; IP address or hostname, or none if not using network
+PTZAddress none          ; IP address or hostname, or none if not using network
                          ; communication.
 PTZTCPPort 80            ; TCP Port to use for HTTP network connection
 
@@ -334,7 +334,7 @@ PTZSerialPort none       ; serial port, or none if not using serial port
                          ; communication
 PTZRobotAuxSerialPort -1 ; Pioneer aux. serial port, or -1 if not using aux.
                          ; serial port for communication.
-PTZAddress 192.168.0.90  ; IP address or hostname, or none if not using network
+PTZAddress none          ; IP address or hostname, or none if not using network
                          ; communication.
 PTZTCPPort 80            ; TCP Port to use for HTTP network connection
 
@@ -349,7 +349,7 @@ PTZSerialPort none       ; serial port, or none if not using serial port
                          ; communication
 PTZRobotAuxSerialPort -1 ; Pioneer aux. serial port, or -1 if not using aux.
                          ; serial port for communication.
-PTZAddress 192.168.0.90  ; IP address or hostname, or none if not using network
+PTZAddress none          ; IP address or hostname, or none if not using network
                          ; communication.
 PTZTCPPort 80            ; TCP Port to use for HTTP network connection
 
@@ -364,7 +364,7 @@ PTZSerialPort none       ; serial port, or none if not using serial port
                          ; communication
 PTZRobotAuxSerialPort -1 ; Pioneer aux. serial port, or -1 if not using aux.
                          ; serial port for communication.
-PTZAddress 192.168.0.90  ; IP address or hostname, or none if not using network
+PTZAddress none          ; IP address or hostname, or none if not using network
                          ; communication.
 PTZTCPPort 80            ; TCP Port to use for HTTP network connection
 
@@ -376,12 +376,13 @@ VideoAutoConnect true    ; If true, connect to this device by default.
 VideoType vapix          ; Device type
 VideoInverted false      ; If image should be flipped (for cameras mounted
                          ; inverted/upside-down)
-VideoWidth -1            ; Desired width of image
-VideoHeight -1           ; Desired height of image
-VideoDeviceIndex -1      ; Device index
+VideoWidth -1            ; Desired width of image, or -1 for default
+VideoHeight -1           ; Desired height of image, or -1 for default
+VideoDeviceIndex -1      ; Device index, or -1 for default
 VideoDeviceName none     ; Device name (overrides VideoDeviceIndex)
-VideoChannel -1          ; Input channel
-VideoAnalogSignalFormat  ; NTSC or PAL
+VideoChannel -1          ; Input channel, or -1 for default
+VideoAnalogSignalFormat  ; NTSC or PAL, or empty for default. Only used for
+                         ; analog framegrabbers.
 VideoAddress 192.168.0.90 ; IP address or hostname, or none if not using
                          ; network communication.
 VideoTCPPort 80          ; TCP Port to use for HTTP network connection
@@ -394,14 +395,15 @@ VideoAutoConnect false   ; If true, connect to this device by default.
 VideoType unknown        ; Device type
 VideoInverted false      ; If image should be flipped (for cameras mounted
                          ; inverted/upside-down)
-VideoWidth -1            ; Desired width of image
-VideoHeight -1           ; Desired height of image
-VideoDeviceIndex -1      ; Device index
+VideoWidth -1            ; Desired width of image, or -1 for default
+VideoHeight -1           ; Desired height of image, or -1 for default
+VideoDeviceIndex -1      ; Device index, or -1 for default
 VideoDeviceName none     ; Device name (overrides VideoDeviceIndex)
-VideoChannel -1          ; Input channel
-VideoAnalogSignalFormat  ; NTSC or PAL
-VideoAddress 192.168.0.90 ; IP address or hostname, or none if not using
-                         ; network communication.
+VideoChannel -1          ; Input channel, or -1 for default
+VideoAnalogSignalFormat  ; NTSC or PAL, or empty for default. Only used for
+                         ; analog framegrabbers.
+VideoAddress none        ; IP address or hostname, or none if not using network
+                         ; communication.
 VideoTCPPort 80          ; TCP Port to use for HTTP network connection
 
 Section Video 3 parameters
@@ -412,14 +414,15 @@ VideoAutoConnect false   ; If true, connect to this device by default.
 VideoType unknown        ; Device type
 VideoInverted false      ; If image should be flipped (for cameras mounted
                          ; inverted/upside-down)
-VideoWidth -1            ; Desired width of image
-VideoHeight -1           ; Desired height of image
-VideoDeviceIndex -1      ; Device index
+VideoWidth -1            ; Desired width of image, or -1 for default
+VideoHeight -1           ; Desired height of image, or -1 for default
+VideoDeviceIndex -1      ; Device index, or -1 for default
 VideoDeviceName none     ; Device name (overrides VideoDeviceIndex)
-VideoChannel -1          ; Input channel
-VideoAnalogSignalFormat  ; NTSC or PAL
-VideoAddress 192.168.0.90 ; IP address or hostname, or none if not using
-                         ; network communication.
+VideoChannel -1          ; Input channel, or -1 for default
+VideoAnalogSignalFormat  ; NTSC or PAL, or empty for default. Only used for
+                         ; analog framegrabbers.
+VideoAddress none        ; IP address or hostname, or none if not using network
+                         ; communication.
 VideoTCPPort 80          ; TCP Port to use for HTTP network connection
 
 Section Video 4 parameters
@@ -430,14 +433,15 @@ VideoAutoConnect false   ; If true, connect to this device by default.
 VideoType unknown        ; Device type
 VideoInverted false      ; If image should be flipped (for cameras mounted
                          ; inverted/upside-down)
-VideoWidth -1            ; Desired width of image
-VideoHeight -1           ; Desired height of image
-VideoDeviceIndex -1      ; Device index
+VideoWidth -1            ; Desired width of image, or -1 for default
+VideoHeight -1           ; Desired height of image, or -1 for default
+VideoDeviceIndex -1      ; Device index, or -1 for default
 VideoDeviceName none     ; Device name (overrides VideoDeviceIndex)
-VideoChannel -1          ; Input channel
-VideoAnalogSignalFormat  ; NTSC or PAL
-VideoAddress 192.168.0.90 ; IP address or hostname, or none if not using
-                         ; network communication.
+VideoChannel -1          ; Input channel, or -1 for default
+VideoAnalogSignalFormat  ; NTSC or PAL, or empty for default. Only used for
+                         ; analog framegrabbers.
+VideoAddress none        ; IP address or hostname, or none if not using network
+                         ; communication.
 VideoTCPPort 80          ; TCP Port to use for HTTP network connection
 
 Section Video 5 parameters
@@ -448,14 +452,15 @@ VideoAutoConnect false   ; If true, connect to this device by default.
 VideoType unknown        ; Device type
 VideoInverted false      ; If image should be flipped (for cameras mounted
                          ; inverted/upside-down)
-VideoWidth -1            ; Desired width of image
-VideoHeight -1           ; Desired height of image
-VideoDeviceIndex -1      ; Device index
+VideoWidth -1            ; Desired width of image, or -1 for default
+VideoHeight -1           ; Desired height of image, or -1 for default
+VideoDeviceIndex -1      ; Device index, or -1 for default
 VideoDeviceName none     ; Device name (overrides VideoDeviceIndex)
-VideoChannel -1          ; Input channel
-VideoAnalogSignalFormat  ; NTSC or PAL
-VideoAddress 192.168.0.90 ; IP address or hostname, or none if not using
-                         ; network communication.
+VideoChannel -1          ; Input channel, or -1 for default
+VideoAnalogSignalFormat  ; NTSC or PAL, or empty for default. Only used for
+                         ; analog framegrabbers.
+VideoAddress none        ; IP address or hostname, or none if not using network
+                         ; communication.
 VideoTCPPort 80          ; TCP Port to use for HTTP network connection
 
 Section Video 6 parameters
@@ -466,14 +471,15 @@ VideoAutoConnect false   ; If true, connect to this device by default.
 VideoType unknown        ; Device type
 VideoInverted false      ; If image should be flipped (for cameras mounted
                          ; inverted/upside-down)
-VideoWidth -1            ; Desired width of image
-VideoHeight -1           ; Desired height of image
-VideoDeviceIndex -1      ; Device index
+VideoWidth -1            ; Desired width of image, or -1 for default
+VideoHeight -1           ; Desired height of image, or -1 for default
+VideoDeviceIndex -1      ; Device index, or -1 for default
 VideoDeviceName none     ; Device name (overrides VideoDeviceIndex)
-VideoChannel -1          ; Input channel
-VideoAnalogSignalFormat  ; NTSC or PAL
-VideoAddress 192.168.0.90 ; IP address or hostname, or none if not using
-                         ; network communication.
+VideoChannel -1          ; Input channel, or -1 for default
+VideoAnalogSignalFormat  ; NTSC or PAL, or empty for default. Only used for
+                         ; analog framegrabbers.
+VideoAddress none        ; IP address or hostname, or none if not using network
+                         ; communication.
 VideoTCPPort 80          ; TCP Port to use for HTTP network connection
 
 Section Video 7 parameters
@@ -484,14 +490,15 @@ VideoAutoConnect false   ; If true, connect to this device by default.
 VideoType unknown        ; Device type
 VideoInverted false      ; If image should be flipped (for cameras mounted
                          ; inverted/upside-down)
-VideoWidth -1            ; Desired width of image
-VideoHeight -1           ; Desired height of image
-VideoDeviceIndex -1      ; Device index
+VideoWidth -1            ; Desired width of image, or -1 for default
+VideoHeight -1           ; Desired height of image, or -1 for default
+VideoDeviceIndex -1      ; Device index, or -1 for default
 VideoDeviceName none     ; Device name (overrides VideoDeviceIndex)
-VideoChannel -1          ; Input channel
-VideoAnalogSignalFormat  ; NTSC or PAL
-VideoAddress 192.168.0.90 ; IP address or hostname, or none if not using
-                         ; network communication.
+VideoChannel -1          ; Input channel, or -1 for default
+VideoAnalogSignalFormat  ; NTSC or PAL, or empty for default. Only used for
+                         ; analog framegrabbers.
+VideoAddress none        ; IP address or hostname, or none if not using network
+                         ; communication.
 VideoTCPPort 80          ; TCP Port to use for HTTP network connection
 
 Section Video 8 parameters
@@ -502,12 +509,13 @@ VideoAutoConnect false   ; If true, connect to this device by default.
 VideoType unknown        ; Device type
 VideoInverted false      ; If image should be flipped (for cameras mounted
                          ; inverted/upside-down)
-VideoWidth -1            ; Desired width of image
-VideoHeight -1           ; Desired height of image
-VideoDeviceIndex -1      ; Device index
+VideoWidth -1            ; Desired width of image, or -1 for default
+VideoHeight -1           ; Desired height of image, or -1 for default
+VideoDeviceIndex -1      ; Device index, or -1 for default
 VideoDeviceName none     ; Device name (overrides VideoDeviceIndex)
-VideoChannel -1          ; Input channel
-VideoAnalogSignalFormat  ; NTSC or PAL
-VideoAddress 192.168.0.90 ; IP address or hostname, or none if not using
-                         ; network communication.
+VideoChannel -1          ; Input channel, or -1 for default
+VideoAnalogSignalFormat  ; NTSC or PAL, or empty for default. Only used for
+                         ; analog framegrabbers.
+VideoAddress none        ; IP address or hostname, or none if not using network
+                         ; communication.
 VideoTCPPort 80          ; TCP Port to use for HTTP network connection

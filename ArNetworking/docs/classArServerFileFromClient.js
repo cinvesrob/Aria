@@ -1,5 +1,6 @@
 var classArServerFileFromClient =
 [
+    [ "FileInfo", "classArServerFileFromClient_1_1FileInfo.html", "classArServerFileFromClient_1_1FileInfo" ],
     [ "ArServerFileFromClient", "classArServerFileFromClient.html#a2a2ed40cbe8f1e24ecf3d0872a2da2bb", null ],
     [ "~ArServerFileFromClient", "classArServerFileFromClient.html#a3dea68c6549d52d556bf64fbadddd3cb", null ],
     [ "addPostMoveCallback", "classArServerFileFromClient.html#a2bb52db9f02cdac0ddf3557fcf79960d", null ],

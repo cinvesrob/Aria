@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -313,12 +314,12 @@ bool ArBatteryConnector::internalConfigureBattery (
 	}
 	// the rest handles all the connection stuff
 	const ArRobotParams *params;
-	char portBuf[1024];
 	if (batteryData->myBattery == NULL) {
 		ArLog::log (ArLog::Terse, "ArBatteryConnector::internalConfigureBattery() There is no battery, cannot connect");
 		return false;
 	}
-	sprintf (portBuf, "%d", batteryData->myBattery->getDefaultTcpPort());
+	char portBuf[8];
+	strncpy(portBuf, batteryData->myBattery->getDefaultTcpPort(), 7); portBuf[8] = 0;
 	if (myRobotConnector == NULL) {
 		ArLog::log (ArLog::Terse, "ArBatteryConnector::internalConfigureBattery() No ArRobotConnector is passed in so simulators and remote hosts will not work correctly");
 	}
@@ -561,7 +562,7 @@ AREXPORT bool ArBatteryConnector::setupBattery (ArBatteryMTX *battery,
 		myRobot = myRobotConnector->getRobot();
 	std::map<int, BatteryData *>::iterator it;
 	BatteryData *batteryData = NULL;
-	const ArRobotParams *params;
+	//const ArRobotParams *params;
 	if ( (it = myBatteries.find (batteryNumber)) != myBatteries.end())
 		batteryData = (*it).second;
 	if (batteryData == NULL && battery == NULL) {

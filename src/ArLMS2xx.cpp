@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -586,7 +587,7 @@ AREXPORT int ArLMS2xx::internalConnectHandler(void)
     myPacket.empty();
     myPacket.byteToBuf(0x20);
     myPacket.byteToBuf(0x00);
-    myPacket.strNToBuf("SICK_LMS", strlen("SICK_LMS"));
+    myPacket.strNToBuf("SICK_LMS", (int)strlen("SICK_LMS"));
     myPacket.finalizePacket();
     if (myConn->write(myPacket.getBuf(), myPacket.getLength()))
     {

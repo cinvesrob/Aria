@@ -1,9 +1,10 @@
 var classArClientHandlerRobotUpdate =
 [
+    [ "RobotData", "structArClientHandlerRobotUpdate_1_1RobotData.html", "structArClientHandlerRobotUpdate_1_1RobotData" ],
     [ "ArClientHandlerRobotUpdate", "classArClientHandlerRobotUpdate.html#a30eeb57403200c9f077a72f266947c88", null ],
     [ "~ArClientHandlerRobotUpdate", "classArClientHandlerRobotUpdate.html#a457ce90ec73a812f114f207719e50c07", null ],
     [ "addModeChangedCB", "classArClientHandlerRobotUpdate.html#a5bf1111698c6b3888a94ea903163bef0", null ],
-    [ "addStatusChangedCB", "classArClientHandlerRobotUpdate.html#a890c0680bcd9345d073f6b6e68e5871d", null ],
+    [ "addStatusChangedCB", "classArClientHandlerRobotUpdate.html#a3f058fc89de776228734b773d4f04bd4", null ],
     [ "addUpdateCB", "classArClientHandlerRobotUpdate.html#a71c1138b62468ada65ab9b966a6cdba9", null ],
     [ "getData", "classArClientHandlerRobotUpdate.html#a20403933a7cde91876995b7737feeaf3", null ],
     [ "getLatVel", "classArClientHandlerRobotUpdate.html#abcdee791aeed3e74ff88bbca5a1cb495", null ],
@@ -26,11 +27,13 @@ var classArClientHandlerRobotUpdate =
     [ "lock", "classArClientHandlerRobotUpdate.html#a7a7cf7df29cbfe92c0e5e590705f4e68", null ],
     [ "parseData", "classArClientHandlerRobotUpdate.html#ae531c4a228baa213ca99eb7532d96102", null ],
     [ "remModeChangedCB", "classArClientHandlerRobotUpdate.html#afaeffce973daa342519c3e1ba24a3497", null ],
-    [ "remStatusChangedCB", "classArClientHandlerRobotUpdate.html#ad4c0bdb21f089fe1c49b2104ce317593", null ],
+    [ "remStatusChangedCB", "classArClientHandlerRobotUpdate.html#abaeefbbc9c5d045d071a987a39481e0a", null ],
     [ "remUpdateCB", "classArClientHandlerRobotUpdate.html#aa87ed6e789dd012f5aeb8f042c48baf3", null ],
     [ "requestUpdates", "classArClientHandlerRobotUpdate.html#a308497682f0b294307f76b3738509c48", null ],
     [ "stopUpdates", "classArClientHandlerRobotUpdate.html#ad7d541b0fcc9ac7fe3bed90f240a0d5f", null ],
     [ "unlock", "classArClientHandlerRobotUpdate.html#a2b2e2dbf3cd1fdc44cc93b4a37a1e339", null ],
+    [ "waitForMode", "classArClientHandlerRobotUpdate.html#ae861fa0542620624287b4c2323607a5e", null ],
+    [ "waitForStatus", "classArClientHandlerRobotUpdate.html#a144ae2b9f9b25c861fc4f3d86d9a4934", null ],
     [ "myClient", "classArClientHandlerRobotUpdate.html#afeea412ae5be9e597dcb58138ca13069", null ],
     [ "myData", "classArClientHandlerRobotUpdate.html#a26449de81d04d0771d987e34dc368221", null ],
     [ "myHandleUpdateNumbersCB", "classArClientHandlerRobotUpdate.html#ac0c5acb83c730ce966f89f08d166bf57", null ],
@@ -39,7 +42,8 @@ var classArClientHandlerRobotUpdate =
     [ "myMode", "classArClientHandlerRobotUpdate.html#a5bb5c4a7ca45b377f03801bde5e3e4a4", null ],
     [ "myModeChangedCBList", "classArClientHandlerRobotUpdate.html#a3994c4bf074204addd24f34cf59d52ab", null ],
     [ "myMutex", "classArClientHandlerRobotUpdate.html#ae96a7b3105e1750123fe53f0df8f1a3d", null ],
+    [ "myRequestFreq", "classArClientHandlerRobotUpdate.html#ad72c512a9e4a8e0536f1bde845bd4c80", null ],
     [ "myStatus", "classArClientHandlerRobotUpdate.html#aa9996de92f3853006b4d0657299bdb78", null ],
-    [ "myStatusChangedCBList", "classArClientHandlerRobotUpdate.html#a234a355ad77ef8cccde9340b63c6ebfb", null ],
+    [ "myStatusChangedCBList", "classArClientHandlerRobotUpdate.html#a8b552d71e180635db11f9968ec89ae31", null ],
     [ "myUpdateCBList", "classArClientHandlerRobotUpdate.html#a2af775ecf21b6395953948933e93fc85", null ]
 ];

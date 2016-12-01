@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -1042,8 +1043,8 @@ void ArConfigArg::clear(bool initial,
 
 AREXPORT void ArConfigArg::replaceSpacesInName(void)
 {
-  int i;
-  int len = myName.size();
+  size_t i;
+  size_t len = myName.size();
   for (i = 0; i < len; i++)
   {
     if (isspace(myName[i]))
@@ -1430,7 +1431,8 @@ AREXPORT const char *ArConfigArg::getString(bool *ok) const
 {
   if (ok != NULL) {
     *ok = ((myType == STRING) || 
-           (myType == STRING_HOLDER));
+           (myType == STRING_HOLDER) ||
+           (myType == CPPSTRING));
   }
 
   if ((myType == STRING) || (myType == STRING_HOLDER)) {
@@ -1446,6 +1448,8 @@ AREXPORT const char *ArConfigArg::getString(bool *ok) const
     }
     else if (myData.myStringData.myStringPointer != NULL)
       return myData.myStringData.myStringPointer;
+  } else if(myType == CPPSTRING) {
+    return getCppString().c_str();
   }
 
   // KMC 7/9/12 Are we sure we want to return NULL and not ""?
@@ -1493,7 +1497,7 @@ AREXPORT bool ArConfigArg::setString(const char *str, char *errorBuffer,
   {
     ArLog::log(ArLog::Normal, "ArConfigArg of %s: setString called with argument %d long, when max length is %d.", getName(), len, myData.myStringData.myMaxStrLen);
     if (errorBuffer != NULL)
-      snprintf(errorBuffer, errorBufferLen, "%s string is %d long when max length is %d.", getName(), len, myData.myStringData.myMaxStrLen);
+      snprintf(errorBuffer, errorBufferLen, "%s string is %lu long when max length is %lu.", getName(), len, myData.myStringData.myMaxStrLen);
     return false;
   }
   if (!doNotSet)
@@ -2468,6 +2472,36 @@ AREXPORT bool ArConfigArg::parseArgument(
         }
       }
     }
+    break;
+
+  case CPPSTRING:
+    {
+      std::string origString = getCppString();
+      ok = setCppString(arg->getFullString());
+      if(origString != getCppString() && changed != NULL)
+      {
+        if(printing)  
+            ArLog::log(ArLog::Normal, "%sParameter %s (cppstring) changed from '%s' to '%s'",
+                       logPrefix, getName(), 
+                       origString.c_str(), getCppString().c_str());
+            *changed = true;
+      }
+      if (ok) {
+        IFDEBUG(ArLog::log(ArLog::Verbose, 
+                           "%sSet parameter string '%s' to '%s'",
+                           logPrefix,
+                           getName(), getString()));
+      }
+      else { // error setting string  
+        ArLog::log(ArLog::Verbose, 
+                   "%sCould not set cppstring parameter '%s' to '%s'",
+                   logPrefix,
+                   getName(), getCppString().c_str());
+        if (errorBuffer != NULL)
+          snprintf(errorBuffer, errorBufferLen, 
+                   "%s could not be set to '%s'.", getName(), arg->getFullString());
+      }
+    } 
     break;
 
   default:

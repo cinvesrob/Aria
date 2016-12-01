@@ -1,5 +1,6 @@
 var classArConfig =
 [
+    [ "ProcessFileCBType", "classArConfig_1_1ProcessFileCBType.html", "classArConfig_1_1ProcessFileCBType" ],
     [ "ArConfig", "classArConfig.html#acf0b53be8ad35c4351396f86e36ebdbb", null ],
     [ "~ArConfig", "classArConfig.html#abea211003bd8bc7ffec5651677660ec0", null ],
     [ "ArConfig", "classArConfig.html#a70bcd80359bcbc86e9da239558ff2a7d", null ],

@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -54,6 +55,20 @@ class ArFunctor;
       from interrupting it.
       If you want a non-recursive mutex, so that multiple attempts by the same thread 
       to lock a mutex to block, supply an argument of 'false' to the constructor.
+
+  In addition to provding cross-platform API to OS mutex objects, ArMutex adds
+some diagnostic features:
+  <ul>
+    <li>Use setLockWarningTime() to warn if a call to lock() takes more than the
+      given amount of time. This can help find potential performance impacts and
+other undesired effects of lock contention.
+    <li>Use setUnlockWarningTime() to warn if the time elapsed between lock()
+      and unlock() is more than a given amount of time.  This can help find potential
+      performance impacts and other undesired effects of code holding a lock for a
+      long time.
+    <li>Use setLogName() to name an ArMutex object for logging.
+    <li>Use setLog() to enable logging of various events such as lock, unlock, errors.
+  </ul>
 
   @ingroup UtilityClasses
 */
@@ -206,5 +221,47 @@ protected:
   static ArFunctor *ourNonRecursiveDeadlockFunctor;
 };
 
+
+/** 
+  Locks a given mutex when created, and unlocks the mutex
+when destroyed. If created on the stack then it will hold the lock until the
+scope in which it was created (e.g. a function body) ends.  For example:
+  @code
+  ArMutex myMutex;
+  void example()
+  {
+    ArScopedLock(myMutex);
+    int r = randomInRange(0, 100);
+    if(r > 50)
+    {
+      puts(">50");
+      return; // myMutex will be unlocked here in this condition
+    } 
+    else if(r < 50)
+    {
+      puts("<50");
+      return; // myMutex will also be unlocked here in this else case
+    }
+    
+    puts("=50");
+    // myMutex will also be unlocked here at the end of the function 
+  }
+  @endcode
+    
+  @ingroup UtilityClasses 
+*/
+class ArScopedLock {
+private:
+	ArMutex& mtx;
+public:
+	ArScopedLock(ArMutex& m) : mtx(m) {
+		mtx.lock();
+	}
+	~ArScopedLock() {
+		mtx.unlock();
+	}
+  void lock() { mtx.lock(); }
+  void unlock() { mtx.unlock(); }
+};
 
 #endif // ARMUTEX_H

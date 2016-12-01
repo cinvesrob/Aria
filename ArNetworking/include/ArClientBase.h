@@ -1,3 +1,29 @@
+/*
+Adept MobileRobots Robotics Interface for Applications (ARIA)
+Copyright (C) 2004-2005 ActivMedia Robotics LLC
+Copyright (C) 2006-2010 MobileRobots Inc.
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
+
+     This program is free software; you can redistribute it and/or modify
+     it under the terms of the GNU General Public License as published by
+     the Free Software Foundation; either version 2 of the License, or
+     (at your option) any later version.
+
+     This program is distributed in the hope that it will be useful,
+     but WITHOUT ANY WARRANTY; without even the implied warranty of
+     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+     GNU General Public License for more details.
+
+     You should have received a copy of the GNU General Public License
+     along with this program; if not, write to the Free Software
+     Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+If you wish to redistribute ARIA under different terms, contact 
+Adept MobileRobots for information about a commercial version of ARIA at 
+robots@mobilerobots.com or 
+Adept MobileRobots, 10 Columbia Drive, Amherst, NH 03031; +1-603-881-7960
+*/
 #ifndef NLCLIENTBASE_H
 #define NLCLIENTBASE_H
 
@@ -16,8 +42,8 @@
    You need to connect a client to a server using blockingConnect() with
    the address for the server.  Then you should add handlers to
    the client to receive information from the server (with addHandler(),
-   request(), and requestOnce()).  Then call run() or runAsync()
-   (or loopOnce() if you really know what you're doing).
+   request(), and requestOnce()).  Then call run() or runAsync() to
+   begin processing communications.
    You can also add a callback that will get called every cycle of the
    client.
    
@@ -29,9 +55,17 @@
    password were rejected.  Another relevant function is setServerKey()
    to set the key (string of text) we need to connect to the server.
 
-   This class should be thread safe... The only thing you cannot do is
-   call 'addHandler' or 'remHandler' from within a handler for that
-   specific piece of data.   
+   This class is threadsafe for access and does not need locking
+   to call accessor methods. However, when run in a new thread
+   using runAsync(), any cycle callbacks added with addCycleCallback(), and any
+   data handlers added by addHandler(), will be called from that thread, and
+   mutexes or other synchronization methods may be needed for those callback
+   functions to interact with other threads.  For example, if your data 
+   handler callback function stores some data received in a variable, and a different thread
+   in the application will also be reading the data from that variable, a mutex 
+   or other synchronization technique should be used to prevent simultaneous
+   access to that variable.
+
  **/
 
 class ArClientBase : public ArASyncTask
@@ -106,14 +140,22 @@ public:
   /** @return true if a server connection attempt failed because the server rejected the username or password, false if the connection failed for another reason, or the username/password were accepted. */
   AREXPORT bool wasRejected(void) { return myState == STATE_REJECTED; }
 
-  /// Gets the state of the client
+  /// Gets the state of the client connection
   AREXPORT ClientState getState(void) { return myState; }
 
-  /// Adds a functor for some particular data
+  /** Adds a callback functor for data packets received from the server. 
+   @note Do not call addHandler() or remHandler() from within a handler
+   callback, since that will possibly interfere with ArClientBase's iteration
+   over the handler list as it invokes handhlers.
+  */
   AREXPORT bool addHandler(const char *name, 
 			    ArFunctor1 <ArNetPacket *> *functor);
 
-  /// Removes a functor for some particular data by name
+  /** Removes a functor for data packets received from the server.
+   @note Do not call addHandler() or remHandler() from within a handler
+   callback, since that will possibly interfere with ArClientBase's iteration
+   over the handler list as it invokes handhlers.
+  */
   AREXPORT bool remHandler(const char *name, ArFunctor1<ArNetPacket *> *functor);
 
   /// Request some data every @a mSec milliseconds
@@ -133,8 +175,17 @@ public:
 			       ArNetPacket *packet = NULL, 
 			       bool quiet = false);
 
-  /// Request some data (or send a command) just once with a string as argument
+  /// Request some data or send a command once with a string as argument
   AREXPORT bool requestOnceWithString(const char *name, const char *str);
+
+  /// Request some data or send a command once with a 16-bit (2-byte) integer value as an argument
+  AREXPORT bool requestOnceWithInt16(const char *name, ArTypes::Byte2 val);
+
+  /// Request some data or send a command once with a 32-bit (4-byte) integer value as an argument
+  AREXPORT bool requestOnceWithInt32(const char *name, ArTypes::Byte4 val);
+
+  /// Request some data or send a command once with a double value as an argument
+  AREXPORT bool requestOnceWithDouble(const char *name, double val);
   
   /// Sees if this data exists
   AREXPORT bool dataExists(const char *name);
@@ -142,6 +193,12 @@ public:
   /// Gets the name of the host we tried to connect to
   AREXPORT const char *getHost(void);
 
+  /// Get port we connected to (only valid if connected)
+  int getPort() { 
+    int r; 
+    myDataMutex.lock(); r = myPort; myDataMutex.unlock(); 
+    return r;
+  }
   
   /// Sets the 'key' needed to connect to the server
   AREXPORT void setServerKey(const char *serverKey, bool log = true);
@@ -346,6 +403,7 @@ protected:
   bool myDebugLogging;
   ArLog::LogLevel myVerboseLogLevel;
   std::string myHost;
+  int myPort;
   std::string myUser;
   std::string myPassword;
   // the time we allow for connections

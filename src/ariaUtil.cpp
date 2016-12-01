@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -981,13 +982,28 @@ AREXPORT double ArUtil::atof(const char *nptr)
 
 
 AREXPORT void ArUtil::functorPrintf(ArFunctor1<const char *> *functor,
-				    char *str, ...)
+				    const char *str, ...)
 {
   char buf[10000];
   va_list ptr;
   va_start(ptr, str);
   //vsprintf(buf, str, ptr);
   vsnprintf(buf, sizeof(buf) - 1, str, ptr);
+  buf[sizeof(buf) - 1] = '\0';
+  functor->invoke(buf);
+  va_end(ptr);
+}
+
+// preserving this old version that takes char* as format str instead of const char* 
+// to maximize compatibility
+AREXPORT void ArUtil::functorPrintf(ArFunctor1<const char *> *functor,
+				    char *str, ...)
+{
+  char buf[10000];
+  va_list ptr;
+  va_start(ptr, str);
+  //vsprintf(buf, str, ptr);
+  vsnprintf(buf, sizeof(buf) - 1, (const char*)str, ptr);
   buf[sizeof(buf) - 1] = '\0';
   functor->invoke(buf);
   va_end(ptr);
@@ -2131,6 +2147,11 @@ AREXPORT int ArUtil::open(const char *pathname, int flags, mode_t mode,
   return fd;
 }
 
+AREXPORT int ArUtil::close(int fd)
+{
+	return ::close(fd);
+}
+
 AREXPORT int ArUtil::creat(const char *pathname, mode_t mode, 
 			   bool closeOnExec)
 {
@@ -2215,20 +2236,57 @@ AREXPORT long ArMath::getRandMax() { return ourRandMax; }
 
 ArGlobalRetFunctor2<ArLaser *, int, const char *> 
 ArLaserCreatorHelper::ourLMS2xxCB(&ArLaserCreatorHelper::createLMS2xx);
+
 ArGlobalRetFunctor2<ArLaser *, int, const char *> 
 ArLaserCreatorHelper::ourUrgCB(&ArLaserCreatorHelper::createUrg);
+
 ArGlobalRetFunctor2<ArLaser *, int, const char *> 
 ArLaserCreatorHelper::ourLMS1XXCB(&ArLaserCreatorHelper::createLMS1XX);
+
 ArGlobalRetFunctor2<ArLaser *, int, const char *> 
 ArLaserCreatorHelper::ourS3SeriesCB(&ArLaserCreatorHelper::createS3Series);
+
 ArGlobalRetFunctor2<ArLaser *, int, const char *>
 ArLaserCreatorHelper::ourUrg_2_0CB(&ArLaserCreatorHelper::createUrg_2_0);
+
 ArGlobalRetFunctor2<ArLaser *, int, const char *>
 ArLaserCreatorHelper::ourLMS5XXCB(&ArLaserCreatorHelper::createLMS5XX);
+
 ArGlobalRetFunctor2<ArLaser *, int, const char *>
 ArLaserCreatorHelper::ourTiM3XXCB(&ArLaserCreatorHelper::createTiM3XX);
+
 ArGlobalRetFunctor2<ArLaser *, int, const char *>
 ArLaserCreatorHelper::ourSZSeriesCB(&ArLaserCreatorHelper::createSZSeries);
+
+ArLaser *createAnyLMS1xx(int laserNumber, const char *logPrefix, const char *name, ArLMS1XX::LaserModel model)
+{
+	return new ArLMS1XX(laserNumber, name, model);
+}
+
+ArGlobalRetFunctor4<ArLaser*, int, const char*, const char *, ArLMS1XX::LaserModel>
+TiM551CB(&createAnyLMS1xx, -1, "", "tim551", ArLMS1XX::TiM551);
+
+ArGlobalRetFunctor4<ArLaser*, int, const char*, const char *, ArLMS1XX::LaserModel>
+TiM561CB(&createAnyLMS1xx, -1, "", "tim561", ArLMS1XX::TiM561); 
+
+ArGlobalRetFunctor4<ArLaser*, int, const char*, const char *, ArLMS1XX::LaserModel>
+TiM571CB(&createAnyLMS1xx, -1, "", "tim571", ArLMS1XX::TiM571);
+
+ArRetFunctor2<ArLaser *, int, const char *> *
+ArLaserCreatorHelper::getCreateTiM551CB(void) {
+  return &TiM551CB;
+}
+
+ArRetFunctor2<ArLaser *, int, const char *> *
+ArLaserCreatorHelper::getCreateTiM561CB(void) {
+  return &TiM561CB;
+}
+
+ArRetFunctor2<ArLaser *, int, const char *> *
+ArLaserCreatorHelper::getCreateTiM571CB(void) {
+  return &TiM571CB;
+}
+
 
 ArGlobalRetFunctor2<ArBatteryMTX *, int, const char *>
 ArBatteryMTXCreatorHelper::ourBatteryMTXCB(&ArBatteryMTXCreatorHelper::createBatteryMTX);
@@ -2262,11 +2320,9 @@ ArRetFunctor2<ArLaser *, int, const char *> *ArLaserCreatorHelper::getCreateUrgC
   return &ourUrgCB;
 }
 
-ArLaser *ArLaserCreatorHelper::createLMS1XX(int laserNumber, 
-		const char *logPrefix)
+ArLaser *ArLaserCreatorHelper::createLMS1XX(int laserNumber, const char *logPrefix)
 {
-	// PS 8/22/11 - added "lms1xx" and flag specifying laser is NOT an lms5xx
-	return new ArLMS1XX(laserNumber,"lms1xx", ArLMS1XX::LMS1XX);
+	return new ArLMS1XX(laserNumber, "lms1xx", ArLMS1XX::LMS1XX);
 }
 
 ArRetFunctor2<ArLaser *, int, const char *> *ArLaserCreatorHelper::getCreateLMS1XXCB(void)
@@ -2324,7 +2380,6 @@ ArRetFunctor2<ArLaser *, int, const char *> *ArLaserCreatorHelper::getCreateTiM3
   return &ourTiM3XXCB;
 }
 
-
 ArLaser *ArLaserCreatorHelper::createSZSeries(int laserNumber,
 					    const char *logPrefix)
 {
@@ -2380,7 +2435,7 @@ ArDeviceConnectionCreatorHelper::ourTcpCB(
 ArGlobalRetFunctor3<ArDeviceConnection *, const char *, const char *, const char *>
 ArDeviceConnectionCreatorHelper::ourSerial422CB(
 	&ArDeviceConnectionCreatorHelper::createSerial422Connection);
-ArLog::LogLevel ArDeviceConnectionCreatorHelper::ourSuccessLogLevel;
+ArLog::LogLevel ArDeviceConnectionCreatorHelper::ourSuccessLogLevel = ArLog::Verbose;
 
 ArDeviceConnection *ArDeviceConnectionCreatorHelper::createSerialConnection(
 	const char *port, const char *defaultInfo, const char *logPrefix)
@@ -2489,7 +2544,7 @@ ArDeviceConnection *ArDeviceConnectionCreatorHelper::createTcpConnection(
 	const char *port, const char *defaultInfo, const char *logPrefix)
 {
   ArTcpConnection *tcpConn = new ArTcpConnection;
-  int ret;
+  //int ret;
 
   tcpConn->setPort(port, atoi(defaultInfo));
   ArLog::log(ourSuccessLogLevel, 

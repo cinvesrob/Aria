@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -108,6 +109,7 @@ AREXPORT bool ArStringInfoGroup::addStringBool(
 			   functor, format)));
 }
 
+// for a functor returning a C string (const char*)
 AREXPORT bool ArStringInfoGroup::addStringString(
 	const char *name, ArTypes::UByte2 maxLength,
 	ArRetFunctor<const char *> *functor, const char *format)
@@ -118,6 +120,20 @@ AREXPORT bool ArStringInfoGroup::addStringString(
 	     const char *>(&ArStringInfoHolderFunctions::stringWrapper, 
 			   (char *)NULL, (ArTypes::UByte2) 0, 
 			   functor, format)));
+}
+
+// for a functor returning a C++ string (std::string)
+AREXPORT bool ArStringInfoGroup::addStringString(
+	const char *name, ArTypes::UByte2 maxLength,
+	ArRetFunctor<std::string> *functor)
+{
+  return addString(name, maxLength, 
+	    (new ArGlobalFunctor3<char *, ArTypes::UByte2, ArRetFunctor<std::string>*>(
+         &ArStringInfoHolderFunctions::cppStringWrapper, 
+			   (char *)NULL, (ArTypes::UByte2) 0, 
+			   functor)
+      )
+  );
 }
 
 AREXPORT bool ArStringInfoGroup::addStringUnsignedLong(

@@ -2,7 +2,8 @@
 Adept MobileRobots Robotics Interface for Applications (ARIA)
 Copyright (C) 2004-2005 ActivMedia Robotics LLC
 Copyright (C) 2006-2010 MobileRobots Inc.
-Copyright (C) 2011-2014 Adept Technology
+Copyright (C) 2011-2015 Adept Technology, Inc.
+Copyright (C) 2016 Omron Adept Technologies, Inc.
 
      This program is free software; you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -47,20 +48,20 @@ class ArSocket;
 
     Which constructor you use determines the value type of the ArConfigArg object.
   
-    A typical idiom for creating ArConfigArg objects and adding them to ArConfig
-    is to create a temporary ArConfigArg in the call to ArConfig::addParam():
-
+    Example:
     @code
     config->addParam(ArConfigArg("MyParameter", &myTarget, "Example Parameter"), "Example Section");
     @endcode
 
-    Where <tt>config</tt> is a pointer to an ArConfig object or subclass, and
+    Where: <tt>config</tt> is a pointer to an ArConfig object or subclass (e.g.  use
+    <tt>ArConfig* config = Aria::getConfig()</tt> to use the global Aria ArConfig
+    object);
     <tt>myTarget</tt> is a variable (e.g. int) that is a class member whose instance will not
     be destroyed before the end of the program, or which will remove the parameter
     from ArConfig before being destroyed (the pointer to <tt>myTarget</tt> that is stored
     in ArConfig must not become invalid.)  The ArConfigArg object passed to
-    addParam() will be copied and stored in ArConfig.
-    
+    addParam() will be copied and stored in ArConfig.  The type of the target
+    variable (<tt>myTarget</tt>) determines the type of the parameter.
 
 
     @swignote Swig cannot determine the correct constructor to use
@@ -72,6 +73,23 @@ class ArSocket;
      in addition to passing them to ArConfig, and read new values from those
      objects if ArConfig changes; or pass functors to ArConfigArg instead
      of the initial value.
+
+    Special features:
+
+    You can add a separator line to the section by adding an ArConfigArg with type SEPARATOR: 
+    @code
+      config->addParam(ArConfigArg(ArConfigArg::SEPARATOR), "My Section");
+    @endcode
+
+    You can specify a list of possible values by setting a "display hint".  For
+    example, for a string parameter with possible values "A", "B" and "C":
+    @code
+      ArConfigArg arg("Example", exampleString, "Example string parameter");
+      arg.setDisplayHint("Choices:A;;B;;C");
+      config->addParam(arg);
+    @endcode
+    This information is provided to clients, but you should still verify the
+    value is not unexpected when it changes or when you use the value.
 */
 class ArConfigArg
 {

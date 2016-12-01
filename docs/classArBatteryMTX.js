@@ -1,12 +1,64 @@
 var classArBatteryMTX =
 [
-    [ "CellFlags", "classArBatteryMTX.html#ae83b7fba37ff6b7a120b7cc024052a86", null ],
-    [ "Commands", "classArBatteryMTX.html#a2ec86d1ba086226c91782e9f53b3acb2", null ],
-    [ "Data", "classArBatteryMTX.html#a60fa096c5e1a400c46ae46f274b665ff", null ],
-    [ "ErrorFlags", "classArBatteryMTX.html#a2c5bac9e5056ae834fad6f0bf8d6cde9", null ],
-    [ "Headers", "classArBatteryMTX.html#acc0dc39b6bc3b9cf67200eef2751b974", null ],
-    [ "Sizes", "classArBatteryMTX.html#a09a63d9b05054f9a9bdbadb76b255afa", null ],
-    [ "StatusFlags", "classArBatteryMTX.html#aa3d1f12f970619a4ec40d0746ea4cdae", null ],
+    [ "CellFlags", "classArBatteryMTX.html#ae83b7fba37ff6b7a120b7cc024052a86", [
+      [ "BALANCER_IS_ON", "classArBatteryMTX.html#ae83b7fba37ff6b7a120b7cc024052a86a04b5d57c17b18d95937a81563a396064", null ],
+      [ "OVER_VOLTAGE", "classArBatteryMTX.html#ae83b7fba37ff6b7a120b7cc024052a86a99493fef0ee9336d0425d745b1ce6f5b", null ],
+      [ "UNDER_VOLTAGE", "classArBatteryMTX.html#ae83b7fba37ff6b7a120b7cc024052a86a234c1cea5a06b48ede0d27be3392ecce", null ]
+    ] ],
+    [ "Commands", "classArBatteryMTX.html#a2ec86d1ba086226c91782e9f53b3acb2", [
+      [ "BASIC_INFO", "classArBatteryMTX.html#a2ec86d1ba086226c91782e9f53b3acb2a7e83d98691cd575d10c6172a12f5028b", null ],
+      [ "SYSTEM_INFO", "classArBatteryMTX.html#a2ec86d1ba086226c91782e9f53b3acb2a23d2e0f8b527c3b5c69121ebaac83fdd", null ],
+      [ "CELL_INFO", "classArBatteryMTX.html#a2ec86d1ba086226c91782e9f53b3acb2a0e0e1ea6ee34ca65a4d905a4883532e8", null ],
+      [ "POWER_OFF_REQUEST", "classArBatteryMTX.html#a2ec86d1ba086226c91782e9f53b3acb2a71a7291def92dc0ecb735d3266725540", null ],
+      [ "POWER_OFF_CANCEL", "classArBatteryMTX.html#a2ec86d1ba086226c91782e9f53b3acb2a10936c054acea69477a49a10784db4b5", null ],
+      [ "STOP_CHARGING", "classArBatteryMTX.html#a2ec86d1ba086226c91782e9f53b3acb2ac48c750f35acae61bff43f42cab73c89", null ],
+      [ "START_CHARGING", "classArBatteryMTX.html#a2ec86d1ba086226c91782e9f53b3acb2a8afd582c313c2a10ba11123ac1b01736", null ],
+      [ "SET_POWER_OFF_DELAY", "classArBatteryMTX.html#a2ec86d1ba086226c91782e9f53b3acb2a705ce87af8d94e8882d9b7563069994f", null ],
+      [ "SET_REAL_TIME_CLOCK", "classArBatteryMTX.html#a2ec86d1ba086226c91782e9f53b3acb2a080b4af9e9a37205dd4963521084afbe", null ],
+      [ "RESET_CELL_DATA", "classArBatteryMTX.html#a2ec86d1ba086226c91782e9f53b3acb2a4f8e82b7d18f511d9d26e33a70b5e68c", null ],
+      [ "SET_RESERVE_VALUE", "classArBatteryMTX.html#a2ec86d1ba086226c91782e9f53b3acb2a4bafc155998ba02a3b530a6a67663680", null ],
+      [ "SET_BALANCE_VALUE", "classArBatteryMTX.html#a2ec86d1ba086226c91782e9f53b3acb2a044c93190ee72dd6b6f2e58457cfbd34", null ],
+      [ "EMERGENCY_OFF", "classArBatteryMTX.html#a2ec86d1ba086226c91782e9f53b3acb2a5744a080c1b3bb836c3a2259854c3115", null ]
+    ] ],
+    [ "Data", "classArBatteryMTX.html#a60fa096c5e1a400c46ae46f274b665ff", [
+      [ "STOP_SENDING", "classArBatteryMTX.html#a60fa096c5e1a400c46ae46f274b665ffac71f3b1b5cae198f3b761ffe95b00f93", null ],
+      [ "SEND_ONCE", "classArBatteryMTX.html#a60fa096c5e1a400c46ae46f274b665ffaa7a9f0623a5adf20874f4f35ea977eb3", null ],
+      [ "SEND_CONTINUOUS", "classArBatteryMTX.html#a60fa096c5e1a400c46ae46f274b665ffa4089eb9123d3b5973be8d9403c69a4d5", null ]
+    ] ],
+    [ "ErrorFlags", "classArBatteryMTX.html#a2c5bac9e5056ae834fad6f0bf8d6cde9", [
+      [ "ERROR_BATTERY_OVERVOLTAGE", "classArBatteryMTX.html#a2c5bac9e5056ae834fad6f0bf8d6cde9a52a5ae919abd5662309957c011718df2", null ],
+      [ "ERROR_BATTERY_UNDERVOLTAGE", "classArBatteryMTX.html#a2c5bac9e5056ae834fad6f0bf8d6cde9a90a9f0e28405ec0ee7953e3884bee378", null ],
+      [ "ERROR_OVERCURRENT", "classArBatteryMTX.html#a2c5bac9e5056ae834fad6f0bf8d6cde9a2919ad6dd54231d21d8a258befd961ff", null ],
+      [ "ERROR_BLOWNFUSE", "classArBatteryMTX.html#a2c5bac9e5056ae834fad6f0bf8d6cde9a7aded132296c1c925c36a63a060d283b", null ],
+      [ "ERROR_RTC_ERROR", "classArBatteryMTX.html#a2c5bac9e5056ae834fad6f0bf8d6cde9a027f9de679ace09382dde09d92139d75", null ],
+      [ "ERROR_OVER_TEMPERATURE", "classArBatteryMTX.html#a2c5bac9e5056ae834fad6f0bf8d6cde9a54dada6fa3a6e0c3c8ca0cc18cf7aaf0", null ],
+      [ "ERROR_MASTER_SWITCH_FAULT", "classArBatteryMTX.html#a2c5bac9e5056ae834fad6f0bf8d6cde9a850b1dc0b9ea1a87e77c3ef8b3bc5a35", null ],
+      [ "ERROR_SRAM_ERROR", "classArBatteryMTX.html#a2c5bac9e5056ae834fad6f0bf8d6cde9ae1fb22567cde998b838b72c6051d5c46", null ],
+      [ "ERROR_CHARGER_OUT_OF_VOLTAGE_RANGE", "classArBatteryMTX.html#a2c5bac9e5056ae834fad6f0bf8d6cde9afb31a93953230ec2e6facd98f86978d2", null ],
+      [ "ERROR_CHARGER_CIRCUIT_FAULT", "classArBatteryMTX.html#a2c5bac9e5056ae834fad6f0bf8d6cde9a923b507544e954704f4f5f2afd227302", null ]
+    ] ],
+    [ "Headers", "classArBatteryMTX.html#acc0dc39b6bc3b9cf67200eef2751b974", [
+      [ "HEADER1", "classArBatteryMTX.html#acc0dc39b6bc3b9cf67200eef2751b974a9d268574487945a67e6f4119e77d383d", null ],
+      [ "HEADER2", "classArBatteryMTX.html#acc0dc39b6bc3b9cf67200eef2751b974a579d4c0bbd99f3c4f79e7aed6a6d23fa", null ]
+    ] ],
+    [ "Sizes", "classArBatteryMTX.html#a09a63d9b05054f9a9bdbadb76b255afa", [
+      [ "BASIC_INFO_SIZE", "classArBatteryMTX.html#a09a63d9b05054f9a9bdbadb76b255afaa39e135dff11e60d72acadc5ba44837dd", null ],
+      [ "SYSTEM_INFO_SIZE", "classArBatteryMTX.html#a09a63d9b05054f9a9bdbadb76b255afaaa20750c31518f67c5614789e340b0ee4", null ],
+      [ "CELL_INFO_SIZE", "classArBatteryMTX.html#a09a63d9b05054f9a9bdbadb76b255afaac3b53ef2cb4858cc43f2352b10a8073e", null ]
+    ] ],
+    [ "StatusFlags", "classArBatteryMTX.html#aa3d1f12f970619a4ec40d0746ea4cdae", [
+      [ "STATUS_ON_CHARGER", "classArBatteryMTX.html#aa3d1f12f970619a4ec40d0746ea4cdaea49aee54a3557ac48179b574e445a390a", null ],
+      [ "STATUS_CHARGING", "classArBatteryMTX.html#aa3d1f12f970619a4ec40d0746ea4cdaea857e41ebfb862b475e1938c7ff47aad4", null ],
+      [ "STATUS_BALANCING_ENGAGED", "classArBatteryMTX.html#aa3d1f12f970619a4ec40d0746ea4cdaea0ea46b8fc649bc2dd87fb4d12e185934", null ],
+      [ "STATUS_CHARGER_ON", "classArBatteryMTX.html#aa3d1f12f970619a4ec40d0746ea4cdaeab00ea3db943a18258c65a11bcda9b896", null ],
+      [ "STATUS_BATTERY_POWERING_OFF", "classArBatteryMTX.html#aa3d1f12f970619a4ec40d0746ea4cdaea6b94cb0959a3e86914d4e55dd864d805", null ],
+      [ "STATUS_MASTER_SWITCH_ON", "classArBatteryMTX.html#aa3d1f12f970619a4ec40d0746ea4cdaeae2065d58d01daa191c0e8d9bc87b8b4e", null ],
+      [ "STATUS_CHARGE_SWITCH_ON", "classArBatteryMTX.html#aa3d1f12f970619a4ec40d0746ea4cdaea009022206e67fdf6158b5de2db22f847", null ],
+      [ "STATUS_COMMANDED_SHUTDOWN", "classArBatteryMTX.html#aa3d1f12f970619a4ec40d0746ea4cdaeaf5f4c62bdded892feebd505dd658b575", null ],
+      [ "STATUS_OFF_BUTTON_PRESSED", "classArBatteryMTX.html#aa3d1f12f970619a4ec40d0746ea4cdaeab3122a623e1cc4267f330f1d2338f21a", null ],
+      [ "STATUS_ON_BUTTON_PRESSED", "classArBatteryMTX.html#aa3d1f12f970619a4ec40d0746ea4cdaeaa7a777fad02cb7c16ace03ddc5ae20cd", null ],
+      [ "STATUS_USER_BUTTON_PRESSED", "classArBatteryMTX.html#aa3d1f12f970619a4ec40d0746ea4cdaead700077995768ed554196658d6fc657b", null ]
+    ] ],
     [ "ArBatteryMTX", "classArBatteryMTX.html#aec9ce3b72d0dc814cb33909d69555c54", null ],
     [ "~ArBatteryMTX", "classArBatteryMTX.html#a56fda49cc2ef53e173857f0ecddcccb8", null ],
     [ "addBatteryPoweringOffCancelledCB", "classArBatteryMTX.html#aa434aa7e6c16018536ddf5fe8f8ba793", null ],

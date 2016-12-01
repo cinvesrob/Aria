@@ -1,6 +1,10 @@
 var classArZippable =
 [
-    [ "ModeType", "classArZippable.html#af64b03ccec8f3a286a07638f43a2a1ef", null ],
+    [ "CASE_INSENSITIVE", "classArZippable.html#a9170cdb5630ef375b7b85c6bf524b600a9f5aec0c78ca05b8d45043490c580cf3", null ],
+    [ "ModeType", "classArZippable.html#af64b03ccec8f3a286a07638f43a2a1ef", [
+      [ "ZIP_MODE", "classArZippable.html#af64b03ccec8f3a286a07638f43a2a1efa844a7e0fbdffccb94c761e9d074f97ba", null ],
+      [ "UNZIP_MODE", "classArZippable.html#af64b03ccec8f3a286a07638f43a2a1efa578fe92f16b2935ee0394a5b4cc53b5d", null ]
+    ] ],
     [ "ArZippable", "classArZippable.html#a99bbf0628efef06c0cd60d3fc2704450", null ],
     [ "~ArZippable", "classArZippable.html#a5bcdbc19f221b1249babd897c4ee085a", null ],
     [ "addAll", "classArZippable.html#afd19ba1556c9d9c3b39e3699395c1b4b", null ],

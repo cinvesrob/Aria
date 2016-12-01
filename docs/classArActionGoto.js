@@ -1,6 +1,10 @@
 var classArActionGoto =
 [
-    [ "State", "classArActionGoto.html#a22bc08cac8634f61cd1890f5d3f6e7b9", null ],
+    [ "State", "classArActionGoto.html#a22bc08cac8634f61cd1890f5d3f6e7b9", [
+      [ "STATE_NO_GOAL", "classArActionGoto.html#a22bc08cac8634f61cd1890f5d3f6e7b9acd50e3df37b0f503ce91ee343bc15d57", null ],
+      [ "STATE_ACHIEVED_GOAL", "classArActionGoto.html#a22bc08cac8634f61cd1890f5d3f6e7b9af9f6a6e2adf959323a1795a6ce5319aa", null ],
+      [ "STATE_GOING_TO_GOAL", "classArActionGoto.html#a22bc08cac8634f61cd1890f5d3f6e7b9a1f2c731f4ee3701dfdb9f89e947ef996", null ]
+    ] ],
     [ "ArActionGoto", "classArActionGoto.html#a1038c18b5fc4896cc0bb06620cab36d8", null ],
     [ "~ArActionGoto", "classArActionGoto.html#a9dfe40573463fa7c0b843e1f16c8882e", null ],
     [ "cancelGoal", "classArActionGoto.html#ad45b33599e54febc0747cf1bc297d13f", null ],

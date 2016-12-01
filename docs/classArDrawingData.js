@@ -1,5 +1,6 @@
 var classArDrawingData =
 [
+    [ "DEFAULT_REFRESH_TIME", "classArDrawingData.html#ae3ba35a07f07f1198346ed1b25d14d0aab4133f9c05747b7ffd5f0fcd039d8bd7", null ],
     [ "ArDrawingData", "classArDrawingData.html#a4918a35341e3142abfc5579022ef5cbf", null ],
     [ "ArDrawingData", "classArDrawingData.html#a709f97d1fa22c1a0faccadd8ec61bcb5", null ],
     [ "~ArDrawingData", "classArDrawingData.html#a0a4e414784bf68118ffa49e5c328bfbc", null ],

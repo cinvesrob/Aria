@@ -1,0 +1,4 @@
+UserInfoVersion1
+user bob isFUN RobotInfo 
+user user activmedia CustomCommands Movement RobotInfo SensorInfo Stop UnsafeMovement
+user administrator activmedia all

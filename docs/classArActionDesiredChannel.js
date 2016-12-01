@@ -1,0 +1,26 @@
+var classArActionDesiredChannel =
+[
+    [ "ArActionDesiredChannel", "classArActionDesiredChannel.html#afe00fd2b49562f829f4e6a3ee928ff40", null ],
+    [ "~ArActionDesiredChannel", "classArActionDesiredChannel.html#a305694abc2a5cdf04f3a72bad469aa5d", null ],
+    [ "addAverage", "classArActionDesiredChannel.html#a8c1098777868d117df4df5b3687c31dd", null ],
+    [ "checkLowerBound", "classArActionDesiredChannel.html#aab560843bc71a6435760a626a159822c", null ],
+    [ "checkUpperBound", "classArActionDesiredChannel.html#a91fa84aac9b1f1063b2499a2bf7f18a4", null ],
+    [ "endAverage", "classArActionDesiredChannel.html#a9d98affb0fe808166e0f878fe83a75e8", null ],
+    [ "getAllowOverride", "classArActionDesiredChannel.html#a2f01f6a2be93bd8795767a4e2da8a4ab", null ],
+    [ "getDesired", "classArActionDesiredChannel.html#a6e055821654befb89d0657b835da8565", null ],
+    [ "getStrength", "classArActionDesiredChannel.html#a2721a6d9ae80d5abf760634a994e19bd", null ],
+    [ "merge", "classArActionDesiredChannel.html#a1b21f9fe6ce03c922022d23e93a11c7d", null ],
+    [ "reset", "classArActionDesiredChannel.html#ad1b3b8287f9d8cf355fee4e682cf4578", null ],
+    [ "setDesired", "classArActionDesiredChannel.html#ae9d6231d15ca7d6d9b9cbd5f57213978", null ],
+    [ "setOverrideDoesLessThan", "classArActionDesiredChannel.html#ab196c58e468c0d0a0122ebd65915f533", null ],
+    [ "startAverage", "classArActionDesiredChannel.html#a1b459dd7157e95b64122309fae30ff80", null ],
+    [ "MAX_STRENGTH", "classArActionDesiredChannel.html#aaceeb6f102773b9a101fe79f50d99e25", null ],
+    [ "MIN_STRENGTH", "classArActionDesiredChannel.html#ab341b5b773efbb9de53de289f7995131", null ],
+    [ "myAllowOverride", "classArActionDesiredChannel.html#ac00cd09acd2e9498d3ac9ce121f03ddf", null ],
+    [ "myDesired", "classArActionDesiredChannel.html#a4be0b43316091552cd4b1b46caf9778a", null ],
+    [ "myDesiredTotal", "classArActionDesiredChannel.html#adf132e69ee2abc1b03e407979bbfbbcb", null ],
+    [ "myOverrideDoesLessThan", "classArActionDesiredChannel.html#af1a63b96054b8c015c5719166cd2580a", null ],
+    [ "myStrength", "classArActionDesiredChannel.html#a246a1ac2943f5dd102bf35a52d692b5e", null ],
+    [ "myStrengthTotal", "classArActionDesiredChannel.html#a7610adc8154a9dfa9ccec77405eb32ad", null ],
+    [ "NO_STRENGTH", "classArActionDesiredChannel.html#a09e5ae3856ac84c8aa84a80929441691", null ]
+];

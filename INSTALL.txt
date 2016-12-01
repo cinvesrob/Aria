@@ -1,0 +1,7 @@
+
+To install the contents of this .tgz package in /usr/local,
+run "make install" as the root user, or "sudo make install" 
+if you have the "sudo" tool.
+
+See README.txt for more information on getting started.
+

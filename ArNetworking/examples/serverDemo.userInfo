@@ -1,0 +1,8 @@
+; You'll want to change the . below to the actual password you want 
+; used for the different accounts, also note you can start up serverDemo
+; with this information by giving it the '-userInfo <userInfoFile>'
+; argument on the command line
+UserInfoVersion1
+user user . CustomCommands Movement RobotInfo SensorInfo Stop UnsafeMovement
+user guest . CustomCommands Movement RobotInfo SensorInfo Stop UnsafeMovement
+user administrator . all

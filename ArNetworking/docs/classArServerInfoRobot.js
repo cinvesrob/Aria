@@ -1,0 +1,27 @@
+var classArServerInfoRobot =
+[
+    [ "ArServerInfoRobot", "classArServerInfoRobot.html#ae7a1c348ddaacc8669eb908a12d34c7e", null ],
+    [ "~ArServerInfoRobot", "classArServerInfoRobot.html#a07e1e158db45699f306a24f7f4cbde7c", null ],
+    [ "activityTimeInfo", "classArServerInfoRobot.html#a37b6b2739285beb767fea6bcb130cdb0", null ],
+    [ "batteryInfo", "classArServerInfoRobot.html#a4b1f5a1de6266e00dcbe3f8d02d63e10", null ],
+    [ "physicalInfo", "classArServerInfoRobot.html#ab2cbbfd21c0deafa12a0e60fd77a5b2a", null ],
+    [ "update", "classArServerInfoRobot.html#a4a0905008a60f291372e53481d6656a2", null ],
+    [ "updateNumbers", "classArServerInfoRobot.html#a4625b86363da3746a7f194b80a316e61", null ],
+    [ "updateStrings", "classArServerInfoRobot.html#a124d06b5f8fd99676200e76222cb7979", null ],
+    [ "userTask", "classArServerInfoRobot.html#ab22b4e8128c3c289fbb8c724feaff5f2", null ],
+    [ "myActivityTimeInfoCB", "classArServerInfoRobot.html#ab2ec56a2825eb0d24e3ec6c7a7ec0294", null ],
+    [ "myBatteryInfoCB", "classArServerInfoRobot.html#a20f05293bf9ee42a5b67f59d51017fd9", null ],
+    [ "myExtendedStatus", "classArServerInfoRobot.html#a224a6d07051237503612f336c69bda37", null ],
+    [ "myMode", "classArServerInfoRobot.html#a8885c11cb59b462e01a216dee5e19cf7", null ],
+    [ "myOldExtendedStatus", "classArServerInfoRobot.html#a247cbe7a907306fb54dbe64882ea0671", null ],
+    [ "myOldMode", "classArServerInfoRobot.html#a973c53984dea10eb42fa268a1d0cb12b", null ],
+    [ "myOldStatus", "classArServerInfoRobot.html#a6d009f7d13454f4436d25b88b6fe87c5", null ],
+    [ "myPhysicalInfoCB", "classArServerInfoRobot.html#ae31b4dda1ec676ac02107bfced98587e", null ],
+    [ "myRobot", "classArServerInfoRobot.html#a010739ba99f0717216c687da3f27c314", null ],
+    [ "myServer", "classArServerInfoRobot.html#a71669dbe0be1c7917db62c8971cf7b42", null ],
+    [ "myStatus", "classArServerInfoRobot.html#a09da12433a5066862f09df97786180fb", null ],
+    [ "myUpdateCB", "classArServerInfoRobot.html#ad40bdcd0ff3badf205dba6f5208b5119", null ],
+    [ "myUpdateNumbersCB", "classArServerInfoRobot.html#a1da2b9b64e5c59c2ffd205b82f1b8f86", null ],
+    [ "myUpdateStringsCB", "classArServerInfoRobot.html#a5a5ed06648187c14e64d73c9327ba5fd", null ],
+    [ "myUserTaskCB", "classArServerInfoRobot.html#a0f7f99ed112fdbf7ec1d4d8a1a7ae104", null ]
+];

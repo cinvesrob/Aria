@@ -1,0 +1,28 @@
+var classArClientDeleteFileOnServer =
+[
+    [ "ArClientDeleteFileOnServer", "classArClientDeleteFileOnServer.html#aeb7a2f2995dfad4c6f40a710cdb9a747", null ],
+    [ "~ArClientDeleteFileOnServer", "classArClientDeleteFileOnServer.html#a377dc7089a074b57623aa8e8fd04ab18", null ],
+    [ "addFileDeletedCallback", "classArClientDeleteFileOnServer.html#ad1efe20169369e46ffd56d512a5952f3", null ],
+    [ "callFileDeletedCallbacks", "classArClientDeleteFileOnServer.html#a4b7902b1ce02a9e34a8e19ecea2436d6", null ],
+    [ "deleteFileFromDirectory", "classArClientDeleteFileOnServer.html#aef1686f5b0fa8260c1606d19dae9e5d8", null ],
+    [ "getDirectory", "classArClientDeleteFileOnServer.html#a6572a2c8936ec848a2bdb51cbdaef7ea", null ],
+    [ "getFileName", "classArClientDeleteFileOnServer.html#a496bb5912002e28a92cd372b001adf12", null ],
+    [ "getLastCompletedSend", "classArClientDeleteFileOnServer.html#a6e697dba601133956234dbb06d9dc9f5", null ],
+    [ "getLastStartedSend", "classArClientDeleteFileOnServer.html#a26ba154309ef51304df4f5bef0c2eb6d", null ],
+    [ "isAvailable", "classArClientDeleteFileOnServer.html#a35222414f09180b659597b67ed96d178", null ],
+    [ "isWaitingForReturn", "classArClientDeleteFileOnServer.html#a7bbfe1934dcc420fbed8313d72e20fdb", null ],
+    [ "netDeleteFile", "classArClientDeleteFileOnServer.html#a296412a041436e1c09ff88f8ef4de951", null ],
+    [ "remFileDeletedCallback", "classArClientDeleteFileOnServer.html#a98d934f18fef3b55e548824892767f27", null ],
+    [ "myCallbackMutex", "classArClientDeleteFileOnServer.html#aa8f6cc4d78f59feb094b7878522a5d66", null ],
+    [ "myClient", "classArClientDeleteFileOnServer.html#a88430ab32d362eee4faeab5efc97e662", null ],
+    [ "myDataMutex", "classArClientDeleteFileOnServer.html#a047a4348415e3f60871dac6960708a42", null ],
+    [ "myDeleteFileCB", "classArClientDeleteFileOnServer.html#aed34a489354fd26ccbb2b631479e3c3f", null ],
+    [ "myDirectory", "classArClientDeleteFileOnServer.html#a3efecb8372ab5b029c1ad9c3655bbda8", null ],
+    [ "myFile", "classArClientDeleteFileOnServer.html#a3ed0ff33533809a79cb9f38a0301e26a", null ],
+    [ "myFileDeletedCallbacks", "classArClientDeleteFileOnServer.html#a27d116502f8378fe861b4ea456d6d93d", null ],
+    [ "myFileName", "classArClientDeleteFileOnServer.html#aa488cffd4d2be529c3a8880204c9268e", null ],
+    [ "myIsWaitingForReturn", "classArClientDeleteFileOnServer.html#a3c8179ba4cc8ef723088371e8a72c83a", null ],
+    [ "myLastCompletedSend", "classArClientDeleteFileOnServer.html#a5672b9acdc93d7d5a9e647284808ff4c", null ],
+    [ "myLastStartedSend", "classArClientDeleteFileOnServer.html#a9422fa5ab4a5aa339f8296f4d47e86a8", null ],
+    [ "myWholeFileName", "classArClientDeleteFileOnServer.html#a1fba242377266a84ddfa9349fe23155c", null ]
+];

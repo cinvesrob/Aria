@@ -1,0 +1,28 @@
+var classArRobotConfig =
+[
+    [ "ArRobotConfig", "classArRobotConfig.html#ae2da3f4c583b85235cc9c10bb06e999a", null ],
+    [ "~ArRobotConfig", "classArRobotConfig.html#abd91b0a601a366c546e053c1461f97a4", null ],
+    [ "addAnalogGyro", "classArRobotConfig.html#a2656738860ce40f9a6e6d6235ccdcef3", null ],
+    [ "connectCallback", "classArRobotConfig.html#abfc6556d88c567f5348b112ff85c7327", null ],
+    [ "processFile", "classArRobotConfig.html#a84ff87e03de8c9eaea9a3cfe0d574998", null ],
+    [ "myAddedGyro", "classArRobotConfig.html#a4b1493d12c5f98d649fcea8a6a768069", null ],
+    [ "myAddedMovementParams", "classArRobotConfig.html#aff6dabf877b464980d4f6157348d8e39", null ],
+    [ "myAnalogGyro", "classArRobotConfig.html#a64d7870ff8adf6e1c669fe0e5c21967b", null ],
+    [ "myConnectCB", "classArRobotConfig.html#aa37b4aead6b952545f6fe35d38ed4e7b", null ],
+    [ "myOriginalRotAccel", "classArRobotConfig.html#a9f786faf8f34c527b8dffdedaa1f3703", null ],
+    [ "myOriginalRotDecel", "classArRobotConfig.html#a08b98bba2e9eee29b74e5bcda1ceb630", null ],
+    [ "myOriginalRotVelMax", "classArRobotConfig.html#a1d3ccc1927de788543c910a2174304a3", null ],
+    [ "myOriginalTransAccel", "classArRobotConfig.html#a508385170070227e22091340254507f0", null ],
+    [ "myOriginalTransDecel", "classArRobotConfig.html#a53323d7bb2adfc7c9adc8581a9d80ff1", null ],
+    [ "myOriginalTransVelMax", "classArRobotConfig.html#adbc94a100762e7854921bc4502fd3186", null ],
+    [ "myProcessFileCB", "classArRobotConfig.html#a1c22c362efe7dde435f45e86244f7d60", null ],
+    [ "myRobot", "classArRobotConfig.html#aa74ca5eb21da063451c0b22443aca06f", null ],
+    [ "myRotAccel", "classArRobotConfig.html#a3cac94999e4cac25e9ee1c825b53c7be", null ],
+    [ "myRotDecel", "classArRobotConfig.html#a83dffe4e48e3278a4dab4a8e21046c60", null ],
+    [ "myRotVelMax", "classArRobotConfig.html#a39c7d6e97d32012e9bf78285de4f1f22", null ],
+    [ "mySavedOriginalMovementParameters", "classArRobotConfig.html#a6732e162fe1456ad8aefb37a2dfe8135", null ],
+    [ "myTransAccel", "classArRobotConfig.html#a69874933fdbcd3dc33cb9d5779bfa01d", null ],
+    [ "myTransDecel", "classArRobotConfig.html#adfe03ce109caa09ebde53eaf3a332945", null ],
+    [ "myTransVelMax", "classArRobotConfig.html#a48c23e5de0a028993663bf9de759be16", null ],
+    [ "myUseGyro", "classArRobotConfig.html#af50fee28e01c13cfd8cc2605e61e7b59", null ]
+];

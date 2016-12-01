@@ -1,0 +1,118 @@
+nohup: ignoring input
+ArTcpConnection::internalOpen: Connecting to localhost 8101
+Connecting to simulator through tcp.
+
+Syncing 0
+Syncing 1
+Syncing 2
+Connected to robot.
+Name: MobileSim
+Type: Pioneer
+Subtype: p3dx-sh
+ArConfig: Config version: 2.0
+ArRobotParams: SonarUnit parameters invalid 10
+ArConfig::parseArgument() error parsing 0 69 136 90 0 0 0 0 0 0
+## Last error on line 91 of file '/home/reed/Aria/params/p3dx-sh.p'
+ArRobotParams: SonarUnit parameters invalid 10
+ArConfig::parseArgument() error parsing 1 114 119 50 0 0 0 0 0 0
+## Last error on line 92 of file '/home/reed/Aria/params/p3dx-sh.p'
+ArRobotParams: SonarUnit parameters invalid 10
+ArConfig::parseArgument() error parsing 2 148 78 30 0 0 0 0 0 0
+## Last error on line 93 of file '/home/reed/Aria/params/p3dx-sh.p'
+ArRobotParams: SonarUnit parameters invalid 10
+ArConfig::parseArgument() error parsing 3 166 27 10 0 0 0 0 0 0
+## Last error on line 94 of file '/home/reed/Aria/params/p3dx-sh.p'
+ArRobotParams: SonarUnit parameters invalid 10
+ArConfig::parseArgument() error parsing 4 166 -27 -10 0 0 0 0 0 0
+## Last error on line 95 of file '/home/reed/Aria/params/p3dx-sh.p'
+ArRobotParams: SonarUnit parameters invalid 10
+ArConfig::parseArgument() error parsing 5 148 -78 -30 0 0 0 0 0 0
+## Last error on line 96 of file '/home/reed/Aria/params/p3dx-sh.p'
+ArRobotParams: SonarUnit parameters invalid 10
+ArConfig::parseArgument() error parsing 6 114 -119 -50 0 0 0 0 0 0
+## Last error on line 97 of file '/home/reed/Aria/params/p3dx-sh.p'
+ArRobotParams: SonarUnit parameters invalid 10
+ArConfig::parseArgument() error parsing 7 69 -136 -90 0 0 0 0 0 0
+## Last error on line 98 of file '/home/reed/Aria/params/p3dx-sh.p'
+ArRobotParams: SonarUnit parameters invalid 10
+ArConfig::parseArgument() error parsing 8 -157 -136 -90 0 0 0 0 0 0
+## Last error on line 99 of file '/home/reed/Aria/params/p3dx-sh.p'
+ArRobotParams: SonarUnit parameters invalid 10
+ArConfig::parseArgument() error parsing 9 -203 -119 -130 0 0 0 0 0 0
+## Last error on line 100 of file '/home/reed/Aria/params/p3dx-sh.p'
+ArRobotParams: SonarUnit parameters invalid 10
+ArConfig::parseArgument() error parsing 10 -237 -78 -150 0 0 0 0 0 0
+## Last error on line 101 of file '/home/reed/Aria/params/p3dx-sh.p'
+ArRobotParams: SonarUnit parameters invalid 10
+ArConfig::parseArgument() error parsing 11 -255 -27 -170 0 0 0 0 0 0
+## Last error on line 102 of file '/home/reed/Aria/params/p3dx-sh.p'
+ArRobotParams: SonarUnit parameters invalid 10
+ArConfig::parseArgument() error parsing 12 -255 27 170 0 0 0 0 0 0
+## Last error on line 103 of file '/home/reed/Aria/params/p3dx-sh.p'
+ArRobotParams: SonarUnit parameters invalid 10
+ArConfig::parseArgument() error parsing 13 -237 78 150 0 0 0 0 0 0
+## Last error on line 104 of file '/home/reed/Aria/params/p3dx-sh.p'
+ArRobotParams: SonarUnit parameters invalid 10
+ArConfig::parseArgument() error parsing 14 -203 119 130 0 0 0 0 0 0
+## Last error on line 105 of file '/home/reed/Aria/params/p3dx-sh.p'
+ArRobotParams: SonarUnit parameters invalid 10
+ArConfig::parseArgument() error parsing 15 -157 136 90 0 0 0 0 0 0
+## Last error on line 106 of file '/home/reed/Aria/params/p3dx-sh.p'
+ArConfig: Have no argument type for config 'ptztype' in section, got string 'unknown'
+ArConfig: Have no argument type for config 'ptzserialport' in section, got string 'none'
+ArConfig: Have no argument type for config 'ptzaddress' in section, got string '192.168.0.90'
+ArConfig: Have no argument type for config 'ptztype' in section, got string 'unknown'
+ArConfig: Have no argument type for config 'ptzserialport' in section, got string 'none'
+ArConfig: Have no argument type for config 'ptzaddress' in section, got string '192.168.0.90'
+ArConfig: Have no argument type for config 'ptztype' in section, got string 'unknown'
+ArConfig: Have no argument type for config 'ptzserialport' in section, got string 'none'
+ArConfig: Have no argument type for config 'ptzaddress' in section, got string '192.168.0.90'
+ArConfig: Have no argument type for config 'ptztype' in section, got string 'unknown'
+ArConfig: Have no argument type for config 'ptzserialport' in section, got string 'none'
+ArConfig: Have no argument type for config 'ptzaddress' in section, got string '192.168.0.90'
+ArConfig: Have no argument type for config 'ptztype' in section, got string 'unknown'
+ArConfig: Have no argument type for config 'ptzserialport' in section, got string 'none'
+ArConfig: Have no argument type for config 'ptzaddress' in section, got string '192.168.0.90'
+ArConfig: Have no argument type for config 'ptztype' in section, got string 'unknown'
+ArConfig: Have no argument type for config 'ptzserialport' in section, got string 'none'
+ArConfig: Have no argument type for config 'ptzaddress' in section, got string '192.168.0.90'
+ArConfig: Have no argument type for config 'ptztype' in section, got string 'unknown'
+ArConfig: Have no argument type for config 'ptzserialport' in section, got string 'none'
+ArConfig: Have no argument type for config 'ptzaddress' in section, got string '192.168.0.90'
+ArConfig: Have no argument type for config 'ptztype' in section, got string 'unknown'
+ArConfig: Have no argument type for config 'ptzserialport' in section, got string 'none'
+ArConfig: Have no argument type for config 'ptzaddress' in section, got string '192.168.0.90'
+ArConfig: Have no argument type for config 'videotype' in section, got string 'unknown'
+ArConfig: Have no argument type for config 'videodevicename' in section, got string 'none'
+ArConfig: Have no argument type for config 'videoaddress' in section, got string '192.168.0.90'
+ArConfig: Have no argument type for config 'videotype' in section, got string 'unknown'
+ArConfig: Have no argument type for config 'videodevicename' in section, got string 'none'
+ArConfig: Have no argument type for config 'videoaddress' in section, got string '192.168.0.90'
+ArConfig: Have no argument type for config 'videotype' in section, got string 'unknown'
+ArConfig: Have no argument type for config 'videodevicename' in section, got string 'none'
+ArConfig: Have no argument type for config 'videoaddress' in section, got string '192.168.0.90'
+ArConfig: Have no argument type for config 'videotype' in section, got string 'unknown'
+ArConfig: Have no argument type for config 'videodevicename' in section, got string 'none'
+ArConfig: Have no argument type for config 'videoaddress' in section, got string '192.168.0.90'
+ArConfig: Have no argument type for config 'videotype' in section, got string 'unknown'
+ArConfig: Have no argument type for config 'videodevicename' in section, got string 'none'
+ArConfig: Have no argument type for config 'videoaddress' in section, got string '192.168.0.90'
+ArConfig: Have no argument type for config 'videotype' in section, got string 'unknown'
+ArConfig: Have no argument type for config 'videodevicename' in section, got string 'none'
+ArConfig: Have no argument type for config 'videoaddress' in section, got string '192.168.0.90'
+ArConfig: Have no argument type for config 'videotype' in section, got string 'unknown'
+ArConfig: Have no argument type for config 'videodevicename' in section, got string 'none'
+ArConfig: Have no argument type for config 'videoaddress' in section, got string '192.168.0.90'
+ArConfig: Have no argument type for config 'videotype' in section, got string 'unknown'
+ArConfig: Have no argument type for config 'videodevicename' in section, got string 'none'
+ArConfig: Have no argument type for config 'videoaddress' in section, got string '192.168.0.90'
+Using default parameters for a p3dx-sh robot
+ArRobot::setAbsoluteMaxTransVel: Setting to 9999
+Using new style simulated laser for lms2xx_1
+sim_lms2xx_1::setConnectionTimeoutSeconds: Setting timeout to 8 secs
+ArServerBase: Started on tcp port 7272 and udp port 7272.
+Mode stop added as default mode
+Server is now running...
+Aria: Received signal 'SIGSEGV'. Exiting.
+ArServerBase: Server shutting down.
+Disconnecting from robot.

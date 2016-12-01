@@ -1,0 +1,101 @@
+project(ArNetworking)
+
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
+
+set(AR_NETWORKING_SOURCES
+    src/ArCentralForwarder.cpp
+    src/ArCentralManager.cpp
+    src/ArClientArgUtils.cpp
+    src/ArClientBase.cpp
+    src/ArClientData.cpp
+    src/ArClientFileUtils.cpp
+    src/ArClientHandlerConfig.cpp
+    src/ArClientSimpleConnector.cpp
+    src/ArClientSwitchManager.cpp
+    src/ArHybridForwarderVideo.cpp
+    src/ArMapChanger.cpp
+    src/ArNetPacket.cpp
+    src/ArNetPacketReceiverTcp.cpp
+    src/ArNetPacketReceiverUdp.cpp
+    src/ArNetPacketSenderTcp.cpp
+    src/ArServerBase.cpp
+    src/ArServerClient.cpp
+    src/ArServerData.cpp
+    src/ArServerFileUtils.cpp
+    src/ArServerHandlerCameraCollection.cpp
+    src/ArServerHandlerCamera.cpp
+    src/ArServerHandlerCommands.cpp
+    src/ArServerHandlerCommMonitor.cpp
+    src/ArServerHandlerConfig.cpp
+    src/ArServerHandlerMap.cpp
+    src/ArServerHandlerMapping.cpp
+    src/ArServerHandlerPopup.cpp
+    src/ArServerInfoDrawings.cpp
+    src/ArServerInfoRobot.cpp
+    src/ArServerInfoSensor.cpp
+    src/ArServerInfoStrings.cpp
+    src/ArServerMode.cpp
+    src/ArServerModeDrive.cpp
+    src/ArServerModeIdle.cpp
+    src/ArServerModeRatioDrive.cpp
+    src/ArServerModeStop.cpp
+    src/ArServerModeWander.cpp
+    src/ArServerSimpleCommands.cpp
+    src/ArServerSimpleOpener.cpp
+    src/ArServerUserInfo.cpp
+    src/ArTempDirectoryHelper.cpp
+    src/md5.cpp
+)
+set(AR_NETWORKING_HEADERS    
+    include/ArCentralForwarder.h
+    include/ArCentralManager.h
+    include/ArClientArgUtils.h
+    include/ArClientBase.h
+    include/ArClientCommands.h
+    include/ArClientData.h
+    include/ArClientFileUtils.h
+    include/ArClientHandlerConfig.h
+    include/ArClientSimpleConnector.h
+    include/ArClientSwitchManager.h
+    include/ArHybridForwarderVideo.h
+    include/ArMapChanger.h
+    include/ArNetPacket.h
+    include/ArNetPacketReceiverTcp.h
+    include/ArNetPacketReceiverUdp.h
+    include/ArNetPacketSenderTcp.h
+    include/ArNetworking.h
+    include/ArServerBase.h
+    include/ArServerClientData.h
+    include/ArServerClient.h
+    include/ArServerClientIdentifier.h
+    include/ArServerCommands.h
+    include/ArServerData.h
+    include/ArServerFileUtils.h
+    include/ArServerHandlerCameraCollection.h
+    include/ArServerHandlerCamera.h
+    include/ArServerHandlerCommands.h
+    include/ArServerHandlerCommMonitor.h
+    include/ArServerHandlerConfig.h
+    include/ArServerHandlerMap.h
+    include/ArServerHandlerMapping.h
+    include/ArServerHandlerPopup.h
+    include/ArServerInfoDrawings.h
+    include/ArServerInfoRobot.h
+    include/ArServerInfoSensor.h
+    include/ArServerInfoStrings.h
+    include/ArServerModeDrive.h
+    include/ArServerMode.h
+    include/ArServerModeIdle.h
+    include/ArServerModeRatioDrive.h
+    include/ArServerModeStop.h
+    include/ArServerModeWander.h
+    include/ArServerSimpleCommands.h
+    include/ArServerSimpleOpener.h
+    include/ArServerUserInfo.h
+    include/ArTempDirectoryHelper.h
+    include/md5.h
+)
+
+
+add_library(ArNetworking ${AR_NETWORKING_SOURCES} ${AR_NETWORKING_HEADERS})
+

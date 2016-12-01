@@ -1,0 +1,26 @@
+var classArActionJoydrive =
+[
+    [ "ArActionJoydrive", "classArActionJoydrive.html#a5796b4d6a3f260312e68982267beb8d4", null ],
+    [ "~ArActionJoydrive", "classArActionJoydrive.html#a41e613b087e51236aa736335e6aba356", null ],
+    [ "fire", "classArActionJoydrive.html#af8701e7416c59072351536f479f4d2c8", null ],
+    [ "getDesired", "classArActionJoydrive.html#ae0b99869cda7e88e38f7923718e32778", null ],
+    [ "getDesired", "classArActionJoydrive.html#a63075f8b6166c3a299cb1b8005c2e14c", null ],
+    [ "getJoyHandler", "classArActionJoydrive.html#a9bfb87ceded10e06d0b34052ca692711", null ],
+    [ "getStopIfNoButtonPressed", "classArActionJoydrive.html#ad054d118754418ced755b85489ac0b8c", null ],
+    [ "getUseOSCal", "classArActionJoydrive.html#afa9cc09bc39a110bd6375b1dbccb67ec", null ],
+    [ "joystickInited", "classArActionJoydrive.html#aadc5a4816e3c69bb0c7b57f72bbadde5", null ],
+    [ "setSpeeds", "classArActionJoydrive.html#a06811cc5f29954696410ce18fd645f85", null ],
+    [ "setStopIfNoButtonPressed", "classArActionJoydrive.html#a2d2e8053a6a49487c5dbeadcbcc44556", null ],
+    [ "setThrottleParams", "classArActionJoydrive.html#a9b07f959ebe2a6193c8c7f3aee98913f", null ],
+    [ "setUseOSCal", "classArActionJoydrive.html#abde56674b5adc9d52ab1d0db362beb61", null ],
+    [ "myDesired", "classArActionJoydrive.html#ad26535b0822da4fb88579418a26671ba", null ],
+    [ "myHighThrottle", "classArActionJoydrive.html#a253da9c30d7dcbd4a55d10dc63458678", null ],
+    [ "myJoyHandler", "classArActionJoydrive.html#a717164ac53a27e9265abc10b349e56c6", null ],
+    [ "myLowThrottle", "classArActionJoydrive.html#a526b9ead69d89471af564560c103a91c", null ],
+    [ "myPreviousUseOSCal", "classArActionJoydrive.html#a6a10af7f3f7dcab6d1dba5f5b532ea58", null ],
+    [ "myStopIfNoButtonPressed", "classArActionJoydrive.html#a46d994794e038e62774d053098e921b7", null ],
+    [ "myTransVelMax", "classArActionJoydrive.html#ad4fb76a98ba0dbf43e21fa0ca17db8da", null ],
+    [ "myTurnAmountMax", "classArActionJoydrive.html#abf97215aafaf15a3b504414b79d17a9a", null ],
+    [ "myUseOSCal", "classArActionJoydrive.html#a42966e7cecd24cae1994ea66803b906e", null ],
+    [ "myUseThrottle", "classArActionJoydrive.html#aa4b05b37d5582ec1fac50ff126305ebd", null ]
+];

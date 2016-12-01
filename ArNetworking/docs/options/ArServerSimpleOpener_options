@@ -1,0 +1,14 @@
+Options for ArServerSimpleOpener:
+-serverPort <serverPortNumber>
+-sp <serverPortNumber>
+-serverIP <serverIPToOpenOn>
+-sip <serverIPToOpenOn>
+-serverTcpOnly
+-userInfo <userInfoFileName>
+-ui <userInfoFileName>
+-logUserInfo
+-lui
+-logCommandGroups
+-lcg
+-serverInfoFile <file>
+

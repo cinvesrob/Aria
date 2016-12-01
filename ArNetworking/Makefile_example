@@ -1,0 +1,69 @@
+
+# Copy this Makefile as a starting point if you are developing your own project
+# outside of the examples directory, for example in a new directory your home
+# directory.  This will allow you to use multiple source code files and to more easily
+# link to other libraries. Rename it to "Makefile".
+# This Makefile assumes ARIA has been installed in the standard location 
+# (/usr/local/Aria)
+#
+# You must set the value of TARGET to the name of your program. 
+#
+# This uses the $(wildcard *.cpp) function, so all .cpp files
+# found in the current directory will be compiled and linked
+# to produce $(TARGET). If instead you want to list the source
+# files individually, replace $(wildcard *.cpp) with the list of
+# files.
+#
+# libAria and libArNetworking will be linked automatically to the target. 
+# If you need additional libraries, add them to
+# the LINK variable.
+
+
+TARGET = myProgram
+
+# If you want to use a different file extension for source files such as .cc, change it here.
+CXXFILEEXT=.cpp
+
+# If you want to list source files, replace the following line, e.g.:
+# SOURCES = myProgram.cpp myUtil.cpp myClass.cpp 
+SOURCES = $(wildcard *$(CXXFILEEXT))
+
+LINK = -lArNetworking -lAria -ldl -lrt -lm -lpthread
+# e.g. for ARNL instead: LINK = -lArnl -lArnlBase -lArNetworking -lAriaForArnl -ldl -lrt -lpthread -lm
+
+LFLAGS = -L/usr/local/Aria/lib
+# e.g. for ARNL: LINK = -L/usr/local/Arnl/lib
+
+INCLUDE = -I/usr/local/Aria/include -I/usr/local/Aria/ArNetworking/include
+# e.g. for ARNL: INCLUDE = -I/usr/local/Arnl/include # -I/usr/local/Arnl/include/Aria -I/usr/local/Arnl/include/ArNetworking
+
+CXXFLAGS = -fPIC -g -Wall -D_REENTRANT
+
+
+OBJ := $(patsubst %$(CXXFILEEXT),%.o,$(SOURCES))
+
+ifndef CXX
+CXX:=c++
+endif
+
+all: $(TARGET)
+
+$(TARGET): $(OBJ)
+	$(CXX) $(CXXFLAGS) $(INCLUDE) $(LFLAGS) -o $@ $^ $(LINK)
+
+%.o: %$(CXXFILEEXT) 
+	$(CXX) -c $(CXXFLAGS) $(INCLUDE) -o $@ $<
+	
+clean: 
+	-rm $(TARGET) $(OBJ)
+
+Makefile.dep: $(SOURCES)
+	$(CXX) $(CXXFLAGS) $(INCLUDE) -MM $(SOURCES) >Makefile.dep
+
+-include Makefile.dep
+
+# You can invoke this rule to force remaking of Makefile.dep:
+dep: clean Makefile.dep
+
+.PHONY: clean all dep
+

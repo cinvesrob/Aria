@@ -1,0 +1,27 @@
+var classArPixelDevice =
+[
+    [ "ArPixelDevice", "classArPixelDevice.html#a01761e3235bc82ceccd5caa68ceded56", null ],
+    [ "~ArPixelDevice", "classArPixelDevice.html#abe0807548f94d153ec931e17e0e6be2d", null ],
+    [ "allocateSensorDataMemory", "classArPixelDevice.html#a2c4f237da84504d3dd8b89ea181338fe", null ],
+    [ "allocateSensorXYZMemory", "classArPixelDevice.html#aa27838e1500f5b1f1a3d5e4a2d6ee165", null ],
+    [ "getName", "classArPixelDevice.html#a607d4a60cad027a8b0bd016dd51aa5a4", null ],
+    [ "getRawSensorData", "classArPixelDevice.html#a0d0e15eacef3e8d94a1454414c794903", null ],
+    [ "getRawSensorXYZ", "classArPixelDevice.html#a3f430a587215207de314359d650d3d9a", null ],
+    [ "getSensorData", "classArPixelDevice.html#ab2b4a1300d1dceaf6f25d2bef4b07662", null ],
+    [ "getSensorXYZ", "classArPixelDevice.html#a908923f418bf207e65c1cb5cee53c03a", null ],
+    [ "getXDimension", "classArPixelDevice.html#a71583b3614c46f55dfcb64683816976a", null ],
+    [ "getXFOV", "classArPixelDevice.html#afc0daa1c15f80f5e994df18bf138c8d7", null ],
+    [ "getYDimension", "classArPixelDevice.html#af87331b4df0116708f9288c6a80384c5", null ],
+    [ "getYFOV", "classArPixelDevice.html#a5162bcde6c96dca465963a4117ece247", null ],
+    [ "lockDevice", "classArPixelDevice.html#ae715397d1ac30e8e67924727907dd988", null ],
+    [ "tryLockDevice", "classArPixelDevice.html#a84736070112d9b82ee01df1c5c75d733", null ],
+    [ "unlockDevice", "classArPixelDevice.html#a561f0030e2f000e1b818774ce3ec1f42", null ],
+    [ "myDeviceMutex", "classArPixelDevice.html#a47e7336cc6e1aa166d4abb685da1ed77", null ],
+    [ "myName", "classArPixelDevice.html#a9f008a5c82d942fbe54e5992e2af1bef", null ],
+    [ "mySensorData", "classArPixelDevice.html#a6377895c88e9c0d3ef8a3e3991ac1850", null ],
+    [ "mySensorXYZ", "classArPixelDevice.html#ad115b15ee6b6cac4c4d4127d01d78ad1", null ],
+    [ "myXFOV", "classArPixelDevice.html#a7b802c07db5a82cc25c029c6b77ef30e", null ],
+    [ "myXSize", "classArPixelDevice.html#aa003a600b9a8d817bfea8e78934ff00b", null ],
+    [ "myYFOV", "classArPixelDevice.html#a4a339ac088bee1de0259b62031c5e9c7", null ],
+    [ "myYSize", "classArPixelDevice.html#a40c91abcbd254a0b5343e21e02ccfcd7", null ]
+];

@@ -1,0 +1,12 @@
+Options for ArClientSimpleConnector (see docs for more details):
+-host <hostName>
+-port <portNumber>
+-p <portNumber>
+-user <user>
+-u <user>
+-password <password>
+-pwd <password>
+-nopassword
+-np
+-logDataList
+-ldl

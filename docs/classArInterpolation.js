@@ -1,0 +1,26 @@
+var classArInterpolation =
+[
+    [ "ArInterpolation", "classArInterpolation.html#a390e2f6b40f8408aaaff951ea6c078e2", null ],
+    [ "~ArInterpolation", "classArInterpolation.html#a21c245c475dc9cc143a0ddbffb34c8e1", null ],
+    [ "addReading", "classArInterpolation.html#a5e4c9a7fc7328d706ba5e36393dd7a3e", null ],
+    [ "getAllowedMSForPrediction", "classArInterpolation.html#acf464ac1312fd3f5a8da949d95b0b641", null ],
+    [ "getAllowedPercentageForPrediction", "classArInterpolation.html#abfdad1150051171355ce2d5e5aa86c75", null ],
+    [ "getLogPrediction", "classArInterpolation.html#ab1316fbed2756959e0dac7b5cb683fe2", null ],
+    [ "getName", "classArInterpolation.html#a5fe6e4e09eff98da75b0e2f223ab1add", null ],
+    [ "getNumberOfReadings", "classArInterpolation.html#af62cac6a3bcbe97a5a1b282febf863c4", null ],
+    [ "getPose", "classArInterpolation.html#a921584c2abed2141ae892c6239b2b13e", null ],
+    [ "reset", "classArInterpolation.html#a680d369e76b3ac8c7e65f502adbcedab", null ],
+    [ "setAllowedMSForPrediction", "classArInterpolation.html#ae3ea201cbaf4849bdfa68a6c56582ffe", null ],
+    [ "setAllowedPercentageForPrediction", "classArInterpolation.html#a1167744f79eea56c4575eb6db91ea147", null ],
+    [ "setLogPrediction", "classArInterpolation.html#ae050c608bdc05e4f225b915c50c7c939", null ],
+    [ "setName", "classArInterpolation.html#a7ff041eb02aea11fd2dd835451f007c0", null ],
+    [ "setNumberOfReadings", "classArInterpolation.html#ada65079027b25726721abed43a9a254b", null ],
+    [ "myAllowedMSForPrediction", "classArInterpolation.html#a2bd7eb4be4178dc80b93c9692e7f9af0", null ],
+    [ "myAllowedPercentageForPrediction", "classArInterpolation.html#a23e5c2550bcd434ef264017959f4a8f8", null ],
+    [ "myDataMutex", "classArInterpolation.html#a583f140ee0552d9a70939f344b805217", null ],
+    [ "myLogPrediction", "classArInterpolation.html#aaaaf6db44e29534be80e1b481f4fb2e4", null ],
+    [ "myName", "classArInterpolation.html#af169b5824ba8869ac86c4c7277c450db", null ],
+    [ "myPoses", "classArInterpolation.html#ac9e146b111bb383ba305e4012b288fd3", null ],
+    [ "mySize", "classArInterpolation.html#a90edd6cc474f4539217efb488a08ce40", null ],
+    [ "myTimes", "classArInterpolation.html#ac3a820fefc071200df4712c7a2653507", null ]
+];

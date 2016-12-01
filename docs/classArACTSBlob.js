@@ -1,0 +1,27 @@
+var classArACTSBlob =
+[
+    [ "ArACTSBlob", "classArACTSBlob.html#a302e482bfbef0b769cc6055a7556bfd9", null ],
+    [ "~ArACTSBlob", "classArACTSBlob.html#ab385b40fcc6f79baf42e0382be310809", null ],
+    [ "getArea", "classArACTSBlob.html#ae93d582aad025b14cb07da1c8f6fc254", null ],
+    [ "getBottom", "classArACTSBlob.html#a8d202877d450de1d25770800601afad1", null ],
+    [ "getLeft", "classArACTSBlob.html#a881c863440e9d83fcd968049a5b223f4", null ],
+    [ "getRight", "classArACTSBlob.html#a13f23085c9b0c0ae78f51cd08a5cb661", null ],
+    [ "getTop", "classArACTSBlob.html#a4d5ed62db566ff9086c0e30dbfed89e2", null ],
+    [ "getXCG", "classArACTSBlob.html#a5f6eb283420c455186090bd339c63289", null ],
+    [ "getYCG", "classArACTSBlob.html#a713ba6721a03e97d7722db58c729e817", null ],
+    [ "log", "classArACTSBlob.html#a35d5b404396d5e2ca1fdc115c3474920", null ],
+    [ "setArea", "classArACTSBlob.html#aa65217b03d86a49b9101e77d88089247", null ],
+    [ "setBottom", "classArACTSBlob.html#a667d3e2023a5ceb0c8c4583e90d2b7f0", null ],
+    [ "setLeft", "classArACTSBlob.html#a9a09032a5f080a1c9d9f1a8955a88436", null ],
+    [ "setRight", "classArACTSBlob.html#a4ec2416ef0809de49e2ae034f0b7d1d6", null ],
+    [ "setTop", "classArACTSBlob.html#a5cf7d36814349cd89fe55f97c3448b6f", null ],
+    [ "setXCG", "classArACTSBlob.html#a456cb51b853d08a57433df67314be404", null ],
+    [ "setYCG", "classArACTSBlob.html#a9ecec1db31525641f495cc3b7b7aa4b4", null ],
+    [ "myArea", "classArACTSBlob.html#afbbf2c27b32beb82642b3ad69e608d96", null ],
+    [ "myBottom", "classArACTSBlob.html#a2c58cef37eacd41af4389a39dafcb77d", null ],
+    [ "myLeft", "classArACTSBlob.html#ab1943fbd58284f6d0cef3f93eaaaf290", null ],
+    [ "myRight", "classArACTSBlob.html#a2ef5b581fc305ad5cc5d3e9409072eae", null ],
+    [ "myTop", "classArACTSBlob.html#a76eb0b3eef6b7f19cde7f9b5f72f3515", null ],
+    [ "myXCG", "classArACTSBlob.html#a48885dcacd61dd31709aff5c13f362e5", null ],
+    [ "myYCG", "classArACTSBlob.html#add99466dfe15cc4e1d87bbcd6f7946e7", null ]
+];

@@ -3661,14 +3661,14 @@ AREXPORT void ArRobot::stateReflector(void)
     }
     else if (myTransType == TRANS_VEL2)
     {
-      if (ArMath::roundShort(myTransVal/myParams->getVel2Divisor()) > 128)
-	transVal = 128;
+      if (ArMath::roundShort(myTransVal/myParams->getVel2Divisor()) > 127)
+	transVal = 127;
       else if (ArMath::roundShort(myTransVal/myParams->getVel2Divisor()) < -128)
 	transVal = -128;
       else 
 	transVal = ArMath::roundShort(myTransVal/myParams->getVel2Divisor());
-      if (ArMath::roundShort(myTransVal2/myParams->getVel2Divisor()) > 128)
-	transVal2 = 128;
+      if (ArMath::roundShort(myTransVal2/myParams->getVel2Divisor()) > 127)
+	transVal2 = 127;
       else if (ArMath::roundShort(myTransVal2/myParams->getVel2Divisor()) < -128)
 	transVal2 = -128;
       else 
